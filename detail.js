@@ -15,6 +15,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = document.getElementById('detail-img');
         const imageWrapper = document.querySelector('.image-wrapper');
         
+        // 动态设置 favicon
+        const setFavicon = () => {
+            const link = document.querySelector("link[rel~='icon']") || document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'icon';
+            // 使用对应的卡片图片
+            link.href = currentProject.image;
+            document.head.appendChild(link);
+        };
+        
+        // 调用设置 favicon 函数
+        setFavicon();
+        
+        // 设置页面标题
+        try {
+            if (currentProject.title) {
+                document.title = `${currentProject.title['data-lang']} - HuShenbai`;
+            } else {
+                document.title = 'HuShenbai';
+            }
+        } catch (error) {
+            console.error('设置标题时出错:', error);
+            document.title = 'TCM Collection';
+        }
+        
         // 检查是否需要刷新
         const needsReload = !sessionStorage.getItem('imageLoaded');
         
