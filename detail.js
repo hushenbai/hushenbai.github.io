@@ -12,8 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
     currentProject = groupedProjects[groupId].find(p => p.serialnumber === serialnumber);
     
     if (currentProject) {
-        // 更新页面内容
-        document.getElementById('detail-img').src = currentProject.image.replace('/TCM/', '/TCM-big/');
+        const img = document.getElementById('detail-img');
+        const imageWrapper = document.querySelector('.image-wrapper');
+        
+        // 设置图片加载完成的处理
+        img.onload = function() {
+            imageWrapper.classList.add('loaded');
+            this.classList.add('loaded');
+        };
+        
+        // 设置图片源
+        img.src = currentProject.image.replace('/TCM/', '/TCM-big/');
+        
+        // 更新其他内容
         document.getElementById('detail-serialnumber').textContent = currentProject.serialnumber;
         document.getElementById('detail-size').textContent = currentProject.size;
         document.getElementById('detail-weight').textContent = currentProject.weight;
@@ -27,12 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // 使用全局语言设置更新内容
         changeLanguage(currentLang);
-        
-        // 添加图片加载完成的处理
-        const img = document.getElementById('detail-img');
-        img.onload = function() {
-            this.classList.add('loaded');
-        };
     }
 });
 
