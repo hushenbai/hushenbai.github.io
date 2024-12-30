@@ -468,6 +468,7 @@ body {
 /* 右侧信息区域 */
 .detail-info {
     padding: 0 24px;
+    width: 100%;
 }
 
 .detail-info h1 {
