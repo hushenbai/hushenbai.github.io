@@ -2,20 +2,18 @@
 let currentProject = null;
 
 // 页面加载时初始化
-document.addEventListener('DOMContentLoaded', async () => {
-    // 立即开始加载图片
+document.addEventListener('DOMContentLoaded', () => {
+    // 从 URL 获取参数
     const params = new URLSearchParams(window.location.search);
     const groupId = params.get('group');
     const serialnumber = params.get('id');
     
+    // 查找对应的项目数据
     currentProject = groupedProjects[groupId].find(p => p.serialnumber === serialnumber);
     
     if (currentProject) {
-        // 立即开始预加载图片
-        const imgUrl = currentProject.image.replace('/TCM/', '/TCM-big/');
-        const imageLoadPromise = preloadImage(imgUrl);
-        
-        // 同时更新其他内容
+        // 更新页面内容
+        document.getElementById('detail-img').src = currentProject.image.replace('/TCM/', '/TCM-big/');
         document.getElementById('detail-serialnumber').textContent = currentProject.serialnumber;
         document.getElementById('detail-size').textContent = currentProject.size;
         document.getElementById('detail-weight').textContent = currentProject.weight;
@@ -29,20 +27,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // 使用全局语言设置更新内容
         changeLanguage(currentLang);
-
-        // 等待图片加载完成
-        const detailImage = document.querySelector('.detail-image');
-        const imageWrapper = document.querySelector('.image-wrapper');
         
-        try {
-            await imageLoadPromise;
-            document.getElementById('detail-img').src = imgUrl;
-            detailImage.classList.remove('loading');
-            imageWrapper.classList.add('loaded');
-        } catch (error) {
-            console.error('图片加载失败:', error);
-            detailImage.classList.remove('loading');
-        }
+        // 添加图片加载完成的处理
+        const img = document.getElementById('detail-img');
+        img.onload = function() {
+            this.classList.add('loaded');
+        };
     }
 });
 
