@@ -15,10 +15,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = document.getElementById('detail-img');
         const imageWrapper = document.querySelector('.image-wrapper');
         
+        // 检查是否需要刷新
+        const needsReload = !sessionStorage.getItem('imageLoaded');
+        
         // 设置图片加载完成的处理
         img.onload = function() {
             imageWrapper.classList.add('loaded');
             this.classList.add('loaded');
+            
+            // 只在第一次加载时刷新
+            if (needsReload) {
+                sessionStorage.setItem('imageLoaded', 'true');
+                setTimeout(() => {
+                    window.location.reload();
+                }, 200);
+            }
         };
         
         // 设置图片源
