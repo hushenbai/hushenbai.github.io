@@ -382,7 +382,7 @@ body {
     margin-bottom: 30px;
     perspective: 1000px;
     user-select: none;
-    position: relative; /* 为阴影定位添加参考 */
+
 }
 
 /* 图片容器 */
@@ -537,6 +537,7 @@ body {
 @media screen and (max-width: 800px) {
 
     .detail-container {
+        width: 100vw;
         flex-direction: column;
         align-items: center;
         gap: 40px;
