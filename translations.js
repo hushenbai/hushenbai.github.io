@@ -14,7 +14,7 @@ const translations = {
         '作者持有': '作者持有',
         '已收藏': '已收藏',
         'detail-TCMmain': '明珠薏苡系列指向华人的常见符号。<br>对中药的信仰比汉语的使用范围更广、也更虔诚。骄傲的华人追求一切，虚弱的华人祈求中药的疗效。<br>这些黑色的、苦涩的水，如同民族的长河，流淌在所有华人的生活中。<br>绘画是静态的，为了让尊严凝固其中，在姿态上抵御时间侵蚀。<br>生活中，药被急切地喝下。但在绘画中，药不会变质、不会蒸发、不会被倒掉，你有充分的时间来认识它、考虑是否需要它。',
-
+        'loading': '加载中...',
 
         '文言四字碗盛药图': '文言四字碗<br>盛药图',
         '四回字碗盛药图': '四回字碗<br>盛药图',
@@ -149,7 +149,7 @@ const translations = {
         '作者持有': 'Artist Holding',
         '已收藏': 'Collected',
         'detail-TCMmain': 'The Pearl, barley, sand series points to common symbols for the Chinese. <br>Belief in Chinese medicine is wider and more devout than the use of Chinese language. The proud Chinese looking for everything, the weak Chinese pray for the healing power of Chinese medicine. <br>These black, bitter waters, like the river of the nation, flow through the lives of all Chinese.<br>Painting is static, in order to freeze the dignity in it, in gestures resist the erosion of time. <br>In life, medicine is eagerly drunk. But in painting, medicine does not spoil, or get poured out; you have time to recognize it and consider whether you need it.',
-
+        'loading': 'Loading...',
 
         '文言四字碗盛药图': 'Classical tone characters bowl with Medicine',
         '四回字碗盛药图': 'Four "Hui" character bowl with Medicine',
