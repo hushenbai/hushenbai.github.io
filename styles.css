@@ -389,6 +389,7 @@ body {
 .detail-image .image-wrapper {
     position: relative;
     width: 70%;
+    aspect-ratio: 1 / 1;  /* 保持1:1的比例 */
     transform-style: preserve-3d;
     transform: translateZ(0) scale(1);
     transition: transform 0.2s ease;
@@ -558,6 +559,7 @@ body {
     .detail-image .image-wrapper {
     position: relative;
     width: 100%;
+    aspect-ratio: 1 / 1;  /* 移动端也保持1:1比例 */
     transform-style: preserve-3d; /* 保持3D效果 */
     transform: translateZ(0);
     transition: transform 0.1s ease;
@@ -602,21 +604,6 @@ body {
 .image-wrapper.loaded .image-placeholder {
     opacity: 0;
     pointer-events: none;
-}
-
-.loading-spinner {
-    width: 40px;
-    height: 40px;
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #b99745;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin-bottom: 10px;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }
 
 
