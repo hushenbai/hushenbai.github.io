@@ -84,5 +84,73 @@ function goToDetail(groupId, serialnumber) {
     window.location.href = `detail.html?${params.toString()}`;
 }
 
+// 在现有代码基础上添加
+document.addEventListener('DOMContentLoaded', () => {
+    // 检查当前页面
+    const isRSMPage = window.location.pathname.includes('rsm.html');
+    
+    // 根据页面类型生成不同的卡片
+    if (isRSMPage) {
+        generateCards('RSM');
+    } else {
+        generateCards('TCM');
+    }
+});
 
+// 修改 generateCards 函数以支持不同类型
+function generateCards(type) {
+    const container = document.querySelector('.grid-container');
+    if (!container) return;
+    
+    // 根据类型选择对应的数据
+    const projects = Object.values(groupedProjects).flat();
+    
+    projects.forEach(project => {
+        // 创建卡片的代码保持不变
+        // ...
+    });
+}
+
+function generateRSMGallery() {
+    const container = document.querySelector('.gallery-container');
+    if (!container) return;
+    
+    const projects = Object.values(groupedProjects).flat();
+    
+    projects.forEach(project => {
+        const item = document.createElement('div');
+        item.className = 'gallery-item';
+        
+        const img = document.createElement('img');
+        img.className = 'gallery-image';
+        img.src = project.image;
+        img.alt = project.title['data-lang'];
+        
+        const info = document.createElement('div');
+        info.className = 'gallery-info';
+        
+        const title = document.createElement('p1');
+        title.setAttribute('data-lang', project.title['data-lang']);
+        
+        const time = document.createElement('p2');
+        time.textContent = project.year;
+        
+        info.appendChild(title);
+        info.appendChild(time);
+        
+        item.appendChild(img);
+        item.appendChild(info);
+        container.appendChild(item);
+    });
+    
+    // 更新语言
+    changeLanguage(currentLang);
+}
+
+// 在页面加载时调用
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.location.pathname.includes('rsm.html')) {
+        generateRSMGallery();
+    }
+});
 
