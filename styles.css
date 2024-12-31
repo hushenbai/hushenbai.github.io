@@ -361,9 +361,10 @@ body {
 }
 
 .detail-container {
-    min-height: 100vh;
+    min-height: 100%;
     max-width: 1080px;
-    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
     display: flex;
     gap: 60px;
     flex-direction: column;
@@ -511,7 +512,7 @@ body {
 
 .exhibit-item {
     display: grid;
-    grid-template-columns: 48px 1fr 2fr 108px ;  /* 添加 new 标签的列 */
+    grid-template-columns: 48px 1fr 2fr 0.7fr ;  /* 添加 new 标签的列 */
     align-items: center;
     padding: 12px 0;
     border-bottom: 1px solid #ddd;
@@ -605,7 +606,7 @@ body {
         align-items: center;
         gap: 40px;
         padding: 28px;
-        margin-top: 60px;
+        margin-bottom: 16px;
     }
     
     .detail-image {
