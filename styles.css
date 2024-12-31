@@ -297,7 +297,7 @@ body {
 /* 子页面样式 */
 
 
-.detailtcm-container {
+.detail-container {
     min-height: 100%;
     max-width: 1080px;
     margin-top: 60px;
@@ -310,7 +310,7 @@ body {
     background: transparent;
 }
 
-.detailtcm-image {
+.detail-image {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -321,7 +321,7 @@ body {
 }
 
 /* 图片容器 */
-.detailtcm-image .image-wrapper {
+.detail-image .image-wrapper {
     position: relative;
     display: block;
     width: 100%;
@@ -332,24 +332,24 @@ body {
     cursor: grab;
 }
 
-.detailtcm-image .image-wrapper.dragging {
+.detail-image .image-wrapper.dragging {
     cursor: grabbing;
 }
 
 /* 触摸状态的缩放 */
-.detailtcm-image .image-wrapper.touching {
+.detail-image .image-wrapper.touching {
     transform: translateZ(0) scale(0.8);
 }
 
 /* 图片和深度层的容器 */
-.detailtcm-image .depth-container {
+.detail-image .depth-container {
     position: relative;
     transform-style: preserve-3d; /* 保持3D效果 */
     width: 100%;
 }
 
 /* 主图片 */
-.detailtcm-image img {
+.detail-image img {
     width: 100%;
     height: auto;
     opacity: 0;
@@ -362,7 +362,7 @@ body {
 }
 
 /* 深度层基础样式 */
-.detailtcm-image .depth-layer {
+.detail-image .depth-layer {
     position: absolute;
     top: 0;
     left: 0;
@@ -373,58 +373,58 @@ body {
 }
 
 /* 前两层使用白色 */
-.detailtcm-image .depth-layer:nth-child(2)  { 
+.detail-image .depth-layer:nth-child(2)  { 
     transform: translateZ(-4px);
     background: #e4e4e0;
 }
 
 /* 默认状态：56px 范围 */
-.detailtcm-image .depth-layer:nth-child(3)  { transform: translateZ(-8px); }
-.detailtcm-image .depth-layer:nth-child(4)  { transform: translateZ(-15px); }
-.detailtcm-image .depth-layer:nth-child(5)  { transform: translateZ(-22px); }
-.detailtcm-image .depth-layer:nth-child(6)  { transform: translateZ(-28px); }
-.detailtcm-image .depth-layer:nth-child(7)  { transform: translateZ(-33px); }
-.detailtcm-image .depth-layer:nth-child(8)  { transform: translateZ(-39px); }
-.detailtcm-image .depth-layer:nth-child(9)  { transform: translateZ(-45px); }
-.detailtcm-image .depth-layer:nth-child(10) { transform: translateZ(-50px); }
-.detailtcm-image .depth-layer:nth-child(11) { transform: translateZ(-56px); }
+.detail-image .depth-layer:nth-child(3)  { transform: translateZ(-8px); }
+.detail-image .depth-layer:nth-child(4)  { transform: translateZ(-15px); }
+.detail-image .depth-layer:nth-child(5)  { transform: translateZ(-22px); }
+.detail-image .depth-layer:nth-child(6)  { transform: translateZ(-28px); }
+.detail-image .depth-layer:nth-child(7)  { transform: translateZ(-33px); }
+.detail-image .depth-layer:nth-child(8)  { transform: translateZ(-39px); }
+.detail-image .depth-layer:nth-child(9)  { transform: translateZ(-45px); }
+.detail-image .depth-layer:nth-child(10) { transform: translateZ(-50px); }
+.detail-image .depth-layer:nth-child(11) { transform: translateZ(-56px); }
 
 /* 1080px 及以下：40px 范围 */
 @media screen and (max-width: 1080px) {
-    .detailtcm-image .depth-layer:nth-child(3)  { transform: translateZ(-8px); }
-    .detailtcm-image .depth-layer:nth-child(4)  { transform: translateZ(-12px); }
-    .detailtcm-image .depth-layer:nth-child(5)  { transform: translateZ(-16px); }
-    .detailtcm-image .depth-layer:nth-child(6)  { transform: translateZ(-20px); }
-    .detailtcm-image .depth-layer:nth-child(7)  { transform: translateZ(-24px); }
-    .detailtcm-image .depth-layer:nth-child(8)  { transform: translateZ(-28px); }
-    .detailtcm-image .depth-layer:nth-child(9)  { transform: translateZ(-32px); }
-    .detailtcm-image .depth-layer:nth-child(10) { transform: translateZ(-36px); }
-    .detailtcm-image .depth-layer:nth-child(11) { transform: translateZ(-40px); }
+    .detail-image .depth-layer:nth-child(3)  { transform: translateZ(-8px); }
+    .detail-image .depth-layer:nth-child(4)  { transform: translateZ(-12px); }
+    .detail-image .depth-layer:nth-child(5)  { transform: translateZ(-16px); }
+    .detail-image .depth-layer:nth-child(6)  { transform: translateZ(-20px); }
+    .detail-image .depth-layer:nth-child(7)  { transform: translateZ(-24px); }
+    .detail-image .depth-layer:nth-child(8)  { transform: translateZ(-28px); }
+    .detail-image .depth-layer:nth-child(9)  { transform: translateZ(-32px); }
+    .detail-image .depth-layer:nth-child(10) { transform: translateZ(-36px); }
+    .detail-image .depth-layer:nth-child(11) { transform: translateZ(-40px); }
 }
 
 /* 图片加载完成后的样式 */
-.detailtcm-image img.loaded {
+.detail-image img.loaded {
     opacity: 1;
 }
 
 /* 移动端触摸效果 */
 @media (hover: none) {
-    .detailtcm-image .image-wrapper:active {
+    .detail-image .image-wrapper:active {
         transform: rotateX(5deg) rotateY(-5deg);
     }
 }
 
 /* 右侧信息区域 */
-.detailtcm-info {
+.detail-info {
     padding: 0 24px;
     width: 100%;
 }
 
-.detailtcm-info h1 {
+.detail-info h1 {
     margin-bottom: 24px;
 }
 
-.detailtcm-info p0 {
+.detail-info p0 {
     display: block;
     margin-left: 4px;
 }
@@ -485,7 +485,7 @@ body {
 }
 
 
-.detailtcm-article {
+.detail-article {
     align-items: center;
     max-width: 1080px;
     padding: 0 60px;
@@ -496,12 +496,12 @@ body {
     width: 100%;
 }
 
-.detailtcm-line {
+.detail-line {
     text-align: left;
     margin-bottom: 24px;
 }
 
-.detailtcm-line p0 {
+.detail-line p0 {
     color: #202020;
     line-height: 2;
 }
@@ -510,18 +510,18 @@ body {
 
 
 @media screen and (min-width: 800px) {
-    .detailtcm-container {
+    .detail-container {
         flex-direction: row;
         align-items: center;
         padding: 60px;
     }
     
-    .detailtcm-image {
+    .detail-image {
         width: 55%;
         margin-bottom: 0;
     }
     
-    .detailtcm-info {
+    .detail-info {
         width: 45%;
         padding: 0;
     }
@@ -537,7 +537,7 @@ body {
 
 @media screen and (max-width: 800px) {
 
-    .detailtcm-container {
+    .detail-container {
         width: 100vw;
         flex-direction: column;
         align-items: center;
@@ -546,7 +546,7 @@ body {
         margin-bottom: 16px;
     }
     
-    .detailtcm-image {
+    .detail-image {
         width: 100%;
         margin-bottom: 0;
     }
@@ -564,7 +564,7 @@ body {
     }
 
     /* 图片容器 */
-    .detailtcm-image .image-wrapper {
+    .detail-image .image-wrapper {
     position: relative;
     width: 100%;
     aspect-ratio: 1 / 1;  /* 移动端也保持1:1比例 */
@@ -574,12 +574,12 @@ body {
     cursor: grab;
     }
     
-    .detailtcm-info {
+    .detail-info {
         width: 100%;
         padding: 0;
     }
 
-    .detailtcm-info p0 {
+    .detail-info p0 {
         display: block;
         margin-left: 2px;
     }
@@ -611,7 +611,7 @@ body {
         text-align: right;  /* 靠右对齐 */
     }
 
-    .detailtcm-article {
+    .detail-article {
         padding: 0 28px;
         margin-bottom: 80px;
     }

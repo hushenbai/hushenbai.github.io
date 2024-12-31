@@ -12,7 +12,7 @@ function createCards() {
         const cardsHTML = groupedProjects[groupId].map(project => {
             const titleKey = project.title['data-lang'];
             return `
-                <article class="card" onclick="goToDetailtcm('${groupId}', '${project.serialnumber}')">
+                <article class="card" onclick="goToDetail('${groupId}', '${project.serialnumber}')">
                     <div class="card-image">
                         <img src="${project.image}" alt="${translations[currentLang][titleKey]}">
                     </div>
@@ -76,17 +76,18 @@ function addNewContent() {
     document.body.appendChild(newElement);
 }
 
-function goToDetailtcm(groupId, serialnumber) {
+function goToDetail(groupId, serialnumber) {
     // 将数据存储到 URL 参数中
     const params = new URLSearchParams();
     params.set('group', groupId);
     params.set('id', serialnumber);
-    window.location.href = `Detailtcm.html?${params.toString()}`;
+    window.location.href = `Detail.html?${params.toString()}`;
 }
 
 // 在现有代码基础上添加
 document.addEventListener('DOMContentLoaded', () => {
     // 检查当前页面
+    const isDetailPage = window.location.pathname.includes('detail.html');
     const isRSMPage = window.location.pathname.includes('rsm.html');
     
     // 根据页面类型生成不同的卡片

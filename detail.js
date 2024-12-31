@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentProject = groupedProjects[groupId].find(p => p.serialnumber === serialnumber);
     
     if (currentProject) {
-        const img = document.getElementById('detailtcm-img');
+        const img = document.getElementById('detail-img');
         const imageWrapper = document.querySelector('.image-wrapper');
         
         // 设置图片加载完成的处理
@@ -25,15 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
         img.src = currentProject.image.replace('/TCM/', '/tcm-big/');
         
         // 更新基本信息
-        document.getElementById('detailtcm-serialnumber').textContent = currentProject.serialnumber;
-        document.getElementById('detailtcm-size').textContent = currentProject.size;
-        document.getElementById('detailtcm-weight').textContent = currentProject.weight;
-        document.getElementById('detailtcm-year').textContent = currentProject.year;
+        document.getElementById('detail-serialnumber').textContent = currentProject.serialnumber;
+        document.getElementById('detail-size').textContent = currentProject.size;
+        document.getElementById('detail-weight').textContent = currentProject.weight;
+        document.getElementById('detail-year').textContent = currentProject.year;
         
         // 设置需要翻译的元素
-        document.getElementById('detailtcm-title').setAttribute('data-lang', currentProject.title2['data-lang']);
-        document.getElementById('detailtcm-media').setAttribute('data-lang', currentProject.media['data-lang']);
-        document.getElementById('detailtcm-state').setAttribute('data-lang', currentProject.state['data-lang']);
+        document.getElementById('detail-title').setAttribute('data-lang', currentProject.title2['data-lang']);
+        document.getElementById('detail-media').setAttribute('data-lang', currentProject.media['data-lang']);
+        document.getElementById('detail-state').setAttribute('data-lang', currentProject.state['data-lang']);
         
         // 处理展览信息
         const exhibitsList = document.getElementById('exhibits-list');
