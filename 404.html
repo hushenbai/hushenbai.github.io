@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // 获取当前 URL 的路径和参数
+        const path = window.location.pathname;
+        const search = window.location.search;
+        
+        // 如果是 detail.html 的请求
+        if (path.includes('detail.html')) {
+            // 重定向到正确的路径
+            window.location.href = '/detail/' + search;
+        }
+    </script>
+</head>
+<body>
+    Redirecting...
+</body>
+</html> 
