@@ -511,7 +511,7 @@ body {
 
 .exhibit-item {
     display: grid;
-    grid-template-columns: 60px 1fr 2fr 120px ;  /* 添加 new 标签的列 */
+    grid-template-columns: 48px 1fr 2fr 108px ;  /* 添加 new 标签的列 */
     align-items: center;
     padding: 12px 0;
     border-bottom: 1px solid #ddd;
@@ -653,16 +653,23 @@ body {
         padding: 16px 28px;
     }
 
-    .exhibit-item .exhibit-name {
-        padding-left: 16px;
+    .new-tag {
+        font-size: 7px;
+        margin-left: 0px;  /* 与其他元素对齐 */
     }
-    
+
     .exhibit-item .exhibit-city {
-        padding-left: 16px;
+        padding-left: 8px;
     }
     
+
+    .exhibit-item .exhibit-name {
+        padding-left: 8px;
+    }
+    
+
     .exhibit-item .exhibit-time {
-        padding-right: 16px;
+        padding-right: 0px;
         text-align: right;  /* 靠右对齐 */
     }
 
