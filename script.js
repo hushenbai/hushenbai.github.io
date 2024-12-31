@@ -120,6 +120,10 @@ function generateRSMGallery() {
     projects.forEach(project => {
         const item = document.createElement('div');
         item.className = 'gallery-item';
+        item.onclick = () => {
+            //
+            window.location.href = `detailrsm.html?group=rsm&id=${project.serialnumber}`;
+        };
         
         const img = document.createElement('img');
         img.className = 'gallery-image';
@@ -142,7 +146,7 @@ function generateRSMGallery() {
         item.appendChild(info);
         container.appendChild(item);
     });
-    
+
     // 更新语言
     changeLanguage(currentLang);
 }

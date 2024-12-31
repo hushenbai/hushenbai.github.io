@@ -11,13 +11,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW1',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -42,13 +42,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW2',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -73,13 +73,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW3',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -104,13 +104,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW4',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -135,13 +135,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW5',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -166,13 +166,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW6',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -197,13 +197,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW7',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -228,13 +228,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW8',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -259,13 +259,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW9',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -290,13 +290,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW10',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -321,13 +321,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW11',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -352,13 +352,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW12',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -383,13 +383,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW13',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -414,13 +414,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW14',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -445,13 +445,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW15',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -476,13 +476,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW16',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -507,13 +507,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW17',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -538,7 +538,7 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW18',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
@@ -578,13 +578,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW19',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -609,13 +609,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMFW20',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -646,13 +646,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCSCT1',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -677,13 +677,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCSCT2',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -708,13 +708,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCSCT3',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -739,13 +739,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCSCT4',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -773,13 +773,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCSCT5',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -804,13 +804,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCSCT6',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -835,13 +835,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCSCT7',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -866,13 +866,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCSCT8',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -900,13 +900,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCSCW1',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -931,13 +931,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCSCW2',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -962,13 +962,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCSCW3',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -993,13 +993,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCSCW4',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1024,13 +1024,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCSCW5',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1058,13 +1058,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCS3G1',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1088,13 +1088,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCS3G2',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
             state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1118,13 +1118,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCS3G3',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
             state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1148,13 +1148,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCS3G4',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1178,13 +1178,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCS3G5',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1208,13 +1208,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCS3G6',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1238,13 +1238,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCS3G7',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1268,13 +1268,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCS3G8',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1298,13 +1298,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMCS3G9',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1331,13 +1331,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMES1',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1361,13 +1361,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMES2',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1391,13 +1391,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMES3',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1421,13 +1421,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMES4',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1453,13 +1453,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMNN1',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1483,13 +1483,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMNN2',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1513,13 +1513,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMNN3',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1543,13 +1543,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMNN4',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1573,13 +1573,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMNN5',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1603,13 +1603,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMNN6',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1633,13 +1633,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMNN7',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1663,13 +1663,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMNN8',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {
@@ -1693,13 +1693,13 @@ const groupedProjects = {
             },
             serialnumber: 'TCMNN9',
             media: {
-                'data-lang': '木板油画'
+                'data-lang': '木板油彩'
             },
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '作者持有'
+                'data-lang': '创作者持有'
             },
             "exhibits": [
                 {

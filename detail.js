@@ -1,6 +1,11 @@
 // 全局变量存储当前项目数据
 let currentProject = null;
 
+// 添加返回上一页函数
+function goBack() {
+    window.history.back();
+}
+
 // 页面加载时初始化
 document.addEventListener('DOMContentLoaded', () => {
     // 从 URL 获取参数
