@@ -11,6 +11,11 @@ function createCards() {
         
         const cardsHTML = groupedProjects[groupId].map(project => {
             const titleKey = project.title['data-lang'];
+            // 生成链接时使用 hash
+            const link = `detail.html#${project.serialnumber}`;
+
+            // 在 detail.js 中获取 ID
+            const id = window.location.hash.substring(1);
             return `
                 <article class="card" onclick="goToDetail('${groupId}', '${project.serialnumber}')">
                     <div class="card-image">
