@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Songti SC", "STSong", "华文宋体", "宋体", SimSun, ui-serif, serif;
+    font-family: "Gowun Batang","Noto Serif SC", "Noto Serif", serif;
     -webkit-font-smoothing: antialiased;  /* 优化字体渲染 */
     -moz-osx-font-smoothing: grayscale;   /* Firefox 字体渲染优化 */
     text-rendering: optimizeLegibility;    /* 优化字体清晰度 */
@@ -60,7 +60,7 @@ footer {
 
 h1 {
     font-size: 48pt;
-    font-family: "Songti SC", "STSong", "华文宋体", "宋体", SimSun, ui-serif, serif;
+    font-family: "Gowun Batang", "Noto Serif SC", "Noto Serif", serif;
     font-weight: 400;
     line-height: 1.15;
     color: #000;
@@ -68,16 +68,15 @@ h1 {
 
 h2 {
     font-size: 22pt;
-    font-family: "Songti SC", "STSong", "华文宋体", "宋体", SimSun, ui-serif, serif;
+    font-family: "Gowun Batang", "Noto Serif SC", "Noto Serif", serif;
     font-weight: 400;
-    font-style: italic;
     line-height: 1.15;
     color: #000;
 }
 
 h3 {
     font-size: 20pt;
-    font-family: "Songti SC", "STSong", "华文宋体", "宋体", SimSun, ui-serif, serif;
+    font-family: "Gowun Batang","Noto Serif SC", "Noto Serif", serif;
     font-weight: 400;
     color: #000;
     line-height: 1.5;
@@ -85,7 +84,7 @@ h3 {
 
 p0 {
     font-size: 14pt;
-    font-family: "Songti SC", "STSong", "华文宋体", "宋体", SimSun, ui-serif, serif;
+    font-family: "Gowun Batang","Noto Serif SC", "Noto Serif", serif;
     font-weight: 400;;
     color: #6e6e6e;
     line-height: 1.7;
