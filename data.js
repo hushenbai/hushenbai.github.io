@@ -16,9 +16,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                    "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                }
+            ]
         },
 
         {
@@ -36,9 +47,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -56,9 +78,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -76,9 +109,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -96,9 +140,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -116,9 +171,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -136,9 +202,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -156,9 +233,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -176,9 +264,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -196,9 +295,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -216,9 +326,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -236,9 +357,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -256,9 +388,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -276,9 +419,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -296,9 +450,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -316,9 +481,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -336,9 +512,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -359,6 +546,26 @@ const groupedProjects = {
             state: {
                 'data-lang': '已收藏'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "One's 咖啡店"
+                    },
+                    "time": "2025.01",
+                },
+                {
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                    "city": {
+                        "data-lang": "成都"
+                    }
+                },
+            ]
         },
 
         {
@@ -376,9 +583,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -396,9 +614,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
 
@@ -422,9 +651,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -442,9 +682,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -462,9 +713,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -482,9 +744,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         // 第二组的更多项目...
     ],
@@ -505,9 +778,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -525,9 +809,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -545,9 +840,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -565,9 +871,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         // 第二组的更多项目...
     ],
@@ -588,9 +905,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -608,9 +936,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -628,9 +967,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -648,9 +998,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
 
         {
@@ -668,9 +1029,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         // 第二组的更多项目...
     ],
@@ -691,9 +1063,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMCS3G2兴山紫釉碗盛药图.png',
@@ -713,6 +1096,17 @@ const groupedProjects = {
             state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMCS3G3巴东紫釉碗盛药图.png',
@@ -732,6 +1126,17 @@ const groupedProjects = {
             state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMCS3G4巫山紫釉碗盛药图.png',
@@ -748,9 +1153,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMCS3G5奉节紫釉碗盛药图.png',
@@ -767,9 +1183,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMCS3G6万县紫釉碗盛药图.png',
@@ -786,9 +1213,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMCS3G7开县紫釉碗盛药图.png',
@@ -805,9 +1243,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMCS3G8丰都紫釉碗盛药图.png',
@@ -824,9 +1273,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMCS3G9云阳紫釉碗盛药图.png',
@@ -843,9 +1303,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         
     ],
@@ -865,9 +1336,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMES2花迎娣黄衣搪瓷碗盛药图.png',
@@ -884,9 +1366,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMES3花念娣粉衣搪瓷碗盛药图.png',
@@ -903,9 +1396,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMES4花盼娣青衣搪瓷碗盛药图.png',
@@ -922,9 +1426,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
     ],
     group7: [
@@ -943,9 +1458,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMNN2娘惹黄蓝瓷碗盛药图.png',
@@ -962,9 +1488,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMNN3娘惹黄绿瓷碗盛药图.png',
@@ -981,9 +1518,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMNN4娘惹黄罗瓷碗盛药图.png',
@@ -1000,9 +1548,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMNN5娘惹蓝绿瓷碗盛药图.png',
@@ -1019,9 +1578,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMNN6娘惹粉罗瓷碗盛药图.png',
@@ -1038,9 +1608,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMNN7娘惹土粉瓷碗盛药图.png',
@@ -1057,9 +1638,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMNN8娘惹酱绿瓷碗盛药图.png',
@@ -1076,9 +1668,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
         {
             image: './assets/TCM/TCMNN9娘惹红黄瓷碗盛药图.png',
@@ -1095,9 +1698,20 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
+                        state: {
                 'data-lang': '作者持有'
             },
+            "exhibits": [
+                {
+                     "city": {
+                        "data-lang": "成都"
+                    },
+                    "name": {
+                        "data-lang": "工作室"
+                    },
+                    "time": "2024.12",
+                },
+            ]
         },
     ],
     // 可以添加更多组...

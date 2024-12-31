@@ -24,17 +24,59 @@ document.addEventListener('DOMContentLoaded', () => {
         // 设置图片源
         img.src = currentProject.image.replace('/TCM/', '/TCM-big/');
         
-        // 更新其他内容
+        // 更新基本信息
         document.getElementById('detail-serialnumber').textContent = currentProject.serialnumber;
         document.getElementById('detail-size').textContent = currentProject.size;
         document.getElementById('detail-weight').textContent = currentProject.weight;
         document.getElementById('detail-year').textContent = currentProject.year;
-
         
         // 设置需要翻译的元素
         document.getElementById('detail-title').setAttribute('data-lang', currentProject.title2['data-lang']);
         document.getElementById('detail-media').setAttribute('data-lang', currentProject.media['data-lang']);
         document.getElementById('detail-state').setAttribute('data-lang', currentProject.state['data-lang']);
+        
+        // 处理展览信息
+        const exhibitsList = document.getElementById('exhibits-list');
+        if (currentProject.exhibits && exhibitsList) {
+            exhibitsList.innerHTML = '';
+            
+            currentProject.exhibits.forEach((exhibit, index) => {
+                const exhibitItem = document.createElement('div');
+                exhibitItem.className = 'exhibit-item';
+                
+                // 创建 new 标签容器（始终创建以保持布局一致）
+                const newTagContainer = document.createElement('span');
+                newTagContainer.className = 'new-tag-container';
+                if (index === 0) {
+                    const newTag = document.createElement('span');
+                    newTag.className = 'new-tag';
+                    newTag.textContent = 'NEW';
+                    newTagContainer.appendChild(newTag);
+                }
+                
+                const exhibitCity = document.createElement('span');
+                exhibitCity.className = 'exhibit-city';
+                const cityText = document.createElement('span');
+                cityText.setAttribute('data-lang', exhibit.city['data-lang']);
+                exhibitCity.appendChild(cityText);
+                
+                const exhibitName = document.createElement('span');
+                exhibitName.className = 'exhibit-name';
+                exhibitName.setAttribute('data-lang', exhibit.name['data-lang']);
+                
+                const exhibitTime = document.createElement('span');
+                exhibitTime.className = 'exhibit-time';
+                exhibitTime.textContent = exhibit.time;
+                
+                // 按新顺序添加元素
+                exhibitItem.appendChild(newTagContainer);
+                exhibitItem.appendChild(exhibitCity);
+                exhibitItem.appendChild(exhibitName);
+                exhibitItem.appendChild(exhibitTime);
+                
+                exhibitsList.appendChild(exhibitItem);
+            });
+        }
         
         // 使用全局语言设置更新内容
         changeLanguage(currentLang);
@@ -126,11 +168,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const deltaY = (e.clientY - centerY) / centerY;
                 
                 // 计算旋转角度（最大20度）
-                const rotateY = deltaX * 30;
-                const rotateX = -deltaY * 30;
+                const rotateY = deltaX * 35;
+                const rotateX = -deltaY * 35;
                 
                 // 应用平滑过渡
-                wrapper.style.transition = 'transform 0.3s ease-out';
+                wrapper.style.transition = 'transform 0.8s ease-out';
                 wrapper.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
             });
 
