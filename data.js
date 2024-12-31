@@ -28,7 +28,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 }
@@ -62,7 +62,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -96,7 +96,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -130,7 +130,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -164,7 +164,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -198,7 +198,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -232,7 +232,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -266,7 +266,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -300,7 +300,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -334,7 +334,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -368,7 +368,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -402,7 +402,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -436,7 +436,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -470,7 +470,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -504,7 +504,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -538,7 +538,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -572,7 +572,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -612,7 +612,7 @@ const groupedProjects = {
                 },
                 {
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                     "city": {
@@ -649,7 +649,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -683,7 +683,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -723,7 +723,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -757,7 +757,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -791,7 +791,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -825,7 +825,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -862,7 +862,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -896,7 +896,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -930,7 +930,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -964,7 +964,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1001,7 +1001,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1035,7 +1035,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1069,7 +1069,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1103,7 +1103,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1137,7 +1137,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1174,7 +1174,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1207,7 +1207,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1240,7 +1240,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1273,7 +1273,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1306,7 +1306,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1339,7 +1339,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1372,7 +1372,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1405,7 +1405,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1438,7 +1438,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1474,7 +1474,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1507,7 +1507,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1540,7 +1540,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1573,7 +1573,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1608,7 +1608,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1641,7 +1641,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1674,7 +1674,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1707,7 +1707,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1740,7 +1740,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1773,7 +1773,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1806,7 +1806,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1839,7 +1839,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1872,7 +1872,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "工作室"
+                        "data-lang": "申白的工作室"
                     },
                     "time": "2024.12",
                 },
