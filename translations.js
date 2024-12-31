@@ -5,21 +5,33 @@ let currentLang = localStorage.getItem('preferred-language') || 'zh';
 const translations = {
     'zh': {
         'title': '明珠薏苡',
-        'subtitle': 'Pearl, barley, sand',
+        'subtitle': 'PearlBarleySand',
+        'back': '返回',
+        'switch-lang': 'English',
+        'tcm-title': '明珠薏苡',
+        'rsm-title': '重圆镜',
         'nav-all': '全部',
         'nav-get': '获得',
         'nav-author': '作者',
         'back': '返回',
-        '木板油画': '木板油画',
+        '木板油彩': '木板油彩',
+        '帆布油彩': '帆布油彩',
         '作者持有': '创作者持有',
         '已收藏': '已收藏',
-        'detail-TCMmain': '明珠薏苡系列指向华人的常见符号。<br>对中药的信仰比汉语的使用范围更广、也更虔诚。骄傲的华人追求一切，虚弱的华人祈求中药的疗效。<br>这些黑色的、苦涩的水，如同民族的长河，流淌在所有华人的生活中。<br>绘画是静态的，为了让尊严凝固其中，在姿态上抵御时间侵蚀。<br>生活中，药被急切地喝下。但在绘画中，药不会变质、不会蒸发、不会被倒掉，你有充分的时间来认识它、考虑是否需要它。',
+        'detailtcm-TCMmain': '明珠薏苡系列指向华人的常见符号。<br>对中药的信仰比汉语的使用范围更广、也更虔诚。骄傲的华人追求一切，虚弱的华人祈求中药的疗效。<br>这些黑色的、苦涩的水，如同民族的长河，流淌在所有华人的生活中。<br>绘画是静态的，为了让尊严凝固其中，在姿态上抵御时间侵蚀。<br>生活中，药被急切地喝下。但在绘画中，药不会变质、不会蒸发、不会被倒掉，你有充分的时间来认识它、考虑是否需要它。',
         'loading': '加载中...',
         'exhibitions': '追踪',
         '工作室': '申白的工作室',
         'One\'s 咖啡店': 'One\'s 咖啡店',
         '成都': '成都',
 
+        '推荐': '推荐',
+        '表达': '表达',
+        '判断': '判断',    
+        '烤火': '烤火',
+        '尝试': '尝试',
+        '抓握': '抓握',
+        '介绍': '介绍',
 
         '文言四字碗盛药图': '文言四字碗<br>盛药图',
         '四回字碗盛药图': '四回字碗<br>盛药图',
@@ -140,8 +152,7 @@ const translations = {
         '娘惹<br>酱绿瓷碗<br>盛药图': '娘惹<br>酱绿瓷碗<br>盛药图',
         '娘惹<br>红黄瓷碗<br>盛药图': '娘惹<br>红黄瓷碗<br>盛药图',
 
-        'back': '返回',
-        'switch-lang': 'English',
+
     },
     'en': {
         'title': 'Pearl Barley',
@@ -150,15 +161,23 @@ const translations = {
         'nav-get': 'Get',
         'nav-author': 'Author',
         'back': 'Back',
-        '木板油画': 'Oil on wood',
+        '木板油彩': 'Oil on wood',
         '作者持有': 'Artist Holding',
         '已收藏': 'Collected',
-        'detail-TCMmain': 'The Pearl, barley, sand series points to common symbols for the Chinese. <br>Belief in Chinese medicine is wider and more devout than the use of Chinese language. The proud Chinese looking for everything, the weak Chinese pray for the healing power of Chinese medicine. <br>These black, bitter waters, like the river of the nation, flow through the lives of all Chinese.<br>Painting is static, in order to freeze the dignity in it, in gestures resist the erosion of time. <br>In life, medicine is eagerly drunk. But in painting, medicine does not spoil, or get poured out; you have time to recognize it and consider whether you need it.',
+        'detailtcm-TCMmain': 'The Pearl, barley, sand series points to common symbols for the Chinese. <br>Belief in Chinese medicine is wider and more devout than the use of Chinese language. The proud Chinese looking for everything, the weak Chinese pray for the healing power of Chinese medicine. <br>These black, bitter waters, like the river of the nation, flow through the lives of all Chinese.<br>Painting is static, in order to freeze the dignity in it, in gestures resist the erosion of time. <br>In life, medicine is eagerly drunk. But in painting, medicine does not spoil, or get poured out; you have time to recognize it and consider whether you need it.',
         'loading': 'Loading...',
         'exhibitions': 'Track',
         '工作室': 'Artist\'s workshop',
         'One\'s 咖啡店': 'One\'s Coffee',
         '成都': 'Chengdu',
+
+        '推荐': 'Recommend',
+        '表达': 'Voice',
+        '判断': 'Judge',    
+        '烤火': 'Heat',
+        '尝试': 'Try',
+        '抓握': 'Grasp',
+        '介绍': 'Introduce',
 
         '文言四字碗盛药图': 'Classical tone characters bowl with Medicine',
         '四回字碗盛药图': 'Four "Hui" character bowl with Medicine',
@@ -184,7 +203,7 @@ const translations = {
         '糯玉瓷碗盛药图': 'Glutinous jade porcelain bowl with Medicine',
         '绿铁碗盛药图': 'Green iron bowl with Medicine',
         '草地金斑黑瓷碗盛药图': 'Grass ground gold-speckle black porcelain bowl with Medicine',
-        '碎绿地白瓷碗盛药图': 'sprinkle green ground white porcelain bowl with Medicine',
+        '碎绿地白瓷碗盛药图': 'Sprinkle green ground white porcelain bowl with Medicine',
         '淤血白瓷碗盛药图': 'Bruise white porcelain bowl with Medicine',
         '淤花纹蓝底钵盛药图': 'Bruise blue-bottomed bowl with Medicine',
         '之字白瓷碗盛药图': 'Zi symbol white porcelain bowl with Medicine',
@@ -281,6 +300,8 @@ const translations = {
 
         'back': 'Back',
         'switch-lang': '中文',
+        'tcm-title': 'PearlBarleySand',
+        'rsm-title': 'RestoredMirrors',
     }
 }; 
 
