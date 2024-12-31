@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         // 设置图片源
-        img.src = currentProject.image.replace('/TCM/', '/tcm-big/');
+        img.src = currentProject.image.replace('/TCM/', '/TCM-big/');
         
         // 更新基本信息
         document.getElementById('detail-serialnumber').textContent = currentProject.serialnumber;
