@@ -67,7 +67,7 @@ h1 {
 }
 
 h2 {
-    font-size: 48pt;
+    font-size: 22pt;
     font-family: "Songti SC", "STSong", "华文宋体", "宋体", SimSun, ui-serif, serif;
     font-weight: 400;
     font-style: italic;
@@ -257,13 +257,11 @@ body {
 .card-content p1 {
     margin-bottom: 0px;
     color: #666;
-    font-family: "SimSun", sans-serif;
 }
 
 .card-content p2 {
     margin-bottom: 0px;
     color: #c0c0c0;
-    font-family: "SimSun", sans-serif;
 }
 
 /* 响应式布局调整 */
@@ -388,6 +386,7 @@ body {
 /* 图片容器 */
 .detail-image .image-wrapper {
     position: relative;
+    display: block;
     width: 70%;
     aspect-ratio: 1 / 1;  /* 保持1:1的比例 */
     transform-style: preserve-3d;
@@ -442,16 +441,29 @@ body {
     background: #e4e4e0;
 }
 
-/* 其他层保持原有颜色和位置 */
+/* 默认状态：56px 范围 */
 .detail-image .depth-layer:nth-child(3)  { transform: translateZ(-8px); }
-.detail-image .depth-layer:nth-child(4)  { transform: translateZ(-12px); }
-.detail-image .depth-layer:nth-child(5)  { transform: translateZ(-16px); }
-.detail-image .depth-layer:nth-child(6)  { transform: translateZ(-20px); }
-.detail-image .depth-layer:nth-child(7)  { transform: translateZ(-24px); }
-.detail-image .depth-layer:nth-child(8)  { transform: translateZ(-28px); }
-.detail-image .depth-layer:nth-child(9)  { transform: translateZ(-32px); }
-.detail-image .depth-layer:nth-child(10) { transform: translateZ(-36px); }
-.detail-image .depth-layer:nth-child(11) { transform: translateZ(-40px); }
+.detail-image .depth-layer:nth-child(4)  { transform: translateZ(-15px); }
+.detail-image .depth-layer:nth-child(5)  { transform: translateZ(-22px); }
+.detail-image .depth-layer:nth-child(6)  { transform: translateZ(-28px); }
+.detail-image .depth-layer:nth-child(7)  { transform: translateZ(-33px); }
+.detail-image .depth-layer:nth-child(8)  { transform: translateZ(-39px); }
+.detail-image .depth-layer:nth-child(9)  { transform: translateZ(-45px); }
+.detail-image .depth-layer:nth-child(10) { transform: translateZ(-50px); }
+.detail-image .depth-layer:nth-child(11) { transform: translateZ(-56px); }
+
+/* 1080px 及以下：40px 范围 */
+@media screen and (max-width: 1080px) {
+    .detail-image .depth-layer:nth-child(3)  { transform: translateZ(-8px); }
+    .detail-image .depth-layer:nth-child(4)  { transform: translateZ(-12px); }
+    .detail-image .depth-layer:nth-child(5)  { transform: translateZ(-16px); }
+    .detail-image .depth-layer:nth-child(6)  { transform: translateZ(-20px); }
+    .detail-image .depth-layer:nth-child(7)  { transform: translateZ(-24px); }
+    .detail-image .depth-layer:nth-child(8)  { transform: translateZ(-28px); }
+    .detail-image .depth-layer:nth-child(9)  { transform: translateZ(-32px); }
+    .detail-image .depth-layer:nth-child(10) { transform: translateZ(-36px); }
+    .detail-image .depth-layer:nth-child(11) { transform: translateZ(-40px); }
+}
 
 /* 图片加载完成后的样式 */
 .detail-image img.loaded {
@@ -523,13 +535,7 @@ body {
 @media screen and (max-width: 1080px) {
     
     h1 {
-        font-size: 36pt;
-    }
-    h2 {
-        font-size: 36pt;
-    }
-    h3 {
-        font-size: 18pt;
+        font-size: 40pt;
     }
 }
 
@@ -551,10 +557,15 @@ body {
     }
 
     h1 {
-        font-size: 30pt;
+        font-size: 32pt;
     }
+
     h2 {
-        font-size: 30pt;
+        font-size: 18pt;
+    }
+
+    h3 {
+        font-size: 14pt;
     }
 
     /* 图片容器 */
