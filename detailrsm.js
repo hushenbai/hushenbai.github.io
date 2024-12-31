@@ -27,16 +27,17 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         // 设置图片源
-        img.src = currentProject.image.replace('/TCM/', '/TCM-big/');
+        img.src = currentProject.image;
         
         // 更新基本信息
         document.getElementById('detail-serialnumber').textContent = currentProject.serialnumber;
         document.getElementById('detail-size').textContent = currentProject.size;
         document.getElementById('detail-weight').textContent = currentProject.weight;
         document.getElementById('detail-year').textContent = currentProject.year;
+        
         // 设置需要翻译的元素
-        document.getElementById('detail-title').setAttribute('data-lang', currentProject.title2['data-lang']);
         document.getElementById('detail-series').setAttribute('data-lang', currentProject.series['data-lang']);
+        document.getElementById('detail-title').setAttribute('data-lang', currentProject.title['data-lang']);
         document.getElementById('detail-media').setAttribute('data-lang', currentProject.media['data-lang']);
         document.getElementById('detail-state').setAttribute('data-lang', currentProject.state['data-lang']);
         
@@ -137,8 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 rotationX = -(touch.clientY - startY) * 0.5;
                 
                 // 限制旋转角度
-                rotationX = Math.max(-30, Math.min(30, rotationX));
-                rotationY = Math.max(-30, Math.min(30, rotationY));
+                rotationX = Math.max(-15, Math.min(15, rotationX));
+                rotationY = Math.max(-15, Math.min(15, rotationY));
                 
                 // 合并缩放和旋转变换
                 wrapper.style.transform = `translateZ(0) scale(0.9) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
@@ -173,8 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const deltaY = (e.clientY - centerY) / centerY;
                 
                 // 计算旋转角度（最大20度）
-                const rotateY = deltaX * 35;
-                const rotateX = -deltaY * 35;
+                const rotateY = deltaX * 15;
+                const rotateX = -deltaY * 15;
                 
                 // 应用平滑过渡
                 wrapper.style.transition = 'transform 0.8s ease-out';

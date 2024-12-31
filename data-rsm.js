@@ -9,6 +9,9 @@ const groupedProjects = {
             "media": {
                 "data-lang": "帆布油彩"
             },
+            "series": {
+                'data-lang': "四川女人"
+            },
             "size": "80 x 100 x 3.2 cm",
             "weight": "10.5 kg",
             "year": "2024",
@@ -35,6 +38,9 @@ const groupedProjects = {
             "image": "./assets/RSM/RSMSC2表达.png",
             "media": {
                 "data-lang": "帆布油彩"
+            },
+            "series": {
+                'data-lang': "四川女人"
             },
             "size": "80 x 100 x 3.2 cm",
             "weight": "10.5 kg",
@@ -63,6 +69,9 @@ const groupedProjects = {
             "media": {
                 "data-lang": "帆布油彩"
             },
+            "series": {
+                'data-lang': "四川女人"
+            },
             "size": "80 x 100 x 3.2 cm",
             "weight": "10.5 kg",
             "year": "2024",
@@ -89,6 +98,9 @@ const groupedProjects = {
             "image": "./assets/RSM/RSMSC5烤火.png",
             "media": {
                 "data-lang": "帆布油彩"
+            },
+            "series": {
+                'data-lang': "四川女人"
             },
             "size": "100 x 120 x 3.2 cm",
             "weight": "14.5 kg",
@@ -117,6 +129,9 @@ const groupedProjects = {
             "media": {
                 "data-lang": "帆布油彩"
             },
+            "series": {
+                'data-lang': "四川女人"
+            },
             "size": "100 x 120 x 3.2 cm",
             "weight": "14.5 kg",
             "year": "2024",
@@ -144,6 +159,9 @@ const groupedProjects = {
             "media": {
                 "data-lang": "帆布油彩"
             },
+            "series": {
+                'data-lang': "四川女人"
+            },
             "size": "80 x 100 x 3.2 cm",
             "weight": "10.5 kg",
             "year": "2024",
@@ -170,6 +188,9 @@ const groupedProjects = {
             "image": "./assets/RSM/RSMSC8介绍.png",
             "media": {
                 "data-lang": "帆布油彩"
+            },
+            "series": {
+                'data-lang': "四川女人"
             },
             "size": "100 x 120 x 3.2 cm",
             "weight": "14.5 kg",

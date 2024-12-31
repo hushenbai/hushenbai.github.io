@@ -115,41 +115,42 @@ function generateRSMGallery() {
     const container = document.querySelector('.gallery-container');
     if (!container) return;
     
-    const projects = Object.values(groupedProjects).flat();
-    
-    projects.forEach(project => {
-        const item = document.createElement('div');
-        item.className = 'gallery-item';
-        item.onclick = () => {
-            //
-            window.location.href = `detailrsm.html?group=rsm&id=${project.serialnumber}`;
-        };
-        
-        const img = document.createElement('img');
-        img.className = 'gallery-image';
-        img.src = project.image;
-        img.alt = project.title['data-lang'];
-        
-        const info = document.createElement('div');
-        info.className = 'gallery-info';
-        
-        const title = document.createElement('p1');
-        title.setAttribute('data-lang', project.title['data-lang']);
-        
-        const time = document.createElement('p2');
-        time.textContent = project.year;
-        
-        info.appendChild(title);
-        info.appendChild(time);
-        
-        item.appendChild(img);
-        item.appendChild(info);
-        container.appendChild(item);
+    Object.entries(groupedProjects).forEach(([groupId, projects]) => {
+        projects.forEach(project => {
+            const item = document.createElement('div');
+            item.className = 'gallery-item';
+            
+            item.onclick = () => {
+                window.location.href = `detailrsm.html?group=${groupId}&id=${project.serialnumber}`;
+            };
+            
+            const img = document.createElement('img');
+            img.className = 'gallery-image';
+            img.src = project.image;
+            img.alt = project.title['data-lang'];
+            
+            const info = document.createElement('div');
+            info.className = 'gallery-info';
+            
+            const title = document.createElement('p1');
+            title.setAttribute('data-lang', project.title['data-lang']);
+            title.textContent = project.title['data-lang'];
+            
+            const time = document.createElement('p2');
+            time.textContent = project.year;
+            
+            info.appendChild(title);
+            info.appendChild(time);
+            
+            item.appendChild(img);
+            item.appendChild(info);
+            container.appendChild(item);
+        });
     });
-
-    // 更新语言
-    changeLanguage(currentLang);
 }
+
+// 更新语言
+changeLanguage(currentLang);
 
 // 在页面加载时调用
 document.addEventListener('DOMContentLoaded', () => {

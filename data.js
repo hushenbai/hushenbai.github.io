@@ -10,6 +10,9 @@ const groupedProjects = {
                 'data-lang': '白陶碗<br>盛药图'
             },
             serialnumber: 'TCMFW1',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -41,6 +44,9 @@ const groupedProjects = {
                 'data-lang': '金叶纹铜碗<br>盛药图'
             },
             serialnumber: 'TCMFW2',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -72,6 +78,9 @@ const groupedProjects = {
                 'data-lang': '柔形白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW3',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -103,6 +112,9 @@ const groupedProjects = {
                 'data-lang': '金边天蓝釉<br>瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW4',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -134,6 +146,9 @@ const groupedProjects = {
                 'data-lang': '枯草地<br>白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW5',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -165,6 +180,9 @@ const groupedProjects = {
                 'data-lang': '金环白瓷盘<br>盛药图'
             },
             serialnumber: 'TCMFW6',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -196,6 +214,9 @@ const groupedProjects = {
                 'data-lang': '紫地<br>高足白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW7',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -227,6 +248,9 @@ const groupedProjects = {
                 'data-lang': '金边黑釉<br>扁陶碗<br>盛药图'
             },
             serialnumber: 'TCMFW8',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -258,6 +282,9 @@ const groupedProjects = {
                 'data-lang': '金边墨蓝釉<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMFW9',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -289,6 +316,9 @@ const groupedProjects = {
                 'data-lang': '素青瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW10',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -320,6 +350,9 @@ const groupedProjects = {
                 'data-lang': '大玻璃碗<br>盛药图'
             },
             serialnumber: 'TCMFW11',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -351,6 +384,9 @@ const groupedProjects = {
                 'data-lang': '冰蓝釉褐边<br>厚碗<br>盛药图'
             },
             serialnumber: 'TCMFW12',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -382,6 +418,9 @@ const groupedProjects = {
                 'data-lang': '金地<br>黑边灰土碗<br>盛药图'
             },
             serialnumber: 'TCMFW13',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -413,6 +452,9 @@ const groupedProjects = {
                 'data-lang': '黄釉<br>喇叭瓷盘<br>盛药图'
             },
             serialnumber: 'TCMFW14',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -444,6 +486,9 @@ const groupedProjects = {
                 'data-lang': '糯玉瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW15',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -475,6 +520,9 @@ const groupedProjects = {
                 'data-lang': '绿铁碗<br>盛药图'
             },
             serialnumber: 'TCMFW16',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -506,6 +554,9 @@ const groupedProjects = {
                 'data-lang': '草地<br>金斑黑瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW17',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -537,6 +588,9 @@ const groupedProjects = {
                 'data-lang': '碎绿地<br>白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW18',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -577,6 +631,9 @@ const groupedProjects = {
                 'data-lang': '淤血白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW19',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -608,6 +665,9 @@ const groupedProjects = {
                 'data-lang': '淤花纹<br>蓝底钵<br>盛药图'
             },
             serialnumber: 'TCMFW20',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -645,6 +705,9 @@ const groupedProjects = {
                 'data-lang': '之字<br>白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT1',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -676,6 +739,9 @@ const groupedProjects = {
                 'data-lang': '乎字<br>白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT2',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -707,6 +773,9 @@ const groupedProjects = {
                 'data-lang': '者字<br>白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT3',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -738,6 +807,9 @@ const groupedProjects = {
                 'data-lang': '也字<br>白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT4',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -772,6 +844,9 @@ const groupedProjects = {
                 'data-lang': '回字第一形<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT5',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -803,6 +878,9 @@ const groupedProjects = {
                 'data-lang': '回字第二形<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT6',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -834,6 +912,9 @@ const groupedProjects = {
                 'data-lang': '回字第三形<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT7',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -865,6 +946,9 @@ const groupedProjects = {
                 'data-lang': '回字第四形<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT8',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -899,6 +983,9 @@ const groupedProjects = {
                 'data-lang': '天字<br>红碗<br>盛药图'
             },
             serialnumber: 'TCMCSCW1',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -930,6 +1017,9 @@ const groupedProjects = {
                 'data-lang': '地字<br>红碗<br>盛药图'
             },
             serialnumber: 'TCMCSCW2',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -961,6 +1051,9 @@ const groupedProjects = {
                 'data-lang': '君字<br>红碗<br>盛药图'
             },
             serialnumber: 'TCMCSCW3',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -992,6 +1085,9 @@ const groupedProjects = {
                 'data-lang': '亲字<br>红碗<br>盛药图'
             },
             serialnumber: 'TCMCSCW4',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1023,6 +1119,9 @@ const groupedProjects = {
                 'data-lang': '师字<br>红碗<br>盛药图'
             },
             serialnumber: 'TCMCSCW5',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1057,6 +1156,9 @@ const groupedProjects = {
                 'data-lang': '秭归<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G1',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1087,6 +1189,9 @@ const groupedProjects = {
                 'data-lang': '兴山<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G2',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1117,6 +1222,9 @@ const groupedProjects = {
                 'data-lang': '巴东<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G3',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1147,6 +1255,9 @@ const groupedProjects = {
                 'data-lang': '巫山<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G4',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1177,6 +1288,9 @@ const groupedProjects = {
                 'data-lang': '奉节<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G5',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1207,6 +1321,9 @@ const groupedProjects = {
                 'data-lang': '万县<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G6',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1237,6 +1354,9 @@ const groupedProjects = {
                 'data-lang': '开县<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G7',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1267,6 +1387,9 @@ const groupedProjects = {
                 'data-lang': '丰都<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G8',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1297,6 +1420,9 @@ const groupedProjects = {
                 'data-lang': '云阳<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G9',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1330,6 +1456,9 @@ const groupedProjects = {
                 'data-lang': '花招娣<br>白衣搪瓷碗<br>盛药图'
             },
             serialnumber: 'TCMES1',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1360,6 +1489,9 @@ const groupedProjects = {
                 'data-lang': '花迎娣<br>黄衣搪瓷碗<br>盛药图'
             },
             serialnumber: 'TCMES2',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1390,6 +1522,9 @@ const groupedProjects = {
                 'data-lang': '花念娣<br>粉衣搪瓷碗<br>盛药图'
             },
             serialnumber: 'TCMES3',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1420,6 +1555,9 @@ const groupedProjects = {
                 'data-lang': '花盼娣<br>青衣搪瓷碗<br>盛药图'
             },
             serialnumber: 'TCMES4',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1452,6 +1590,9 @@ const groupedProjects = {
                 'data-lang': '娘惹<br>绿粉瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN1',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1482,6 +1623,9 @@ const groupedProjects = {
                 'data-lang': '娘惹<br>黄蓝瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN2',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1512,6 +1656,9 @@ const groupedProjects = {
                 'data-lang': '娘惹<br>黄绿瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN3',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1542,6 +1689,9 @@ const groupedProjects = {
                 'data-lang': '娘惹<br>黄罗瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN4',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1572,6 +1722,9 @@ const groupedProjects = {
                 'data-lang': '娘惹<br>蓝绿瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN5',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1602,6 +1755,9 @@ const groupedProjects = {
                 'data-lang': '娘惹<br>粉罗瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN6',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1632,6 +1788,9 @@ const groupedProjects = {
                 'data-lang': '娘惹<br>土粉瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN7',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1662,6 +1821,9 @@ const groupedProjects = {
                 'data-lang': '娘惹<br>酱绿瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN8',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
@@ -1692,6 +1854,9 @@ const groupedProjects = {
                 'data-lang': '娘惹<br>红黄瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN9',
+            series: {
+                'data-lang': '传统中药'
+            },
             media: {
                 'data-lang': '木板油彩'
             },
