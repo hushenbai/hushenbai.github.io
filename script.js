@@ -210,3 +210,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentLang = getCurrentLanguage();
     updateLanguage(currentLang);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const detailContainer = document.querySelector('.detail-container');
+    const scrollSpeed = 0.3;
+    
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        detailContainer.style.transform = `translateY(${scrollPosition * scrollSpeed}px)`;
+    });
+});
+

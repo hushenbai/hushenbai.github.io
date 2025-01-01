@@ -38,51 +38,61 @@
         </nav>
     </div>
 
-    <div class="detail-container">
-        <div class="detail-image">
-            <div class="image-wrapper">               
-                <div class="depth-container">
-                    <img id="detail-img" src="" alt="">
-                    <span class="depth-layer"></span>
-                    <span class="depth-layer"></span>
-                    <span class="depth-layer"></span>
-                    <span class="depth-layer"></span>
+    <!-- 主要内容容器 -->
+    <div class="detail-wrapper">
+        <!-- 慢速滚动的容器 -->
+        <div class="detail-container">
+            <div class="detail-image">
+                 <div class="image-wrapper">               
+                    <div class="depth-container">
+                        <img id="detail-img" src="" alt="">
+                        <span class="depth-layer"></span>
+                        <span class="depth-layer"></span>
+                        <span class="depth-layer"></span>
+                        <span class="depth-layer"></span>
+                    </div>
                 </div>
             </div>
+        
+            <div class="detail-info">
+                <h1 id="detail-title" data-lang=""></h1>
+                <p0 id="detail-serialnumber"></p0>
+                <p0 id="detail-series" data-lang=""></p0>
+                <p0 id="detail-media" data-lang=""></p0>
+                <p0 id="detail-size"></p0>
+                <p0 id="detail-weight"></p0>
+                <p0 id="detail-year"></p0>
+                <p0 id="detail-state" data-lang=""></p0>
+            </div>
         </div>
-        <div class="detail-info">
-            <h1 id="detail-title" data-lang=""></h1>
-            <p0 id="detail-serialnumber"></p0>
-            <p0 id="detail-series" data-lang=""></p0>
-            <p0 id="detail-media" data-lang=""></p0>
-            <p0 id="detail-size"></p0>
-            <p0 id="detail-weight"></p0>
-            <p0 id="detail-year"></p0>
-            <p0 id="detail-state" data-lang=""></p0>
+
+    <!-- 正常滚动的浮动信息 -->
+    <div class="floating-info">
+        <div class="floating-content">
+            <!-- 展览列表模块 -->
+            <div class="exhibits-list-container">
+                <div class="exhibits-header">
+                    <p0 data-lang="exhibitions">追踪</p0>
+                </div>
+                <div id="exhibits-list" class="exhibits-list">
+                    <!-- 展览信息由 JavaScript 动态插入 -->
+                </div>
+            </div>
+        
+            <!-- 现有的文章部分 -->
+            <article class="detail-article">
+                <div class="detail-line">
+                    <p0 id="detail-RSMmain" data-lang="detail-RSMmain"></p0>
+                </div>
+            </article>
+            
+
+            <footer>
+                <p3>&copy; 2024 HU SHENBAI</p3>
+            </footer>
         </div>
     </div>
 
-    <!-- 展览列表模块 -->
-    <div class="exhibits-list-container">
-        <div class="exhibits-header">
-            <p0 data-lang="exhibitions">追踪</p0>
-        </div>
-        <div id="exhibits-list" class="exhibits-list">
-            <!-- 展览信息由 JavaScript 动态插入 -->
-        </div>
-    </div>
-
-    <!-- 现有的文章部分 -->
-    <article class="detail-article">
-        <div class="detail-line">
-            <p0 id="detail-RSMmain" data-lang="detail-RSMmain"></p0>
-        </div>
-    </article>
-
-    <footer>
-        <p3>&copy; 2024 HU SHENBAI</p3>
-    </footer>
-    
     <script src="data-rsm.js"></script>
     <script src="detailrsm.js"></script>
 </body>

@@ -222,3 +222,13 @@ window.addEventListener('scroll', () => {
     
     lastScrollTop = scrollTop;
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const detailContainer = document.querySelector('.detail-container');
+    const scrollSpeed = 0.7;
+    
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        detailContainer.style.transform = `translateY(${scrollPosition * scrollSpeed}px)`;
+    });
+});
