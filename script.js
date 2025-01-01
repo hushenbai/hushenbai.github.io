@@ -17,8 +17,8 @@ function createCards() {
                         <img src="${project.image}" alt="${translations[currentLang][titleKey]}">
                     </div>
                     <div class="card-content">
-                        <p1 data-lang="${titleKey}">${translations[currentLang][titleKey]}</p1>
-                        <p2 class="year">${project.year}</p2>
+                        <p2 data-lang="${titleKey}">${translations[currentLang][titleKey]}</p2>
+                        <p3 class="year">${project.year}</p3>
                     </div>
                 </article>
             `;
@@ -116,9 +116,12 @@ function generateRSMGallery() {
     if (!container) return;
     
     Object.entries(groupedProjects).forEach(([groupId, projects]) => {
-        projects.forEach(project => {
+        projects.forEach((project, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
+            
+            // 添加延迟动画
+            item.style.animationDelay = `${index * 0.2}s`;  // 每个项目延迟 0.2 秒
             
             item.onclick = () => {
                 window.location.href = `detailrsm.html?group=${groupId}&id=${project.serialnumber}`;
@@ -132,16 +135,15 @@ function generateRSMGallery() {
             const info = document.createElement('div');
             info.className = 'gallery-info';
             
-            const title = document.createElement('p1');
+            const title = document.createElement('p2');
             title.setAttribute('data-lang', project.title['data-lang']);
             title.textContent = project.title['data-lang'];
             
-            const time = document.createElement('p2');
+            const time = document.createElement('p3');
             time.textContent = project.year;
             
             info.appendChild(title);
             info.appendChild(time);
-            
             item.appendChild(img);
             item.appendChild(info);
             container.appendChild(item);
@@ -158,4 +160,24 @@ document.addEventListener('DOMContentLoaded', () => {
         generateRSMGallery();
     }
 });
+
+// 添加滚动监听
+let lastScrollTop = 0;
+const nav = document.querySelector('.nav-background');
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // 向下滚动时隐藏
+    if (scrollTop > lastScrollTop && scrollTop > 300) {
+        nav.classList.add('hidden');
+    } 
+    // 向上滚动时显示
+    else {
+        nav.classList.remove('hidden');
+    }
+    
+    lastScrollTop = scrollTop;
+});
+
 

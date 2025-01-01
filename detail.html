@@ -25,10 +25,18 @@
      <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h3 class="back-button" onclick="goBack()" data-lang="back"></h3>
 
-    <div class="language-switch">
-        <h3><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer;">English</button></h3>
+    <div class="nav-background">
+        <nav class="nav-container">
+            <div class="nav-left">
+                <p1 class="back-button" onclick="goBack()" data-lang="back"></p1>
+            </div>
+            <div class="nav-right">
+                <div class="language-switch">
+                    <p1><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer;">English</button></p1>
+                </div>
+            </div>
+        </nav>
     </div>
 
     <div class="detail-container">
@@ -80,7 +88,7 @@
     </article>
 
     <footer>
-        <p2>&copy; 2024 HU SHENBAI</p2>
+        <p3>&copy; 2024 HU SHENBAI</p3>
     </footer>
     
     <script src="data.js"></script>
