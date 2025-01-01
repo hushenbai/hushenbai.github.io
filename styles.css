@@ -741,6 +741,8 @@ body {
         bottom: 0;
         border-bottom: none;
         border-top: 1px solid #f2f2f2;
+        height: calc(56px + env(safe-area-inset-bottom));
+        padding-top: env(safe-area-inset-bottom);
     }
 
     .nav-background.hidden {
@@ -768,21 +770,6 @@ body {
     }
 
 }
-
-/* 仅 iOS 设备的底部安全区域适配 */
-@supports (-webkit-touch-callout: none) {
-        .nav-background {
-            height: calc(78px + env(safe-area-inset-bottom));
-            padding-top: env(safe-area-inset-bottom);
-        }
-
-        .nav-container {
-            height: 48px;
-            padding-bottom: env(safe-area-inset-bottom);
-        }
-    }
-
-
 
 .rsm-gallery {
     width: 100%;
