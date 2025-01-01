@@ -13,15 +13,15 @@ const groupedProjects = {
                 'data-lang': "四川女人"
             },
             "size": "80 x 100 x 3.2 cm",
-            "weight": "10.5 kg",
+            "weight": "2.15 kg",
             "year": "2024",
             "state": {
-                "data-lang": "创作者持有"
+                "data-lang": "申白持有"
             },
             "exhibits": [
                 {
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                     "city": {
@@ -43,15 +43,15 @@ const groupedProjects = {
                 'data-lang': "四川女人"
             },
             "size": "80 x 100 x 3.2 cm",
-            "weight": "10.5 kg",
+            "weight": "2.15 kg",
             "year": "2024",
             "state": {
-                "data-lang": "创作者持有"
+                "data-lang": "申白持有"
             },
             "exhibits": [
                 {
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                     "city": {
@@ -73,15 +73,15 @@ const groupedProjects = {
                 'data-lang': "四川女人"
             },
             "size": "80 x 100 x 3.2 cm",
-            "weight": "10.5 kg",
+            "weight": "2.15 kg",
             "year": "2024",
             "state": {
-                "data-lang": "创作者持有"
+                "data-lang": "申白持有"
             },
             "exhibits": [
                 {
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                     "city": {
@@ -102,16 +102,16 @@ const groupedProjects = {
             "series": {
                 'data-lang': "四川女人"
             },
-            "size": "100 x 120 x 3.2 cm",
-            "weight": "14.5 kg",
+            "size": "120 x 100 x 3.2 cm",
+            "weight": "2.45 kg",
             "year": "2024",
             "state": {
-                "data-lang": "创作者持有"
+                "data-lang": "申白持有"
             },
             "exhibits": [
                 {
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                     "city": {
@@ -132,16 +132,16 @@ const groupedProjects = {
             "series": {
                 'data-lang': "四川女人"
             },
-            "size": "100 x 120 x 3.2 cm",
-            "weight": "14.5 kg",
+            "size": "80 x 100 x 3.2 cm",
+            "weight": "2.15 kg",
             "year": "2024",
             "state": {
-                "data-lang": "创作者持有"
+                "data-lang": "申白持有"
             },
             "exhibits": [
                 {
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                     "city": {
@@ -162,16 +162,16 @@ const groupedProjects = {
             "series": {
                 'data-lang': "四川女人"
             },
-            "size": "80 x 100 x 3.2 cm",
-            "weight": "10.5 kg",
+            "size": "100 x 80 x 3.2 cm",
+            "weight": "2.15 kg",
             "year": "2024",
             "state": {
-                "data-lang": "创作者持有"
+                "data-lang": "申白持有"
             },
             "exhibits": [
                 {
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                     "city": {
@@ -192,16 +192,16 @@ const groupedProjects = {
             "series": {
                 'data-lang': "四川女人"
             },
-            "size": "100 x 120 x 3.2 cm",
-            "weight": "14.5 kg",
+            "size": "80 x 100 x 3.2 cm",
+            "weight": "2.15 kg",
             "year": "2024",
             "state": {
-                "data-lang": "创作者持有"
+                "data-lang": "申白持有"
             },
             "exhibits": [
                 {
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                     "city": {

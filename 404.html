@@ -17,21 +17,74 @@
 
     <header class="header" style="margin: 0px;" >
         <img src="./assets/apple-touch-icon.png" style="width: 180px; height: 180px;" alt="404" class="error-image">
-        <div class="text-box" style="padding: 24px 0;">
+        <div class="text-box" style="padding: 0 36px; max-width: 800px; text-align: center;">
             <h1>404</h1>
-            <p0 >抱歉，您访问的页面不存在</p0>
-            <p0 >Sorry, the page you are looking for does not exist.</p0>
-            <p0 >申し訳ありませんが、あなたが訪問しているページは存在しません。</p0>
-            <p0 >Lo sentimos, la página que está visitando no existe</p0>
-            <p0 >방문 중인 페이지가 존재하지 않습니다.</p0>
+            <div style="height: 24px;"></div>
+            <h3>Sorry, the page you are visiting does not exist. But I invite you to take some medicine.</h3>
+            <h3 id="rotating-title" style="height: 180px;"></h3>
         </div>
         <p1 class="nav-button" onclick="window.location.href='index.html'">
-            <span data-lang="tcm-title">Back Home</span>
+            <span>Back Home</span>
         </p1>
     </header>
 
+     <!-- 添加必要的脚本 -->
+     <script src="translations.js"></script>
+     <script>
+     // 直接在页面中添加轮替逻辑
+     const titles = [
+    "抱歉，您访问的页面不存在。但我可以请您喝药。",
+    "唔好意思，你訪問嘅頁面唔存在。但我可以請你飲藥。",
+    "抱歉，您造訪的頁面不存在。但我可以請你吃點藥。",
+    "申し訳ありませんが、あなたがアクセスしているページは存在しません。しかし、薬を飲むことをお勧めします。",
+    "Lo sentimos, la página que visitaste no existe. Pero puedo comprarte un medicamento.",
+    "죄송합니다. 방문 중인 페이지는 존재하지 않습니다. 하지만 약을 먹으라고 권유합니다.",
+    "ขออภัย ไม่พบหน้าที่คุณกำลังเยี่ยมชม แต่ฉันขอเชิญคุณรับประทานยา",
+    "Xin lỗi, trang bạn truy cập không tồn tại. Nhưng tôi có thể mua cho bạn ít thuốc.",
+    "Maaf, halaman yang anda lawati tidak wujud. Tapi saya ajak awak makan ubat.",
+    "Извините, страница, на которую вы заходите, не существует. Но я предлагаю вам принять лекарство.",
+    "Désolé, la page que vous visitez n'existe pas. Mais je vous invite à prendre quelques médicaments.",
+    "மன்னிக்கவும், நீங்கள் பார்வையிடும் பக்கம் இல்லை. ஆனால் நான் உங்களை கொஞ்சம் மருந்து சாப்பிட அழைக்கிறேன்.",
+    "Es tut uns leid, die Seite, die Sie besuchen, existiert nicht. Aber ich lade Sie ein, ein Medikament einzunehmen.",
+    "Λυπούμαστε, η σελίδα που επισκέπτεστε δεν υπάρχει. Αλλά σας προσκαλώ να πάρετε κάποιο φάρμακο.",
+    "Spiacenti, la pagina che stai visitando non esiste. Ma ti invito a prendere qualche medicina.",
+    "Lamentamos, a página que está a visitar não existe. Mas convido-o a tomar um medicamento.",
+    "क्षमा करें, आप जिस पेज पर जा रहे हैं वह मौजूद नहीं है। लेकिन मैं आपको कुछ दवा लेने के लिए आमंत्रित करता हूँ।",
+    "Valitettavasti sivua, jolla vierailet, ei ole olemassa. Mutta kehotan sinua ottamaan lääkettä.",
+     ];
+ 
+     function rotateTitle() {
+    const titleElement = document.getElementById('rotating-title');
+    let lastIndex = -1;
+
+    // 添加过渡样式
+    titleElement.style.transition = 'opacity 0.5s ease';
+
+    function getRandomIndex() {
+        let newIndex;
+        do {
+            newIndex = Math.floor(Math.random() * titles.length);
+        } while (newIndex === lastIndex);
+        lastIndex = newIndex;
+        return newIndex;
+    }
+
+    function rotate() {
+        titleElement.style.opacity = 0;
+        setTimeout(() => {
+            titleElement.textContent = titles[getRandomIndex()];
+            titleElement.style.opacity = 1;
+        }, 500);
+    }
+
+    rotate();
+    setInterval(rotate, 3500);
+}
+
+document.addEventListener('DOMContentLoaded', rotateTitle);
+</script>
+
     <script src="data.js"></script>
     <script src="script.js"></script>
-
 </body>
 </html>

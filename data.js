@@ -20,7 +20,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -28,7 +28,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 }
@@ -54,7 +54,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -62,7 +62,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -88,7 +88,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -96,7 +96,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -122,7 +122,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -130,7 +130,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -156,7 +156,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -164,7 +164,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -190,7 +190,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -198,7 +198,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -224,7 +224,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -232,7 +232,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -258,7 +258,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -266,7 +266,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -292,7 +292,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -300,7 +300,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -326,7 +326,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -334,7 +334,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -360,7 +360,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -368,7 +368,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -394,7 +394,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -402,7 +402,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -428,7 +428,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -436,7 +436,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -462,7 +462,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -470,7 +470,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -496,7 +496,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -504,7 +504,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -530,7 +530,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -538,7 +538,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -564,7 +564,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -572,7 +572,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -612,7 +612,7 @@ const groupedProjects = {
                 },
                 {
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                     "city": {
@@ -641,7 +641,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -649,7 +649,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -675,7 +675,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -683,7 +683,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -715,7 +715,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -723,7 +723,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -749,7 +749,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -757,7 +757,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -783,7 +783,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -791,7 +791,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -817,7 +817,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -825,7 +825,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -854,7 +854,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -862,7 +862,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -888,7 +888,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -896,7 +896,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -922,7 +922,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -930,7 +930,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -956,7 +956,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -964,7 +964,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -993,7 +993,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1001,7 +1001,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1027,7 +1027,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1035,7 +1035,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1061,7 +1061,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1069,7 +1069,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1095,7 +1095,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1103,7 +1103,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1129,7 +1129,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1137,7 +1137,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1166,7 +1166,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1174,7 +1174,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1199,7 +1199,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
             state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1207,7 +1207,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1232,7 +1232,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
             state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1240,7 +1240,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1265,7 +1265,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1273,7 +1273,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1298,7 +1298,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1306,7 +1306,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1331,7 +1331,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1339,7 +1339,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1364,7 +1364,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1372,7 +1372,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1397,7 +1397,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1405,7 +1405,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1430,7 +1430,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1438,7 +1438,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1466,7 +1466,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1474,7 +1474,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1499,7 +1499,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1507,7 +1507,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1532,7 +1532,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1540,7 +1540,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1565,7 +1565,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1573,7 +1573,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1600,7 +1600,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1608,7 +1608,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1633,7 +1633,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1641,7 +1641,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1666,7 +1666,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1674,7 +1674,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1699,7 +1699,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1707,7 +1707,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1732,7 +1732,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1740,7 +1740,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1765,7 +1765,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1773,7 +1773,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1798,7 +1798,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1806,7 +1806,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1831,7 +1831,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1839,7 +1839,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
@@ -1864,7 +1864,7 @@ const groupedProjects = {
             weight: '250 g',
             year: '2024',
                         state: {
-                'data-lang': '创作者持有'
+                'data-lang': '申白持有'
             },
             "exhibits": [
                 {
@@ -1872,7 +1872,7 @@ const groupedProjects = {
                         "data-lang": "成都"
                     },
                     "name": {
-                        "data-lang": "申白的工作室"
+                        "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
                 },
