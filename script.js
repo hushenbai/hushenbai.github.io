@@ -137,7 +137,7 @@ function generateRSMGallery() {
             
             const title = document.createElement('p2');
             title.setAttribute('data-lang', project.title['data-lang']);
-            title.textContent = project.title['data-lang'];
+            title.textContent = project.title[getCurrentLanguage()] || project.title['data-lang'];
             
             const time = document.createElement('p3');
             time.textContent = project.year;
@@ -178,6 +178,37 @@ window.addEventListener('scroll', () => {
     }
     
     lastScrollTop = scrollTop;
+});
+
+function getCurrentLanguage() {
+    return localStorage.getItem('language') || 'zh';
+}
+
+function setLanguage(lang) {
+    localStorage.setItem('language', lang);
+}
+
+function toggleLanguage() {
+    const currentLang = getCurrentLanguage();
+    const newLang = currentLang === 'zh' ? 'en' : 'zh';
+    setLanguage(newLang);
+    updateLanguage(newLang);
+}
+
+function updateLanguage(lang) {
+    const elements = document.querySelectorAll('[data-lang]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-lang');
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+}
+
+// 页面加载时初始化语言
+document.addEventListener('DOMContentLoaded', () => {
+    const currentLang = getCurrentLanguage();
+    updateLanguage(currentLang);
 });
 
 
