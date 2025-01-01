@@ -16,7 +16,12 @@
 <body>
 
     <header class="header" style="margin: 0px;" >
-        <img src="./assets/apple-touch-icon.png" style="width: 180px; height: 180px;" alt="404" class="error-image">
+        <img src="./assets/apple-touch-icon.png" 
+             style="width: 140px; height: 140px;" 
+             alt="404" 
+             class="error-image" 
+             id="rotating-image">
+             <div style="height: 8px;"></div>
         <div class="text-box" style="padding: 0 36px; max-width: 800px; text-align: center;">
             <h1>404</h1>
             <div style="height: 24px;"></div>
@@ -29,8 +34,8 @@
     </header>
 
      <!-- 添加必要的脚本 -->
-     <script src="translations.js"></script>
-     <script>
+<script src="translations.js"></script>
+<script>
      // 直接在页面中添加轮替逻辑
      const titles = [
     "抱歉，您访问的页面不存在。但我可以请您喝药。",
@@ -73,6 +78,28 @@
 }
 
 document.addEventListener('DOMContentLoaded', rotateTitle);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const image = document.getElementById('rotating-image');
+    const maxRotation = 25; // 最大旋转角度
+
+    document.addEventListener('mousemove', (e) => {
+        // 计算鼠标在页面宽度上的百分比位置 (0 到 1)
+        const percentageX = e.clientX / window.innerWidth;
+        
+        // 将百分比转换为旋转角度 (-25 到 25)
+        const rotation = (percentageX - 0.5) * (maxRotation * 2);
+        
+        // 应用旋转效果
+        image.style.transform = `rotate(${rotation}deg)`;
+    });
+
+    // 当鼠标离开页面时重置旋转
+    document.addEventListener('mouseleave', () => {
+        image.style.transform = 'rotate(0deg)';
+    });
+});
+
 </script>
 
     <script src="data.js"></script>

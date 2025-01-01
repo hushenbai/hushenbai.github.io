@@ -224,26 +224,26 @@ window.addEventListener('scroll', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const detailContainer = document.querySelector('.detail-container');
-    const scrollSpeed = 0.7;
+    const scrollSpeed = 0.4;
     let lastScrollPosition = window.scrollY;
     let ticking = false;
     
-    // 使用 requestAnimationFrame 优化滚动性能
     function updatePosition() {
-        detailContainer.style.transform = `translateY(${lastScrollPosition * scrollSpeed}px)`;
+        // 只在桌面端应用滚动效果
+        if (window.innerWidth > 800) {
+            detailContainer.style.transform = `translateY(${lastScrollPosition * scrollSpeed}px)`;
+        }
         ticking = false;
     }
     
     window.addEventListener('scroll', () => {
         lastScrollPosition = window.scrollY;
-        
         if (!ticking) {
             requestAnimationFrame(() => {
                 updatePosition();
             });
             ticking = true;
         }
-    }, {
-        passive: true  // 提示浏览器这是一个被动事件监听器
-    });
+    }, { passive: true });
 });
+

@@ -76,7 +76,7 @@ h1 {
     font-size: 48pt;
     font-family: "Gowun Batang", "Noto Serif SC", "Noto Serif", serif;
     font-weight: 400;
-    line-height: 1.15;
+    line-height: 1.05;
     color: #000;
 }
 
@@ -473,15 +473,32 @@ body {
     position: relative;
     width: 100%;
     z-index: 2;
-    background: rgba(250, 250, 250, 0.3);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+}
+
+/* 只在桌面端应用毛玻璃效果 */
+@media screen and (min-width: 801px) {
+    .floating-info {
+        background: rgba(250, 250, 250, 0.7);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+    }
+}
+
+/* 移动端样式 */
+@media screen and (max-width: 800px) {
+    .floating-info {
+        background: #f8f8f8;  /* 纯白背景 */
+    }
+    
+    .detail-container {
+        transform: none !important;  /* 确保移动端没有transform效果 */
+    }
 }
 
 .floating-content {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 24px 0;
+    padding-top: 24px;
 }
 
 .exhibits-list-container {
@@ -548,7 +565,7 @@ body {
     align-items: center;
     max-width: 1080px;
     padding: 0 60px;
-    margin-bottom: 180px;
+    margin-bottom: 80px;
 }
 
 .article {
@@ -687,7 +704,7 @@ body {
     left: 0;
     right: 0;
     height: 50px;
-    background: rgba(250, 250, 250, 0.3);
+    background: rgba(250, 250, 250, 0.7);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -893,6 +910,13 @@ body {
         margin-top: 4px;
     }
 }
+
+.error-image {
+    transition: transform 0.5s ease-out;
+    will-change: transform;
+}
+
+
 
 
 

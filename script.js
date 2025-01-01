@@ -169,7 +169,7 @@ window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
     // 向下滚动时隐藏
-    if (scrollTop > lastScrollTop && scrollTop > 300) {
+    if (scrollTop > lastScrollTop && scrollTop > 50) {
         nav.classList.add('hidden');
     } 
     // 向上滚动时显示
@@ -213,27 +213,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const detailContainer = document.querySelector('.detail-container');
-    const scrollSpeed = 0.7;
-    let lastScrollPosition = window.scrollY;
-    let ticking = false;
-    
-    // 使用 requestAnimationFrame 优化滚动性能
-    function updatePosition() {
-        detailContainer.style.transform = `translateY(${lastScrollPosition * scrollSpeed}px)`;
-        ticking = false;
-    }
+    const scrollSpeed = 0.3;
     
     window.addEventListener('scroll', () => {
-        lastScrollPosition = window.scrollY;
-        
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                updatePosition();
-            });
-            ticking = true;
-        }
-    }, {
-        passive: true  // 提示浏览器这是一个被动事件监听器
+        const scrollPosition = window.scrollY;
+        detailContainer.style.transform = `translateY(${scrollPosition * scrollSpeed}px)`;
     });
 });
 
