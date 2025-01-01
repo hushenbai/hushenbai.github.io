@@ -383,6 +383,13 @@ body {
     transform: translateZ(0);
     z-index: 1;
     background: transparent; /* 确保背景透明 */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version */
+    pointer-events: none; /* 禁止任何指针事件 */
 }
 
 /* 深度层基础样式 */
@@ -652,7 +659,7 @@ body {
     left: 0;
     right: 0;
     height: 50px;
-    background: rgba(251, 251, 251, 0.8);
+    background: rgba(251, 251, 251, 0.6);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid #f2f2f2;
@@ -680,7 +687,7 @@ body {
 
 .nav-left {
     position: fixed;
-    left: 30px;
+    left: 24px;
     cursor: pointer;
     flex-direction: row;
     z-index: 100;
@@ -688,7 +695,7 @@ body {
 
 .nav-right {
     position: fixed;
-    right: 30px;
+    right: 24px;
     cursor: pointer;
     flex-direction: row;
     z-index: 100;
@@ -702,27 +709,13 @@ body {
     margin-right: 4px;
     background: rgba(255, 255, 255, 0); 
     padding: 2px 8px;
-    border-radius: 20px;
+    border-radius: 4px;
 }
 
 .nav-button:hover {
-    background: rgba(0, 0, 0, 0.05); 
+    background: rgba(0, 0, 0, 0.08); 
 }
 
-.back-button {
-    position: relative;
-    display: inline-flex;
-    cursor: pointer;
-    z-index: 100;
-    margin-right: 4px;
-    background: rgba(255, 255, 255, 0); 
-    padding: 2px 8px;
-    border-radius: 20px;
-}
-
-.back-button:hover {
-    background: rgba(0, 0, 0, 0.05); 
-}
 
 .language-switch {
     position: relative;
@@ -731,11 +724,11 @@ body {
     z-index: 100;
     background: rgba(255, 255, 255, 0); 
     padding: 2px 8px;
-    border-radius: 20px;
+    border-radius: 4px;
 }
 
 .language-switch:hover {
-    background: rgba(0, 0, 0, 0.05); 
+    background: rgba(0, 0, 0, 0.08); 
 }
 
 .language-switch button {
@@ -748,18 +741,14 @@ body {
 @media screen and (max-width: 800px) {
 
     .nav-left {
-        left: 16px;
+        left: 8px;
     }
     
     .nav-right {
-        right: 16px;
+        right: 8px;
     }
     
     .nav-button {
-        padding: 2px 6px;
-    }
-
-    .back-button {
         padding: 2px 6px;
     }
 
@@ -814,6 +803,13 @@ body {
     object-fit: contain;
     transform: scale(1) translateY(0);
     transition: transform 0.5s ease;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version */
+    pointer-events: none; /* 禁止任何指针事件 */
 }
 
 .gallery-image:hover {
