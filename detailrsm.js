@@ -226,9 +226,25 @@ window.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const detailContainer = document.querySelector('.detail-container');
     const scrollSpeed = 0.7;
+    let lastScrollPosition = window.scrollY;
+    let ticking = false;
+    
+    // 使用 requestAnimationFrame 优化滚动性能
+    function updatePosition() {
+        detailContainer.style.transform = `translateY(${lastScrollPosition * scrollSpeed}px)`;
+        ticking = false;
+    }
     
     window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY;
-        detailContainer.style.transform = `translateY(${scrollPosition * scrollSpeed}px)`;
+        lastScrollPosition = window.scrollY;
+        
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                updatePosition();
+            });
+            ticking = true;
+        }
+    }, {
+        passive: true  // 提示浏览器这是一个被动事件监听器
     });
 });
