@@ -5,7 +5,7 @@ const groupedProjects = {
             "title": {
                 "data-lang": "推荐"
             },
-            "image": "./assets/RSM/RSMSC1推荐.png",
+            "image": "./assets/RSM/RSMSC1推荐.jpg",
             "media": {
                 "data-lang": "帆布油彩"
             },
@@ -35,7 +35,7 @@ const groupedProjects = {
             "title": {
                 "data-lang": "表达"
             },
-            "image": "./assets/RSM/RSMSC2表达.png",
+            "image": "./assets/RSM/RSMSC2表达.jpg",
             "media": {
                 "data-lang": "帆布油彩"
             },
@@ -65,7 +65,7 @@ const groupedProjects = {
             "title": {
                 "data-lang": "判断"
             },
-            "image": "./assets/RSM/RSMSC4判断.png",
+            "image": "./assets/RSM/RSMSC4判断.jpg",
             "media": {
                 "data-lang": "帆布油彩"
             },
@@ -95,7 +95,7 @@ const groupedProjects = {
             "title": {
                 "data-lang": "烤火"
             },
-            "image": "./assets/RSM/RSMSC5烤火.png",
+            "image": "./assets/RSM/RSMSC5烤火.jpg",
             "media": {
                 "data-lang": "帆布油彩"
             },
@@ -125,7 +125,7 @@ const groupedProjects = {
             "title": {
                 "data-lang": "尝试"
             },
-            "image": "./assets/RSM/RSMSC6尝试.png",
+            "image": "./assets/RSM/RSMSC6尝试.jpg",
             "media": {
                 "data-lang": "帆布油彩"
             },
@@ -155,7 +155,7 @@ const groupedProjects = {
             "title": {
                 "data-lang": "抓握"
             },
-            "image": "./assets/RSM/RSMSC7抓握.png",
+            "image": "./assets/RSM/RSMSC7抓握.jpg",
             "media": {
                 "data-lang": "帆布油彩"
             },
@@ -185,7 +185,7 @@ const groupedProjects = {
             "title": {
                 "data-lang": "介绍"
             },
-            "image": "./assets/RSM/RSMSC8介绍.png",
+            "image": "./assets/RSM/RSMSC8介绍.jpg",
             "media": {
                 "data-lang": "帆布油彩"
             },

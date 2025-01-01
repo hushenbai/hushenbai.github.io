@@ -2,7 +2,7 @@
 const groupedProjects = {
     group1: [
         {
-            image: './assets/TCM/TCMFW1白陶碗盛药图.png',
+            image: './assets/TCM/TCMFW1白陶碗盛药图.jpg',
             title: {
                 'data-lang': '白陶碗盛药图'
             },
@@ -36,7 +36,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW2金叶纹铜碗盛药图.png',
+            image: './assets/TCM/TCMFW2金叶纹铜碗盛药图.jpg',
             title: {
                 'data-lang': '金叶纹铜碗盛药图'
             },
@@ -70,7 +70,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW3柔形白瓷碗盛药图.png',
+            image: './assets/TCM/TCMFW3柔形白瓷碗盛药图.jpg',
             title: {
                 'data-lang': '柔形白瓷碗盛药图'
             },
@@ -104,7 +104,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW4金边天蓝釉瓷碗盛药图.png',
+            image: './assets/TCM/TCMFW4金边天蓝釉瓷碗盛药图.jpg',
             title: {
                 'data-lang': '金边天蓝釉瓷碗盛药图'
             },
@@ -138,7 +138,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW5枯草地白瓷碗盛药图.png',
+            image: './assets/TCM/TCMFW5枯草地白瓷碗盛药图.jpg',
             title: {
                 'data-lang': '枯草地白瓷碗盛药图'
             },
@@ -172,7 +172,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW6金环白瓷盘盛药图.png',
+            image: './assets/TCM/TCMFW6金环白瓷盘盛药图.jpg',
             title: {
                 'data-lang': '金环白瓷盘盛药图'
             },
@@ -206,7 +206,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW7紫地高足白瓷碗盛药图.png',
+            image: './assets/TCM/TCMFW7紫地高足白瓷碗盛药图.jpg',
             title: {
                 'data-lang': '紫地高足白瓷碗盛药图'
             },
@@ -240,7 +240,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW8金边黑釉扁陶碗盛药图.png',
+            image: './assets/TCM/TCMFW8金边黑釉扁陶碗盛药图.jpg',
             title: {
                 'data-lang': '金边黑釉扁陶碗盛药图'
             },
@@ -274,7 +274,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW9金边墨蓝釉陶碗盛药图.png',
+            image: './assets/TCM/TCMFW9金边墨蓝釉陶碗盛药图.jpg',
             title: {
                 'data-lang': '金边墨蓝釉陶碗盛药图'
             },
@@ -308,7 +308,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW10素青瓷碗盛药图.png',
+            image: './assets/TCM/TCMFW10素青瓷碗盛药图.jpg',
             title: {
                 'data-lang': '素青瓷碗盛药图'
             },
@@ -342,7 +342,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW11大玻璃碗盛药图.png',
+            image: './assets/TCM/TCMFW11大玻璃碗盛药图.jpg',
             title: {
                 'data-lang': '大玻璃碗盛药图'
             },
@@ -376,7 +376,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW12冰蓝釉褐边厚碗盛药图.png',
+            image: './assets/TCM/TCMFW12冰蓝釉褐边厚碗盛药图.jpg',
             title: {
                 'data-lang': '冰蓝釉褐边厚碗盛药图'
             },
@@ -410,7 +410,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW13金地黑边灰土碗盛药图.png',
+            image: './assets/TCM/TCMFW13金地黑边灰土碗盛药图.jpg',
             title: {
                 'data-lang': '金地黑边灰土碗盛药图'
             },
@@ -444,7 +444,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW14黄釉喇叭瓷盘盛药图.png',
+            image: './assets/TCM/TCMFW14黄釉喇叭瓷盘盛药图.jpg',
             title: {
                 'data-lang': '黄釉喇叭瓷盘盛药图'
             },
@@ -478,7 +478,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW15糯玉瓷碗盛药图.png',
+            image: './assets/TCM/TCMFW15糯玉瓷碗盛药图.jpg',
             title: {
                 'data-lang': '糯玉瓷碗盛药图'
             },
@@ -512,7 +512,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW16绿铁碗盛药图.png',
+            image: './assets/TCM/TCMFW16绿铁碗盛药图.jpg',
             title: {
                 'data-lang': '绿铁碗盛药图'
             },
@@ -546,7 +546,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW17草地金斑黑瓷碗盛药图.png',
+            image: './assets/TCM/TCMFW17草地金斑黑瓷碗盛药图.jpg',
             title: {
                 'data-lang': '草地金斑黑瓷碗盛药图'
             },
@@ -580,7 +580,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW18碎绿地白瓷碗盛药图.png',
+            image: './assets/TCM/TCMFW18碎绿地白瓷碗盛药图.jpg',
             title: {
                 'data-lang': '碎绿地白瓷碗盛药图'
             },
@@ -623,7 +623,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW19淤血白瓷碗盛药图.png',
+            image: './assets/TCM/TCMFW19淤血白瓷碗盛药图.jpg',
             title: {
                 'data-lang': '淤血白瓷碗盛药图'
             },
@@ -657,7 +657,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMFW20淤花纹蓝底钵盛药图.png',
+            image: './assets/TCM/TCMFW20淤花纹蓝底钵盛药图.jpg',
             title: {
                 'data-lang': '淤花纹蓝底钵盛药图'
             },
@@ -697,7 +697,7 @@ const groupedProjects = {
 
     group2: [
         {
-            image: './assets/TCM/TCMCSCT1之字白瓷碗盛药图.png',
+            image: './assets/TCM/TCMCSCT1之字白瓷碗盛药图.jpg',
             title: {
                 'data-lang': '之字白瓷碗盛药图'
             },
@@ -731,7 +731,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMCSCT2乎字白瓷碗盛药图.png',
+            image: './assets/TCM/TCMCSCT2乎字白瓷碗盛药图.jpg',
             title: {
                 'data-lang': '乎字白瓷碗盛药图'
             },
@@ -765,7 +765,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMCSCT3者字白瓷碗盛药图.png',
+            image: './assets/TCM/TCMCSCT3者字白瓷碗盛药图.jpg',
             title: {
                 'data-lang': '者字白瓷碗盛药图'
             },
@@ -799,7 +799,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMCSCT4也字白瓷碗盛药图.png',
+            image: './assets/TCM/TCMCSCT4也字白瓷碗盛药图.jpg',
             title: {
                 'data-lang': '也字白瓷碗盛药图'
             },
@@ -836,7 +836,7 @@ const groupedProjects = {
 
     group3: [
         {
-            image: './assets/TCM/TCMCSCT5回字第一形陶碗盛药图.png',
+            image: './assets/TCM/TCMCSCT5回字第一形陶碗盛药图.jpg',
             title: {
                 'data-lang': '回字第一形陶碗盛药图'
             },
@@ -870,7 +870,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMCSCT6回字第二形陶碗盛药图.png',
+            image: './assets/TCM/TCMCSCT6回字第二形陶碗盛药图.jpg',
             title: {
                 'data-lang': '回字第二形陶碗盛药图'
             },
@@ -904,7 +904,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMCSCT7回字第三形陶碗盛药图.png',
+            image: './assets/TCM/TCMCSCT7回字第三形陶碗盛药图.jpg',
             title: {
                 'data-lang': '回字第三形陶碗盛药图'
             },
@@ -938,7 +938,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMCSCT8回字第四形陶碗盛药图.png',
+            image: './assets/TCM/TCMCSCT8回字第四形陶碗盛药图.jpg',
             title: {
                 'data-lang': '回字第四形陶碗盛药图'
             },
@@ -975,7 +975,7 @@ const groupedProjects = {
 
     group4: [
         {
-            image: './assets/TCM/TCMCSCW1天字红碗盛药图.png',
+            image: './assets/TCM/TCMCSCW1天字红碗盛药图.jpg',
             title: {
                 'data-lang': '天字红碗盛药图'
             },
@@ -1009,7 +1009,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMCSCW2地字红碗盛药图.png',
+            image: './assets/TCM/TCMCSCW2地字红碗盛药图.jpg',
             title: {
                 'data-lang': '地字红碗盛药图'
             },
@@ -1043,7 +1043,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMCSCW3君字红碗盛药图.png',
+            image: './assets/TCM/TCMCSCW3君字红碗盛药图.jpg',
             title: {
                 'data-lang': '君字红碗盛药图'
             },
@@ -1077,7 +1077,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMCSCW4亲字红碗盛药图.png',
+            image: './assets/TCM/TCMCSCW4亲字红碗盛药图.jpg',
             title: {
                 'data-lang': '亲字红碗盛药图'
             },
@@ -1111,7 +1111,7 @@ const groupedProjects = {
         },
 
         {
-            image: './assets/TCM/TCMCSCW5师字红碗盛药图.png',
+            image: './assets/TCM/TCMCSCW5师字红碗盛药图.jpg',
             title: {
                 'data-lang': '师字红碗盛药图'
             },
@@ -1148,7 +1148,7 @@ const groupedProjects = {
 
     group5: [
         {
-            image: './assets/TCM/TCMCS3G1秭归紫釉碗盛药图.png',
+            image: './assets/TCM/TCMCS3G1秭归紫釉碗盛药图.jpg',
             title: {
                 'data-lang': '秭归紫釉碗盛药图'
             },
@@ -1181,7 +1181,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMCS3G2兴山紫釉碗盛药图.png',
+            image: './assets/TCM/TCMCS3G2兴山紫釉碗盛药图.jpg',
             title: {
                 'data-lang': '兴山紫釉碗盛药图'
             },
@@ -1214,7 +1214,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMCS3G3巴东紫釉碗盛药图.png',
+            image: './assets/TCM/TCMCS3G3巴东紫釉碗盛药图.jpg',
             title: {
                 'data-lang': '巴东紫釉碗盛药图'
             },
@@ -1247,7 +1247,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMCS3G4巫山紫釉碗盛药图.png',
+            image: './assets/TCM/TCMCS3G4巫山紫釉碗盛药图.jpg',
             title: {
                 'data-lang': '巫山紫釉碗盛药图'
             },
@@ -1280,7 +1280,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMCS3G5奉节紫釉碗盛药图.png',
+            image: './assets/TCM/TCMCS3G5奉节紫釉碗盛药图.jpg',
             title: {
                 'data-lang': '奉节紫釉碗盛药图'
             },
@@ -1313,7 +1313,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMCS3G6万县紫釉碗盛药图.png',
+            image: './assets/TCM/TCMCS3G6万县紫釉碗盛药图.jpg',
             title: {
                 'data-lang': '万县紫釉碗盛药图'
             },
@@ -1346,7 +1346,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMCS3G7开县紫釉碗盛药图.png',
+            image: './assets/TCM/TCMCS3G7开县紫釉碗盛药图.jpg',
             title: {
                 'data-lang': '开县紫釉碗盛药图'
             },
@@ -1379,7 +1379,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMCS3G8丰都紫釉碗盛药图.png',
+            image: './assets/TCM/TCMCS3G8丰都紫釉碗盛药图.jpg',
             title: {
                 'data-lang': '丰都紫釉碗盛药图'
             },
@@ -1412,7 +1412,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMCS3G9云阳紫釉碗盛药图.png',
+            image: './assets/TCM/TCMCS3G9云阳紫釉碗盛药图.jpg',
             title: {
                 'data-lang': '云阳紫釉碗盛药图'
             },
@@ -1448,7 +1448,7 @@ const groupedProjects = {
     ],
     group6: [
         {
-            image: './assets/TCM/TCMES1花招娣白衣搪瓷碗盛药图.png',
+            image: './assets/TCM/TCMES1花招娣白衣搪瓷碗盛药图.jpg',
             title: {
                 'data-lang': '花招娣白衣搪瓷碗盛药图'
             },
@@ -1481,7 +1481,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMES2花迎娣黄衣搪瓷碗盛药图.png',
+            image: './assets/TCM/TCMES2花迎娣黄衣搪瓷碗盛药图.jpg',
             title: {
                 'data-lang': '花迎娣黄衣搪瓷碗盛药图'
             },
@@ -1514,7 +1514,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMES3花念娣粉衣搪瓷碗盛药图.png',
+            image: './assets/TCM/TCMES3花念娣粉衣搪瓷碗盛药图.jpg',
             title: {
                 'data-lang': '花念娣粉衣搪瓷碗盛药图'
             },
@@ -1547,7 +1547,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMES4花盼娣青衣搪瓷碗盛药图.png',
+            image: './assets/TCM/TCMES4花盼娣青衣搪瓷碗盛药图.jpg',
             title: {
                 'data-lang': '花盼娣青衣搪瓷碗盛药图'
             },
@@ -1582,7 +1582,7 @@ const groupedProjects = {
     ],
     group7: [
         {
-            image: './assets/TCM/TCMNN1娘惹绿粉瓷碗盛药图.png',
+            image: './assets/TCM/TCMNN1娘惹绿粉瓷碗盛药图.jpg',
             title: {
                 'data-lang': '娘惹绿粉瓷碗盛药图'
             },
@@ -1615,7 +1615,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMNN2娘惹黄蓝瓷碗盛药图.png',
+            image: './assets/TCM/TCMNN2娘惹黄蓝瓷碗盛药图.jpg',
             title: {
                 'data-lang': '娘惹黄蓝瓷碗盛药图'
             },
@@ -1648,7 +1648,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMNN3娘惹黄绿瓷碗盛药图.png',
+            image: './assets/TCM/TCMNN3娘惹黄绿瓷碗盛药图.jpg',
             title: {
                 'data-lang': '娘惹黄绿瓷碗盛药图'
             },
@@ -1681,7 +1681,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMNN4娘惹黄罗瓷碗盛药图.png',
+            image: './assets/TCM/TCMNN4娘惹黄罗瓷碗盛药图.jpg',
             title: {
                 'data-lang': '娘惹黄罗瓷碗盛药图'
             },
@@ -1714,7 +1714,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMNN5娘惹蓝绿瓷碗盛药图.png',
+            image: './assets/TCM/TCMNN5娘惹蓝绿瓷碗盛药图.jpg',
             title: {
                 'data-lang': '娘惹蓝绿瓷碗盛药图'
             },
@@ -1747,7 +1747,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMNN6娘惹粉罗瓷碗盛药图.png',
+            image: './assets/TCM/TCMNN6娘惹粉罗瓷碗盛药图.jpg',
             title: {
                 'data-lang': '娘惹粉罗瓷碗盛药图'
             },
@@ -1780,7 +1780,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMNN7娘惹土粉瓷碗盛药图.png',
+            image: './assets/TCM/TCMNN7娘惹土粉瓷碗盛药图.jpg',
             title: {
                 'data-lang': '娘惹土粉瓷碗盛药图'
             },
@@ -1813,7 +1813,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMNN8娘惹酱绿瓷碗盛药图.png',
+            image: './assets/TCM/TCMNN8娘惹酱绿瓷碗盛药图.jpg',
             title: {
                 'data-lang': '娘惹酱绿瓷碗盛药图'
             },
@@ -1846,7 +1846,7 @@ const groupedProjects = {
             ]
         },
         {
-            image: './assets/TCM/TCMNN9娘惹红黄瓷碗盛药图.png',
+            image: './assets/TCM/TCMNN9娘惹红黄瓷碗盛药图.jpg',
             title: {
                 'data-lang': '娘惹红黄瓷碗盛药图'
             },

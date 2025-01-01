@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         // 设置图片源
-        img.src = currentProject.image;
+        img.src = currentProject.image.replace('/RSM/', '/RSM-big/');
         
         // 更新基本信息
         document.getElementById('detail-serialnumber').textContent = currentProject.serialnumber;

@@ -152,6 +152,8 @@ const translations = {
 
         'back': '返回',
         'switch-lang': 'English',
+        'view-grid': '矩阵',
+        'view-list': '列表',
     },
     'en': {
         'title': 'PearlBarleySand',
@@ -301,6 +303,8 @@ const translations = {
         '娘惹<br>土粉瓷碗<br>盛药图': 'Nyonya khaki pink porcelain bowl with Medicine',
         '娘惹<br>酱绿瓷碗<br>盛药图': 'Nyonya deep-red green porcelain bowl with Medicine',
         '娘惹<br>红黄瓷碗<br>盛药图': 'Nyonya red yellow porcelain bowl with Medicine',
+        'view-grid': 'Grid',
+        'view-list': 'List',
     }
 }; 
 
