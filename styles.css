@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+html {
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: "Gowun Batang","Noto Serif SC", "Noto Serif", serif;
     -webkit-font-smoothing: antialiased;  /* 优化字体渲染 */
