@@ -347,7 +347,7 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-    perspective: 1000px;
+    perspective: 1500px;
     user-select: none;
 
 }

@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('detail-series').setAttribute('data-lang', currentProject.series['data-lang']);
         document.getElementById('detail-title').setAttribute('data-lang', currentProject.title['data-lang']);
         document.getElementById('detail-media').setAttribute('data-lang', currentProject.media['data-lang']);
-        document.getElementById('detail-state').setAttribute('data-lang', currentProject.state['data-lang']);
+        
         
         // 处理展览信息
         const exhibitsList = document.getElementById('exhibits-list');
