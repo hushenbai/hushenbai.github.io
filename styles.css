@@ -317,7 +317,8 @@ body {
     }
 }
 
-/* 子页面样式 */
+/* 子页面样式 ---------------------------------------------*/
+/* 子页面样式 -------------------------------------------- */
 
 .detail-wrapper {
     position: relative;
@@ -469,122 +470,6 @@ body {
     margin-left: 4px;
 }
 
-.floating-info {
-    position: relative;
-    width: 100%;
-    z-index: 2;
-}
-
-/* 只在桌面端应用毛玻璃效果 */
-@media screen and (min-width: 801px) {
-    .floating-info {
-        background: rgba(250, 250, 250, 0.7);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
-    }
-}
-
-/* 移动端样式 */
-@media screen and (max-width: 800px) {
-    .floating-info {
-        background: #f8f8f8;  /* 纯白背景 */
-    }
-    
-    .detail-container {
-        transform: none !important;  /* 确保移动端没有transform效果 */
-    }
-}
-
-.floating-content {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding-top: 24px;
-}
-
-.exhibits-list-container {
-    margin-bottom: 40px;
-    width: 100%;
-    max-width: 1080px;
-    padding: 20px 60px;
-}
-
-.exhibits-header {
-    margin-bottom: 8px; /* 与 exhibit-item 对齐 */
-}
-
-.exhibits-header p0{
-    color:#202020;
-}
-
-
-.exhibits-list {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.exhibit-item {
-    display: grid;
-    grid-template-columns: 48px 1fr 2fr 0.7fr ;  /* 添加 new 标签的列 */
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.new-tag {
-    display: inline-block;
-    font-size: 7px;
-    font-weight: 600;
-    color: #ffffff;
-    background-color: #00d74b;
-    padding: 2px 4px;
-    border-radius: 4px;
-    margin-left: 8px;  /* 与其他元素对齐 */
-    vertical-align: middle;
-}
-
-.exhibit-item .exhibit-city {
-    padding-left: 24px;
-}
-
-.exhibit-item .exhibit-name {
-    padding-left: 24px;
-}
-
-.exhibit-item .exhibit-time {
-    padding-right: 24px;
-    text-align: right;
-}
-
-.exhibit-item span {
-    font-size: 14px;
-}
-
-
-.detail-article {
-    align-items: center;
-    max-width: 1080px;
-    padding: 0 60px;
-    margin-bottom: 80px;
-}
-
-.article {
-    width: 100%;
-}
-
-.detail-line {
-    text-align: left;
-    margin-bottom: 24px;
-}
-
-.detail-line p0 {
-    color: #202020;
-    line-height: 2;
-}
-
-
-
-
 @media screen and (min-width: 800px) {
     .detail-container {
         flex-direction: row;
@@ -609,7 +494,6 @@ body {
         font-size: 40pt;
     }
 }
-
 
 @media screen and (max-width: 800px) {
 
@@ -660,43 +544,161 @@ body {
         display: block;
         margin-left: 2px;
     }
+}
 
-    .exhibits-list-container {
-        margin-bottom: 40px;
-        width: 100%;
-        max-width: 1080px;
-        padding: 16px 20px;
-    }
 
-    .new-tag {
-        font-size: 7px;
-        margin-left: 0px;  /* 与其他元素对齐 */
-    }
+/* floating --------------------------------------------- */
+/* floating-------------------------------------------- */
 
-    .exhibit-item .exhibit-city {
-        padding-left: 8px;
-    }
-    
+.floating-info {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    padding-bottom: 40px;
+}
 
-    .exhibit-item .exhibit-name {
-        padding-left: 8px;
-    }
-    
-
-    .exhibit-item .exhibit-time {
-        padding-right: 0px;
-        text-align: right;  /* 靠右对齐 */
-    }
-
-    .detail-article {
-        padding: 0 20px;
-        margin-bottom: 80px;
-    }
-    
-    .article {
-        width: 100%;
+/* 只在桌面端应用毛玻璃效果 */
+@media screen and (min-width: 801px) {
+    .floating-info {
+        background: rgba(250, 250, 250, 0.7);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
     }
 }
+
+/* 移动端样式 */
+@media screen and (max-width: 800px) {
+    .floating-info {
+        background: #f8f8f8;  /* 纯白背景 */
+    }
+    .detail-container {
+        transform: none !important;  /* 确保移动端没有transform效果 */
+    }
+}
+
+.floating-content {
+    margin: 0 auto;
+    max-width: 1080px;
+    padding: 60px;
+}
+
+.exhibits-list-container {
+    width: 100%;
+    max-width: 1080px;
+    margin-bottom: 40px;
+}
+
+.exhibits-header {
+    margin-bottom: 8px; /* 与 exhibit-item 对齐 */
+}
+
+.exhibits-header p0{
+    color:#202020;
+}
+
+.exhibits-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.exhibit-item {
+    display: grid;
+    grid-template-columns: 48px 1fr 2fr 0.7fr ;  /* 添加 new 标签的列 */
+    align-items: center;
+    gap: 8px;
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.new-tag {
+    display: inline-block;
+    font-size: 7px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #00d74b;
+    padding: 2px 4px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.exhibit-item .exhibit-time {
+    text-align: right;
+}
+
+.exhibit-item span {
+    font-size: 14px;
+}
+
+.article {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.detail-line {
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.detail-line p0 {
+    color: #202020;
+    line-height: 2;
+}
+
+.subscribe-container {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 40px 36px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.subscribe-container p1 {
+    color: #666;
+}
+
+.styled-button {
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+    z-index: 100;
+    background: rgba(0, 0, 0, 1); 
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+
+.styled-button hover{
+    background: rgba(0, 0, 0, 0.8); 
+}
+
+/* .styled-button[data-lang="subscribe-4"] {
+    background: #ccc;
+    color: #666;
+} */
+
+@media screen and (max-width: 800px) {
+    .floating-content {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    }
+
+    .subscribe-container {
+        margin-bottom: 20px;
+    }
+    
+}
+
+/* 导航栏 --------------------------------------------- */
+/* 导航栏 -------------------------------------------- */
 
 .nav-background {
     position: fixed;
@@ -759,6 +761,14 @@ body {
 
 .nav-button:hover {
     background: rgba(0, 0, 0, 0.08); 
+}
+
+b1 {
+    font-size: 13pt;
+    font-family: "Apple-System", system-ui, segoe ui, Arial, sans-serif;
+    font-weight: 400;;
+    line-height: 1.5;
+    color: #ffffff;
 }
 
 
@@ -915,6 +925,92 @@ body {
     transition: transform 0.5s ease-out;
     will-change: transform;
 }
+
+
+/* 悬浮卡片 --------------------------------------------- */  
+/* 悬浮卡片 --------------------------------------------- */  
+
+.contact-card {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.contact-card.show {
+    display: flex;
+}
+
+.contact-card p0 {
+    color: #222;
+}
+
+.contact-card-content {
+    position: relative;
+    padding: 20px 20px 32px 20px;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    /* 初始状态 */
+    transform: translateY(700px);
+    opacity: 1;
+    transition: transform 0.4s ease;
+}
+
+/* 显示状态 */
+.contact-card.show .contact-card-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.contact-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.05);
+    transition: background 0.3s;
+}
+
+.contact-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.contact-card.show .contact-card-content {
+    transform: translateY(0px);
+    transition: all 0.5s cubic-bezier(.25,1.23,.52,1);
+}
+
+@media screen and (max-width: 800px) {
+    .contact-card-content {
+        bottom: 0;
+        position: fixed;
+        padding: 20px 20px 32px 20px;
+        border-radius: 12px;
+        max-width: 480px;
+    }
+}
+
+
 
 
 

@@ -247,3 +247,89 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
 });
 
+// 处理订阅状态显示
+function updateSubscribeStatus() {
+    // 确保 currentProject 存在且有 state 值
+    if (currentProject && typeof currentProject.state !== 'undefined') {
+        const state = currentProject.state;
+        
+        // 获取显示元素
+        const textElement = document.querySelector('.styled-button');
+        const descElement = document.querySelector('.subscribe-desc');
+        
+        if (textElement && descElement) {
+            // 根据 state 设置对应的翻译键
+            textElement.setAttribute('data-lang', `subscribe-${state}`);
+            descElement.setAttribute('data-lang', `subscribe-info-${state}`);
+            
+            // 更新翻译
+            changeLanguage(currentLang);
+        }
+    }
+}
+
+// 在页面加载完成时更新订阅状态
+document.addEventListener('DOMContentLoaded', updateSubscribeStatus);
+
+// 页面加载完成后初始化卡片状态
+document.addEventListener('DOMContentLoaded', () => {
+    const card = document.getElementById('contact-card');
+    const content = card.querySelector('.contact-card-content');
+    
+    // 设置初始状态
+    content.style.transform = 'translateY(700px)';
+});
+
+// 显示联系卡片
+function showContactCard() {
+    const card = document.getElementById('contact-card');
+    const content = card.querySelector('.contact-card-content');
+    
+    // 确保初始状态
+    content.style.transform = 'translateY(700px)';
+    
+    // 先显示卡片容器
+    card.classList.add('show');
+    
+    // 强制重绘
+    void content.offsetWidth;
+    
+    // 触发动画
+    requestAnimationFrame(() => {
+        content.style.transform = 'translateY(0)';
+    });
+    
+    // 阻止背景滚动
+    document.body.style.overflow = 'hidden';
+}
+
+// 隐藏联系卡片
+function hideContactCard() {
+    const card = document.getElementById('contact-card');
+    const content = card.querySelector('.contact-card-content');
+    
+    // 重置动画状态
+    content.style.transform = 'translateY(700px)';
+    
+    // 等待动画完成后隐藏卡片
+    setTimeout(() => {
+        card.classList.remove('show');
+        // 恢复背景滚动
+        document.body.style.overflow = '';
+    }, 400); // 与 CSS transition 时间匹配
+}
+
+// 点击背景关闭卡片
+document.getElementById('contact-card').addEventListener('click', (e) => {
+    if (e.target.id === 'contact-card') {
+        hideContactCard();
+    }
+});
+
+// ESC 键关闭卡片
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        hideContactCard();
+    }
+});
+

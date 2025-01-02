@@ -19,10 +19,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+            state: 0,
+            exhibits: [
                 {
                     "city": {
                         "data-lang": "成都"
@@ -31,8 +29,8 @@ const groupedProjects = {
                         "data-lang": "申白工作室"
                     },
                     "time": "2024.12",
-                }
-            ]
+                },
+            ],
         },
 
         {
@@ -53,10 +51,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+            state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -87,10 +83,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+            state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -121,10 +115,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -155,10 +147,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -189,10 +179,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -223,10 +211,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -257,10 +243,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -291,10 +275,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -325,10 +307,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -359,10 +339,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -393,10 +371,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+            state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -427,10 +403,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+            state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -461,10 +435,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+            state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -495,10 +467,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+            state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -529,10 +499,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+            state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -563,10 +531,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+            state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -597,10 +563,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
-                'data-lang': '已收藏'
-            },
-            "exhibits": [
+            state: 2,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -640,10 +604,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -674,10 +636,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -714,10 +674,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -748,10 +706,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -782,10 +738,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -816,10 +770,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -853,10 +805,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -887,10 +837,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -921,10 +869,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -955,10 +901,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -992,10 +936,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1026,10 +968,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1060,10 +1000,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1094,10 +1032,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1128,10 +1064,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1165,10 +1099,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1198,10 +1130,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+            state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1231,10 +1161,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-            state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+            state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1264,10 +1192,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1297,10 +1223,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1330,10 +1254,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1363,10 +1285,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1396,10 +1316,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1429,10 +1347,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1465,10 +1381,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1498,10 +1412,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1531,10 +1443,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1564,10 +1474,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1599,10 +1507,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1632,10 +1538,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1665,10 +1569,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1698,10 +1600,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1731,10 +1631,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1764,10 +1662,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1797,10 +1693,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+            state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1830,10 +1724,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+            state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"
@@ -1863,10 +1755,8 @@ const groupedProjects = {
             size: '20 x 20 x 2.3 cm',
             weight: '250 g',
             year: '2024',
-                        state: {
-                'data-lang': '申白持有'
-            },
-            "exhibits": [
+                        state: 0,
+            exhibits: [
                 {
                      "city": {
                         "data-lang": "成都"

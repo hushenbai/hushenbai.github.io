@@ -1,24 +1,22 @@
 const groupedProjects = {
     "group1": [
         {
-            "serialnumber": "RSMSC1",
-            "title": {
+            serialnumber: "RSMSC1",
+            title: {
                 "data-lang": "推荐"
             },
-            "image": "./assets/RSM/RSMSC1推荐.jpg",
-            "media": {
+            image: "./assets/RSM/RSMSC1推荐.jpg",
+            media: {
                 "data-lang": "帆布油彩"
             },
-            "series": {
+            series: {
                 'data-lang': "四川女人"
             },
-            "size": "80 x 100 x 3.2 cm",
-            "weight": "2.15 kg",
-            "year": "2024",
-            "state": {
-                "data-lang": "申白持有"
-            },
-            "exhibits": [
+            size: "80 x 100 x 3.2 cm",
+            weight: "2.15 kg",
+            year: "2024",
+            state: 0,
+            exhibits: [
                 {
                     "name": {
                         "data-lang": "申白工作室"
@@ -31,24 +29,22 @@ const groupedProjects = {
             ]
         },
         {
-            "serialnumber": "RSMSC2",
-            "title": {
+            serialnumber: "RSMSC2",
+            title: {
                 "data-lang": "表达"
             },
-            "image": "./assets/RSM/RSMSC2表达.jpg",
-            "media": {
+            image: "./assets/RSM/RSMSC2表达.jpg",
+            media: {
                 "data-lang": "帆布油彩"
             },
-            "series": {
+            series: {
                 'data-lang': "四川女人"
             },
-            "size": "80 x 100 x 3.2 cm",
-            "weight": "2.15 kg",
-            "year": "2024",
-            "state": {
-                "data-lang": "申白持有"
-            },
-            "exhibits": [
+            size: "80 x 100 x 3.2 cm",
+            weight: "2.15 kg",
+            year: "2024",
+            state: 0,
+            exhibits: [
                 {
                     "name": {
                         "data-lang": "申白工作室"
@@ -61,24 +57,22 @@ const groupedProjects = {
             ]
         },  
         {
-            "serialnumber": "RSMSC4",
-            "title": {
+            serialnumber: "RSMSC4",
+            title: {
                 "data-lang": "判断"
             },
-            "image": "./assets/RSM/RSMSC4判断.jpg",
-            "media": {
+            image: "./assets/RSM/RSMSC4判断.jpg",
+            media: {
                 "data-lang": "帆布油彩"
             },
-            "series": {
+            series: {
                 'data-lang': "四川女人"
             },
-            "size": "80 x 100 x 3.2 cm",
-            "weight": "2.15 kg",
-            "year": "2024",
-            "state": {
-                "data-lang": "申白持有"
-            },
-            "exhibits": [
+            size: "80 x 100 x 3.2 cm",
+            weight: "2.15 kg",
+            year: "2024",
+            state: 0,
+            exhibits: [
                 {
                     "name": {
                         "data-lang": "申白工作室"
@@ -91,24 +85,22 @@ const groupedProjects = {
             ]
         },
         {
-            "serialnumber": "RSMSC5",
-            "title": {
+            serialnumber: "RSMSC5",
+            title: {
                 "data-lang": "烤火"
             },
-            "image": "./assets/RSM/RSMSC5烤火.jpg",
-            "media": {
+            image: "./assets/RSM/RSMSC5烤火.jpg",
+            media: {
                 "data-lang": "帆布油彩"
             },
-            "series": {
+            series: {
                 'data-lang': "四川女人"
             },
-            "size": "120 x 100 x 3.2 cm",
-            "weight": "2.45 kg",
-            "year": "2024",
-            "state": {
-                "data-lang": "申白持有"
-            },
-            "exhibits": [
+            size: "120 x 100 x 3.2 cm",
+            weight: "2.45 kg",
+            year: "2024",
+            state: 0,
+            exhibits: [
                 {
                     "name": {
                         "data-lang": "申白工作室"
@@ -121,24 +113,22 @@ const groupedProjects = {
             ]
         },
         {
-            "serialnumber": "RSMSC6",
-            "title": {
+            serialnumber: "RSMSC6",
+            title: {
                 "data-lang": "尝试"
             },
-            "image": "./assets/RSM/RSMSC6尝试.jpg",
-            "media": {
+            image: "./assets/RSM/RSMSC6尝试.jpg",
+            media: {
                 "data-lang": "帆布油彩"
             },
-            "series": {
+            series: {
                 'data-lang': "四川女人"
             },
-            "size": "80 x 100 x 3.2 cm",
-            "weight": "2.15 kg",
-            "year": "2024",
-            "state": {
-                "data-lang": "申白持有"
-            },
-            "exhibits": [
+            size: "80 x 100 x 3.2 cm",
+            weight: "2.15 kg",
+            year: "2024",
+            state: 0,
+            exhibits: [
                 {
                     "name": {
                         "data-lang": "申白工作室"
@@ -151,24 +141,22 @@ const groupedProjects = {
             ]
         },
         {
-            "serialnumber": "RSMSC7",
-            "title": {
+            serialnumber: "RSMSC7",
+            title: {
                 "data-lang": "抓握"
             },
-            "image": "./assets/RSM/RSMSC7抓握.jpg",
-            "media": {
+            image: "./assets/RSM/RSMSC7抓握.jpg",
+            media: {
                 "data-lang": "帆布油彩"
             },
-            "series": {
+            series: {
                 'data-lang': "四川女人"
             },
-            "size": "100 x 80 x 3.2 cm",
-            "weight": "2.15 kg",
-            "year": "2024",
-            "state": {
-                "data-lang": "申白持有"
-            },
-            "exhibits": [
+            size: "100 x 80 x 3.2 cm",
+            weight: "2.15 kg",
+            year: "2024",
+            state: 0,
+            exhibits: [
                 {
                     "name": {
                         "data-lang": "申白工作室"
@@ -181,24 +169,22 @@ const groupedProjects = {
             ]
         },
         {
-            "serialnumber": "RSMSC8",
-            "title": {
+            serialnumber: "RSMSC8",
+            title: {
                 "data-lang": "介绍"
             },
-            "image": "./assets/RSM/RSMSC8介绍.jpg",
-            "media": {
+            image: "./assets/RSM/RSMSC8介绍.jpg",
+            media: {
                 "data-lang": "帆布油彩"
             },
-            "series": {
+            series: {
                 'data-lang': "四川女人"
             },
-            "size": "80 x 100 x 3.2 cm",
-            "weight": "2.15 kg",
-            "year": "2024",
-            "state": {
-                "data-lang": "申白持有"
-            },
-            "exhibits": [
+            size: "80 x 100 x 3.2 cm",
+            weight: "2.15 kg",
+            year: "2024",
+            state: 0,
+            exhibits: [
                 {
                     "name": {
                         "data-lang": "申白工作室"

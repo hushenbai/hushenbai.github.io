@@ -86,19 +86,50 @@
                 </div>
 
                 <!-- 文章部分 -->
-                <article class="detail-article">
+                <article class="article">
                     <div class="detail-line">
                         <p0 id="detail-TCMmain" data-lang="detail-TCMmain"></p0>
                     </div>
                 </article>
-            </div>
 
-            <footer>
-                <p3>&copy; 2024 HU SHENBAI</p3>
-            </footer>
-            
+                <div class="subscribe-container">
+                    <b1 class="styled-button" data-lang="subscribe-0" onclick="showContactCard()"></b1>
+                    <p1 class="subscribe-desc" style="max-width: 600px;" data-lang="subscribe-info-0"></p1>
+                </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <!-- 添加悬浮卡片 -->
+<div id="contact-card" class="contact-card">
+    <div class="contact-card-content">
+        <div class="contact-close" onclick="hideContactCard()">×</div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+             <img src="./assets/tcmbowl.png" 
+             style="width: 140px; height: 140px;" 
+             alt="404" 
+             class="error-image" 
+             id="rotating-image">
+             <div style="height: 8px;"></div>
+             <div class="text-box" style="padding: 0 36px; max-width: 800px; text-align: center;">
+                 <p0>添加微信，或者向我发送邮件</p0>
+                 <p0>Chat in WeChat, or send me an email</p0>
+                 <div style="height: 12px;"></div>
+                 <p0>hushenbai@163.com</p0>
+                 <div style="height: 12px;"></div>
+                 <div class="qrcode-container">
+                 <img src="assets/qrcode.jpg" alt="QR Code" class="qrcode-image" style="width: 200px; height: 200px; border-radius: 12px;">
+                 </div>
+                 <div style="height: 24px;"></div>
+             </div>
         </div>
     </div>
+</div>
+
+    <footer>
+        <p3>&copy; 2024 HU SHENBAI</p3>
+    </footer>  
 
     <script src="data.js"></script>
     <script src="detail.js"></script>
