@@ -12,9 +12,12 @@ const groupedProjects = {
             series: {
                 'data-lang': "四川女人"
             },
-            size: "80 x 100 x 3.2 cm",
+            width: 80,
+            height: 100,
+            depth: 3.2,
+            coefficient: 150,
             weight: "2.15 kg",
-            year: "2024",
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -40,9 +43,12 @@ const groupedProjects = {
             series: {
                 'data-lang': "四川女人"
             },
-            size: "80 x 100 x 3.2 cm",
+            width: 80,
+            height: 100,
+            depth: 3.2,
+            coefficient: 150,
             weight: "2.15 kg",
-            year: "2024",
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -68,9 +74,12 @@ const groupedProjects = {
             series: {
                 'data-lang': "四川女人"
             },
-            size: "80 x 100 x 3.2 cm",
+            width: 80,
+            height: 100,
+            depth: 3.2,
+            coefficient: 150,
             weight: "2.15 kg",
-            year: "2024",
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -96,9 +105,12 @@ const groupedProjects = {
             series: {
                 'data-lang': "四川女人"
             },
-            size: "120 x 100 x 3.2 cm",
+            width: 120,
+            height: 100,
+            depth: 3.2,
+            coefficient: 150,
             weight: "2.45 kg",
-            year: "2024",
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -124,9 +136,12 @@ const groupedProjects = {
             series: {
                 'data-lang': "四川女人"
             },
-            size: "80 x 100 x 3.2 cm",
+            width: 80,
+            height: 100,
+            depth: 3.2,
+            coefficient: 150,
             weight: "2.15 kg",
-            year: "2024",
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -152,9 +167,12 @@ const groupedProjects = {
             series: {
                 'data-lang': "四川女人"
             },
-            size: "100 x 80 x 3.2 cm",
+            width: 100,
+            height: 80,
+            depth: 3.2,
+            coefficient: 150,
             weight: "2.15 kg",
-            year: "2024",
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -180,9 +198,12 @@ const groupedProjects = {
             series: {
                 'data-lang': "四川女人"
             },
-            size: "80 x 100 x 3.2 cm",
+            width: 80,
+            height: 100,
+            depth: 3.2,
+            coefficient: 150,
             weight: "2.15 kg",
-            year: "2024",
+            year: 2024,
             state: 0,
             exhibits: [
                 {

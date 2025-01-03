@@ -34,12 +34,31 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('detail-size').textContent = currentProject.size;
         document.getElementById('detail-weight').textContent = currentProject.weight;
         document.getElementById('detail-year').textContent = currentProject.year;
+        // 更新公式中的值
+        document.getElementById('detail-width').textContent = currentProject.width;
+        document.getElementById('detail-height').textContent = currentProject.height;
+        document.getElementById('detail-coefficient').textContent = currentProject.coefficient;
         // 设置需要翻译的元素
         document.getElementById('detail-title').setAttribute('data-lang', currentProject.title2['data-lang']);
         document.getElementById('detail-series').setAttribute('data-lang', currentProject.series['data-lang']);
         document.getElementById('detail-media').setAttribute('data-lang', currentProject.media['data-lang']);
         
-    
+        // 格式化尺寸显示
+        const sizeElement = document.getElementById('detail-size');
+        if (currentProject.width && currentProject.height && currentProject.depth) {
+            sizeElement.textContent = `${currentProject.width} × ${currentProject.height} × ${currentProject.depth} cm`;
+        }
+        
+        // 更新系数显示
+        const coefficientElement = document.getElementById('detail-coefficient');
+        if (currentProject.coefficient) {
+            coefficientElement.textContent = currentProject.coefficient;
+        }
+
+        // 计算价格：(宽 + 高) × 系数
+        const price = (currentProject.width + currentProject.height) * currentProject.coefficient;
+        document.getElementById('calculated-price').textContent = Math.round(price);
+
         // 处理展览信息
         const exhibitsList = document.getElementById('exhibits-list');
         if (currentProject.exhibits && exhibitsList) {
@@ -85,6 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // 使用全局语言设置更新内容
         changeLanguage(currentLang);
+        
+
     }
 });
 
@@ -274,7 +295,7 @@ document.addEventListener('DOMContentLoaded', updateSubscribeStatus);
 // 页面加载完成后初始化卡片状态
 document.addEventListener('DOMContentLoaded', () => {
     const card = document.getElementById('contact-card');
-    const content = card.querySelector('.contact-card-content');
+    const content = card.querySelector('.contact-card-box');
     
     // 设置初始状态
     content.style.transform = 'translateY(700px)';
@@ -283,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // 显示联系卡片
 function showContactCard() {
     const card = document.getElementById('contact-card');
-    const content = card.querySelector('.contact-card-content');
+    const content = card.querySelector('.contact-card-box');
     
     // 确保初始状态
     content.style.transform = 'translateY(700px)';
@@ -306,7 +327,7 @@ function showContactCard() {
 // 隐藏联系卡片
 function hideContactCard() {
     const card = document.getElementById('contact-card');
-    const content = card.querySelector('.contact-card-content');
+    const content = card.querySelector('.contact-card-box');
     
     // 重置动画状态
     content.style.transform = 'translateY(700px)';

@@ -16,9 +16,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -48,9 +51,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -80,9 +86,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -112,9 +121,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -144,9 +156,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -176,9 +191,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -208,9 +226,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -240,9 +261,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -272,9 +296,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -304,9 +331,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -336,9 +366,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -368,9 +401,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -400,9 +436,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -432,9 +471,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -464,9 +506,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -496,9 +541,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -528,9 +576,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -560,9 +611,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 2,
             exhibits: [
                 {
@@ -601,9 +655,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -633,9 +690,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -671,9 +731,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -703,9 +766,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -735,9 +801,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -767,9 +836,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -802,9 +874,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -834,9 +909,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -866,9 +944,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -898,9 +979,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -933,9 +1017,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -965,9 +1052,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -997,9 +1087,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1029,9 +1122,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1061,9 +1157,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1096,9 +1195,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1127,9 +1229,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -1158,9 +1263,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -1189,9 +1297,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1220,9 +1331,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1251,9 +1365,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1282,9 +1399,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1313,9 +1433,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1344,9 +1467,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1378,9 +1504,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1409,9 +1538,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1440,9 +1572,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1471,9 +1606,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1504,9 +1642,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1535,9 +1676,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1566,9 +1710,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1597,9 +1744,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1628,9 +1778,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1659,9 +1812,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {
@@ -1690,9 +1846,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -1721,9 +1880,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
             state: 0,
             exhibits: [
                 {
@@ -1752,9 +1914,12 @@ const groupedProjects = {
             media: {
                 'data-lang': '木板油彩'
             },
-            size: '20 x 20 x 2.3 cm',
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
             weight: '250 g',
-            year: '2024',
+            year: 2024,
                         state: 0,
             exhibits: [
                 {

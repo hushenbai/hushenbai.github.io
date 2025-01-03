@@ -103,26 +103,51 @@
 
     <!-- 添加悬浮卡片 -->
 <div id="contact-card" class="contact-card">
-    <div class="contact-card-content">
+    <div class="contact-card-box">
         <div class="contact-close" onclick="hideContactCard()">×</div>
-        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-             <img src="./assets/tcmbowl.png" 
-             style="width: 140px; height: 140px;" 
-             alt="404" 
-             class="error-image" 
-             id="rotating-image">
-             <div style="height: 8px;"></div>
-             <div class="text-box" style="padding: 0 36px; max-width: 800px; text-align: center;">
-                 <p0>添加微信，或者向我发送邮件</p0>
-                 <p0>Chat in WeChat, or send me an email</p0>
-                 <div style="height: 12px;"></div>
-                 <p0>hushenbai@163.com</p0>
-                 <div style="height: 12px;"></div>
-                 <div class="qrcode-container">
-                 <img src="assets/qrcode.jpg" alt="QR Code" class="qrcode-image" style="width: 200px; height: 200px; border-radius: 12px;">
-                 </div>
-                 <div style="height: 24px;"></div>
+        <div class="contact-card-content">
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+             <div>
+                <h2 data-lang="price">price</h2>
+                <div style="height: 2px;"></div>
+                <div style="display: flex; flex-direction: row; gap: 4px;">
+                <p2 data-lang="price-TCMinfo">price-TCMinfo</p2>
+                <p2 id="detail-price-coefficient">60</p2>
+                <p2>CNY</p2>
+                </div>
              </div>
+             <div>
+                <div style="display: flex; flex-direction: row; align-items: baseline; gap: 4px;">
+                    <h1 id="calculated-price"></h1>
+                    <h2>CNY</h2>
+                </div>
+                <div style="display: flex; flex-direction: row; gap: 4px;">
+                    <p2 data-lang="price-formula">price-formula:</p2>
+                    <div style="display: flex; flex-direction: row; gap: 3px;">
+                        <p2>(</p2>
+                        <p2 data-lang="width">width</p2>
+                        <p2 id="detail-width"></p2>
+                        <p2>+</p2>
+                        <p2 data-lang="height">height</p2>
+                        <p2 id="detail-height"></p2>
+                        <p2>)</p2>
+                        <p2>×</p2>
+                        <p2 data-lang="coefficient">coefficient</p2>
+                        <p2 id="detail-coefficient"></p2>
+                    </div>
+                    </div>
+             </div>
+             <div style="display: flex; flex-direction: column;">
+                <p2 data-lang="purchase-info">purchase-info</p2>
+             </div>
+             <div style="display: flex; flex-direction: column;">
+                 <p2 data-lang="Contactway">Contactway</p2>
+             </div>
+             <p0>hushenbai@163.com</p0>
+             <div class="qrcode-container">
+                 <img src="assets/qrcode.jpg" alt="QR Code" class="qrcode-image" style="width: 120px; height: 120px; border-radius: 8px;">
+             </div>
+        </div>
         </div>
     </div>
 </div>

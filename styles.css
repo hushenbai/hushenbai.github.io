@@ -951,15 +951,16 @@ b1 {
     color: #222;
 }
 
-.contact-card-content {
+.contact-card-box {
     position: relative;
-    padding: 20px 20px 32px 20px;
+    display: flex;
+    overflow-y: hidden;
+    padding: 0 36px;
     border-radius: 12px;
     max-width: 480px;
     width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
-    background: rgba(255, 255, 255, 0.5);
+    max-height: 85vh;
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -967,16 +968,33 @@ b1 {
     transform: translateY(700px);
     opacity: 1;
     transition: transform 0.4s ease;
+    /* 隐藏滚动条 - Firefox */
+    scrollbar-width: none;
+    /* 隐藏滚动条 - IE/Edge */
+    -ms-overflow-style: none;
+}
+
+.contact-card-content {
+    padding: 60px 0;
+    overflow-y: auto;
+    justify-content: left;
+    align-items: left;
+}
+
+/* 隐藏滚动条 - Chrome/Safari/Opera */
+.contact-card-content::-webkit-scrollbar {
+    display: none;
 }
 
 /* 显示状态 */
-.contact-card.show .contact-card-content {
+.contact-card.show .contact-card-box {
     transform: translateY(0);
     opacity: 1;
+    transition: all 0.5s cubic-bezier(.25,1.23,.52,1);
 }
 
 .contact-close {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     font-size: 32px;
@@ -989,24 +1007,25 @@ b1 {
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.05);
     transition: background 0.3s;
+    z-index: 1000;
 }
 
 .contact-close:hover {
     background: rgba(0, 0, 0, 0.1);
 }
 
-.contact-card.show .contact-card-content {
-    transform: translateY(0px);
-    transition: all 0.5s cubic-bezier(.25,1.23,.52,1);
-}
-
 @media screen and (max-width: 800px) {
-    .contact-card-content {
+    .contact-card-box {
         bottom: 0;
         position: fixed;
-        padding: 20px 20px 32px 20px;
-        border-radius: 12px;
-        max-width: 480px;
+        padding: 0 20px;
+        border-radius: 0px;
+        max-width: 100%;
+        max-height: 80vh;
+    }
+
+    .contact-card-content {
+        padding: 48px 0;
     }
 }
 

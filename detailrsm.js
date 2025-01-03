@@ -40,6 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('detail-title').setAttribute('data-lang', currentProject.title['data-lang']);
         document.getElementById('detail-media').setAttribute('data-lang', currentProject.media['data-lang']);
         
+        // 格式化尺寸显示
+        const sizeElement = document.getElementById('detail-size');
+        if (currentProject.width && currentProject.height && currentProject.depth) {
+            sizeElement.textContent = `${currentProject.width} × ${currentProject.height} × ${currentProject.depth} cm`;
+        }
         
         // 处理展览信息
         const exhibitsList = document.getElementById('exhibits-list');
