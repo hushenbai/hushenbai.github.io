@@ -68,6 +68,7 @@ function translateElement(element, key) {
     }
 }
 
+
 // 使用示例
 function addNewContent() {
     const newElement = document.createElement('div');
@@ -211,13 +212,5 @@ document.addEventListener('DOMContentLoaded', () => {
     updateLanguage(currentLang);
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const detailContainer = document.querySelector('.detail-container');
-    const scrollSpeed = 0.3;
-    
-    window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY;
-        detailContainer.style.transform = `translateY(${scrollPosition * scrollSpeed}px)`;
-    });
-});
+
 

@@ -614,7 +614,7 @@ const groupedProjects = {
             width: 20,
             height: 20,
             depth: 2.3,
-            coefficient: 65,
+            coefficient: 60,
             weight: '250 g',
             year: 2024,
             state: 2,

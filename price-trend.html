@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Trend - HuShenbai</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js 必须最先引入 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="price-trend.css">
+     <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
+ <body>
+</head>
+<body>
+    <div class="nav-background">
+        <nav class="nav-container">
+            <div class="nav-left">
+                <p1 class="nav-button" onclick="goBack()" data-lang="back"></p1>
+            </div>
+            <div class="nav-right">
+                <div class="language-switch">
+                    <p1><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer;">English</button></p1>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <header class="header">
+        <h1>价格系数</h1>
+        <h1>Coefficient</h1>
+        <div style="height: 40px;"></div>
+        <div style="max-width: 1080px; margin: 0 24px;">
+            <p0>系数是艺术作品定价的方式，系数越高，作品价格越高。<br>
+                标准系数是艺术家第一次售卖的价格依据，但艺术家手中的作品有限。<br>
+                其他拥有本艺术家作品的藏家会以自由系数出售作品。<br><br>
+                作品价格 =（宽度+高度）* 系数
+            </p0>
+        </div>
+    </header>
+
+    
+  <div class="frame">
+    <div class="big-coefficient">
+        <div class="two">
+             <div class="bigamount">
+             <h1>60</h1>
+             <p1 class="coefficient-title">标准系数</p1>
+             </div>
+             <div class="bigamount">
+             <h1 id="average-coefficient">0.0</h1>
+             <p1 class="coefficient-title">平均系数</p1>
+             </div>
+        </div>
+        <div class="lists-container">
+            <canvas id="priceChart"></canvas>
+        </div>
+    </div>
+
+    <div class="lists-container">
+        <div class="list-column">
+            <p0 class="list-title" data-lang="latest-coefficient">最新系数</p0>
+            <div class="project-label">
+                <div style="width: 32px;"></div>
+                <p3 data-lang="name">名称</p3>
+                <p3 data-lang="serialnumber">编号</p3>
+                <p3 data-lang="coefficient">系数</p3>
+                <p3 data-lang="price">价格</p3>
+            </div>
+            <div id="latest-list"></div>
+        </div>
+        <div class="list-column">
+            <p0 class="list-title" data-lang="highest-coefficient">最高系数</p0>
+            <div class="project-label">
+                <div style="width: 32px;"></div>
+                <p3 data-lang="name">名称</p3>
+                <p3 data-lang="serialnumber">编号</p3>
+                <p3 data-lang="coefficient">系数</p3>
+                <p3 data-lang="price">价格</p3>
+            </div>
+            <div id="highest-list"></div>
+        </div>
+    </div>
+    </div>
+
+    <home>
+        <div class="text-box">
+            <p0>一条大河，十亿小碗</p0>
+            <p0>One big river, billion small bowls</p0>
+        </div>
+        </home>
+    
+        <footer>
+            <p3>&copy; 2024 HU SHENBAI</p3>
+        </footer>
+
+    <script src="translations.js"></script>
+    <script src="data.js"></script>
+    <script src="price-events.js"></script>
+    <script src="utils.js"></script>
+    <script src="price-trend.js"></script>
+    <script>
+    function goToDetail(groupId, serialnumber) {
+        window.location.href = `detail.html?group=group${groupId}&id=${serialnumber}`;
+    }
+    </script>
+</body>
+</html> 

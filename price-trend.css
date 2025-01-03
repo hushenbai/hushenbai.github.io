@@ -1,0 +1,170 @@
+.frame {
+    max-width: 1080px;
+    width: 100%;
+    padding: 0 60px;
+}
+
+.lists-container {
+    max-width: 1080px;
+    height: 100%;
+    width: 100%;
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.two {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+#priceChart {
+    width: 100% ;  /* 强制覆盖 Chart.js 的默认宽度 */
+    height: 100% ;
+}
+
+.list-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+}
+.list-title {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.project-label {
+    display: grid;
+    grid-template-columns: 32px 2fr 1fr 0.5fr 0.5fr ;  /* 添加 new 标签的列 */
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    flex: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.project-image {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.project-info {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.5fr 0.5fr ;  /* 添加 new 标签的列 */
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.big-coefficient {
+    max-width: 1080px;
+    width: 100%;
+    height: 280px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+.coefficient-item {
+    text-align: center;
+}
+
+.coefficient-title {
+    font-size: 16px;
+    color: #666;
+}
+
+.bigamount {
+    width: 50%;
+    min-width: 200px;
+    height: 100%;
+    padding: 24px;
+    display: flex;
+    gap: 4px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tooltip-content {
+    min-width: 200px;
+}
+
+.tooltip-header {
+    margin-bottom: 16px;
+}
+
+.tooltip-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.tooltip-item {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+#chartjs-tooltip {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 12px;
+    pointer-events: none;
+    position: absolute;
+    transform: translate(-50%, -100%);
+    margin-top: -8px;
+    z-index: 100;
+}
+
+@media (max-width: 768px) {
+
+    .frame {
+        padding: 12px;
+    }
+
+    .big-coefficient {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .two {
+        gap: 12px;
+    }
+    .lists-container {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .bigamount {
+        width: 50%;
+        min-width: auto;
+        height: 100%;
+        padding: 16px;
+        display: flex;
+    }
+}

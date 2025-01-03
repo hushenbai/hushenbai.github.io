@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6EYM7997C"></script>
-   <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-F6EYM7997C');
-    </script>
-    <!-- 确保 translations.js 最先加载 -->
-    <script src="translations.js"></script>
+    <!-- Meta 标签 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HuShenbai</title>
+    
+    <!-- 资源引用 -->
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-    <!-- 为 iOS 设备添加图标 -->
     <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
-     <!-- Google Fonts -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6EYM7997C"></script>
+    <script>
+        // Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F6EYM7997C');
+    </script>
 </head>
+
 <body>
-    <!-- 导航栏 -->
+    <!-- 1. 导航栏 -->
     <div class="nav-background">
         <nav class="nav-container">
             <div class="nav-left">
@@ -41,12 +43,14 @@
 
     <!-- 主要内容容器 -->
     <div class="detail-wrapper">
-        <!-- 慢速滚动的容器 -->
+        <!-- 2.1 慢速滚动区域 -->
         <div class="detail-container">
+            <!-- 图片区域 -->
             <div class="detail-image">
                 <div class="image-wrapper">               
                     <div class="depth-container">
                         <img id="detail-img" src="" alt="">
+                        <!-- 深度层 -->
                         <span class="depth-layer"></span>
                         <span class="depth-layer"></span>
                         <span class="depth-layer"></span>
@@ -60,6 +64,7 @@
                     </div>
                 </div>
             </div>
+            <!-- 基本信息 -->
             <div class="detail-info">
                 <h1 id="detail-title" data-lang=""></h1>
                 <p0 id="detail-serialnumber"></p0>
@@ -68,14 +73,13 @@
                 <p0 id="detail-size"></p0>
                 <p0 id="detail-weight"></p0>
                 <p0 id="detail-year"></p0>
-                
             </div>
         </div>
         
-        <!-- 正常滚动的浮动信息 -->
+        <!-- 2.2 正常滚动区域 -->
         <div class="floating-info">
             <div class="floating-content">
-                <!-- 展览列表模块 -->
+                <!-- 展览列表 -->
                 <div class="exhibits-list-container">
                     <div class="exhibits-header">
                         <p0 data-lang="exhibitions">追踪</p0>
@@ -85,45 +89,50 @@
                     </div>
                 </div>
 
+                <!-- 订阅按钮 -->
+                <div class="visiter-container">
+                    <b1 class="styled-button" data-lang="visiter-0" onclick="showBuyCard()"></b1>
+                    <p1 class="visiter-desc" style="max-width: 600px;" data-lang="visiter-statebutton-0"></p1>
+                </div>
+
                 <!-- 文章部分 -->
                 <article class="article">
                     <div class="detail-line">
                         <p0 id="detail-TCMmain" data-lang="detail-TCMmain"></p0>
                     </div>
                 </article>
-
-                <div class="subscribe-container">
-                    <b1 class="styled-button" data-lang="subscribe-0" onclick="showContactCard()"></b1>
-                    <p1 class="subscribe-desc" style="max-width: 600px;" data-lang="subscribe-info-0"></p1>
-                </div>
-                </div>
+            
             </div>
         </div>    
     </div>
 
     <!-- 添加悬浮卡片 -->
-<div id="contact-card" class="contact-card">
-    <div class="contact-card-box">
-        <div class="contact-close" onclick="hideContactCard()">×</div>
-        <div class="contact-card-content">
+<div id="buy-card" class="buy-card">
+    <div class="buy-card-box">
+    <div class="buy-close" onclick="hideBuyCard()">×</div>
+    <div class="buy-card-content">
         <div style="display: flex; flex-direction: column; gap: 24px;">
-             <div>
+            <div>
                 <h2 data-lang="price">price</h2>
                 <div style="height: 2px;"></div>
                 <div style="display: flex; flex-direction: row; gap: 4px;">
-                <p2 data-lang="price-TCMinfo">price-TCMinfo</p2>
-                <p2 id="detail-coefficientshow"></p2>
-                <p2>CNY</p2>
+                    <p2 data-lang="price-TCMinfo">price-TCMinfo</p2>
+                    <p2>60</p2>
                 </div>
-             </div>
-             <div>
+                <div style="display: flex; flex-direction: row; gap: 4px;">
+                    <p2 data-lang="price-this">price-this</p2>
+                    <p2 id="detail-coefficientshow"></p2>
+                </div>
+            </div>
+
+            <!-- 计算价格部分 -->
+            <div>
                 <div style="display: flex; flex-direction: row; align-items: baseline; gap: 4px;">
                     <h1 id="calculated-price"></h1>
                     <h2>CNY</h2>
                 </div>
                 <div style="display: flex; flex-direction: row; gap: 4px;">
-                    <p2 data-lang="price-formula">price-formula:</p2>
-                    <div style="display: flex; flex-direction: row; gap: 3px;">
+                    <div style="display: flex; flex-direction: row; gap: 2px;">
                         <p2>(</p2>
                         <p2 data-lang="width">width</p2>
                         <p2 id="detail-width"></p2>
@@ -135,27 +144,45 @@
                         <p2 data-lang="coefficient">coefficient</p2>
                         <p2 id="detail-coefficient"></p2>
                     </div>
-                    </div>
-             </div>
-             <div style="display: flex; flex-direction: column;">
+                </div>
+            </div>
+
+            <!-- 购买信息部分 -->
+            <div style="display: flex; flex-direction: column;">
                 <p2 data-lang="purchase-info">purchase-info</p2>
-             </div>
-             <div style="display: flex; flex-direction: column;">
-                 <p2 data-lang="Contactway">Contactway</p2>
-             </div>
-             <p0>hushenbai@163.com</p0>
-             <div class="qrcode-container">
-                 <img src="assets/qrcode.jpg" alt="QR Code" class="qrcode-image" style="width: 120px; height: 120px; border-radius: 8px;">
-             </div>
-        </div>
+            </div>
+
+            <!-- 购买方式部分 -->
+            <div style="display: flex; flex-direction: column;">
+                <p2 data-lang="Buyway">Buyway</p2>
+            </div>
+
+            <div class="contact-card" style="display: flex; flex-direction: row; gap: 16px;">
+                <div class="info-block" style="width: 35%;">
+                    <img src="assets/qrcode.png" alt="QR Code" style="width: 100%; height: 100%;">
+                </div>
+                 <div class="info-block" style="width: 65%; height: auto;">
+                     <p0>hushenbai@163.com</p0>
+                 </div>
+            </div>
+
+            <div class="visiter-container">
+                <b1 class="styled-button" data-lang="price-trend" onclick="window.location.href='price-trend.html'"></b1>
+            </div>
+
+            
+            
         </div>
     </div>
+</div>
 </div>
 
     <footer>
         <p3>&copy; 2024 HU SHENBAI</p3>
     </footer>  
 
+    <script src="price-events.js"></script>
+    <script src="utils.js"></script>  
     <script src="data.js"></script>
     <script src="detail.js"></script>
 </body>
