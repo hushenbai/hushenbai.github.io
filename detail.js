@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 更新公式中的值
         document.getElementById('detail-width').textContent = currentProject.width;
         document.getElementById('detail-height').textContent = currentProject.height;
+        document.getElementById('detail-coefficientshow').textContent = currentProject.coefficient;
         document.getElementById('detail-coefficient').textContent = currentProject.coefficient;
         // 设置需要翻译的元素
         document.getElementById('detail-title').setAttribute('data-lang', currentProject.title2['data-lang']);
@@ -49,11 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
             sizeElement.textContent = `${currentProject.width} × ${currentProject.height} × ${currentProject.depth} cm`;
         }
         
-        // 更新系数显示
-        const coefficientElement = document.getElementById('detail-coefficient');
-        if (currentProject.coefficient) {
-            coefficientElement.textContent = currentProject.coefficient;
-        }
 
         // 计算价格：(宽 + 高) × 系数
         const price = (currentProject.width + currentProject.height) * currentProject.coefficient;
@@ -105,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // 使用全局语言设置更新内容
         changeLanguage(currentLang);
         
-
     }
 });
 
