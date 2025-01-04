@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 计算平均系数
     const allProjects = Object.values(groupedProjects).flat();
-    const coefficients = allProjects.map(project => 
-        getProjectCoefficient(project.serialnumber)
-    );
+    const coefficients = allProjects.map(project => {
+        const latestCoeff = getLatestCoefficient(project.serialnumber);
+        return latestCoeff !== null ? latestCoeff : project.coefficient;
+    });
     const averageCoefficient = coefficients.reduce((a, b) => a + b, 0) / coefficients.length;
     
     // 更新平均系数显示
@@ -12,16 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 获取每个项目的最新系数和最新更新时间
     const projectsWithCoefficient = allProjects.map(project => {
-        // 获取该项目的最新价格事件
-        const latestEvent = priceEvents
-            .filter(event => event.serialnumber === project.serialnumber)
-            .sort((a, b) => new Date(b.date) - new Date(a.date))[0];
-
+        const latestCoefficient = getLatestCoefficient(project.serialnumber);
         return {
             ...project,
-            currentCoefficient: getProjectCoefficient(project.serialnumber),
-            price: (project.width + project.height) * getProjectCoefficient(project.serialnumber),
-            lastUpdateDate: latestEvent ? new Date(latestEvent.date) : new Date('1970-01-01')
+            currentCoefficient: latestCoefficient !== null ? latestCoefficient : project.coefficient,
+            price: (project.width + project.height) * (latestCoefficient !== null ? latestCoefficient : project.coefficient),
+            lastUpdateDate: priceEvents
+                .filter(event => event.serialnumber === project.serialnumber)
+                .sort((a, b) => new Date(b.date) - new Date(a.date))[0]?.date || '1970-01-01'
         };
     });
 
@@ -261,3 +260,11 @@ function updateProjectCoefficients() {
         }
     });
 }
+
+document.addEventListener('languageChanged', () => {
+    // 重新渲染列表
+    document.getElementById('latest-list').innerHTML = 
+        latestSorted.map(generateProjectHTML).join('');
+    document.getElementById('highest-list').innerHTML = 
+        highestSorted.map(generateProjectHTML).join('');
+});

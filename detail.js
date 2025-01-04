@@ -101,6 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // 使用全局语言设置更新内容
         changeLanguage(currentLang);
         
+        // 更新系数
+        updateDetailCoefficient(currentProject);
+        
         updateProjectInfo();
         updateVisiterStatus();
         updateContactCardData();
@@ -384,5 +387,16 @@ function updateProjectInfo() {
     }
 
     // ... 其他更新代码保持不变 ...
+}
+
+// 更新项目系数
+function updateDetailCoefficient(project) {
+    if (!project) return;
+    
+    // 从 price-events.js 获取最新系数
+    const latestCoefficient = getLatestCoefficient(project.serialnumber);
+    if (latestCoefficient !== null) {
+        project.coefficient = latestCoefficient;
+    }
 }
 
