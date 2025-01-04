@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Price Trend - HuShenbai</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="translations.js"></script>
+    <script src="language.js"></script>    
     <!-- Chart.js 必须最先引入 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -44,11 +46,11 @@
   <div class="frame">
     <div class="big-board">
         <div class="box-row">
-            <div class="board-column">
+            <div class="board-column" style="background-color: rgba(0, 0, 0, 0.9);">
              <div class="text-column">
-             <h1>60</h1>
-             <p0 data-lang="official-coefficient" style="line-height: 1.5;">官方系数</p0>
-             <p3 data-lang="official-coefficient-description" style="line-height: 1.5;">艺术家发售作品的统一价格</p3>
+             <h1 style="color: white;">60</h1>
+             <p0 data-lang="official-coefficient" style="line-height: 1.5; color: white;">官方系数</p0>
+             <p3 data-lang="official-coefficient-description" style="line-height: 1.5;color: white;">艺术家发售作品的统一价格</p3>
              </div>
              </div>
              <div class="board-column">
@@ -107,30 +109,30 @@
     <script src="utils.js"></script>
     <script src="price-trend.js"></script>
     <script>
-    function goToDetail(groupId, serialnumber) {
-        window.location.href = `detail.html?group=group${groupId}&id=${serialnumber}`;
-    }
-
-    function toggleLanguage() {
-        currentLang = currentLang === 'zh' ? 'en' : 'zh';
-        updateLanguage();
-        // 触发语言改变事件
-        document.dispatchEvent(new Event('languageChanged'));
-    }
-
-    function updateLanguage() {
-        document.querySelectorAll('[data-lang]').forEach(element => {
-            const key = element.getAttribute('data-lang');
-            if (translations[currentLang][key]) {
-                element.innerHTML = translations[currentLang][key];
-            }
+        function goToDetail(groupId, serialnumber) {
+            window.location.href = `detail.html?group=group${groupId}&id=${serialnumber}`;
+        }
+    
+        function toggleLanguage() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            updateLanguage();
+            // 触发语言改变事件
+            document.dispatchEvent(new Event('languageChanged'));
+        }
+    
+        function updateLanguage() {
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                const key = element.getAttribute('data-lang');
+                if (translations[currentLang][key]) {
+                    element.innerHTML = translations[currentLang][key];
+                }
+            });
+        }
+    
+        // 初始化语言
+        document.addEventListener('DOMContentLoaded', () => {
+            updateLanguage();
         });
-    }
-
-    // 初始化语言
-    document.addEventListener('DOMContentLoaded', () => {
-        updateLanguage();
-    });
-    </script>
+        </script>
 </body>
 </html> 

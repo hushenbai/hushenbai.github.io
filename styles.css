@@ -660,8 +660,23 @@ body {
     margin-bottom: 40px;
 }
 
-.productstate-container p1 {
-    color: #666;
+.trend-card {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 40px 36px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.trend-card:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .styled-button {
