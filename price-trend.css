@@ -1,3 +1,25 @@
+
+
+header {
+    max-width: 1080px;
+    width: 100%;
+    padding: 0 60px;
+    margin-top: 160px;
+    margin-bottom: 80px;
+}
+
+.header-title {
+    width: 100vw;
+    max-width: 1080px;
+    padding: 0 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+}
+
 .frame {
     max-width: 1080px;
     width: 100%;
@@ -7,12 +29,21 @@
     gap: 16px;
 }
 
+.big-board {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
 .box-column {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
+
 }
 
 .box-row {
@@ -20,16 +51,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 16px;
-}
-
-.info-box {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: buttom;
-    align-items: buttom;
+    gap: 16px;;
 }
 
 .board-column {
@@ -56,6 +78,17 @@
     gap: 16px;
 }
 
+.text-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    bottom: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 .lists-container {
     max-width: 1080px;
     height: 100%;
@@ -68,11 +101,6 @@
     gap: 24px;
 }
 
-.two {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-}
 
 #priceChart {
     width: 100% ;  /* 强制覆盖 Chart.js 的默认宽度 */
@@ -121,15 +149,7 @@
     flex: 1;
 }
 
-.big-coefficient {
-    max-width: 1080px;
-    width: 100%;
-    height: 280px;
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    margin-bottom: 24px;
-}
+
 .coefficient-item {
     text-align: center;
 }
@@ -137,21 +157,6 @@
 .coefficient-title {
     font-size: 16px;
     color: #666;
-}
-
-.bigamount {
-    width: 50%;
-    min-width: 200px;
-    height: 100%;
-    padding: 24px;
-    display: flex;
-    gap: 4px;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
 }
 
 .tooltip-content {
@@ -190,21 +195,46 @@
 
 @media (max-width: 768px) {
 
+
+    header {
+        margin-top: 100px;
+        margin-bottom: 40px;
+        padding: 0 20px;
+    }
+
+    .header-title {
+        padding: 0 20px;
+    }
+
     .frame {
         padding: 12px;
+        gap: 12px;
     }
 
-    .big-coefficient {
-        width: 100%;
+    .big-board {
         height: 100%;
+        display: flex;
         flex-direction: column;
         gap: 12px;
-        margin-bottom: 12px;
     }
 
-    .two {
+    .box-row {
+        height: 200px;
+        width: 100%;
         gap: 12px;
     }
+
+    .board-row {
+        padding: 12px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .board-column {
+        padding: 12px;
+        gap: 12px;
+    }
+
     .lists-container {
         padding: 16px;
         display: flex;
@@ -212,11 +242,4 @@
         gap: 24px;
     }
 
-    .bigamount {
-        width: 50%;
-        min-width: auto;
-        height: 100%;
-        padding: 16px;
-        display: flex;
-    }
 }

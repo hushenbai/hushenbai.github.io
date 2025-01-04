@@ -25,6 +25,25 @@ function generateProjectHTML(project) {
     `;
 }
 
+// 添加滚动监听
+let lastScrollTop = 0;
+const nav = document.querySelector('.nav-background');
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // 向下滚动时隐藏
+    if (scrollTop > lastScrollTop && scrollTop > 50) {
+        nav.classList.add('hidden');
+    } 
+    // 向上滚动时显示
+    else {
+        nav.classList.remove('hidden');
+    }
+    
+    lastScrollTop = scrollTop;
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // 计算平均系数
     const allProjects = Object.values(groupedProjects).flat();
