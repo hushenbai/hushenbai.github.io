@@ -26,11 +26,12 @@ const translations = {
         "productstate-button-4": "该艺术作品已遗失，申白失去了它的消息，你能提供消息吗？",
         "price": "价格",
         "price-trend": "价格趋势",
+        "trend-info": "了解关于价格系数的更多信息<br>查看申白作品的整体价格与趋势。",
         "latest-coefficient": "最新系数",
         "highest-coefficient": "最高系数",
         "average-coefficient": "平均系数",
         "official-coefficient": "标定系数",
-        "official-coefficient-description": "艺术家统一发售价格<br>缓慢上升，不下跌",
+        "official-coefficient-description": "申白统一发售价格<br>缓慢上升，不下跌",
         "average-coefficient-description": "市场交易平均价格<br>卖家自由定价",
 
         "coefficient-description": "系数是艺术作品的定价方式，体现艺术家的价值。系数越高，作品价格越高。<br>作品价格=(宽度+高度)×系数。",
@@ -188,7 +189,7 @@ const translations = {
     'en': {
         'title': 'PearlBarleySand',
         'subtitle': 'PearlBarleySand',
-        'name': 'name',
+        'name': 'Name',
         'back': 'Back',
         'switch-lang': '中文',
         'tcm-title': 'PearlBarleySand',
@@ -207,6 +208,7 @@ const translations = {
         "productstate-button-4": "This artwork has been lost or damaged, do you know any news about it?",
         "price": "Price",
         "price-trend": "Price Trend",
+        "trend-info": "Learn more about the price coefficient,<br>view the overall price and trend of the artist's works.",
         "latest-coefficient": "Latest Coefficient",
         "highest-coefficient": "Highest Coefficient",
         "average-coefficient": "Average<br>Coefficient",
@@ -396,12 +398,18 @@ function changeLanguage(lang) {
     });
 }
 
-// 返回函数
-function goBack() {
-    window.location.href = 'index.html';
-}
-
 // 页面加载时初始化语言
 document.addEventListener('DOMContentLoaded', () => {
     changeLanguage(currentLang);
 }); 
+
+// 返回上一页函数
+function goBack() {
+    // 如果有上一页历史记录，则返回上一页
+    if (window.history.length > 1 && document.referrer) {
+        window.history.back();
+    } else {
+        // 如果没有上一页，则返回首页
+        window.location.href = 'index.html';
+    }
+}

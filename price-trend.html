@@ -103,36 +103,11 @@
             <p3>&copy; 2024 HU SHENBAI</p3>
         </footer>
 
-    <script src="translations.js"></script>
+ 
     <script src="data.js"></script>
     <script src="price-events.js"></script>
     <script src="utils.js"></script>
     <script src="price-trend.js"></script>
-    <script>
-        function goToDetail(groupId, serialnumber) {
-            window.location.href = `detail.html?group=group${groupId}&id=${serialnumber}`;
-        }
-    
-        function toggleLanguage() {
-            currentLang = currentLang === 'zh' ? 'en' : 'zh';
-            updateLanguage();
-            // 触发语言改变事件
-            document.dispatchEvent(new Event('languageChanged'));
-        }
-    
-        function updateLanguage() {
-            document.querySelectorAll('[data-lang]').forEach(element => {
-                const key = element.getAttribute('data-lang');
-                if (translations[currentLang][key]) {
-                    element.innerHTML = translations[currentLang][key];
-                }
-            });
-        }
-    
-        // 初始化语言
-        document.addEventListener('DOMContentLoaded', () => {
-            updateLanguage();
-        });
-        </script>
+    <script src="script.js"></script>
 </body>
 </html> 
