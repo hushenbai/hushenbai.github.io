@@ -25,6 +25,7 @@ const translations = {
         "visiter-statebutton-4": "该艺术作品已遗失，申白失去了它的消息，你能提供消息吗？",
         "price": "价格",
         "price-trend": "价格趋势",
+        "coefficient-description": "系数是艺术作品定价的方式，系数越高，作品价格越高。作品价格 =（宽度+高度）* 系数。",
         "price-TCMinfo": "明珠薏苡当前标准系数为",
         "price-RSMinfo": "重圆镜当前标准系数为",
         "price-this": "本作品价格系数为",
@@ -172,6 +173,9 @@ const translations = {
         '娘惹<br>酱绿瓷碗<br>盛药图': '娘惹<br>酱绿瓷碗<br>盛药图',
         '娘惹<br>红黄瓷碗<br>盛药图': '娘惹<br>红黄瓷碗<br>盛药图',
 
+        'latest-coefficient': '最新系数',
+        'highest-coefficient': '最高系数',
+        'serialnumber': '编号'
     },
     'en': {
         'title': 'PearlBarleySand',
@@ -194,6 +198,7 @@ const translations = {
         "visiter-statebutton-4": "This artwork has been lost or damaged, do you know any news about it?",
         "price": "Price",
         "price-trend": "Price Trend",
+        "coefficient-description": "The coefficient is the pricing method for artworks. The higher the coefficient, the higher the price. Artwork price = (width + height) * coefficient.",
         "price-TCMinfo": "Official PearlBarleySand coefficient at",
         "price-RSMinfo": "Official RestoredMirrors coefficient at",
         "price-this": "This one coefficient is",
@@ -344,6 +349,12 @@ const translations = {
         '娘惹<br>土粉瓷碗<br>盛药图': 'Nyonya khaki pink porcelain bowl with medicine',
         '娘惹<br>酱绿瓷碗<br>盛药图': 'Nyonya deep-red green porcelain bowl with medicine',
         '娘惹<br>红黄瓷碗<br>盛药图': 'Nyonya red yellow porcelain bowl with medicine',
+
+        'latest-coefficient': 'Latest Coefficient',
+        'highest-coefficient': 'Highest Coefficient',
+        'serialnumber': 'Serial No.',
+        'coefficient': 'Coefficient',
+        'price': 'Price'
     }
 }; 
 
