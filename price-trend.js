@@ -1,3 +1,30 @@
+// 声明全局变量
+let latestSorted = [];
+let highestSorted = [];
+
+// 生成列表HTML的函数
+function generateProjectHTML(project) {
+    // 从 groupedProjects 中找到项目所属的 group
+    let groupId = '1';
+    Object.entries(groupedProjects).forEach(([group, projects]) => {
+        if (projects.some(p => p.serialnumber === project.serialnumber)) {
+            groupId = group.replace('group', '');
+        }
+    });
+
+    return `
+        <div class="project-item" onclick="goToDetail('${groupId}', '${project.serialnumber}')" style="cursor: pointer;">
+            <img class="project-image" src="${project.image.replace('/TCM/', '/TCM-small/')}" alt="${project.title['data-lang']}">
+            <div class="project-info">
+                
+                <p2 class="project-serialnumber">${project.serialnumber}</p2>
+                <p2 class="project-serialnumber">${project.currentCoefficient}</p2>
+                <p2 class="project-serialnumber">${Math.round(project.price)}</p2>
+            </div>
+        </div>
+    `;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // 计算平均系数
     const allProjects = Object.values(groupedProjects).flat();
@@ -25,41 +52,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 按最新更新时间排序
-    const latestSorted = [...projectsWithCoefficient]
-        .sort((a, b) => b.lastUpdateDate - a.lastUpdateDate)
-        .slice(0, 5);
+    latestSorted = [...projectsWithCoefficient]
+        .sort((a, b) => new Date(b.lastUpdateDate) - new Date(a.lastUpdateDate))
+        .slice(0, 10);
 
     // 按系数高低排序
-    const highestSorted = [...projectsWithCoefficient]
+    highestSorted = [...projectsWithCoefficient]
         .sort((a, b) => b.currentCoefficient - a.currentCoefficient)
-        .slice(0, 5);
+        .slice(0, 10);
 
     // 确保 goToDetail 函数使用正确的 URL 格式
     function goToDetail(groupId, serialnumber) {
         window.location.href = `detail.html?group=group${groupId}&id=${serialnumber}`;
-    }
-
-    // 生成列表HTML
-    function generateProjectHTML(project) {
-        // 从 groupedProjects 中找到项目所属的 group
-        let groupId = '1';
-        Object.entries(groupedProjects).forEach(([group, projects]) => {
-            if (projects.some(p => p.serialnumber === project.serialnumber)) {
-                groupId = group.replace('group', '');
-            }
-        });
-
-        return `
-            <div class="project-item" onclick="goToDetail('${groupId}', '${project.serialnumber}')" style="cursor: pointer;">
-                <img class="project-image" src="${project.image.replace('/TCM/', '/TCM-small/')}" alt="${project.title['data-lang']}">
-                <div class="project-info">
-                    <p2 class="project-title">${project.title['data-lang']}</p2>
-                    <p2 class="project-serialnumber">${project.serialnumber}</p2>
-                    <p2 class="project-serialnumber">${project.currentCoefficient}</p2>
-                    <p2 class="project-serialnumber">${Math.round(project.price)}</p2>
-                </div>
-            </div>
-        `;
     }
 
     // 渲染列表
@@ -101,27 +105,30 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     });
 
+
     // 创建图表
     const ctx = document.getElementById('priceChart').getContext('2d');
-    new Chart(ctx, {
+    const chart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: dates,
-            datasets: projectData.map(project => ({
-                label: project.serialnumber,
-                data: project.data,
-                borderColor: '#000000',
-                fill: false,
-                tension: 0,
-                image: allProjects.find(p => p.serialnumber === project.serialnumber).image.replace('/TCM/', '/TCM-small/'),
-                pointRadius: 0,
-                borderWidth: 2.5,
-                pointHoverRadius: 5,
-                pointHitRadius: 20,
-                lastPriceChange: priceEvents
-                    .filter(event => event.serialnumber === project.serialnumber)
-                    .sort((a, b) => new Date(b.date) - new Date(a.date))[0]?.date || '1970-01-01'
-            }))
+            datasets: [
+                // 原有的项目数据线
+                ...projectData.map(project => ({
+                    label: project.serialnumber,
+                    data: project.data,
+                    borderColor: 'rgba(0, 0, 0, 0.2)',
+                    fill: false,
+                    image: allProjects.find(p => p.serialnumber === project.serialnumber).image.replace('/TCM/', '/TCM-small/'),
+                    pointRadius: 0,
+                    borderWidth: 4,  // 统一使用 1px 宽度
+                    pointHoverRadius: 5,
+                    pointHitRadius: 20,
+                    lastPriceChange: priceEvents
+                        .filter(event => event.serialnumber === project.serialnumber)
+                        .sort((a, b) => new Date(b.date) - new Date(a.date))[0]?.date || '1970-01-01'
+                }))
+            ]
         },
         options: {
             responsive: true,
@@ -129,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
             animation: false,
             scales: {
                 y: {
-                    min: 50,
+                    min: 55,
                     max: 100,
                     title: {
                         display: false,
@@ -176,12 +183,11 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             plugins: {
                 legend: {
-                    display: false
+                    display: false  // 隐藏图例
                 },
                 tooltip: {
                     enabled: false,
                     external: function(context) {
-                        // 获取或创建 tooltip 元素
                         let tooltipEl = document.getElementById('chartjs-tooltip');
                         if (!tooltipEl) {
                             tooltipEl = document.createElement('div');
@@ -189,9 +195,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             document.body.appendChild(tooltipEl);
                         }
 
-                        // 如果没有数据点，隐藏 tooltip
                         if (!context.tooltip || !context.tooltip.dataPoints || !context.tooltip.dataPoints.length) {
                             tooltipEl.style.opacity = 0;
+                            tooltipEl.style.display = 'none';
                             return;
                         }
 
@@ -227,13 +233,15 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                         `;
 
-                        // 简单的位置调整
+                        // 显示 tooltip
+                        tooltipEl.style.opacity = 1;
+                        tooltipEl.style.display = 'block';
+                        
+                        // 设置位置
                         const positionY = context.chart.canvas.offsetTop + context.tooltip.caretY - 10;
                         const positionX = context.chart.canvas.offsetLeft + context.tooltip.caretX;
 
-                        // 设置 tooltip 位置和样式
                         Object.assign(tooltipEl.style, {
-                            opacity: 1,
                             position: 'absolute',
                             left: positionX + 'px',
                             top: positionY + 'px',
@@ -244,6 +252,31 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             }
+        }
+    });
+
+    // 添加全局事件监听
+    document.addEventListener('mousemove', (event) => {
+        const tooltipEl = document.getElementById('chartjs-tooltip');
+        if (!tooltipEl) return;
+
+        // 获取图表元素
+        const chartElement = document.getElementById('priceChart');
+        if (!chartElement) return;
+
+        // 检查鼠标是否在图表区域内
+        const rect = chartElement.getBoundingClientRect();
+        const isOverChart = (
+            event.clientX >= rect.left &&
+            event.clientX <= rect.right &&
+            event.clientY >= rect.top &&
+            event.clientY <= rect.bottom
+        );
+
+        // 如果鼠标不在图表区域内，隐藏 tooltip
+        if (!isOverChart) {
+            tooltipEl.style.opacity = 0;
+            tooltipEl.style.display = 'none';
         }
     });
 });

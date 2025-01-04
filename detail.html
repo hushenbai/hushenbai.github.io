@@ -90,9 +90,9 @@
                 </div>
 
                 <!-- 订阅按钮 -->
-                <div class="visiter-container">
-                    <b1 class="styled-button" data-lang="visiter-0" onclick="showBuyCard()"></b1>
-                    <p1 class="visiter-desc" style="max-width: 600px;" data-lang="visiter-statebutton-0"></p1>
+                <div class="productstate-container">
+                    <b1 class="styled-button" data-lang="productstate-0" onclick="showWilling()"></b1>
+                    <p1 class="productstate-desc" style="max-width: 600px;" data-lang="productstate-button-0"></p1>
                 </div>
 
                 <!-- 文章部分 -->
@@ -107,10 +107,10 @@
     </div>
 
     <!-- 添加悬浮卡片 -->
-<div id="buy-card" class="buy-card">
-    <div class="buy-card-box">
-    <div class="buy-close" onclick="hideBuyCard()">×</div>
-    <div class="buy-card-content">
+<div id="willing" class="willing">
+    <div class="Willing-card">
+    <div class="closebutton" onclick="hideWilling()">×</div>
+    <div class="willing-content">
         <div style="display: flex; flex-direction: column; gap: 24px;">
             <div>
                 <h2 data-lang="price">price</h2>
@@ -121,14 +121,14 @@
                 </div>
                 <div style="display: flex; flex-direction: row; gap: 4px;">
                     <p2 data-lang="price-this">price-this</p2>
-                    <p2 id="detail-coefficientshow"></p2>
+                    <p2 id="detail-coefficient-1"></p2>
                 </div>
             </div>
 
             <!-- 计算价格部分 -->
             <div>
                 <div style="display: flex; flex-direction: row; align-items: baseline; gap: 4px;">
-                    <h1 id="calculated-price"></h1>
+                    <h1 id="calculated-price">price</h1>
                     <h2>CNY</h2>
                 </div>
                 <div style="display: flex; flex-direction: row; gap: 4px;">
@@ -166,7 +166,7 @@
                  </div>
             </div>
 
-            <div class="visiter-container">
+            <div class="productstate-container">
                 <h3 data-lang="price-trend" onclick="window.location.href='price-trend.html'"></h3>
             </div>
 

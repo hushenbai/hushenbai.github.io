@@ -30,40 +30,40 @@
     </div>
 
     <header class="header">
-        <h1>价格系数</h1>
+        <h1>系数</h1>
         <h1>Coefficient</h1>
-        <div style="height: 40px;"></div>
-        <div style="max-width: 1080px; margin: 0 24px;">
-            <p1 data-lang="coefficient-description">系数是艺术作品定价的方式，系数越高，作品价格越高。作品价格 =（宽度+高度）* 系数。
+        <div style="height: 20px;"></div>
+        <div style="max-width: 600px; margin: 0 24px;">
+            <p1 data-lang="coefficient-description" style="color: #6e6e6e;">系数
             </p1>
         </div>
     </header>
 
     
   <div class="frame">
-    <div class="big-coefficient">
-        <div class="two">
-             <div class="bigamount">
+    <div class="box-row">
+        <div class="board-column">
+             <div class="info-box">
              <h1>60</h1>
-             <p1 class="coefficient-title">标准系数</p1>
-             <p3>艺术家发售作品的统一价格依据</p3>
+             <p2 data-lang="official-coefficient" style="line-height: 1.1;">官方系数</p2>
+             <p3 data-lang="official-coefficient-description" style="line-height: 1.1;">艺术家发售作品的统一价格</p3>
              </div>
-             <div class="bigamount">
+             <div class="info-box">
              <h1 id="average-coefficient">0.0</h1>
-             <p1 class="coefficient-title">平均系数</p1>
-             <p3>藏家自主定价交易的平均价格系数</p3>
+             <p2 data-lang="average-coefficient" style="line-height: 1.1;">平均系数</p2>
+             <p3 data-lang="average-coefficient-description" style="line-height: 1.1;">藏家市场交易的平均价格</p3>
              </div>
         </div>
-        <div class="lists-container">
+        <div class="board-column">
             <canvas id="priceChart"></canvas>
         </div>
     </div>
 
-    <div class="lists-container">
+    <div class="board-row">
         <div class="list-column">
             <p0 class="list-title" data-lang="latest-coefficient">最新系数</p0>
             <div class="project-label">
-                <div style="width: 32px;"></div>
+                
                 <p3 data-lang="name">名称</p3>
                 <p3 data-lang="serialnumber">编号</p3>
                 <p3 data-lang="coefficient">系数</p3>
@@ -74,7 +74,7 @@
         <div class="list-column">
             <p0 class="list-title" data-lang="highest-coefficient">最高系数</p0>
             <div class="project-label">
-                <div style="width: 32px;"></div>
+                
                 <p3 data-lang="name">名称</p3>
                 <p3 data-lang="serialnumber">编号</p3>
                 <p3 data-lang="coefficient">系数</p3>

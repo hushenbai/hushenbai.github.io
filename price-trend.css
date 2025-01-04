@@ -2,6 +2,58 @@
     max-width: 1080px;
     width: 100%;
     padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.box-column {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.box-row {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.info-box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: buttom;
+    align-items: buttom;
+}
+
+.board-column {
+    height: 100%;
+    width: 100%;
+    padding: 24px;
+    background-color: rgba(252, 252, 252, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.board-row {
+    height: 100%;
+    width: 100%;
+    padding: 24px;
+    background-color: rgba(252, 252, 252, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
 }
 
 .lists-container {
@@ -40,7 +92,7 @@
 
 .project-label {
     display: grid;
-    grid-template-columns: 32px 2fr 1fr 0.5fr 0.5fr ;  /* 添加 new 标签的列 */
+    grid-template-columns: 32px 2fr 1fr 1fr ;  /* 添加 new 标签的列 */
     align-items: center;
     gap: 8px;
     padding: 8px;
@@ -63,7 +115,7 @@
 }
 .project-info {
     display: grid;
-    grid-template-columns: 2fr 1fr 0.5fr 0.5fr ;  /* 添加 new 标签的列 */
+    grid-template-columns: 2fr 1fr 1fr ;  /* 添加 new 标签的列 */
     align-items: center;
     gap: 8px;
     flex: 1;

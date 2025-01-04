@@ -646,7 +646,7 @@ body {
     line-height: 2;
 }
 
-.visiter-container {
+.productstate-container {
     background-color: rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     padding: 40px 36px;
@@ -660,7 +660,7 @@ body {
     margin-bottom: 40px;
 }
 
-.visiter-container p1 {
+.productstate-container p1 {
     color: #666;
 }
 
@@ -678,7 +678,7 @@ body {
     background: rgba(0, 0, 0, 0.8); 
 }
 
-/* .styled-button[data-lang="visiter-4"] {
+/* .styled-button[data-lang="productstate-4"] {
     background: #ccc;
     color: #666;
 } */
@@ -690,7 +690,7 @@ body {
     padding: 40px 20px;
     }
 
-    .visiter-container {
+    .productstate-container {
         margin-bottom: 20px;
     }
     
@@ -929,7 +929,7 @@ b1 {
 /* 悬浮卡片 --------------------------------------------- */  
 /* 悬浮卡片 --------------------------------------------- */  
 
-.buy-card {
+.willing {
     display: none;
     position: fixed;
     top: 0;
@@ -942,15 +942,15 @@ b1 {
     background: rgba(0, 0, 0, 0.1);
 }
 
-.buy-card.show {
+.willing.show {
     display: flex;
 }
 
-.buy-card p0 {
+.willing p0 {
     color: #222;
 }
 
-.buy-card-box {
+.Willing-card {
     position: relative;
     display: flex;
     overflow-y: hidden;
@@ -973,7 +973,7 @@ b1 {
     -ms-overflow-style: none;
 }
 
-.buy-card-content {
+.willing-content {
     padding: 60px 0;
     overflow-y: auto;
     justify-content: left;
@@ -981,18 +981,18 @@ b1 {
 }
 
 /* 隐藏滚动条 - Chrome/Safari/Opera */
-.buy-card-content::-webkit-scrollbar {
+.willing-content::-webkit-scrollbar {
     display: none;
 }
 
 /* 显示状态 */
-.buy-card.show .buy-card-box {
+.willing.show .Willing-card {
     transform: translateY(0);
     opacity: 1;
     transition: all 0.5s cubic-bezier(.25,1.23,.52,1);
 }
 
-.buy-close {
+.closebutton {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -1009,12 +1009,12 @@ b1 {
     z-index: 1000;
 }
 
-.buy-close:hover {
+.closebutton:hover {
     background: rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 800px) {
-    .buy-card-box {
+    .Willing-card {
         bottom: 0;
         position: fixed;
         padding: 0 20px;
@@ -1023,7 +1023,7 @@ b1 {
         max-height: 80vh;
     }
 
-    .buy-card-content {
+    .willing-content {
         padding: 48px 0;
     }
 }

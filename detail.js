@@ -1,4 +1,6 @@
-// 全局变量存储当前项目数据
+// ===============================
+// 全局变量
+// ===============================
 let currentProject = null;
 
 // 添加返回上一页函数
@@ -6,7 +8,9 @@ function goBack() {
     window.history.back();
 }
 
-// 页面加载时初始化
+// ===============================
+// 页面初始化
+// ===============================
 document.addEventListener('DOMContentLoaded', () => {
     // 从 URL 获取参数
     const params = new URLSearchParams(window.location.search);
@@ -28,6 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // 设置图片源
         img.src = currentProject.image.replace('/TCM/', '/TCM-big/');
+
+        // 获取每个项目的最新系数和最新更新时间
+        const latestCoefficient = getLatestCoefficient(currentProject.serialnumber);
+        if (latestCoefficient !== null) {
+            currentProject.coefficient = latestCoefficient;  
+        }
+        const latestState = getLatestState(currentProject.serialnumber);
+        if (latestState !== null) {
+            currentProject.state = latestState;
+        }
         
         // 更新基本信息
         document.getElementById('detail-serialnumber').textContent = currentProject.serialnumber;
@@ -37,12 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // 更新公式中的值
         document.getElementById('detail-width').textContent = currentProject.width;
         document.getElementById('detail-height').textContent = currentProject.height;
-        document.getElementById('detail-coefficientshow').textContent = currentProject.coefficient;
         document.getElementById('detail-coefficient').textContent = currentProject.coefficient;
+        document.getElementById('detail-coefficient-1').textContent = currentProject.coefficient;
         // 设置需要翻译的元素
         document.getElementById('detail-title').setAttribute('data-lang', currentProject.title2['data-lang']);
         document.getElementById('detail-series').setAttribute('data-lang', currentProject.series['data-lang']);
         document.getElementById('detail-media').setAttribute('data-lang', currentProject.media['data-lang']);
+
+
 
 
         // 格式化尺寸显示
@@ -50,10 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentProject.width && currentProject.height && currentProject.depth) {
             sizeElement.textContent = `${currentProject.width} × ${currentProject.height} × ${currentProject.depth} cm`;
         }
-
-        // 计算价格：(宽 + 高) × 系数
-        const price = (currentProject.width + currentProject.height) * currentProject.coefficient;
-        document.getElementById('calculated-price').textContent = Math.round(price);
 
         // 处理展览信息
         const exhibitsList = document.getElementById('exhibits-list');
@@ -97,22 +109,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 exhibitsList.appendChild(exhibitItem);
             });
         }
-        
+
+        // 计算价格：(宽 + 高) × 系数
+        const price = (currentProject.width + currentProject.height) * currentProject.coefficient;
+        document.getElementById('calculated-price').textContent = Math.round(price);
+
         // 使用全局语言设置更新内容
         changeLanguage(currentLang);
         
-        // 更新系数
-        updateDetailCoefficient(currentProject);
-        
-        updateProjectInfo();
-        updateVisiterStatus();
-        updateContactCardData();
+        updateProductStatus();
     }
 });
 
+// ===============================
+// 图片转动
+// ===============================
 document.addEventListener('DOMContentLoaded', () => {
     const wrapper = document.querySelector('.image-wrapper');
     
+    // 图片转动
     if (wrapper) {
         let isDragging = false;
         let startX, startY;
@@ -136,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500);
         };
 
+        // 移动端
         if (isMobile) {
             const startDragging = (e) => {
                 isDragging = true;
@@ -150,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.addEventListener('touchmove', preventScroll, { passive: false });
             };
 
+            // 拖动
             const drag = (e) => {
                 if (!isDragging) return;
                 e.preventDefault();
@@ -169,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 lastY = touch.clientY - startY;
             };
 
+            // 停止拖动
             const stopDragging = () => {
                 isDragging = false;
                 wrapper.classList.remove('dragging');
@@ -225,10 +243,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 }); 
 
-// 添加滚动监听
+// ===============================
+// 滚动监听
+// ===============================
 let lastScrollTop = 0;
 const nav = document.querySelector('.nav-background');
-
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
@@ -244,6 +263,10 @@ window.addEventListener('scroll', () => {
     lastScrollTop = scrollTop;
 });
 
+
+// ===============================
+// 视差滚动
+// ===============================
 document.addEventListener('DOMContentLoaded', () => {
     const detailContainer = document.querySelector('.detail-container');
     const scrollSpeed = 0.4;
@@ -269,43 +292,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
 });
 
-// 处理订阅状态显示
-function updateVisiterStatus() {
+// ===============================
+// 处理项目状态显示
+// ===============================
+function updateProductStatus() {
     // 确保 currentProject 存在且有 state 值
     if (currentProject && typeof currentProject.state !== 'undefined') {
         const state = currentProject.state;
         
         // 获取显示元素
         const textElement = document.querySelector('.styled-button');
-        const descElement = document.querySelector('.visiter-desc');
+        const descElement = document.querySelector('.productstate-desc');
         
         if (textElement && descElement) {
             // 根据 state 设置对应的翻译键
-            textElement.setAttribute('data-lang', `visiter-${state}`);
-            descElement.setAttribute('data-lang', `visiter-statebutton-${state}`);
+            textElement.setAttribute('data-lang', `productstate-${state}`);
+            descElement.setAttribute('data-lang', `productstate-button-${state}`);
             
             // 更新翻译
             changeLanguage(currentLang);
         }
     }
 }
+// 在页面加载完成时更新项目状态
+document.addEventListener('DOMContentLoaded', updateProductStatus);
 
-// 在页面加载完成时更新订阅状态
-document.addEventListener('DOMContentLoaded', updateVisiterStatus);
-
-// 页面加载完成后初始化卡片状态
+// 页面加载完成后初始化意愿卡片状态
 document.addEventListener('DOMContentLoaded', () => {
-    const card = document.getElementById('buy-card');
-    const content = card.querySelector('.buy-card-box');
+    const card = document.getElementById('willing');
+    const content = card.querySelector('.Willing-card');
     
     // 设置初始状态
     content.style.transform = 'translateY(700px)';
 });
 
-// 显示联系卡片
-function showBuyCard() {
-    const card = document.getElementById('buy-card');
-    const content = card.querySelector('.buy-card-box');
+// 显示意愿卡片
+function showWilling() {
+    const card = document.getElementById('willing');
+    const content = card.querySelector('.Willing-card');
     
     // 确保初始状态
     content.style.transform = 'translateY(700px)';
@@ -324,11 +348,10 @@ function showBuyCard() {
     // 阻止背景滚动
     document.body.style.overflow = 'hidden';
 }
-
-// 隐藏联系卡片
-function hideBuyCard() {
-    const card = document.getElementById('buy-card');
-    const content = card.querySelector('.buy-card-box');
+// 隐藏意愿卡片
+function hideWilling() {
+    const card = document.getElementById('willing');
+    const content = card.querySelector('.Willing-card');
     
     // 重置动画状态
     content.style.transform = 'translateY(700px)';
@@ -340,63 +363,21 @@ function hideBuyCard() {
         document.body.style.overflow = '';
     }, 400); // 与 CSS transition 时间匹配
 }
-
 // 点击背景关闭卡片
-document.getElementById('buy-card').addEventListener('click', (e) => {
-    if (e.target.id === 'buy-card') {
-        hideBuyCard();
+document.getElementById('willing').addEventListener('click', (e) => {
+    if (e.target.id === 'willing') {
+        hideWilling();
     }
 });
-
 // ESC 键关闭卡片
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        hideBuyCard();
+        hideWilling();
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const detailContainer = document.querySelector('.detail-container');
-    const scrollSpeed = 0.3;
-    
-    window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY;
-        detailContainer.style.transform = `translateY(${scrollPosition * scrollSpeed}px)`;
-    });
-});
+// ===============================
+// 更新项目信息
+// ===============================
 
-// 在更新项目信息时使用 getProjectCoefficient 函数
-function updateProjectInfo() {
-    if (!currentProject) return;
-
-    // 使用 utils.js 中的函数获取最新系数
-    const currentCoefficient = getProjectCoefficient(currentProject.serialnumber);
-    console.log('Current coefficient:', currentCoefficient); // 调试用
-    
-    // 更新系数显示
-    const coefficientElement = document.querySelector('.coefficient');
-    if (coefficientElement) {
-        coefficientElement.textContent = currentCoefficient;
-    }
-    
-    // 使用最新系数计算价格
-    const price = Math.round((currentProject.width + currentProject.height) * currentCoefficient);
-    const priceElement = document.querySelector('.price');
-    if (priceElement) {
-        priceElement.textContent = price;
-    }
-
-    // ... 其他更新代码保持不变 ...
-}
-
-// 更新项目系数
-function updateDetailCoefficient(project) {
-    if (!project) return;
-    
-    // 从 price-events.js 获取最新系数
-    const latestCoefficient = getLatestCoefficient(project.serialnumber);
-    if (latestCoefficient !== null) {
-        project.coefficient = latestCoefficient;
-    }
-}
 
