@@ -305,21 +305,33 @@ function updateProductStatus() {
     // 确保 currentProject 存在且有 state 值
     if (currentProject && typeof currentProject.state !== 'undefined') {
         const state = currentProject.state;
+        console.log('Current state:', state); // 添加调试日志
         
         // 获取显示元素
         const textElement = document.querySelector('.styled-button');
         const descElement = document.querySelector('.productstate-desc');
+        const willingToppart = document.querySelector('.willing-toppart');
         
         if (textElement && descElement) {
             // 根据 state 设置对应的翻译键
             textElement.setAttribute('data-lang', `productstate-${state}`);
             descElement.setAttribute('data-lang', `productstate-button-${state}`);
             
+            // 根据 state 控制 willing-toppart 的显示
+            if (willingToppart) {
+                if ([2, 3, 4].includes(Number(state))) {
+                    willingToppart.classList.add('hidden');
+                } else {
+                    willingToppart.classList.remove('hidden');
+                }
+            }
+            
             // 使用全局语言设置更新内容
             updateLanguage();
         }
     }
 }
+
 // 在页面加载完成时更新项目状态
 document.addEventListener('DOMContentLoaded', updateProductStatus);
 

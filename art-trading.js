@@ -78,9 +78,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const averageCoefficient = coefficients.reduce((a, b) => a + b, 0) / coefficients.length;
     
-    // 更新平均系数显示
+    // 计算平均系数（排除系数为0的项目）
+    const validCoefficients = allProjects
+        .map(project => {
+            const latestCoeff = getLatestCoefficient(project.serialnumber);
+            return latestCoeff !== null ? latestCoeff : project.coefficient;
+        })
+        .filter(coefficient => coefficient > 0);  // 排除系数为0的项目
+
+    // 计算并更新平均值显示
     document.getElementById('average-coefficient').textContent = 
-        averageCoefficient.toFixed(1);
+        (validCoefficients.length > 0
+            ? (validCoefficients.reduce((sum, coeff) => sum + coeff, 0) / validCoefficients.length)
+            : 0
+        ).toFixed(1);
 
     // 获取每个项目的最新系数和最新更新时间
     const projectsWithCoefficient = allProjects.map(project => {
@@ -100,8 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = `detail.html?group=${groupId}&id=${serialnumber}`;
     }
 
-    // 按最新更新时间排序
+    // 只获取有更新的项目并按最新更新时间排序
     latestSorted = [...projectsWithCoefficient]
+        .filter(project => {
+            // 只保留有价格事件更新的项目
+            return priceEvents.some(event => event.serialnumber === project.serialnumber);
+        })
         .sort((a, b) => new Date(b.lastUpdateDate) - new Date(a.lastUpdateDate))
         .slice(0, 10);
 
@@ -158,21 +173,33 @@ document.addEventListener('DOMContentLoaded', () => {
         data: {
             labels: dates,
             datasets: [
-                // 原有的项目数据线
-                ...projectData.map(project => ({
-                    label: project.serialnumber,
-                    data: project.data,
-                    borderColor: 'rgba(0, 0, 0, 0.2)',
-                    fill: false,
-                    image: allProjects.find(p => p.serialnumber === project.serialnumber).image.replace('/TCM/', '/TCM-small/'),
-                    pointRadius: 0,
-                    borderWidth: 4,  // 统一使用 1px 宽度
-                    pointHoverRadius: 5,
-                    pointHitRadius: 20,
-                    lastPriceChange: priceEvents
-                        .filter(event => event.serialnumber === project.serialnumber)
-                        .sort((a, b) => new Date(b.date) - new Date(a.date))[0]?.date || '1970-01-01'
-                }))
+                // 过滤掉系数为0的项目
+                ...projectData
+                    .filter(project => {
+                        // 获取最新系数
+                        const latestCoeff = getLatestCoefficient(project.serialnumber);
+                        // 获取原始系数
+                        const originalProject = allProjects.find(p => p.serialnumber === project.serialnumber);
+                        const originalCoeff = originalProject ? originalProject.coefficient : 0;
+                        
+                        // 检查当前使用的系数
+                        const currentCoeff = latestCoeff !== null ? latestCoeff : originalCoeff;
+                        return currentCoeff > 0;
+                    })
+                    .map(project => ({
+                        label: project.serialnumber,
+                        data: project.data,
+                        borderColor: 'rgba(0, 0, 0, 0.2)',
+                        fill: false,
+                        image: allProjects.find(p => p.serialnumber === project.serialnumber).image.replace('/TCM/', '/TCM-small/'),
+                        pointRadius: 0,
+                        borderWidth: 4,
+                        pointHoverRadius: 5,
+                        pointHitRadius: 20,
+                        lastPriceChange: priceEvents
+                            .filter(event => event.serialnumber === project.serialnumber)
+                            .sort((a, b) => new Date(b.date) - new Date(a.date))[0]?.date || '1970-01-01'
+                    }))
             ]
         },
         options: {

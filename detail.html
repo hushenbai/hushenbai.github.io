@@ -110,30 +110,29 @@
     <!-- 添加悬浮卡片 -->
 <div id="willing" class="willing">
     <div class="Willing-card">
-    <div class="closebutton" onclick="hideWilling()">×</div>
-    <div class="willing-content">
-        <div style="display: flex; flex-direction: column; gap: 24px;">
-            <div>
-                <h2 data-lang="price">price</h2>
-                <div style="height: 2px;"></div>
-                <div style="display: flex; flex-direction: row; gap: 4px;">
-                    <p2 data-lang="price-TCMinfo">price-TCMinfo</p2>
-                    <p2>60</p2>
+        <div class="closebutton" onclick="hideWilling()">×</div>
+        <div class="willing-content">
+            <div class="willing-toppart">
+                <div>
+                    <h2 data-lang="price">price</h2>
+                    <div style="height: 2px;"></div>
+                    <div style="display: flex; flex-direction: row; gap: 4px;">
+                        <p2 data-lang="price-TCMinfo">price-TCMinfo</p2>
+                        <p2>60</p2>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 4px;">
+                        <p2 data-lang="price-this">price-this</p2>
+                        <p2 id="detail-coefficient-1"></p2>
+                    </div>
                 </div>
-                <div style="display: flex; flex-direction: row; gap: 4px;">
-                    <p2 data-lang="price-this">price-this</p2>
-                    <p2 id="detail-coefficient-1"></p2>
-                </div>
-            </div>
-
             <!-- 计算价格部分 -->
-            <div>
-                <div style="display: flex; flex-direction: row; align-items: baseline; gap: 4px;">
-                    <h1 id="calculated-price">price</h1>
-                    <h2>CNY</h2>
-                </div>
-                <div style="display: flex; flex-direction: row; gap: 4px;">
-                    <div style="display: flex; flex-direction: row; gap: 2px;">
+                <div>
+                    <div style="display: flex; flex-direction: row; align-items: baseline; gap: 4px;">
+                        <h1 id="calculated-price">price</h1>
+                        <h2>CNY</h2>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 4px;">
+                        <div style="display: flex; flex-direction: row; gap: 2px;">
                         <p2>(</p2>
                         <p2 data-lang="width">width</p2>
                         <p2 id="detail-width"></p2>
@@ -144,15 +143,16 @@
                         <p2>×</p2>
                         <p2 data-lang="coefficient">coefficient</p2>
                         <p2 id="detail-coefficient"></p2>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- 购买信息部分 -->
-            <div style="display: flex; flex-direction: column;">
-                <p2 data-lang="purchase-info">purchase-info</p2>
+                <!-- 购买信息部分 -->
+                <div style="display: flex; flex-direction: column;">
+                    <p2 data-lang="purchase-info">purchase-info</p2>
+                </div>
             </div>
-
+            <div class="willing-bottompart">
             <!-- 购买方式部分 -->
             <div style="display: flex; flex-direction: column;">
                 <p2 data-lang="Buyway">Buyway</p2>
@@ -175,14 +175,13 @@
 
             <div class="enter-container">
                 <b1 class="styled-button" data-lang="art-trading" onclick="window.location.href='art-trading.html'"></b1>
-                <p2 data-lang="art-trading-info">art-trading-info</p2>
+                    <p2 data-lang="art-trading-info">art-trading-info</p2>
+                </div>
             </div>
 
-
+            </div>
         </div>
     </div>
-</div>
-</div>
 
     <footer>
         <p3>&copy; 2024 HU SHENBAI</p3>
