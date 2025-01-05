@@ -89,18 +89,6 @@ header {
     height: 100%;
 }
 
-.lists-container {
-    max-width: 1080px;
-    height: 100%;
-    width: 100%;
-    padding: 24px;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-}
-
 
 #priceChart {
     width: 100% ;  /* 强制覆盖 Chart.js 的默认宽度 */
@@ -234,12 +222,4 @@ header {
         padding: 12px;
         gap: 12px;
     }
-
-    .lists-container {
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-    }
-
 }
