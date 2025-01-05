@@ -77,12 +77,9 @@ function addNewContent() {
     document.body.appendChild(newElement);
 }
 
+// 通用功能函数
 function goToDetail(groupId, serialnumber) {
-    // 将数据存储到 URL 参数中
-    const params = new URLSearchParams();
-    params.set('group', groupId);
-    params.set('id', serialnumber);
-    window.location.href = `detail.html?${params.toString()}`;
+    window.location.href = `detail.html?group=${groupId}&id=${serialnumber}`;
 }
 
 // 在现有代码基础上添加

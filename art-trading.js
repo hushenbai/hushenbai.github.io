@@ -95,6 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     });
 
+    // 通用功能函数
+    function goToDetail(groupId, serialnumber) {
+    window.location.href = `detail.html?group=${groupId}&id=${serialnumber}`;
+    }
+
     // 按最新更新时间排序
     latestSorted = [...projectsWithCoefficient]
         .sort((a, b) => new Date(b.lastUpdateDate) - new Date(a.lastUpdateDate))
@@ -105,10 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .sort((a, b) => b.currentCoefficient - a.currentCoefficient)
         .slice(0, 10);
 
-    // 确保 goToDetail 函数使用正确的 URL 格式
-    function goToDetail(groupId, serialnumber) {
-        window.location.href = `detail.html?group=group${groupId}&id=${serialnumber}`;
-    }
 
     // 渲染列表
     document.getElementById('latest-list').innerHTML = 
