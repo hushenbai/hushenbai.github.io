@@ -3,22 +3,9 @@ const priceEvents = [
 
     {
         serialnumber: 'TCMFW18',
-        coefficient: 65,
+        coefficient: 60,
         state: '1',
         date: '2024-12-25'
-    },
-    {
-        serialnumber: 'TCMFW2',
-        coefficient: 70,
-        state: '1',
-        date: '2024-12-20'
-    },
-
-    {
-        serialnumber: 'TCMFW2',
-        coefficient: 5,
-        state: '2',
-        date: '2024-12-21'
     },
     // 更多事件...
 ]; 

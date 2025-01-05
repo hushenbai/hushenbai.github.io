@@ -118,12 +118,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return priceEvents.some(event => event.serialnumber === project.serialnumber);
         })
         .sort((a, b) => new Date(b.lastUpdateDate) - new Date(a.lastUpdateDate))
-        .slice(0, 10);
+        .slice(0, 5);
 
     // 按系数高低排序
     highestSorted = [...projectsWithCoefficient]
         .sort((a, b) => b.currentCoefficient - a.currentCoefficient)
-        .slice(0, 10);
+        .slice(0, 5);
 
 
     // 渲染列表
@@ -309,9 +309,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         tooltipEl.style.opacity = 1;
                         tooltipEl.style.display = 'block';
                         
-                        // 设置位置
-                        const positionY = context.chart.canvas.offsetTop + context.tooltip.caretY - 10;
-                        const positionX = context.chart.canvas.offsetLeft + context.tooltip.caretX;
+                        // 获取图表容器的位置
+                        const chartContainer = context.chart.canvas.getBoundingClientRect();
+                        
+                        // 计算相对于视口的位置
+                        const positionY = chartContainer.top + context.tooltip.caretY + window.scrollY - 10;
+                        const positionX = chartContainer.left + context.tooltip.caretX;
 
                         Object.assign(tooltipEl.style, {
                             position: 'absolute',
@@ -373,3 +376,4 @@ document.addEventListener('languageChanged', () => {
     document.getElementById('highest-list').innerHTML = 
         highestSorted.map(generateProjectHTML).join('');
 });
+
