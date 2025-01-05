@@ -1,5 +1,44 @@
-// 全局语言设置
-let currentLang = localStorage.getItem('preferred-language') || 'zh';
+// 全局语言管理
+let currentLang = localStorage.getItem('language') || 'zh';  // 从 localStorage 读取或默认为中文
+
+// 获取当前语言
+function getCurrentLanguage() {
+    // 始终从 localStorage 获取最新值
+    return localStorage.getItem('language') || 'zh';
+}
+
+// 切换语言
+function toggleLanguage() {
+    // 更新 localStorage
+    currentLang = currentLang === 'zh' ? 'en' : 'zh';
+    localStorage.setItem('language', currentLang);
+    
+    // 更新页面
+    updateLanguage();
+    
+    // 触发语言改变事件
+    document.dispatchEvent(new Event('languageChanged'));
+}
+
+// 更新页面语言
+function updateLanguage() {
+    // 确保使用最新的语言设置
+    const lang = getCurrentLanguage();
+    
+    document.querySelectorAll('[data-lang]').forEach(element => {
+        const key = element.getAttribute('data-lang');
+        if (translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
+        }
+    });
+}
+
+// 页面加载时初始化
+document.addEventListener('DOMContentLoaded', () => {
+    // 确保使用 localStorage 中的语言设置
+    currentLang = getCurrentLanguage();
+    updateLanguage();
+});
 
 // 翻译内容
 const translations = {
@@ -17,7 +56,7 @@ const translations = {
         'productstate-0': '认购作品',
         'productstate-button-0': '获得艺术作品的所有权。<br>可以留存给申白继续出售，或申请邮寄实物。',
         "productstate-1": "认购作品",
-        "productstate-button-1": "该艺术作品已被收藏，由藏家定价。<br>您可以尝试购买，经过申白认证真实性及品质后，您可以获得作品的所有权。",
+        "productstate-button-1": "该艺术作品已被收藏，由藏家定价。<br>你可以尝试购买，经过申白认证真实性及品质后，你可以获得作品的所有权。",
         "productstate-2": "随便聊聊",
         "productstate-button-2": "该艺术作品已被收藏，不做交易。",
         "productstate-3": "关于数字版本",
@@ -26,12 +65,15 @@ const translations = {
         "productstate-button-4": "该艺术作品已遗失，申白失去了它的消息，你能提供消息吗？",
         "price": "价格",
         "price-trend": "价格趋势",
+        "art-trading": "艺术品交易",
+        "art-trading-description": "如何参与明珠薏苡系列的交易，你需要了解的信息。",
         "trend-info": "了解关于价格系数的更多信息<br>查看申白作品的整体价格与趋势。",
         "latest-coefficient": "最新系数",
         "highest-coefficient": "最高系数",
+        "highest-coefficient-description": "市场交易最高价格<br>卖家自由定价",
         "average-coefficient": "平均系数",
         "official-coefficient": "标定系数",
-        "official-coefficient-description": "申白统一发售价格<br>缓慢上升，不下跌",
+        "official-coefficient-description": "申白统一发售价格<br>缓慢上升，不会下跌",
         "average-coefficient-description": "市场交易平均价格<br>卖家自由定价",
 
         "coefficient-description": "系数是艺术作品的定价方式，体现艺术家的价值。系数越高，作品价格越高。<br>作品价格=(宽度+高度)×系数。",
@@ -39,7 +81,7 @@ const translations = {
         "price-RSMinfo": "重圆镜当前标准系数为",
         "price-this": "本作品价格系数为",
         "price-formula": "公式:",
-        "purchase-info": "认购之后，您将拥有本作品的<b>实物所有权(Physical ownership)</b>，可以留存给申白继续出售。<br>若获取实物，需支付<b>出库费用</b>。（当前出库费0元）<br>本购买不包含其他商业权利的转让。申白持续具有艺术作品的<b>知识产权(intellectual property)、著作权(copyright)、衍生艺术项目、商业产品开发</b>的权利。",
+        "purchase-info": "认购之后，你将拥有本作品的<b>实物所有权(Physical ownership)</b>，可以留存给申白继续出售。<br>若获取实物，需支付<b>出库费用</b>。（当前出库费0元）<br>本购买不包含其他商业权利的转让。申白持续具有艺术作品的<b>知识产权(intellectual property)、著作权(copyright)、衍生艺术项目、商业产品开发</b>的权利。",
         "coefficient": "系数",
         "width": "宽",
         "height": "高",
@@ -195,7 +237,7 @@ const translations = {
         'tcm-title': 'PearlBarleySand',
         'rsm-title': 'RestoredMirrors',
         'back': 'Back',
-        'work': 'work',
+        'work': 'Work',
         'productstate-0': 'Buy this work',
         'productstate-button-0': 'Obtain ownership of the artwork.<br>You can keep it for Shenbai and continue to sell it, or further apply to delivery.',
         "productstate-1": "Buy this work",
@@ -208,13 +250,16 @@ const translations = {
         "productstate-button-4": "This artwork has been lost or damaged, do you know any news about it?",
         "price": "Price",
         "price-trend": "Price Trend",
+        "art-trading": "Art Trading",
+        "art-trading-description": "How to join in the trading of the PearlBarleySand, you can learn more about it here.",
         "trend-info": "Learn more about the price coefficient,<br>view the overall price and trend of the artist's works.",
         "latest-coefficient": "Latest Coefficient",
         "highest-coefficient": "Highest Coefficient",
-        "average-coefficient": "Average<br>Coefficient",
+        "average-coefficient": "Average Coefficient",
         "official-coefficient": "Official<br>Coefficient",
-        "average-coefficient-description": "Average price of market sell<br>Slowly rising, not falling",
-        "official-coefficient-description": "Uniform price of artist sell<br>Dynamic pricing from Sellers",
+        "highest-coefficient-description": "Highest price of market sell, dynamic pricing from Sellers",
+        "average-coefficient-description": "Average price of market sell, dynamic pricing from Sellers",
+        "official-coefficient-description": "Uniform price of artist sell, slowly going up, not down",
 
         "coefficient-description": "The coefficient is the pricing method for artworks. The higher the coefficient, the higher the price.<br>Artwork price = (width + height) * coefficient.",
         "price-TCMinfo": "Official PearlBarleySand coefficient at",
@@ -375,33 +420,6 @@ const translations = {
         'price': 'Price'
     }
 }; 
-
-// 语言切换函数
-function toggleLanguage() {
-    // 切换语言
-    const newLang = currentLang === 'zh' ? 'en' : 'zh';
-    changeLanguage(newLang);
-}
-
-// 全局语言切换函数
-function changeLanguage(lang) {
-    currentLang = lang;
-    localStorage.setItem('preferred-language', lang);
-    document.documentElement.lang = lang;
-    
-    const elements = document.querySelectorAll('[data-lang]');
-    elements.forEach(element => {
-        const key = element.getAttribute('data-lang');
-        if (translations[lang][key]) {
-            element.innerHTML = translations[lang][key];
-        }
-    });
-}
-
-// 页面加载时初始化语言
-document.addEventListener('DOMContentLoaded', () => {
-    changeLanguage(currentLang);
-}); 
 
 // 返回上一页函数
 function goBack() {

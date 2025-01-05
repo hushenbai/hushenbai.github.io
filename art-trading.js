@@ -44,8 +44,33 @@ window.addEventListener('scroll', () => {
     lastScrollTop = scrollTop;
 });
 
+// 获取所有项目中的最高系数
+function getHighestCoefficient() {
+    const allCoefficients = Object.values(groupedProjects)
+        .flat()
+        .map(project => {
+            // 获取最新的价格事件系数，如果没有则使用原始系数
+            const latestCoeff = getLatestCoefficient(project.serialnumber);
+            return latestCoeff !== null ? latestCoeff : project.coefficient;
+        });
+    
+    return Math.max(...allCoefficients);
+}
+
+// 更新页面上的最高系数显示
+function updateHighestCoefficient() {
+    document.getElementById('highest-coefficient').textContent = getHighestCoefficient();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    // 计算平均系数
+    // 现有的初始化代码...
+    updateHighestCoefficient();
+    // 其他现有的初始化代码...
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 获取所有项目
     const allProjects = Object.values(groupedProjects).flat();
     const coefficients = allProjects.map(project => {
         const latestCoeff = getLatestCoefficient(project.serialnumber);

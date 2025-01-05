@@ -36,9 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('detail-year').textContent = currentProject.year;
         
         // 设置需要翻译的元素
-        document.getElementById('detail-series').setAttribute('data-lang', currentProject.series['data-lang']);
-        document.getElementById('detail-title').setAttribute('data-lang', currentProject.title['data-lang']);
-        document.getElementById('detail-media').setAttribute('data-lang', currentProject.media['data-lang']);
+        const titleElement = document.getElementById('detail-title');
+        titleElement.setAttribute('data-lang', currentProject.title['data-lang']);
+        titleElement.innerHTML = translations[getCurrentLanguage()][currentProject.title['data-lang']];
+
+        const seriesElement = document.getElementById('detail-series');
+        seriesElement.setAttribute('data-lang', currentProject.series['data-lang']);
+        seriesElement.innerHTML = translations[getCurrentLanguage()][currentProject.series['data-lang']];
+
+        const mediaElement = document.getElementById('detail-media');
+        mediaElement.setAttribute('data-lang', currentProject.media['data-lang']);
+        mediaElement.innerHTML = translations[getCurrentLanguage()][currentProject.media['data-lang']];
         
         // 格式化尺寸显示
         const sizeElement = document.getElementById('detail-size');
@@ -69,11 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 exhibitCity.className = 'exhibit-city';
                 const cityText = document.createElement('span');
                 cityText.setAttribute('data-lang', exhibit.city['data-lang']);
+                cityText.innerHTML = translations[getCurrentLanguage()][exhibit.city['data-lang']];
                 exhibitCity.appendChild(cityText);
                 
                 const exhibitName = document.createElement('span');
                 exhibitName.className = 'exhibit-name';
                 exhibitName.setAttribute('data-lang', exhibit.name['data-lang']);
+                exhibitName.innerHTML = translations[getCurrentLanguage()][exhibit.name['data-lang']];
                 
                 const exhibitTime = document.createElement('span');
                 exhibitTime.className = 'exhibit-time';
@@ -88,9 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 exhibitsList.appendChild(exhibitItem);
             });
         }
-        
+    
         // 使用全局语言设置更新内容
-        changeLanguage(currentLang);
+        updateLanguage();
+
     }
 });
 
