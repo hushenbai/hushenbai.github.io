@@ -46,10 +46,14 @@ header {
 
 main {
     width: 100%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 60px;
 }
 
 home {
+    max-width: 1080px;
     width: 100%;
     margin: 0 auto;
     padding: 30px;
@@ -147,8 +151,6 @@ body {
 /* 容器样式 */
 .container {
     max-width: 1080px; /* 根据需要调整最大宽度 */
-    margin: 0 auto;
-    padding: 30px;
     display: grid;
     /* minmax(250px, 1fr) 确保每个卡片最小 250px 宽度 */
     /* auto-fit 使卡片自动填充可用空间 */
@@ -159,15 +161,13 @@ body {
 
 /* 添加组相关的样式 */
 .group {
-    max-width: 1080px; /* 与container相同的最大宽度 */
-    margin: 0 auto;
     width: 100%;
+    max-width: 1080px;
 }
 
 .group-content {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding: 30px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .group-title {
@@ -260,7 +260,6 @@ body {
     .container {
         /* 中等屏幕4列 */
         grid-template-columns: repeat(4, 1fr);
-        gap: 60px;
     }
     .card {
         max-width: 100%;
@@ -278,7 +277,7 @@ body {
     main {
         width: 100%;
         margin: 0 auto;
-        padding: 16px;
+        padding: 30px;
     }
     
     home {
@@ -298,13 +297,12 @@ body {
     .container {
         /* 小屏幕3列 */
         grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
-        padding: 16px;
+        gap: 30px;
     }
 
     .group-content {
-        margin: 16px 0;
-        padding: 16px;
+        margin-top: 40px;
+    margin-bottom: 40px;
     }
 
     .card {
