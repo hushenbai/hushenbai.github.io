@@ -1,9 +1,15 @@
 // 全局变量存储当前项目数据
 let currentProject = null;
 
-// 添加返回上一页函数
+// 返回上一页函数
 function goBack() {
-    window.history.back();
+    // 如果有上一页历史记录，则返回上一页
+    if (window.history.length > 1 && document.referrer) {
+        window.history.back();
+    } else {
+        // 如果没有上一页，则返回首页
+        window.location.href = 'index.html';
+    }
 }
 
 // 页面加载时初始化
