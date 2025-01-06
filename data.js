@@ -22,6 +22,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -57,6 +58,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -92,6 +94,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -127,6 +130,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -162,6 +166,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -197,6 +202,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -232,6 +238,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -267,6 +274,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -302,6 +310,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -337,6 +346,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -372,6 +382,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -407,6 +418,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -442,6 +454,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -477,6 +490,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -512,6 +526,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -547,6 +562,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -582,6 +598,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -617,6 +634,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 2,
             exhibits: [
                 {
@@ -661,6 +679,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -696,6 +715,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -737,6 +757,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -772,6 +793,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -807,6 +829,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -842,6 +865,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -880,6 +904,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -915,6 +940,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -950,6 +976,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -985,6 +1012,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1023,6 +1051,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1058,6 +1087,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1093,6 +1123,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1128,6 +1159,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1163,6 +1195,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1201,6 +1234,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1235,6 +1269,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -1269,6 +1304,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -1303,6 +1339,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1337,6 +1374,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1371,6 +1409,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1405,6 +1444,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1439,6 +1479,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1473,6 +1514,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1510,6 +1552,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1544,6 +1587,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1578,6 +1622,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1612,6 +1657,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1648,6 +1694,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1682,6 +1729,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1716,6 +1764,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1750,6 +1799,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
                         state: 0,
             exhibits: [
                 {
@@ -1784,7 +1834,8 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
-                        state: 0,
+date: '2024-11-20',
+            state: 0,
             exhibits: [
                 {
                      "city": {
@@ -1818,7 +1869,8 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
-                        state: 0,
+date: '2024-11-20',
+            state: 0,
             exhibits: [
                 {
                      "city": {
@@ -1852,6 +1904,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -1886,6 +1939,7 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
+date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -1920,7 +1974,8 @@ const groupedProjects = {
             coefficient: 60,
             weight: '250 g',
             year: 2024,
-                        state: 0,
+date: '2024-11-20',
+            state: 0,
             exhibits: [
                 {
                      "city": {

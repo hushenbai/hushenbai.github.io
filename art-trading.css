@@ -48,14 +48,35 @@ header {
     height: 100%;
     width: 100%;
     padding: 12px;
-    background: rgba(250, 250, 250, 0.7);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
+    background: rgba(250, 250, 250, 1);
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    align-items: top;
+    justify-content: top;
+}
+
+.function-watch {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    justify-content: top;
+}
+
+.function-board-watch {
+    height: 100%;
+    width: 100%;
+    padding: 24px;
+    background: rgba(250, 250, 250, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     align-items: top;
     justify-content: top;
 }
@@ -82,9 +103,7 @@ header {
     height: 100%;
     width: 100%;
     padding: 24px;
-    background: rgba(250, 250, 250, 0.7);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
+    background: rgba(250, 250, 250, 1);
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     display: flex;
@@ -105,7 +124,7 @@ header {
 
 .project-label {
     display: grid;
-    grid-template-columns: 32px 2fr 1fr 1fr ;  /* 添加 new 标签的列 */
+    grid-template-columns: 32px 2fr 0.5fr 0.5fr ;
     align-items: center;
     gap: 8px;
     padding: 8px;
@@ -122,7 +141,7 @@ header {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 8px;
+    padding: 8px 8px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 .project-image {
@@ -133,7 +152,7 @@ header {
 }
 .project-info {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr ;  /* 添加 new 标签的列 */
+    grid-template-columns: 2fr 0.5fr 0.5fr ;
     align-items: center;
     gap: 8px;
     flex: 1;
@@ -170,9 +189,7 @@ header {
 }
 
 #chartjs-tooltip {
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(250, 250, 250, 1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 12px;
@@ -197,9 +214,7 @@ header {
     height: 100%;
     width: 100%;
     padding: 16px;
-    background: rgba(250, 250, 250, 0.7);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
+    background: rgba(250, 250, 250, 1);
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 8px;
     display: flex;
@@ -286,5 +301,19 @@ header {
     }
     .card {
         max-width: 100%;
+    }
+
+    .function-watch {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 12px;
+    }
+    
+    .function-board-watch {
+        padding: 16px;
+        gap: 6px;
+    }
+
+    .function-board-watch h3 {
+        font-size: 16pt;
     }
 }

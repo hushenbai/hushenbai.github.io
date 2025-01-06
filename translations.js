@@ -70,15 +70,32 @@ const translations = {
         "artworks-trading": "艺术品交易",
         "artworks-trading-description": "收藏和交易是两个行为，如果你对购买、出售艺术品有兴趣，可以试试我的。在这里，申白第一次出售艺术品的价格是统一的，转售的价格是自由的。",
         "trend-info": "了解关于价格系数的更多信息<br>查看申白作品的整体价格与趋势。",
-        "latest-coefficient": "最新系数",
-        "highest-coefficient": "最高系数",
-        "highest-coefficient-description": "市场在售最高价格<br>卖家自由定价",
+
+        "function-description": "直接交易之外，申白还提供以下平台功能。",
+
+        "function-1": "病好了，药我不喝了。",
+        "function-1-title": "作品回购",
+        "function-1-description": "申白以实时系数的75%价格赎回作品。<br>出售者需支付检验与运输成本。",
+
+        "function-2": "听说你喝的药把病治好了，我能喝吗？",
+        "function-2-title": "作品交换",
+        "function-2-description": "藏家可以咨询交换另一藏家持有的作品。<br>由申白做中间人，双方商议补价。<br>已提取作品实物，需支付检验与运输成本。<br>未提取各收8元手续费。",
+
+        "function-3": "还是不见好，换新药试试？",
+        "function-3-title": "作品换新",
+        "function-3-description": "藏家可咨询用持有的作品交换申白未售出作品。<br>换新费用为实时标定系数的25%。",
+
+
+        "serialnumber": "编号",
+        "latest-deal": "最新成交",
+        "highest-sell-coefficient": "最高在售系数",
+        "highest-sell-coefficient-description": "市场最高在售价格<br>卖家自由定价",
         "highest-deal-coefficient": "最高成交系数",
-        "highest-deal-coefficient-description": "市场最高成交记录<br>实际成交价格",
-        "average-coefficient": "平均系数",
-        "average-coefficient-description": "市场交易平均价格<br>卖家自由定价",
+        "highest-deal-coefficient-description": "市场最高成交价格<br>实际成交价格",
+        "average-sell-coefficient": "平均在售系数",
+        "average-sell-coefficient-description": "市场交易平均价格<br>卖家自由定价",
         "official-coefficient": "标定系数",
-        "official-coefficient-description": "申白统一发售价格<br>缓慢上升，不会下跌",
+        "official-coefficient-description": "申白统一发售基准<br>缓慢上升，不会下跌",
 
         "credit-description": "如何相信艺术家自主运营的价格和交易网络。",
         "like": "喜欢",
@@ -248,9 +265,6 @@ const translations = {
         '娘惹<br>酱绿瓷碗<br>盛药图': '娘惹<br>酱绿瓷碗<br>盛药图',
         '娘惹<br>红黄瓷碗<br>盛药图': '娘惹<br>红黄瓷碗<br>盛药图',
 
-        'latest-deal': '最新成交',
-        'highest-coefficient': '最高系数',
-        'serialnumber': '编号'
     },
     'en': {
         'title': 'PearlBarleySand',
@@ -279,17 +293,35 @@ const translations = {
         "artworks-trading": "Artworks Trading",
         "artworks-trading-description": "Collecting and trading are two things. If you are interested in buying and selling artworks, you can try try mine. Here, Shenbai's first sale of artworks is uniform, and the resale price is dynamic.",
         "trend-info": "Learn more about the price coefficient,<br>view the overall price and trend of the artist's works.",
-        "latest-coefficient": "Latest Coeffts.",
-        "highest-coefficient": "Highest Coeffts.",
-        "average-coefficient": "Average Coeffts.",
+        
+        'serialnumber': 'Serial No.',
+        'latest-deal': 'Latest Deal',
+        'highest-sell-coefficient': 'High sell Coeffts.',
+        'coefficient': 'Coefficient',
+        'price': 'Price',
+        "highest-sell-coefficient": "High sell Coeffts.",
+        "average-sell-coefficient": "Avg. sell Coeffts.",
         "official-coefficient": "Official Coeffts.",
-        "highest-deal-coefficient": "Highest deal Coeffts.",
+        "highest-deal-coefficient": "High deal Coeffts.",
         "highest-deal-coefficient-description": "Highest deal record<br>Actual price",
-        "highest-coefficient-description": "Highest price of market sell, dynamic pricing from Sellers",
-        "average-coefficient-description": "Average price of market sell, dynamic pricing from Sellers",
+        "highest-sell-coefficient-description": "Highest price of market sell, dynamic pricing from Sellers",
+        "average-sell-coefficient-description": "Average price of market sell, dynamic pricing from Sellers",
         "official-coefficient-description": "Uniform price of artist sell, slowly going up, not down",
         "credit-description": "How to trust artist-owned and operated trading platforms and prices.",
 
+        "function-description": "In addition to direct trading, Shenbai also provides the following platform functions.",
+       
+        "function-1": "I am cured, so I won't take medicine anymore..",
+        "function-1-title": "Works  Repurchase",
+        "function-1-description": "Shenbai repurchase the works at 75% of the real-time official coefficient price. <br>The seller needs to pay the inspection and transportation costs.",
+
+        "function-2": "I heard that the medicine you took cured you. Can I take it?",
+        "function-2-title": "Work Exchange",
+        "function-2-description": "Collectors can consult and exchange works held by another collector.<br>Shenbai can be the middleman, and the two collectors negotiate the price.<br>If the physical work has been collected, the inspection and transportation costs must be paid.<br>If it has not been collected, a handling fee of 8 CNY will be charged to both parties.",
+
+        "function-3": "Still no cure, try a new one?",
+        "function-3-title": "Work for New",
+        "function-3-description": "Collectors can consult and exchange their works for unsold new works. The exchange fee is 25% of the real-time official coefficient price.",
 
         "like": "Like",
         "like-description": "Firstly, it is you like my work, at least find it interesting. This is the core difference between the art market and the stock market. The appreciation of art depends on the growth of liking, and you like more more, more more people like.",
@@ -460,11 +492,7 @@ const translations = {
         '娘惹<br>酱绿瓷碗<br>盛药图': 'Nyonya deep-red green porcelain bowl with medicine',
         '娘惹<br>红黄瓷碗<br>盛药图': 'Nyonya red yellow porcelain bowl with medicine',
 
-        'latest-deal': 'Latest Deal',
-        'highest-coefficient': 'Highest Coeffts.',
-        'serialnumber': 'Serial No.',
-        'coefficient': 'Coefficient',
-        'price': 'Price'
+
     }
 }; 
 
