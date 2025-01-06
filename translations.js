@@ -88,6 +88,7 @@ const translations = {
 
         "serialnumber": "编号",
         "latest-deal": "最新成交",
+        "highest-sell": "最高在售",
         "highest-sell-coefficient": "最高在售系数",
         "highest-sell-coefficient-description": "市场最高在售价格<br>卖家自由定价",
         "highest-deal-coefficient": "最高成交系数",
@@ -299,6 +300,7 @@ const translations = {
         'highest-sell-coefficient': 'High sell Coeffts.',
         'coefficient': 'Coefficient',
         'price': 'Price',
+        "highest-sell": "Highest Selling",
         "highest-sell-coefficient": "High sell Coeffts.",
         "average-sell-coefficient": "Avg. sell Coeffts.",
         "official-coefficient": "Official Coeffts.",

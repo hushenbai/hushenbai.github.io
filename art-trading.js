@@ -136,6 +136,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 按系数高低排序
     highestSorted = [...projectsWithCoefficient]
+        .filter(project => {
+            // 检查原始状态
+            if (project.state === '2' || project.state === '3' || project.state === '4') {
+                return false;
+            }
+            // 检查更新后的状态（如果有价格事件）
+            const latestEvent = priceEvents.find(event => event.serialnumber === project.serialnumber);
+            if (latestEvent && (latestEvent.state === '2' || latestEvent.state === '3' || latestEvent.state === '4')) {
+                return false;
+            }
+            return true;
+        })
         .sort((a, b) => b.currentCoefficient - a.currentCoefficient)
         .slice(0, 5);
 
