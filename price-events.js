@@ -4,6 +4,14 @@ const priceEvents = [
     {
         serialnumber: 'TCMFW18',
         coefficient: 60,
+        dealcoefficient: 60,
+        state: '1',
+        date: '2024-12-23'
+    },
+    {
+        serialnumber: 'TCMFW18',
+        coefficient: 65,
+        dealcoefficient: 60,
         state: '1',
         date: '2024-12-25'
     },

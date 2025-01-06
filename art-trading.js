@@ -117,6 +117,20 @@ document.addEventListener('DOMContentLoaded', () => {
             // 只保留有价格事件更新的项目
             return priceEvents.some(event => event.serialnumber === project.serialnumber);
         })
+        .map(project => {
+            // 找到对应的价格事件，并按日期排序获取最新的
+            const latestEvent = priceEvents
+                .filter(event => event.serialnumber === project.serialnumber)
+                .sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+            
+            const dealcoefficient = latestEvent?.dealcoefficient || project.currentCoefficient;
+            return {
+                ...project,
+                currentCoefficient: dealcoefficient,
+                lastUpdateDate: latestEvent?.date || project.lastUpdateDate, // 使用价格事件的日期
+                price: (project.width + project.height) * dealcoefficient,
+            };
+        })
         .sort((a, b) => new Date(b.lastUpdateDate) - new Date(a.lastUpdateDate))
         .slice(0, 5);
 
@@ -354,6 +368,21 @@ document.addEventListener('DOMContentLoaded', () => {
             tooltipEl.style.display = 'none';
         }
     });
+
+    // 获取所有价格事件中最高的 dealcoefficient
+    let highestDealCoefficient = 0;
+    
+    const allDealCoefficients = priceEvents
+        .map(event => event.dealcoefficient)
+        .filter(coefficient => !isNaN(coefficient) && coefficient !== null);
+
+    if (allDealCoefficients.length > 0) {
+        highestDealCoefficient = Math.max(...allDealCoefficients);
+    }
+
+    // 更新 DOM
+    document.getElementById('highest-deal-coefficient').textContent = 
+        highestDealCoefficient;
 });
 
 // 更新 data.js 中的 coefficient 值
