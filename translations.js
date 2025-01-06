@@ -75,15 +75,15 @@ const translations = {
 
         "function-1": "病好了，药我不喝了。",
         "function-1-title": "作品回购",
-        "function-1-description": "申白以实时系数的50%价格赎回作品。<br>出售者需支付检验与运输成本。",
+        "function-1-description": "申白以实时系数的 <b>50%</b> 价格赎回作品。<br>出售者需支付检验与运输成本。",
 
         "function-2": "听说你喝的药把病治好了，我能喝吗？",
         "function-2-title": "作品交换",
-        "function-2-description": "藏家可以咨询交换另一藏家持有的作品。<br>由申白做中间人，双方商议补价。<br>已提取作品实物，需支付检验与运输成本，如有严重损坏, 可能无法换购。<br>未提取作品实物，各收8元手续费。",
+        "function-2-description": "藏家可以咨询交换另一藏家持有的作品。<br>由申白做中间人，双方商议补价。<br>已提取作品实物，需支付检验与运输成本，如有严重损坏, 可能无法换购。<br>未提取作品实物，各收 <b>8元</b> 手续费。",
 
         "function-3": "还是不见好，换新药试试？",
         "function-3-title": "作品换新",
-        "function-3-description": "藏家可咨询用持有的作品换购申白未售出作品。<br>换新费用为实时标定系数的25%。<br>需支付检验与运输成本，如有严重损坏，可能无法换购。",
+        "function-3-description": "藏家可咨询用持有的作品换购申白未售出作品。<br>换新费用为实时标定系数的 <b>15%</b>。<br>需支付检验与运输成本，如有严重损坏，可能无法换购。",
 
 
         "serialnumber": "编号",
@@ -315,15 +315,15 @@ const translations = {
        
         "function-1": "I am cured, so I won't take medicine anymore..",
         "function-1-title": "Works  Repurchase",
-        "function-1-description": "Shenbai repurchase the works at 50% of the real-time official coefficient price. <br>The seller needs to pay the inspection and transportation costs.",
+        "function-1-description": "Shenbai repurchase the works at <b>50%</b> of the real-time official coefficient price. <br>The seller needs to pay the inspection and transportation costs.",
 
         "function-2": "I heard that the medicine you took cured you. Can I take it?",
         "function-2-title": "Work Exchange",
-        "function-2-description": "Collectors can consult and exchange works held by another collector.<br>Shenbai can be the middleman, and the two collectors negotiate the price.<br>If the physical work has been collected, the inspection and transportation costs must be paid.<br>If it has not been collected, a handling fee of 8 CNY will be charged to both parties.",
+        "function-2-description": "Collectors can consult and exchange works held by another collector.<br>Shenbai can be the middleman, and the two collectors negotiate the price.<br>If the physical work has been collected, the inspection and transportation costs must be paid.<br>If it has not been collected, a handling fee of <b>8 CNY</b> will be charged to both parties.",
 
         "function-3": "Still no cure, try a new one?",
         "function-3-title": "Work for New",
-        "function-3-description": "Collectors can consult and exchange their works for unsold new works. The exchange fee is 25% of the real-time official coefficient price.",
+        "function-3-description": "Collectors can consult and exchange their works for unsold new works. The exchange fee is <b>15%</b> of the real-time official coefficient price.",
 
         "like": "Like",
         "like-description": "Firstly, it is you like my work, at least find it interesting. This is the core difference between the art market and the stock market. The appreciation of art depends on the growth of liking, and you like more more, more more people like.",
