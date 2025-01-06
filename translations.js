@@ -75,7 +75,7 @@ const translations = {
 
         "function-1": "病好了，药我不喝了。",
         "function-1-title": "作品回购",
-        "function-1-description": "申白以实时系数的 <b>50%</b> 价格赎回作品。<br>出售者需支付检验与运输成本。",
+        "function-1-description": "2025年12月31日前出售的作品，申白承诺以实时系数的 <b>75%</b> 价格赎回。<br>出售者需支付检验与运输成本。",
 
         "function-2": "听说你喝的药把病治好了，我能喝吗？",
         "function-2-title": "作品交换",
@@ -315,7 +315,7 @@ const translations = {
        
         "function-1": "I am cured, so I won't take medicine anymore..",
         "function-1-title": "Works  Repurchase",
-        "function-1-description": "Shenbai repurchase the works at <b>50%</b> of the real-time official coefficient price. <br>The seller needs to pay the inspection and transportation costs.",
+        "function-1-description": "For works sold before December 31, 2025, Shen Bai promises to repurchase at <b>75%</b> of the real-time official coefficient price. <br>The seller needs to pay the inspection and transportation costs.",
 
         "function-2": "I heard that the medicine you took cured you. Can I take it?",
         "function-2-title": "Work Exchange",
