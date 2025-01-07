@@ -5,20 +5,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 生成卡片的函数
 function createCards() {
-    Object.keys(groupedProjects).forEach(groupId => {
+    Object.keys(groupedArtworks).forEach(groupId => {
         const container = document.querySelector(`#${groupId} .container`);
         if (!container) return;
         
-        const cardsHTML = groupedProjects[groupId].map(project => {
-            const titleKey = project.title['data-lang'];
+        const cardsHTML = groupedArtworks[groupId].map(artwork => {
+            const titleKey = artwork.title['data-lang'];
             return `
-                <article class="card" onclick="goToDetail('${groupId}', '${project.serialnumber}')">
+                <article class="card" onclick="goToDetail('${groupId}', '${artwork.serialnumber}')">
                     <div class="card-image">
-                        <img src="${project.image}" alt="${translations[currentLang][titleKey]}">
+                        <img src="${artwork.image}" alt="${translations[currentLang][titleKey]}">
                     </div>
                     <div class="card-content">
                         <p2 data-lang="${titleKey}">${translations[currentLang][titleKey]}</p2>
-                        <p3 class="year">${project.year}</p3>
+                        <p3 class="year">${artwork.year}</p3>
                     </div>
                 </article>
             `;
@@ -101,9 +101,9 @@ function generateCards(type) {
     if (!container) return;
     
     // 根据类型选择对应的数据
-    const projects = Object.values(groupedProjects).flat();
+    const artworks = Object.values(groupedArtworks).flat();
     
-    projects.forEach(project => {
+    artworks.forEach(artwork => {
         // 创建卡片的代码保持不变
         // ...
     });
@@ -113,8 +113,8 @@ function generateRSMGallery() {
     const container = document.querySelector('.gallery-container');
     if (!container) return;
     
-    Object.entries(groupedProjects).forEach(([groupId, projects]) => {
-        projects.forEach((project, index) => {
+    Object.entries(groupedArtworks).forEach(([groupId, artworks]) => {
+        artworks.forEach((artwork, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
             
@@ -122,24 +122,24 @@ function generateRSMGallery() {
             item.style.animationDelay = `${index * 0.2}s`;  // 每个项目延迟 0.2 秒
             
             item.onclick = () => {
-                window.location.href = `detailrsm.html?group=${groupId}&id=${project.serialnumber}`;
+                window.location.href = `detailrsm.html?group=${groupId}&id=${artwork.serialnumber}`;
             };
             
             const img = document.createElement('img');
             img.className = 'gallery-image';
-            img.src = project.image;
-            img.alt = project.title['data-lang'];
+            img.src = artwork.image;
+            img.alt = artwork.title['data-lang'];
             
             const info = document.createElement('div');
             info.className = 'gallery-info';
             
             const title = document.createElement('p2');
-            const titleKey = project.title['data-lang'];
+            const titleKey = artwork.title['data-lang'];
             title.setAttribute('data-lang', titleKey);
             title.innerHTML = translations[getCurrentLanguage()][titleKey] || titleKey;
             
             const time = document.createElement('p3');
-            time.textContent = project.year;
+            time.textContent = artwork.year;
             
             info.appendChild(title);
             info.appendChild(time);

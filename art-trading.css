@@ -1,7 +1,7 @@
 
 
 header {
-    max-width: 1080px;
+    max-width: auto;
     width: 100%;
     padding: 0 60px;
     margin-top: 160px;
@@ -18,7 +18,7 @@ header {
 }
 
 .frame {
-    max-width: 1080px;
+    max-width: auto;
     width: 100%;
     padding: 0 60px;
     display: flex;
@@ -122,7 +122,7 @@ header {
     margin-bottom: 16px;
 }
 
-.project-label {
+.artwork-label {
     display: grid;
     grid-template-columns: 32px 2fr 0.5fr 0.5fr ;
     align-items: center;
@@ -133,24 +133,24 @@ header {
     border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.project-label p3 {
+.artwork-label p3 {
     color: rgba(140, 140, 140, 0.8);
 }
 
-.project-item {
+.artwork-item {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 8px;
+    padding: 16px 16px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
-.project-image {
-    width: 32px;
-    height: 32px;
+.artwork-image {
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 6px;
 }
-.project-info {
+.artwork-info {
     display: grid;
     grid-template-columns: 2fr 0.5fr 0.5fr ;
     align-items: center;

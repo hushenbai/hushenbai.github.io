@@ -113,9 +113,9 @@ const translations = {
         "transparency": "透明",
         "transparency-description": "市场动态是公开的。你可以看到其他交易的趋势，来决定购买、持有、出售作品。",
         "protect": "保护",
-        "protect-description": "价格稳健上升应当是我们的共识。你想短期做多，我还不同意呢。我用标定系数和创作速度来控制价格。",
+        "protect-description": "价格稳健上升应当是我们的共识。我用标定系数和创作速度来控制价格。",
         "self-honor": "自尊",
-        "self-honor-description": "谁都有理由做空价格，只有艺术家本人拒绝。最坚持保护价格的是我本人。创作过程的付出，让我不能毁自己的心血。你赌我是爱钱还是爱艺术。",
+        "self-honor-description": "最坚持保护价格的是我本人。创作过程的付出，让我不能毁自己的心血。你赌我是爱钱还是爱艺术。",
         "legal": "合法",
         "legal-description": "我们依法纳税。",
 
@@ -343,9 +343,9 @@ const translations = {
         "transparency": "Transparency",
         "transparency-description": "Market dynamics are public. You can see the trend of other transactions to decide whether to buy, hold, or sell the work. I believe you are a good trading partner, and try to provide as much public information as possible.",
         "protect": "Protect",
-        "protect-description": "A steady rise in prices should be our consensus. You want to go long in the short term, I say no no. I use calibration coefficients and creation speed to control prices. Good results also require your choice.",
+        "protect-description": "A steady rise in prices should be our consensus. I use calibration coefficients and creation speed to control prices. Good results also require your choice.",
         "self-honor": "Self-honor",
-        "self-honor-description": "Everyone has a reason to short the price, but the artist refuse. I am the one who insists on protecting the price the most. The sacrifices made in the creative process prevent me from destroying my works. You bet whether I love money or art.",
+        "self-honor-description": "I am the one who insists on protecting the price the most. The sacrifices made in the creative process prevent me from destroying my works. You bet whether I love money or art.",
         "legal": "Legal",
         "legal-description": "We pay taxes legally.",
         

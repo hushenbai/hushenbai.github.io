@@ -3,23 +3,23 @@ let latestSorted = [];
 let highestSorted = [];
 
 // 生成列表HTML的函数
-function generateProjectHTML(project) {
-    // 从 groupedProjects 中找到项目所属的 group
+function generateArtworkHTML(artwork) {
+    // 从 groupedArtworks 中找到项目所属的 group
     let groupId = '1';
-    Object.entries(groupedProjects).forEach(([group, projects]) => {
-        if (projects.some(p => p.serialnumber === project.serialnumber)) {
+    Object.entries(groupedArtworks).forEach(([group, artworks]) => {
+        if (artworks.some(p => p.serialnumber === artwork.serialnumber)) {
             groupId = group.replace('group', '');
         }
     });
 
     return `
-        <div class="project-item" onclick="goToDetail('${groupId}', '${project.serialnumber}')" style="cursor: pointer;">
-            <img class="project-image" src="${project.image.replace('/TCM/', '/TCM-small/')}" alt="${project.title['data-lang']}">
-            <div class="project-info">
+        <div class="artwork-item" onclick="goToDetail('${groupId}', '${artwork.serialnumber}')" style="cursor: pointer;">
+            <img class="artwork-image" src="${artwork.image.replace('/TCM/', '/TCM-small/')}" alt="${artwork.title['data-lang']}">
+            <div class="artwork-info">
                 
-                <p2 class="project-serialnumber">${project.serialnumber}</p2>
-                <p2 class="project-serialnumber">${project.currentCoefficient}</p2>
-                <p2 class="project-serialnumber">${Math.round(project.price)}</p2>
+                <p2 class="artwork-serialnumber">${artwork.serialnumber}</p2>
+                <p2 class="artwork-serialnumber">${artwork.currentCoefficient}</p2>
+                <p2 class="artwork-serialnumber">${Math.round(artwork.price)}</p2>
             </div>
         </div>
     `;
@@ -46,12 +46,12 @@ window.addEventListener('scroll', () => {
 
 // 获取所有项目中的最高系数
 function getHighestCoefficient() {
-    const allCoefficients = Object.values(groupedProjects)
+    const allCoefficients = Object.values(groupedArtworks)
         .flat()
-        .map(project => {
+        .map(artwork => {
             // 获取最新的价格事件系数，如果没有则使用原始系数
-            const latestCoeff = getLatestCoefficient(project.serialnumber);
-            return latestCoeff !== null ? latestCoeff : project.coefficient;
+            const latestCoeff = getLatestCoefficient(artwork.serialnumber);
+            return latestCoeff !== null ? latestCoeff : artwork.coefficient;
         });
     
     return Math.max(...allCoefficients);
@@ -71,18 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
 
     // 获取所有项目
-    const allProjects = Object.values(groupedProjects).flat();
-    const coefficients = allProjects.map(project => {
-        const latestCoeff = getLatestCoefficient(project.serialnumber);
-        return latestCoeff !== null ? latestCoeff : project.coefficient;
+    const allArtworks = Object.values(groupedArtworks).flat();
+    const coefficients = allArtworks.map(artwork => {
+        const latestCoeff = getLatestCoefficient(artwork.serialnumber);
+        return latestCoeff !== null ? latestCoeff : artwork.coefficient;
     });
     const averageCoefficient = coefficients.reduce((a, b) => a + b, 0) / coefficients.length;
     
     // 计算平均系数（排除系数为0的项目）
-    const validCoefficients = allProjects
-        .map(project => {
-            const latestCoeff = getLatestCoefficient(project.serialnumber);
-            return latestCoeff !== null ? latestCoeff : project.coefficient;
+    const validCoefficients = allArtworks
+        .map(artwork => {
+            const latestCoeff = getLatestCoefficient(artwork.serialnumber);
+            return latestCoeff !== null ? latestCoeff : artwork.coefficient;
         })
         .filter(coefficient => coefficient > 0);  // 排除系数为0的项目
 
@@ -94,14 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
         ).toFixed(1);
 
     // 获取每个项目的最新系数和最新更新时间
-    const projectsWithCoefficient = allProjects.map(project => {
-        const latestCoefficient = getLatestCoefficient(project.serialnumber);
+    const artworksWithCoefficient = allArtworks.map(artwork => {
+        const latestCoefficient = getLatestCoefficient(artwork.serialnumber);
         return {
-            ...project,
-            currentCoefficient: latestCoefficient !== null ? latestCoefficient : project.coefficient,
-            price: (project.width + project.height) * (latestCoefficient !== null ? latestCoefficient : project.coefficient),
+            ...artwork,
+            currentCoefficient: latestCoefficient !== null ? latestCoefficient : artwork.coefficient,
+            price: (artwork.width + artwork.height) * (latestCoefficient !== null ? latestCoefficient : artwork.coefficient),
             lastUpdateDate: priceEvents
-                .filter(event => event.serialnumber === project.serialnumber)
+                .filter(event => event.serialnumber === artwork.serialnumber)
                 .sort((a, b) => new Date(b.date) - new Date(a.date))[0]?.date || '1970-01-01'
         };
     });
@@ -112,37 +112,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 只获取有更新的项目并按最新更新时间排序
-    latestSorted = [...projectsWithCoefficient]
-        .filter(project => {
+    latestSorted = [...artworksWithCoefficient]
+        .filter(artwork => {
             // 只保留有价格事件更新的项目
-            return priceEvents.some(event => event.serialnumber === project.serialnumber);
+            return priceEvents.some(event => event.serialnumber === artwork.serialnumber);
         })
-        .map(project => {
+        .map(artwork => {
             // 找到对应的价格事件，并按日期排序获取最新的
             const latestEvent = priceEvents
-                .filter(event => event.serialnumber === project.serialnumber)
+                .filter(event => event.serialnumber === artwork.serialnumber)
                 .sort((a, b) => new Date(b.date) - new Date(a.date))[0];
             
-            const dealcoefficient = latestEvent?.dealcoefficient || project.currentCoefficient;
+            const dealcoefficient = latestEvent?.dealcoefficient || artwork.currentCoefficient;
             return {
-                ...project,
+                ...artwork,
                 currentCoefficient: dealcoefficient,
-                lastUpdateDate: latestEvent?.date || project.lastUpdateDate, // 使用价格事件的日期
-                price: (project.width + project.height) * dealcoefficient,
+                lastUpdateDate: latestEvent?.date || artwork.lastUpdateDate, // 使用价格事件的日期
+                price: (artwork.width + artwork.height) * dealcoefficient,
             };
         })
         .sort((a, b) => new Date(b.lastUpdateDate) - new Date(a.lastUpdateDate))
         .slice(0, 5);
 
     // 按系数高低排序
-    highestSorted = [...projectsWithCoefficient]
-        .filter(project => {
+    highestSorted = [...artworksWithCoefficient]
+        .filter(artwork => {
             // 检查原始状态
-            if (project.state === '2' || project.state === '3' || project.state === '4') {
+            if (artwork.state === '2' || artwork.state === '3' || artwork.state === '4') {
                 return false;
             }
             // 检查更新后的状态（如果有价格事件）
-            const latestEvent = priceEvents.find(event => event.serialnumber === project.serialnumber);
+            const latestEvent = priceEvents.find(event => event.serialnumber === artwork.serialnumber);
             if (latestEvent && (latestEvent.state === '2' || latestEvent.state === '3' || latestEvent.state === '4')) {
                 return false;
             }
@@ -154,9 +154,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 渲染列表
     document.getElementById('latest-list').innerHTML = 
-        latestSorted.map(generateProjectHTML).join('');
+        latestSorted.map(generateArtworkHTML).join('');
     document.getElementById('highest-list').innerHTML = 
-        highestSorted.map(generateProjectHTML).join('');
+        highestSorted.map(generateArtworkHTML).join('');
         
 
     // 获取当前日期并设置为当天开始时间
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 为每个项目生成价格数据
-    const projectData = allProjects.map(project => {
+    const artworkData = allArtworks.map(artwork => {
         const data = dates.map(date => {
             const dateObj = new Date(date);
             dateObj.setHours(0, 0, 0, 0);
@@ -181,12 +181,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 return null;
             }
 
-            return getProjectCoefficient(project.serialnumber, dateObj);
+            return getArtworkCoefficient(artwork.serialnumber, dateObj);
         });
 
         return {
-            serialnumber: project.serialnumber,
-            title: project.title['data-lang'],
+            serialnumber: artwork.serialnumber,
+            title: artwork.title['data-lang'],
             data
         };
     });
@@ -200,30 +200,30 @@ document.addEventListener('DOMContentLoaded', () => {
             labels: dates,
             datasets: [
                 // 过滤掉系数为0的项目
-                ...projectData
-                    .filter(project => {
+                ...artworkData
+                    .filter(artwork => {
                         // 获取最新系数
-                        const latestCoeff = getLatestCoefficient(project.serialnumber);
+                        const latestCoeff = getLatestCoefficient(artwork.serialnumber);
                         // 获取原始系数
-                        const originalProject = allProjects.find(p => p.serialnumber === project.serialnumber);
-                        const originalCoeff = originalProject ? originalProject.coefficient : 0;
+                        const originalArtwork = allArtworks.find(p => p.serialnumber === artwork.serialnumber);
+                        const originalCoeff = originalArtwork ? originalArtwork.coefficient : 0;
                         
                         // 检查当前使用的系数
                         const currentCoeff = latestCoeff !== null ? latestCoeff : originalCoeff;
                         return currentCoeff > 0;
                     })
-                    .map(project => ({
-                        label: project.serialnumber,
-                        data: project.data,
+                    .map(artwork => ({
+                        label: artwork.serialnumber,
+                        data: artwork.data,
                         borderColor: 'rgba(0, 0, 0, 0.2)',
                         fill: false,
-                        image: allProjects.find(p => p.serialnumber === project.serialnumber).image.replace('/TCM/', '/TCM-small/'),
+                        image: allArtworks.find(p => p.serialnumber === artwork.serialnumber).image.replace('/TCM/', '/TCM-small/'),
                         pointRadius: 0,
                         borderWidth: 4,
                         pointHoverRadius: 5,
                         pointHitRadius: 20,
                         lastPriceChange: priceEvents
-                            .filter(event => event.serialnumber === project.serialnumber)
+                            .filter(event => event.serialnumber === artwork.serialnumber)
                             .sort((a, b) => new Date(b.date) - new Date(a.date))[0]?.date || '1970-01-01'
                     }))
             ]
@@ -398,14 +398,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // 更新 data.js 中的 coefficient 值
-function updateProjectCoefficients() {
-    allProjects.forEach(project => {
+function updateArtworkCoefficients() {
+    allArtworks.forEach(artwork => {
         const latestEvent = priceEvents
-            .filter(event => event.serialnumber === project.serialnumber)
+            .filter(event => event.serialnumber === artwork.serialnumber)
             .sort((a, b) => new Date(b.date) - new Date(a.date))[0];
 
         if (latestEvent) {
-            project.coefficient = latestEvent.coefficient;
+            artwork.coefficient = latestEvent.coefficient;
         }
     });
 }
@@ -413,8 +413,8 @@ function updateProjectCoefficients() {
 document.addEventListener('languageChanged', () => {
     // 重新渲染列表
     document.getElementById('latest-list').innerHTML = 
-        latestSorted.map(generateProjectHTML).join('');
+        latestSorted.map(generateArtworkHTML).join('');
     document.getElementById('highest-list').innerHTML = 
-        highestSorted.map(generateProjectHTML).join('');
+        highestSorted.map(generateArtworkHTML).join('');
 });
 

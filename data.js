@@ -1,5 +1,5 @@
 // 存储所有卡片数据
-const groupedProjects = {
+const groupedArtworks = {
     group1: [
         {
             image: './assets/TCM/TCMFW1白陶碗盛药图.jpg',

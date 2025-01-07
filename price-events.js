@@ -29,11 +29,11 @@ const priceEvents = [
 // 获取项目的最新系数
 function getLatestCoefficient(serialnumber) {
     // 检索该项目的所有价格事件
-    const projectEvents = priceEvents.filter(event => event.serialnumber === serialnumber);
+    const artworkEvents = priceEvents.filter(event => event.serialnumber === serialnumber);
     
-    if (projectEvents.length > 0) {
+    if (artworkEvents.length > 0) {
         // 按日期排序获取最新事件
-        const latestEvent = projectEvents.sort((a, b) => 
+        const latestEvent = artworkEvents.sort((a, b) => 
             new Date(b.date) - new Date(a.date)
         )[0];
         
@@ -47,11 +47,11 @@ function getLatestCoefficient(serialnumber) {
 // 获取项目的最新状态
 function getLatestState(serialnumber) {
     // 检索该项目的所有价格事件
-    const projectEvents = priceEvents.filter(event => event.serialnumber === serialnumber);
+    const artworkEvents = priceEvents.filter(event => event.serialnumber === serialnumber);
     
-    if (projectEvents.length > 0) {
+    if (artworkEvents.length > 0) {
         // 按日期排序获取最新事件
-        const latestEvent = projectEvents.sort((a, b) => 
+        const latestEvent = artworkEvents.sort((a, b) => 
             new Date(b.date) - new Date(a.date)
         )[0];
         
@@ -63,11 +63,11 @@ function getLatestState(serialnumber) {
 }
 
 // 更新项目系数（用于 detail 页面）
-function updateProjectCoefficient(project) {
-    if (!project) return;
+function updateArtworkCoefficient(artwork) {
+    if (!artwork) return;
     
-    const latestCoefficient = getLatestCoefficient(project.serialnumber);
+    const latestCoefficient = getLatestCoefficient(artwork.serialnumber);
     if (latestCoefficient !== null) {
-        project.coefficient = latestCoefficient;
+        artwork.coefficient = latestCoefficient;
     }
 } 

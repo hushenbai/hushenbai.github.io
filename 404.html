@@ -16,21 +16,21 @@
 <body>
 
     <header class="header" style="margin: 0px; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;" >
+        <div style="display: flex; flex-direction: row;">
         <img src="./assets/tcmbowl.png" 
              style="width: 120px; height: 120px;" 
              alt="404" 
              class="error-image" 
              id="rotating-image">
-             <div style="height: 8px;"></div>
+        </div>
+        <div style="height: 8px;"></div>
         <div class="text-box" style="padding: 0 36px; max-width: 800px; text-align: center;">
             <h1>404</h1>
             <div style="height: 24px;"></div>
             <h3>Sorry, the page you are visiting does not exist. But I invite you to take some medicine.</h3>
             <h3 id="rotating-title" style="height: 180px;"></h3>
         </div>
-        <p1 class="nav-button" onclick="window.location.href='index.html'">
-            <span>Back Home</span>
-        </p1>
+        <b1 class="styled-button" onclick="window.location.href='index.html'">Back Home</b1>
     </header>
 
      <!-- 添加必要的脚本 -->
@@ -40,7 +40,7 @@
      const titles = [
     "抱歉，你访问的页面不存在。但我可以请你喝药。",
     "唔好意思，你訪問嘅頁面唔存在。但我可以請你飲藥。",
-    "抱歉，你造訪的頁面不存在。但我可以請你吃點藥。",
+    "抱歉，你造訪的頁面不存在。但我可以請你喝藥。",
     "申し訳ありませんが、あなたがアクセスしているページは存在しません。しかし、薬を飲むことをお勧めします。",
     "죄송합니다. 방문 중인 페이지는 존재하지 않습니다. 하지만 약을 먹으라고 권유합니다.",
     "ขออภัย ไม่พบหน้าที่คุณกำลังเยี่ยมชม แต่ฉันขอเชิญคุณรับประทานยา",

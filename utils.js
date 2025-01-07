@@ -1,4 +1,4 @@
-function getProjectCoefficient(serialnumber, date) {
+function getArtworkCoefficient(serialnumber, date) {
     // 如果提供了日期，获取该日期之前的最新系数
     if (date) {
         const eventsBeforeDate = priceEvents.filter(event => 
@@ -15,7 +15,7 @@ function getProjectCoefficient(serialnumber, date) {
     }
     
     // 如果没有日期或没有找到事件，从原始数据中获取默认系数
-    const allProjects = Object.values(groupedProjects).flat();
-    const project = allProjects.find(p => p.serialnumber === serialnumber);
-    return project ? project.coefficient : 1;
+    const allArtworks = Object.values(groupedArtworks).flat();
+    const artwork = allArtworks.find(p => p.serialnumber === serialnumber);
+    return artwork ? artwork.coefficient : 1;
 }

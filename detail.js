@@ -1,7 +1,7 @@
 // ===============================
 // 全局变量
 // ===============================
-let currentProject = null;
+let currentArtwork = null;
 
 // 返回上一页函数
 function goBack() {
@@ -24,9 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const serialnumber = params.get('id');
     
     // 查找对应的项目数据
-    currentProject = groupedProjects[groupId].find(p => p.serialnumber === serialnumber);
+    currentArtwork = groupedArtworks[groupId].find(p => p.serialnumber === serialnumber);
     
-    if (currentProject) {
+    if (currentArtwork) {
+        // 设置页面标题
+        document.getElementById('page-title').textContent = 
+            (translations[getCurrentLanguage()][currentArtwork.title['data-lang']] || '明珠薏苡') + '-Shenbai';
+        
         const img = document.getElementById('detail-img');
         const imageWrapper = document.querySelector('.image-wrapper');
         
@@ -37,53 +41,53 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         // 设置图片源
-        img.src = currentProject.image.replace('/TCM/', '/TCM-big/');
+        img.src = currentArtwork.image.replace('/TCM/', '/TCM-big/');
 
         // 获取每个项目的最新系数和最新更新时间
-        const latestCoefficient = getLatestCoefficient(currentProject.serialnumber);
+        const latestCoefficient = getLatestCoefficient(currentArtwork.serialnumber);
         if (latestCoefficient !== null) {
-            currentProject.coefficient = latestCoefficient;  
+            currentArtwork.coefficient = latestCoefficient;  
         }
-        const latestState = getLatestState(currentProject.serialnumber);
+        const latestState = getLatestState(currentArtwork.serialnumber);
         if (latestState !== null) {
-            currentProject.state = latestState;
+            currentArtwork.state = latestState;
         }
         
         // 更新基本信息
-        document.getElementById('detail-serialnumber').textContent = currentProject.serialnumber;
-        document.getElementById('detail-size').textContent = currentProject.size;
-        document.getElementById('detail-weight').textContent = currentProject.weight;
-        document.getElementById('detail-year').textContent = currentProject.year;
+        document.getElementById('detail-serialnumber').textContent = currentArtwork.serialnumber;
+        document.getElementById('detail-size').textContent = currentArtwork.size;
+        document.getElementById('detail-weight').textContent = currentArtwork.weight;
+        document.getElementById('detail-year').textContent = currentArtwork.year;
         // 更新公式中的值
-        document.getElementById('detail-width').textContent = currentProject.width;
-        document.getElementById('detail-height').textContent = currentProject.height;
-        document.getElementById('detail-coefficient').textContent = currentProject.coefficient;
-        document.getElementById('detail-coefficient-1').textContent = currentProject.coefficient;
+        document.getElementById('detail-width').textContent = currentArtwork.width;
+        document.getElementById('detail-height').textContent = currentArtwork.height;
+        document.getElementById('detail-coefficient').textContent = currentArtwork.coefficient;
+        document.getElementById('detail-coefficient-1').textContent = currentArtwork.coefficient;
         // 设置需要翻译的元素
         const titleElement = document.getElementById('detail-title');
-        titleElement.setAttribute('data-lang', currentProject.title2['data-lang']);
-        titleElement.innerHTML = translations[getCurrentLanguage()][currentProject.title2['data-lang']];
+        titleElement.setAttribute('data-lang', currentArtwork.title2['data-lang']);
+        titleElement.innerHTML = translations[getCurrentLanguage()][currentArtwork.title2['data-lang']];
 
         const seriesElement = document.getElementById('detail-series');
-        seriesElement.setAttribute('data-lang', currentProject.series['data-lang']);
-        seriesElement.innerHTML = translations[getCurrentLanguage()][currentProject.series['data-lang']];
+        seriesElement.setAttribute('data-lang', currentArtwork.series['data-lang']);
+        seriesElement.innerHTML = translations[getCurrentLanguage()][currentArtwork.series['data-lang']];
 
         const mediaElement = document.getElementById('detail-media');
-        mediaElement.setAttribute('data-lang', currentProject.media['data-lang']);
-        mediaElement.innerHTML = translations[getCurrentLanguage()][currentProject.media['data-lang']];
+        mediaElement.setAttribute('data-lang', currentArtwork.media['data-lang']);
+        mediaElement.innerHTML = translations[getCurrentLanguage()][currentArtwork.media['data-lang']];
 
         // 格式化尺寸显示
         const sizeElement = document.getElementById('detail-size');
-        if (currentProject.width && currentProject.height && currentProject.depth) {
-            sizeElement.textContent = `${currentProject.width} × ${currentProject.height} × ${currentProject.depth} cm`;
+        if (currentArtwork.width && currentArtwork.height && currentArtwork.depth) {
+            sizeElement.textContent = `${currentArtwork.width} × ${currentArtwork.height} × ${currentArtwork.depth} cm`;
         }
 
         // 处理展览信息
         const exhibitsList = document.getElementById('exhibits-list');
-        if (currentProject.exhibits && exhibitsList) {
+        if (currentArtwork.exhibits && exhibitsList) {
             exhibitsList.innerHTML = '';
             
-            currentProject.exhibits.forEach((exhibit, index) => {
+            currentArtwork.exhibits.forEach((exhibit, index) => {
                 const exhibitItem = document.createElement('div');
                 exhibitItem.className = 'exhibit-item';
                 
@@ -123,13 +127,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 计算价格：(宽 + 高) × 系数
-        const price = (currentProject.width + currentProject.height) * currentProject.coefficient;
+        const price = (currentArtwork.width + currentArtwork.height) * currentArtwork.coefficient;
         document.getElementById('calculated-price').textContent = Math.round(price);
 
         // 使用全局语言设置更新内容
         updateLanguage();
         
         updateProductStatus();
+
+
     }
 });
 
@@ -308,9 +314,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // 处理项目状态显示
 // ===============================
 function updateProductStatus() {
-    // 确保 currentProject 存在且有 state 值
-    if (currentProject && typeof currentProject.state !== 'undefined') {
-        const state = currentProject.state;
+    // 确保 currentArtwork 存在且有 state 值
+    if (currentArtwork && typeof currentArtwork.state !== 'undefined') {
+        const state = currentArtwork.state;
         console.log('Current state:', state); // 添加调试日志
         
         // 获取显示元素

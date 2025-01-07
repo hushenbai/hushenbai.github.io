@@ -1,5 +1,5 @@
 // 全局变量存储当前项目数据
-let currentProject = null;
+let currentArtwork = null;
 
 // 返回上一页函数
 function goBack() {
@@ -20,11 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const serialnumber = params.get('id');
     
     // 查找对应的项目数据
-    currentProject = groupedProjects[groupId].find(p => p.serialnumber === serialnumber);
+    currentArtwork = groupedArtworks[groupId].find(p => p.serialnumber === serialnumber);
     
-    if (currentProject) {
+    if (currentArtwork) {
         const img = document.getElementById('detail-img');
         const imageWrapper = document.querySelector('.image-wrapper');
+
+        // 设置页面标题
+        document.getElementById('page-title').textContent = 
+            (translations[getCurrentLanguage()][currentArtwork.title['data-lang']] || '重圆镜') + '-Shenbai';
         
         // 设置图片加载完成的处理
         img.onload = function() {
@@ -33,39 +37,39 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         // 设置图片源
-        img.src = currentProject.image.replace('/RSM/', '/RSM-big/');
+        img.src = currentArtwork.image.replace('/RSM/', '/RSM-big/');
         
         // 更新基本信息
-        document.getElementById('detail-serialnumber').textContent = currentProject.serialnumber;
-        document.getElementById('detail-size').textContent = currentProject.size;
-        document.getElementById('detail-weight').textContent = currentProject.weight;
-        document.getElementById('detail-year').textContent = currentProject.year;
+        document.getElementById('detail-serialnumber').textContent = currentArtwork.serialnumber;
+        document.getElementById('detail-size').textContent = currentArtwork.size;
+        document.getElementById('detail-weight').textContent = currentArtwork.weight;
+        document.getElementById('detail-year').textContent = currentArtwork.year;
         
         // 设置需要翻译的元素
         const titleElement = document.getElementById('detail-title');
-        titleElement.setAttribute('data-lang', currentProject.title['data-lang']);
-        titleElement.innerHTML = translations[getCurrentLanguage()][currentProject.title['data-lang']];
+        titleElement.setAttribute('data-lang', currentArtwork.title['data-lang']);
+        titleElement.innerHTML = translations[getCurrentLanguage()][currentArtwork.title['data-lang']];
 
         const seriesElement = document.getElementById('detail-series');
-        seriesElement.setAttribute('data-lang', currentProject.series['data-lang']);
-        seriesElement.innerHTML = translations[getCurrentLanguage()][currentProject.series['data-lang']];
+        seriesElement.setAttribute('data-lang', currentArtwork.series['data-lang']);
+        seriesElement.innerHTML = translations[getCurrentLanguage()][currentArtwork.series['data-lang']];
 
         const mediaElement = document.getElementById('detail-media');
-        mediaElement.setAttribute('data-lang', currentProject.media['data-lang']);
-        mediaElement.innerHTML = translations[getCurrentLanguage()][currentProject.media['data-lang']];
+        mediaElement.setAttribute('data-lang', currentArtwork.media['data-lang']);
+        mediaElement.innerHTML = translations[getCurrentLanguage()][currentArtwork.media['data-lang']];
         
         // 格式化尺寸显示
         const sizeElement = document.getElementById('detail-size');
-        if (currentProject.width && currentProject.height && currentProject.depth) {
-            sizeElement.textContent = `${currentProject.width} × ${currentProject.height} × ${currentProject.depth} cm`;
+        if (currentArtwork.width && currentArtwork.height && currentArtwork.depth) {
+            sizeElement.textContent = `${currentArtwork.width} × ${currentArtwork.height} × ${currentArtwork.depth} cm`;
         }
         
         // 处理展览信息
         const exhibitsList = document.getElementById('exhibits-list');
-        if (currentProject.exhibits && exhibitsList) {
+        if (currentArtwork.exhibits && exhibitsList) {
             exhibitsList.innerHTML = '';
             
-            currentProject.exhibits.forEach((exhibit, index) => {
+            currentArtwork.exhibits.forEach((exhibit, index) => {
                 const exhibitItem = document.createElement('div');
                 exhibitItem.className = 'exhibit-item';
                 
