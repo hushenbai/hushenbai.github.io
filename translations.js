@@ -68,7 +68,7 @@ const translations = {
         "art-trading": "艺术品交易",
         "art-trading-info": "如何参与明珠薏苡系列的交易，你需要了解的信息。",
         "artworks-trading": "艺术品交易",
-        "artworks-trading-description": "收藏和交易是两个行为，如果你对购买、出售艺术品有兴趣，可以试试我的。在这里，申白第一次出售艺术品的价格是统一的，转售的价格是自由的。",
+        "artworks-trading-description": "如果你对购买、出售艺术品有兴趣，可以试试我的。在这里，申白第一次出售艺术品的价格是统一的，转售的价格是自由的。",
         "trend-info": "了解关于价格系数的更多信息<br>查看申白作品的整体价格与趋势。",
 
         "function-description": "直接交易之外，申白还提供以下平台功能。",
@@ -295,7 +295,7 @@ const translations = {
         "art-trading": "Art Trading",
         "art-trading-info": "How to join in the trading of the PearlBarleySand, you can learn more about it here.",
         "artworks-trading": "Artworks Trading",
-        "artworks-trading-description": "Collecting and trading are two things. If you are interested in buying and selling artworks, you can try try mine. Here, Shenbai's first sale of artworks is uniform, and the resale price is dynamic.",
+        "artworks-trading-description": "If you are interested in buying and selling artworks, you can try try mine. Here, Shenbai's first sale of artworks is uniform, and the resale price is dynamic.",
         "trend-info": "Learn more about the price coefficient,<br>view the overall price and trend of the artist's works.",
         
         'serialnumber': 'Serial No.',
