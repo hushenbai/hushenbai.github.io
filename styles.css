@@ -155,6 +155,8 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 60px;
     justify-content: center;
+    height: fit-content; /* 修改这行 */
+    min-height: min-content; /* 添加这行 */
 }
 
 /* 添加组相关的样式 */
@@ -421,26 +423,26 @@ body {
 
 /* 默认状态：56px 范围 */
 .detail-image .depth-layer:nth-child(3)  { transform: translateZ(-8px); }
-.detail-image .depth-layer:nth-child(4)  { transform: translateZ(-15px); }
-.detail-image .depth-layer:nth-child(5)  { transform: translateZ(-22px); }
-.detail-image .depth-layer:nth-child(6)  { transform: translateZ(-28px); }
-.detail-image .depth-layer:nth-child(7)  { transform: translateZ(-33px); }
-.detail-image .depth-layer:nth-child(8)  { transform: translateZ(-39px); }
-.detail-image .depth-layer:nth-child(9)  { transform: translateZ(-45px); }
-.detail-image .depth-layer:nth-child(10) { transform: translateZ(-50px); }
-.detail-image .depth-layer:nth-child(11) { transform: translateZ(-56px); }
+.detail-image .depth-layer:nth-child(4)  { transform: translateZ(-16px); }
+.detail-image .depth-layer:nth-child(5)  { transform: translateZ(-24px); }
+.detail-image .depth-layer:nth-child(6)  { transform: translateZ(-32px); }
+.detail-image .depth-layer:nth-child(7)  { transform: translateZ(-40px); }
+.detail-image .depth-layer:nth-child(8)  { transform: translateZ(-48px); }
+.detail-image .depth-layer:nth-child(9)  { transform: translateZ(-56px); }
+.detail-image .depth-layer:nth-child(10) { transform: translateZ(-64px); }
+.detail-image .depth-layer:nth-child(11) { transform: translateZ(-72px); }
 
 /* 1080px 及以下：40px 范围 */
 @media screen and (max-width: 1080px) {
-    .detail-image .depth-layer:nth-child(3)  { transform: translateZ(-8px); }
+    .detail-image .depth-layer:nth-child(3)  { transform: translateZ(-6px); }
     .detail-image .depth-layer:nth-child(4)  { transform: translateZ(-12px); }
-    .detail-image .depth-layer:nth-child(5)  { transform: translateZ(-16px); }
-    .detail-image .depth-layer:nth-child(6)  { transform: translateZ(-20px); }
-    .detail-image .depth-layer:nth-child(7)  { transform: translateZ(-24px); }
-    .detail-image .depth-layer:nth-child(8)  { transform: translateZ(-28px); }
-    .detail-image .depth-layer:nth-child(9)  { transform: translateZ(-32px); }
-    .detail-image .depth-layer:nth-child(10) { transform: translateZ(-36px); }
-    .detail-image .depth-layer:nth-child(11) { transform: translateZ(-40px); }
+    .detail-image .depth-layer:nth-child(5)  { transform: translateZ(-18px); }
+    .detail-image .depth-layer:nth-child(6)  { transform: translateZ(-24px); }
+    .detail-image .depth-layer:nth-child(7)  { transform: translateZ(-30px); }
+    .detail-image .depth-layer:nth-child(8)  { transform: translateZ(-36px); }
+    .detail-image .depth-layer:nth-child(9)  { transform: translateZ(-42px); }
+    .detail-image .depth-layer:nth-child(10) { transform: translateZ(-48px); }
+    .detail-image .depth-layer:nth-child(11) { transform: translateZ(-54px); }
 }
 
 /* 图片加载完成后的样式 */

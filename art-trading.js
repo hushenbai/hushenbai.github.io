@@ -2,21 +2,26 @@
 let latestSorted = [];
 let highestSorted = [];
 
+// 添加全局跳转函数
+function goToDetail(groupId, serialnumber) {
+    window.location.href = `detail.html?group=group${groupId}&id=${serialnumber}`;
+}
+
 // 生成列表HTML的函数
 function generateArtworkHTML(artwork) {
     // 从 groupedArtworks 中找到项目所属的 group
     let groupId = '1';
-    Object.entries(groupedArtworks).forEach(([group, artworks]) => {
+    for (const [group, artworks] of Object.entries(groupedArtworks)) {
         if (artworks.some(p => p.serialnumber === artwork.serialnumber)) {
             groupId = group.replace('group', '');
+            break;
         }
-    });
+    }
 
     return `
         <div class="artwork-item" onclick="goToDetail('${groupId}', '${artwork.serialnumber}')" style="cursor: pointer;">
             <img class="artwork-image" src="${artwork.image.replace('/TCM/', '/TCM-small/')}" alt="${artwork.title['data-lang']}">
             <div class="artwork-info">
-                
                 <p2 class="artwork-serialnumber">${artwork.serialnumber}</p2>
                 <p2 class="artwork-serialnumber">${artwork.currentCoefficient}</p2>
                 <p2 class="artwork-serialnumber">${Math.round(artwork.price)}</p2>
@@ -105,11 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 .sort((a, b) => new Date(b.date) - new Date(a.date))[0]?.date || '1970-01-01'
         };
     });
-
-    // 通用功能函数
-    function goToDetail(groupId, serialnumber) {
-    window.location.href = `detail.html?group=${groupId}&id=${serialnumber}`;
-    }
 
     // 只获取有更新的项目并按最新更新时间排序
     latestSorted = [...artworksWithCoefficient]
