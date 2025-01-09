@@ -114,7 +114,7 @@ const groupedArtworks = {
             coefficient: 150,
             weight: "2.45 kg",
             year: 2024,
-date: '2024-11-20',
+            date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -178,7 +178,7 @@ date: '2024-11-20',
             coefficient: 150,
             weight: "2.15 kg",
             year: 2024,
-date: '2024-11-20',
+            date: '2024-11-20',
             state: 0,
             exhibits: [
                 {
@@ -210,7 +210,7 @@ date: '2024-11-20',
             coefficient: 150,
             weight: "2.15 kg",
             year: 2024,
-date: '2024-11-20',
+            date: '2024-11-20',
             state: 0,
             exhibits: [
                 {

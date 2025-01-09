@@ -82,48 +82,66 @@ document.addEventListener('DOMContentLoaded', () => {
             sizeElement.textContent = `${currentArtwork.width} × ${currentArtwork.height} × ${currentArtwork.depth} cm`;
         }
 
-        // 处理展览信息
-        const exhibitsList = document.getElementById('exhibits-list');
-        if (currentArtwork.exhibits && exhibitsList) {
-            exhibitsList.innerHTML = '';
-            
-            currentArtwork.exhibits.forEach((exhibit, index) => {
-                const exhibitItem = document.createElement('div');
-                exhibitItem.className = 'exhibit-item';
+        // 获取作品的展览历史
+        function getArtworkExhibits(serialnumber) {
+            return exhibitEvents
+                .filter(event => event.artworks.includes(serialnumber))
+                .sort((a, b) => {
+                    // 将时间字符串转换为可比较的格式
+                    const timeA = a.time.split('.').join('');
+                    const timeB = b.time.split('.').join('');
+                    return timeB - timeA; // 降序排列，最新的在前
+                });
+        }
+
+        // 在页面加载时更新展览列表
+        if (currentArtwork) {
+            const exhibitsList = document.getElementById('exhibits-list');
+            if (exhibitsList) {
+                exhibitsList.innerHTML = '';
                 
-                // 创建 new 标签容器（始终创建以保持布局一致）
-                const newTagContainer = document.createElement('span');
-                newTagContainer.className = 'new-tag-container';
-                if (index === 0) {
-                    const newTag = document.createElement('span');
-                    newTag.className = 'new-tag';
-                    newTag.textContent = 'NEW';
-                    newTagContainer.appendChild(newTag);
-                }
+                const exhibits = getArtworkExhibits(currentArtwork.serialnumber);
                 
-                const exhibitCity = document.createElement('span');
-                exhibitCity.className = 'exhibit-city';
-                const cityText = document.createElement('span');
-                cityText.setAttribute('data-lang', exhibit.city['data-lang']);
-                cityText.innerHTML = translations[getCurrentLanguage()][exhibit.city['data-lang']];
-                exhibitCity.appendChild(cityText);
-                
-                const exhibitName = document.createElement('span');
-                exhibitName.className = 'exhibit-name';
-                exhibitName.setAttribute('data-lang', exhibit.name['data-lang']);
-                exhibitName.innerHTML = translations[getCurrentLanguage()][exhibit.name['data-lang']];
-                
-                const exhibitTime = document.createElement('span');
-                exhibitTime.className = 'exhibit-time';
-                exhibitTime.textContent = exhibit.time;
-                
-                // 按新顺序添加元素
-                exhibitItem.appendChild(newTagContainer);
-                exhibitItem.appendChild(exhibitCity);
-                exhibitItem.appendChild(exhibitName);
-                exhibitItem.appendChild(exhibitTime);
-                exhibitsList.appendChild(exhibitItem);
-            });
+                exhibits.forEach((exhibit, index) => {
+                    const exhibitItem = document.createElement('div');
+                    exhibitItem.className = 'exhibit-item';
+                    
+                    // 创建 new 标签容器
+                    const newTagContainer = document.createElement('span');
+                    newTagContainer.className = 'new-tag-container';
+                    if (index === 0) {
+                        const newTag = document.createElement('span');
+                        newTag.className = 'new-tag';
+                        newTag.textContent = 'NEW';
+                        newTagContainer.appendChild(newTag);
+                    }
+                    
+                    // 创建展览信息元素
+                    const exhibitCity = document.createElement('span');
+                    exhibitCity.className = 'exhibit-city';
+                    const cityText = document.createElement('span');
+                    cityText.setAttribute('data-lang', exhibit.city['data-lang']);
+                    cityText.innerHTML = translations[getCurrentLanguage()][exhibit.city['data-lang']];
+                    exhibitCity.appendChild(cityText);
+                    
+                    const exhibitName = document.createElement('span');
+                    exhibitName.className = 'exhibit-name';
+                    exhibitName.setAttribute('data-lang', exhibit.name['data-lang']);
+                    exhibitName.innerHTML = translations[getCurrentLanguage()][exhibit.name['data-lang']];
+                    
+                    const exhibitTime = document.createElement('span');
+                    exhibitTime.className = 'exhibit-time';
+                    exhibitTime.textContent = exhibit.time;
+                    
+                    // 添加所有元素
+                    exhibitItem.appendChild(newTagContainer);
+                    exhibitItem.appendChild(exhibitCity);
+                    exhibitItem.appendChild(exhibitName);
+                    exhibitItem.appendChild(exhibitTime);
+                    
+                    exhibitsList.appendChild(exhibitItem);
+                });
+            }
         }
 
         // 计算价格：(宽 + 高) × 系数
@@ -139,127 +157,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// ===============================
-// 图片转动
-// ===============================
+// 在需要使用的页面中
 document.addEventListener('DOMContentLoaded', () => {
-    const wrapper = document.querySelector('.image-wrapper');
-    
-    // 图片转动
-    if (wrapper) {
-        let isDragging = false;
-        let startX, startY;
-        let rotationX = 0, rotationY = 0;
-        let lastX = 0, lastY = 0;
+    // 类型 A：仅 hover 时跟随
+    const hoverElement = document.querySelector('.hover-animation');
+    animation3D.initTypeA(hoverElement);
 
-        // 检测是否为移动设备
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    // 类型 B：全局跟随
+    const globalElement = document.querySelector('.global-animation');
+    animation3D.initTypeB(globalElement);
+});
 
-        // 禁用页面滚动
-        const preventScroll = (e) => {
-            e.preventDefault();
-        };
-
-        // 回正动画函数
-        const resetPosition = () => {
-            wrapper.style.transition = 'transform 1s ease-out';
-            wrapper.style.transform = 'translateZ(0) scale(1) rotateX(0deg) rotateY(0deg)';
-            setTimeout(() => {
-                wrapper.style.transition = 'transform 0.1s ease';
-            }, 500);
-        };
-
-        // 移动端
-        if (isMobile) {
-            const startDragging = (e) => {
-                isDragging = true;
-                wrapper.classList.add('dragging');
-                wrapper.classList.add('touching');
-                wrapper.style.transition = 'transform 0.1s ease';
-                const touch = e.touches[0];
-                startX = touch.clientX - lastX;
-                startY = touch.clientY - lastY;
-
-                // 禁用页面滚动
-                document.addEventListener('touchmove', preventScroll, { passive: false });
-            };
-
-            // 拖动
-            const drag = (e) => {
-                if (!isDragging) return;
-                e.preventDefault();
-                
-                const touch = e.touches[0];
-                rotationY = (touch.clientX - startX) * 0.5;
-                rotationX = -(touch.clientY - startY) * 0.5;
-                
-                // 限制旋转角度
-                rotationX = Math.max(-30, Math.min(30, rotationX));
-                rotationY = Math.max(-30, Math.min(30, rotationY));
-                
-                // 合并缩放和旋转变换
-                wrapper.style.transform = `translateZ(0) scale(0.9) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-                
-                lastX = touch.clientX - startX;
-                lastY = touch.clientY - startY;
-            };
-
-            // 停止拖动
-            const stopDragging = () => {
-                isDragging = false;
-                wrapper.classList.remove('dragging');
-                wrapper.classList.remove('touching');
-                resetPosition();
-
-                // 恢复页面滚动
-                document.removeEventListener('touchmove', preventScroll);
-            };
-
-            // 添加触摸事件监听
-            wrapper.addEventListener('touchstart', startDragging);
-            document.addEventListener('touchmove', drag, { passive: false });
-            document.addEventListener('touchend', stopDragging);
-        } else {
-            // 桌面端：光标跟随
-            document.addEventListener('mousemove', (e) => {
-                // 获取页面中心点
-                const centerX = window.innerWidth / 2;
-                const centerY = window.innerHeight / 2;
-                
-                // 计算光标距离中心点的偏移
-                const deltaX = (e.clientX - centerX) / centerX;
-                const deltaY = (e.clientY - centerY) / centerY;
-                
-                // 计算旋转角度（最大20度）
-                const rotateY = deltaX * 35;
-                const rotateX = -deltaY * 35;
-                
-                // 应用平滑过渡
-                wrapper.style.transition = 'transform 0.8s ease-out';
-                wrapper.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            });
-
-            // 鼠标离开页面时回到原位
-            document.addEventListener('mouseleave', resetPosition);
-        }
-
-        // 禁用图片拖动
-        const img = wrapper.querySelector('img');
-        if (img) {
-            // 禁止拖拽
-            img.addEventListener('dragstart', (e) => e.preventDefault());
-            
-            // 禁止上下文菜单（右键菜单）
-            img.addEventListener('contextmenu', (e) => e.preventDefault());
-            
-            // 禁止长按菜单
-            img.addEventListener('touchstart', (e) => e.preventDefault());
-            
-            // 禁止复制
-            img.addEventListener('copy', (e) => e.preventDefault());
-        }
-    }
-}); 
 
 // ===============================
 // 滚动监听

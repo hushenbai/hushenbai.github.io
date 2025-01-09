@@ -180,8 +180,7 @@ body {
     width: 100%;
     background: white;
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
+    transition: all 0.8s ease;
     /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
 }
 
@@ -194,26 +193,30 @@ body {
 
 /* 悬停效果 */
 .card:hover .card-image img {
-    transition: 0.3s ease;
-    transform: translateY(-5px); /* 轻微上浮 */
+    transition: 0.8s ease;
 }
 
 /* 图片容器 */
 .card-image {
-    width: 100%;
     position: relative;
+    transform-style: preserve-3d;
+    perspective: 1200px;
+    will-change: transform;
     aspect-ratio: 1 / 1;
-    margin-bottom: 8px;
-    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    transition: all 0.5s ease;
     transform: translateY(0px);
-    
+    line-height: 0; /* 移除行高导致的间隙 */
+    font-size: 0; /* 移除字体大小导致的间隙 */
 }
 
 .card-image img {
+    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;/* 保持图片比例并填充容器 */
-    transition: all 0.3s ease;
+    z-index: 10;
+    transition: all 0.5s ease;
     transform: translateY(0px);
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -222,6 +225,8 @@ body {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version */
     pointer-events: none; /* 禁止任何指针事件 */
+    display: block; /* 将图片设置为块级元素，移除底部间隙 */
+    object-fit: cover; /* 确保图片填充容器 */
 }
 
 /* 内容区域 */
@@ -350,7 +355,7 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-    perspective: 1500px;
+    perspective: 2500;
     user-select: none;
 
 }
@@ -404,46 +409,7 @@ body {
     pointer-events: none; /* 禁止任何指针事件 */
 }
 
-/* 深度层基础样式 */
-.detail-image .depth-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #CFC5B0; /* 默认颜色 */
-    z-index: 0;
-}
 
-/* 前两层使用白色 */
-.detail-image .depth-layer:nth-child(2)  { 
-    transform: translateZ(-4px);
-    background: #e4e4e0;
-}
-
-/* 默认状态：56px 范围 */
-.detail-image .depth-layer:nth-child(3)  { transform: translateZ(-8px); }
-.detail-image .depth-layer:nth-child(4)  { transform: translateZ(-16px); }
-.detail-image .depth-layer:nth-child(5)  { transform: translateZ(-24px); }
-.detail-image .depth-layer:nth-child(6)  { transform: translateZ(-32px); }
-.detail-image .depth-layer:nth-child(7)  { transform: translateZ(-40px); }
-.detail-image .depth-layer:nth-child(8)  { transform: translateZ(-48px); }
-.detail-image .depth-layer:nth-child(9)  { transform: translateZ(-56px); }
-.detail-image .depth-layer:nth-child(10) { transform: translateZ(-64px); }
-.detail-image .depth-layer:nth-child(11) { transform: translateZ(-72px); }
-
-/* 1080px 及以下：40px 范围 */
-@media screen and (max-width: 1080px) {
-    .detail-image .depth-layer:nth-child(3)  { transform: translateZ(-6px); }
-    .detail-image .depth-layer:nth-child(4)  { transform: translateZ(-12px); }
-    .detail-image .depth-layer:nth-child(5)  { transform: translateZ(-18px); }
-    .detail-image .depth-layer:nth-child(6)  { transform: translateZ(-24px); }
-    .detail-image .depth-layer:nth-child(7)  { transform: translateZ(-30px); }
-    .detail-image .depth-layer:nth-child(8)  { transform: translateZ(-36px); }
-    .detail-image .depth-layer:nth-child(9)  { transform: translateZ(-42px); }
-    .detail-image .depth-layer:nth-child(10) { transform: translateZ(-48px); }
-    .detail-image .depth-layer:nth-child(11) { transform: translateZ(-54px); }
-}
 
 /* 图片加载完成后的样式 */
 .detail-image img.loaded {
@@ -618,7 +584,7 @@ body {
     font-size: 7px;
     font-weight: 600;
     color: #ffffff;
-    background-color: #00d74b;
+    background-color: #90c6ad;
     padding: 2px 4px;
     border-radius: 4px;
     vertical-align: middle;

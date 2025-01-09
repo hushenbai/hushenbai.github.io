@@ -3,13 +3,15 @@ let currentArtwork = null;
 
 // 返回上一页函数
 function goBack() {
-    // 如果有上一页历史记录，则返回上一页
-    if (window.history.length > 1 && document.referrer) {
-        window.history.back();
-    } else {
-        // 如果没有上一页，则返回首页
-        window.location.href = 'index.html';
-    }
+    // 直接尝试返回上一页
+    window.history.back();
+    
+    // 如果 300ms 后还在同一个页面，说明返回失败，则跳转到首页
+    setTimeout(() => {
+        if (window.location.href.includes('rsm-detail.html')) {
+            window.location.href = 'index.html';
+        }
+    }, 300);
 }
 
 // 页面加载时初始化
@@ -64,16 +66,30 @@ document.addEventListener('DOMContentLoaded', () => {
             sizeElement.textContent = `${currentArtwork.width} × ${currentArtwork.height} × ${currentArtwork.depth} cm`;
         }
         
+        // 获取作品的展览历史
+        function getArtworkExhibits(serialnumber) {
+            return exhibitEvents
+                .filter(event => event.artworks.includes(serialnumber))
+                .sort((a, b) => {
+                    // 将时间字符串转换为可比较的格式
+                    const timeA = a.time.split('.').join('');
+                    const timeB = b.time.split('.').join('');
+                    return timeB - timeA; // 降序排列，最新的在前
+                });
+        }
+
         // 处理展览信息
         const exhibitsList = document.getElementById('exhibits-list');
-        if (currentArtwork.exhibits && exhibitsList) {
+        if (exhibitsList) {
             exhibitsList.innerHTML = '';
             
-            currentArtwork.exhibits.forEach((exhibit, index) => {
+            const exhibits = getArtworkExhibits(currentArtwork.serialnumber);
+            
+            exhibits.forEach((exhibit, index) => {
                 const exhibitItem = document.createElement('div');
                 exhibitItem.className = 'exhibit-item';
                 
-                // 创建 new 标签容器（始终创建以保持布局一致）
+                // 创建 new 标签容器
                 const newTagContainer = document.createElement('span');
                 newTagContainer.className = 'new-tag-container';
                 if (index === 0) {
@@ -99,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 exhibitTime.className = 'exhibit-time';
                 exhibitTime.textContent = exhibit.time;
                 
-                // 按新顺序添加元素
+                // 添加所有元素
                 exhibitItem.appendChild(newTagContainer);
                 exhibitItem.appendChild(exhibitCity);
                 exhibitItem.appendChild(exhibitName);
@@ -115,120 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const wrapper = document.querySelector('.image-wrapper');
-    
-    if (wrapper) {
-        let isDragging = false;
-        let startX, startY;
-        let rotationX = 0, rotationY = 0;
-        let lastX = 0, lastY = 0;
 
-        // 检测是否为移动设备
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-        // 禁用页面滚动
-        const preventScroll = (e) => {
-            e.preventDefault();
-        };
-
-        // 回正动画函数
-        const resetPosition = () => {
-            wrapper.style.transition = 'transform 1s ease-out';
-            wrapper.style.transform = 'translateZ(0) scale(1) rotateX(0deg) rotateY(0deg)';
-            setTimeout(() => {
-                wrapper.style.transition = 'transform 0.1s ease';
-            }, 500);
-        };
-
-        if (isMobile) {
-            const startDragging = (e) => {
-                isDragging = true;
-                wrapper.classList.add('dragging');
-                wrapper.classList.add('touching');
-                wrapper.style.transition = 'transform 0.1s ease';
-                const touch = e.touches[0];
-                startX = touch.clientX - lastX;
-                startY = touch.clientY - lastY;
-
-                // 禁用页面滚动
-                document.addEventListener('touchmove', preventScroll, { passive: false });
-            };
-
-            const drag = (e) => {
-                if (!isDragging) return;
-                e.preventDefault();
-                
-                const touch = e.touches[0];
-                rotationY = (touch.clientX - startX) * 0.5;
-                rotationX = -(touch.clientY - startY) * 0.5;
-                
-                // 限制旋转角度
-                rotationX = Math.max(-15, Math.min(15, rotationX));
-                rotationY = Math.max(-15, Math.min(15, rotationY));
-                
-                // 合并缩放和旋转变换
-                wrapper.style.transform = `translateZ(0) scale(0.9) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-                
-                lastX = touch.clientX - startX;
-                lastY = touch.clientY - startY;
-            };
-
-            const stopDragging = () => {
-                isDragging = false;
-                wrapper.classList.remove('dragging');
-                wrapper.classList.remove('touching');
-                resetPosition();
-
-                // 恢复页面滚动
-                document.removeEventListener('touchmove', preventScroll);
-            };
-
-            // 添加触摸事件监听
-            wrapper.addEventListener('touchstart', startDragging);
-            document.addEventListener('touchmove', drag, { passive: false });
-            document.addEventListener('touchend', stopDragging);
-        } else {
-            // 桌面端：光标跟随
-            document.addEventListener('mousemove', (e) => {
-                // 获取页面中心点
-                const centerX = window.innerWidth / 2;
-                const centerY = window.innerHeight / 2;
-                
-                // 计算光标距离中心点的偏移
-                const deltaX = (e.clientX - centerX) / centerX;
-                const deltaY = (e.clientY - centerY) / centerY;
-                
-                // 计算旋转角度（最大20度）
-                const rotateY = deltaX * 15;
-                const rotateX = -deltaY * 15;
-                
-                // 应用平滑过渡
-                wrapper.style.transition = 'transform 0.8s ease-out';
-                wrapper.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            });
-
-            // 鼠标离开页面时回到原位
-            document.addEventListener('mouseleave', resetPosition);
-        }
-
-        // 禁用图片拖动
-        const img = wrapper.querySelector('img');
-        if (img) {
-            // 禁止拖拽
-            img.addEventListener('dragstart', (e) => e.preventDefault());
-            
-            // 禁止上下文菜单（右键菜单）
-            img.addEventListener('contextmenu', (e) => e.preventDefault());
-            
-            // 禁止长按菜单
-            img.addEventListener('touchstart', (e) => e.preventDefault());
-            
-            // 禁止复制
-            img.addEventListener('copy', (e) => e.preventDefault());
-        }
-    }
-}); 
 
 // 添加滚动监听
 let lastScrollTop = 0;
@@ -282,4 +185,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollPosition = window.scrollY;
         detailContainer.style.transform = `translateY(${scrollPosition * scrollSpeed}px)`;
     });
+});
+
+// 在需要使用的页面中
+document.addEventListener('DOMContentLoaded', () => {
+    // 类型 A：仅 hover 时跟随
+    const hoverElement = document.querySelector('.hover-animation');
+    animation3D.initTypeA(hoverElement);
+
+    // 类型 B：全局跟随
+    const globalElement = document.querySelector('.global-animation');
+    animation3D.initTypeB(globalElement);
 });

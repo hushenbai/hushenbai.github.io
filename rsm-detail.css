@@ -1,0 +1,31 @@
+/* ------------------------------------------------------ */
+/* 深度层 */
+/* ------------------------------------------------------ */
+
+/* 深度层基础样式 */
+.depth-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e1e1de; /* 从上到下渐变 */
+    pointer-events: none; /* 确保不会干扰鼠标事件 */
+    z-index: 1;
+    transform: translateZ(-1px);
+}
+
+/* 默认状态：56px 范围 */
+.depth-layer:nth-child(1)  { transform: translateZ(-6px); }
+.depth-layer:nth-child(2)  { transform: translateZ(-12px); }
+.depth-layer:nth-child(3)  { transform: translateZ(-18px); }
+.depth-layer:nth-child(4)  { transform: translateZ(-24px); }
+
+
+/* 1080px 及以下：40px 范围 */
+@media screen and (max-width: 1080px) {
+    .depth-layer:nth-child(1)  { transform: translateZ(-4px); }
+    .depth-layer:nth-child(2)  { transform: translateZ(-8px); }
+    .depth-layer:nth-child(3)  { transform: translateZ(-12px); }
+    .depth-layer:nth-child(4)  { transform: translateZ(-16px); }
+}

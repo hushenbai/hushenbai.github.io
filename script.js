@@ -3,6 +3,22 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('网页加载完成！');
 });
 
+// 生成作品卡片的HTML
+function generateArtworkCard(artwork, groupId) {
+    const titleKey = artwork.title['data-lang'];
+    return `
+        <article class="card">
+            <div class="card-image" onclick="goToDetail('${groupId}', '${artwork.serialnumber}')">
+                <img src="${artwork.image}" alt="${translations[currentLang][titleKey]}">
+            </div>
+            <div class="card-content">
+                <p2 data-lang="${titleKey}">${translations[currentLang][titleKey]}</p2>
+                <p3 class="year">${artwork.year}</p3>
+            </div>
+        </article>
+    `;
+}
+
 // 生成卡片的函数
 function createCards() {
     Object.keys(groupedArtworks).forEach(groupId => {
@@ -10,28 +26,36 @@ function createCards() {
         if (!container) return;
         
         const cardsHTML = groupedArtworks[groupId].map(artwork => {
-            const titleKey = artwork.title['data-lang'];
-            return `
-                <article class="card" onclick="goToDetail('${groupId}', '${artwork.serialnumber}')">
-                    <div class="card-image">
-                        <img src="${artwork.image}" alt="${translations[currentLang][titleKey]}">
-                    </div>
-                    <div class="card-content">
-                        <p2 data-lang="${titleKey}">${translations[currentLang][titleKey]}</p2>
-                        <p3 class="year">${artwork.year}</p3>
-                    </div>
-                </article>
-            `;
+            return generateArtworkCard(artwork, groupId);
         }).join('');
         
         container.innerHTML = cardsHTML;
     });
 }
 
-// 页面加载时初始化
+// 初始化卡片动画
+function initializeCardAnimations() {
+    const hoverElements = document.querySelectorAll('.hover-animation');
+    hoverElements.forEach(element => {
+        animation3D.initTypeA(element);
+    });
+}
+
+// 分别监听不同功能的初始化
+document.addEventListener('DOMContentLoaded', createCards);
+document.addEventListener('DOMContentLoaded', initializeCardAnimations);
+
+// 在需要使用的页面中
 document.addEventListener('DOMContentLoaded', () => {
-    createCards();
+    // 类型 A：仅 hover 时跟随
+    const hoverElement = document.querySelector('.hover-animation');
+    animation3D.initTypeA(hoverElement);
+
+    // 类型 B：全局跟随
+    const globalElement = document.querySelector('.global-animation');
+    animation3D.initTypeB(globalElement);
 });
+
 
 // 添加滚动监听和动画逻辑
 document.addEventListener('DOMContentLoaded', () => {
@@ -122,7 +146,7 @@ function generateRSMGallery() {
             item.style.animationDelay = `${index * 0.2}s`;  // 每个项目延迟 0.2 秒
             
             item.onclick = () => {
-                window.location.href = `detailrsm.html?group=${groupId}&id=${artwork.serialnumber}`;
+                window.location.href = `rsm-detail.html?group=${groupId}&id=${artwork.serialnumber}`;
             };
             
             const img = document.createElement('img');
@@ -175,6 +199,9 @@ window.addEventListener('scroll', () => {
     
     lastScrollTop = scrollTop;
 });
+
+
+
 
 
 
