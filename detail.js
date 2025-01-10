@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         // 设置图片源
-        img.src = currentArtwork.image.replace('/TCM/', '/TCM-big/');
+        img.src = currentArtwork.image.replace('assets/TCM/', 'assets/TCM-big/');
 
         // 获取每个项目的最新系数和最新更新时间
         const latestCoefficient = getLatestCoefficient(currentArtwork.serialnumber);
