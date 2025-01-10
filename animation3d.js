@@ -69,7 +69,7 @@ class Animation3DManager {
         
         let wrapper = element;
         const {
-            perspective = 2500,
+            perspective = 3000,
             scale = 1,
             maxRotation = 25,
             translateZ = 0
@@ -153,7 +153,7 @@ class Animation3DManager {
             rotationX = Math.max(-25, Math.min(25, rotationX));
             rotationY = Math.max(-25, Math.min(25, rotationY));
             
-            wrapper.style.transform = `translateZ(0) scale(0.9) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+            wrapper.style.transform = `translateZ(0) scale(0.95) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
             
             lastX = touch.clientX - startX;
             lastY = touch.clientY - startY;

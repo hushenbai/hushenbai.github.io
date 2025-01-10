@@ -4,7 +4,20 @@ let highestSorted = [];
 
 // 添加全局跳转函数
 function goToDetail(groupId, serialnumber) {
-    window.location.href = `detail.html?group=group${groupId}&id=${serialnumber}`;
+    window.location.href = `../detail.html?group=group${groupId}&id=${serialnumber}`;
+}
+
+// 返回上一页函数
+function goBack() {
+    // 直接尝试返回上一页
+    window.history.back();
+    
+    // 如果 300ms 后还在同一个页面，说明返回失败，则跳转到首页
+    setTimeout(() => {
+        if (window.location.href.includes('art-trading.html')) {
+            window.location.href = 'index.html';
+        }
+    }, 300);
 }
 
 // 生成列表HTML的函数
@@ -20,7 +33,7 @@ function generateArtworkHTML(artwork) {
 
     return `
         <div class="artwork-item" onclick="goToDetail('${groupId}', '${artwork.serialnumber}')" style="cursor: pointer;">
-            <img class="artwork-image" src="${artwork.image.replace('/TCM/', '/TCM-small/')}" alt="${artwork.title['data-lang']}">
+            <img class="artwork-image" src="${artwork.image.replace('assets/TCM/', '../assets/TCM-small/')}" alt="${artwork.title['data-lang']}">
             <div class="artwork-info">
                 <p2 class="artwork-serialnumber">${artwork.serialnumber}</p2>
                 <p2 class="artwork-serialnumber">${artwork.currentCoefficient}</p2>

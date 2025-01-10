@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentArtwork = groupedArtworks[groupId].find(p => p.serialnumber === serialnumber);
     
     if (currentArtwork) {
-        const img = document.getElementById('detail-img');
+        const img = document.getElementById('artwork-image');
         const imageWrapper = document.querySelector('.image-wrapper');
 
         // 设置页面标题
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         // 设置图片源
-        img.src = currentArtwork.image.replace('/RSM/', '/RSM-big/');
+        img.src = currentArtwork.image.replace('../assets/RSM/', '../assets/RSM-big/');
         
         // 更新基本信息
         document.getElementById('detail-serialnumber').textContent = currentArtwork.serialnumber;

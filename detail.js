@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('page-title').textContent = 
             (translations[getCurrentLanguage()][currentArtwork.title['data-lang']] || '明珠薏苡') + '-Shenbai';
         
-        const img = document.getElementById('detail-img');
+        const img = document.getElementById('artwork-image');
         const imageWrapper = document.querySelector('.image-wrapper');
         
         // 设置图片加载完成的处理
