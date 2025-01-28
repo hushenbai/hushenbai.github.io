@@ -1,11 +1,22 @@
 
 
 header {
-    max-width: 1080px;
     width: 100%;
+    max-width: auto;
     padding: 0 60px;
     margin-top: 160px;
     margin-bottom: 80px;
+    align-items: left;
+    text-align: left;
+    justify-content: left;
+}
+
+.header-title {
+    width: 100%;
+    max-width: auto;
+    align-items: left;
+    text-align: left;
+    justify-content: left;
 }
 
 .trend-title {
@@ -18,19 +29,18 @@ header {
 }
 
 .frame {
-    max-width: 1080px;
     width: 100%;
     height: 100%;
     padding: 0 60px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
     margin-bottom: 60px;
+    gap: 16px;
 }
 
 .big-board {
     width: 100%;
-    height: 300px;
+    height: 280px;
     display: flex;
     flex-direction: row;
     gap: 16px;
@@ -43,22 +53,20 @@ header {
     grid-template-columns: repeat(2, 1fr);
     height: fit-content; /* 修改这行 */
     min-height: min-content; /* 添加这行 */
-    gap: 16px;
     justify-content: top;
+    gap: 16px;
 }
 
 .board-watch {
     height: 100%;
     width: 100%;
     padding: 12px;
-    background: rgba(250, 250, 250, 1);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
     align-items: top;
     justify-content: top;
+    gap: 16px;
 }
 
 .function-watch {
@@ -66,7 +74,6 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
-    gap: 16px;
 }
 
 .function-board-watch {
@@ -75,7 +82,6 @@ header {
     padding: 24px;
     background: rgba(250, 250, 250, 1);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
     gap: 8px;
     display: flex;
     flex-direction: column;
@@ -105,12 +111,10 @@ header {
     height: 100%;
     width: 100%;
     padding: 24px;
-    background: rgba(250, 250, 250, 1);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: 24px;
 }
 
 .list-column {
@@ -231,10 +235,6 @@ header {
     header {
         margin-top: 100px;
         margin-bottom: 40px;
-        padding: 0 20px;
-    }
-
-    .header-title {
         padding: 0 20px;
     }
 

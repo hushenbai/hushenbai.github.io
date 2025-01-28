@@ -24,7 +24,7 @@ const priceEvents = [
     },
     {
         serialnumber: 'all0',
-        coefficient: 70,
+        coefficient: 65,
         date: '2025-01-20'
     },
 

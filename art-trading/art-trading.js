@@ -256,7 +256,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         data: artwork.data,
                         borderColor: 'rgba(0, 0, 0, 0.2)',
                         fill: false,
-                        image: allArtworks.find(p => p.serialnumber === artwork.serialnumber).image.replace('/TCM/', '/TCM-small/'),
+                        image: allArtworks
+                            .find(p => p.serialnumber === artwork.serialnumber)
+                            .image
+                            .replace('assets/TCM/', '../assets/TCM-small/'),
                         pointRadius: 0,
                         borderWidth: 4,
                         pointHoverRadius: 5,

@@ -29,3 +29,25 @@
     .depth-layer:nth-child(3)  { transform: translateZ(-12px); }
     .depth-layer:nth-child(4)  { transform: translateZ(-16px); }
 }
+
+@media screen and (min-width: 800px) {
+    .detail-container {
+        flex-direction: row;
+        align-items: center;
+        padding: 60px;
+    }
+    
+    .detail-imagebox {
+        width: 62%;
+        margin-bottom: 0;
+    }
+
+    .detail-imagebox img {
+        max-height: 600px;
+    }
+    
+    .detail-info {
+        width: 38%;
+        padding: 0;
+    }
+}

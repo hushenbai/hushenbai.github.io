@@ -166,7 +166,7 @@ body {
 }
 
 .group-content {
-    margin-top: 180px;
+    margin-top: 140px;
     margin-bottom: 120px;
 }
 
@@ -617,15 +617,17 @@ body {
 .enter-container {
     background-color: rgba(0, 0, 0, 0.05);
     border-radius: 12px;
-    padding: 40px 36px;
+    padding: 60px 36px;
     display: flex;
     width: 100%;
+    max-width: 1080px;
     flex-direction: column;
     align-items: center;
     gap: 16px;
     text-align: center;
     justify-content: center;
     margin-bottom: 40px;
+
 }
 
 .styled-button {
@@ -633,12 +635,8 @@ body {
     display: inline-flex;
     cursor: pointer;
     background: rgba(0, 0, 0, 1); 
-    padding: 5px 15px;
-    border-radius: 25px;
-}
-
-.styled-button hover{
-    background: rgba(0, 0, 0, 0.8); 
+    padding: 8px 16px;
+    border-radius: 30px;
 }
 
 /* .styled-button[data-lang="productstate-4"] {
@@ -656,6 +654,7 @@ body {
     .enter-container {
         margin-bottom: 20px;
         padding: 40px 20px;
+        border-radius: 0px;
     }
 }
 
