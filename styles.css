@@ -166,8 +166,8 @@ body {
 }
 
 .group-content {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 180px;
+    margin-bottom: 120px;
 }
 
 .group-title {
@@ -306,8 +306,8 @@ body {
     }
 
     .group-content {
-        margin-top: 40px;
-    margin-bottom: 40px;
+        margin-top: 60px;
+        margin-bottom: 40px;
     }
 
     .card {
@@ -326,6 +326,7 @@ body {
 .detail-wrapper {
     position: relative;
     width: 100%;
+    margin-top: 40px;
     min-height: 100vh;
     overflow: visible;
 }
@@ -458,6 +459,10 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+
+    .detail-wrapper {
+        margin-top: 0px;
+    }
 
     .detail-container {
         width: 100vw;
@@ -662,11 +667,11 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    height: 80px;
+    /*background: rgba(255, 255, 255, 0.1);*/
+    /*backdrop-filter: blur(40px);*/
+    /*-webkit-backdrop-filter: blur(40px);*/
+    /*border-bottom: 1px solid rgba(0, 0, 0, 0.05);*/
     z-index: 99;
     align-items: center;
     transition: transform 0.5s ease;
@@ -682,7 +687,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
-    height: 50px;
+    height: 80px;
     width: 100%;
     display: flex;
     align-items: center;  /* 垂直居中 */
@@ -691,17 +696,30 @@ body {
 
 .nav-left {
     position: fixed;
-    left: 24px;
+    left: 36px;
     cursor: pointer;
     flex-direction: row;
+    gap: 32px;
     z-index: 100;
     display: flex;
     align-items: center;
 }
 
+.nav-center {
+    width: 100%;
+    position: fixed;
+    cursor: pointer;
+    z-index: 99;
+    /* 居中相关的样式 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;    /* 垂直居中 */
+    gap: 32px;             /* 元素之间的间距 */
+}
+
 .nav-right {
     position: fixed;
-    right: 24px;
+    right: 36px;
     cursor: pointer;
     flex-direction: row;
     z-index: 100;
@@ -712,14 +730,6 @@ body {
     display: inline-flex;
     cursor: pointer;
     z-index: 100;
-    margin-right: 4px;
-    background: rgba(255, 255, 255, 0); 
-    padding: 2px 8px;
-    border-radius: 4px;
-}
-
-.nav-button:hover {
-    background: rgba(0, 0, 0, 0.08); 
 }
 
 b1 {
@@ -736,14 +746,11 @@ b1 {
     display: inline-flex;
     cursor: pointer;
     z-index: 100;
-    background: rgba(255, 255, 255, 0); 
+    background: rgba(250, 250, 250, 0); 
     padding: 2px 8px;
     border-radius: 4px;
 }
 
-.language-switch:hover {
-    background: rgba(0, 0, 0, 0.08); 
-}
 
 .language-switch button {
     background: none;
@@ -754,12 +761,37 @@ b1 {
 
 @media screen and (max-width: 800px) {
 
+    .nav-background {
+        height: 50px;
+    }
+
+    .nav-container {
+        height: 50px;
+    }
+
     .nav-left {
-        left: 8px;
+        left: 12px;
+        gap: 0px;
+    }
+
+    .nav-center {
+        justify-content: flex-start;
+        padding-left: 58px;
+        gap: 10px;
+    }
+
+    .nav-center p1 {
+        font-size: 10pt;
+        font-weight: 600;
     }
     
     .nav-right {
-        right: 8px;
+        right: 12px;
+    }
+
+    .nav-right p1 {
+        font-size: 10pt;
+        font-weight: 600;
     }
     
     .nav-button {

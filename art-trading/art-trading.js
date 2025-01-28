@@ -194,7 +194,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 return null;
             }
 
-            return getArtworkCoefficient(artwork.serialnumber, dateObj);
+            // 获取作品当前状态
+            const artworkState = getLatestState(artwork.serialnumber) || '0';
+
+            // 获取所有相关的价格事件
+            const relevantEvents = priceEvents
+                .filter(event => {
+                    // 匹配具体作品的事件
+                    if (event.serialnumber === artwork.serialnumber) return true;
+                    
+                    // 匹配全局事件
+                    if (event.serialnumber === 'all') return true;
+                    
+                    // 匹配特定状态的全局事件
+                    if (event.serialnumber === 'all0' && artworkState === '0') return true;
+                    
+                    return false;
+                })
+                .filter(event => new Date(event.date) <= dateObj)
+                .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            // 如果有相关事件，返回最新的系数
+            if (relevantEvents.length > 0) {
+                return relevantEvents[0].coefficient;
+            }
+
+            // 如果没有事件，返回原始系数
+            return artwork.coefficient;
         });
 
         return {
@@ -430,4 +456,39 @@ document.addEventListener('languageChanged', () => {
     document.getElementById('highest-list').innerHTML = 
         highestSorted.map(generateArtworkHTML).join('');
 });
+
+// 获取特定作品的所有价格事件（包括全局事件）
+function getArtworkPriceEvents(serialnumber) {
+    return priceEvents
+        .filter(event => event.serialnumber === serialnumber || event.serialnumber === 'all')
+        .sort((a, b) => new Date(a.date) - new Date(b.date));
+}
+
+// 创建图表
+function createChart(serialnumber) {
+    const events = getArtworkPriceEvents(serialnumber);
+    
+    // 准备图表数据
+    const chartData = {
+        labels: events.map(event => event.date),
+        datasets: [{
+            label: '系数',
+            data: events.map(event => event.coefficient),
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1
+        }]
+    };
+
+    // ... 其他图表配置代码 ...
+}
+
+// 更新图表
+function updateChart(serialnumber) {
+    const events = getArtworkPriceEvents(serialnumber);
+    
+    // 更新图表数据
+    myChart.data.labels = events.map(event => event.date);
+    myChart.data.datasets[0].data = events.map(event => event.coefficient);
+    myChart.update();
+}
 

@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         // 设置图片源
-        img.src = currentArtwork.image.replace('../assets/RSM/', '../assets/RSM-big/');
+        img.src = currentArtwork.image.replace('/RSM/', '/RSM-big/');
         
         // 更新基本信息
         document.getElementById('detail-serialnumber').textContent = currentArtwork.serialnumber;
@@ -150,41 +150,6 @@ window.addEventListener('scroll', () => {
     }
     
     lastScrollTop = scrollTop;
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const detailContainer = document.querySelector('.detail-container');
-    const scrollSpeed = 0.4;
-    let lastScrollPosition = window.scrollY;
-    let ticking = false;
-    
-    function updatePosition() {
-        // 只在桌面端应用滚动效果
-        if (window.innerWidth > 800) {
-            detailContainer.style.transform = `translateY(${lastScrollPosition * scrollSpeed}px)`;
-        }
-        ticking = false;
-    }
-    
-    window.addEventListener('scroll', () => {
-        lastScrollPosition = window.scrollY;
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                updatePosition();
-            });
-            ticking = true;
-        }
-    }, { passive: true });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const detailContainer = document.querySelector('.detail-container');
-    const scrollSpeed = 0.3;
-    
-    window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY;
-        detailContainer.style.transform = `translateY(${scrollPosition * scrollSpeed}px)`;
-    });
 });
 
 // 在需要使用的页面中

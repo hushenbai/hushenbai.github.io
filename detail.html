@@ -33,8 +33,22 @@
     <div class="nav-background">
         <nav class="nav-container">
             <div class="nav-left">
-                <p1 class="nav-button" onclick="goBack()" data-lang="back"></p1>
+                <a href="./hushenbai.html">
+                    <img src="./assets/smallbowl.png" 
+                         style="width: 32px; height: 32px;" 
+                         alt="logo">
+                </a>
             </div>
+
+            <div class="nav-center">
+                <p1 class="nav-button" onclick="window.location.href='index.html'">
+                    <span data-lang="tcm-title">明珠薏苡</span>
+                </p1>
+                <p1 class="nav-button" onclick="window.location.href='rsm/rsm.html'">
+                    <span data-lang="rsm-title">重圆镜</span>
+                </p1>
+             </div>
+
             <div class="nav-right">
                 <div class="language-switch">
                     <p1><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer;">English</button></p1>
@@ -83,7 +97,7 @@
         </div>
         
         <!-- 2.2 正常滚动区域 -->
-        <div class="floating-info">
+        <div>
             <div class="floating-content">
                 <!-- 展览列表 -->
                 <div class="exhibits-list-container">
@@ -123,7 +137,7 @@
                     <div style="height: 2px;"></div>
                     <div style="display: flex; flex-direction: row; gap: 4px;">
                         <p2 data-lang="price-TCMinfo">price-TCMinfo</p2>
-                        <p2>60</p2>
+                        <p2>70</p2>
                     </div>
                     <div style="display: flex; flex-direction: row; gap: 4px;">
                         <p2 data-lang="price-this">price-this</p2>

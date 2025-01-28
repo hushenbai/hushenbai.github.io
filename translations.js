@@ -50,6 +50,8 @@ const translations = {
         'switch-lang': 'English',
         'tcm-title': '明珠薏苡',
         'rsm-title': '重圆镜',
+        'tcm-title-mobile': '明珠薏苡',
+        'rsm-title-mobile': '重圆镜',
         '木板油彩': '木板油彩',
         '帆布油彩': '帆布油彩',
         'work': '作品',
@@ -131,6 +133,8 @@ const translations = {
         "width": "宽",
         "height": "高",
         "Buyway": "添加微信，或者向我发送邮件：",
+
+        "about-me": "华人喝中药，男人看女人。华人如何更有效地喝中药？男人如何更礼貌地看女人？我讨论这些问题，并创作艺术作品。我创作艺术作品，并讨论其他问题。",
 
         "detail-TCMmain": "明珠薏苡项目指向华人的常见符号。<br>对中药的信仰比汉语的使用范围更广、也更虔诚。骄傲的华人追求一切，虚弱的华人祈求中药的疗效。<br>这些黑色的、苦涩的水，如同民族的长河，流淌在所有华人的生活中。<br>绘画是静态的，为了让尊严凝固其中，在姿态上抵御时间侵蚀。<br>生活中，药被急切地喝下。但在绘画中，药不会变质、不会蒸发、不会被倒掉，你有充分的时间来认识它、考虑是否需要它。",
         'detail-RSMmain': '重圆镜项目是大画，我希望主题足够宏大，最终认为值得用大幅面去赞扬的是生活本身。图像中只有女性，我还没有找到让其他性别进来，且镜子不会碎裂的方法。<br>绘画是静态的，为了让尊严凝固其中，在姿态上抵御时间侵蚀。这些场景是弥合的镜子，映射大家的生活，如果它们被打碎，我觉得情况会不好。<br>我画得简略，她们应当是常见的、你习惯到分不清的普通人。普通到有尊严的样子。',
@@ -278,6 +282,8 @@ const translations = {
         'switch-lang': '中文',
         'tcm-title': 'PearlBarleySand',
         'rsm-title': 'RestoredMirrors',
+        'tcm-title-mobile': 'PBS',
+        'rsm-title-mobile': 'RSM',
         'back': 'Back',
         'work': 'Work',
         'productstate-0': 'Buy this work',
@@ -359,6 +365,8 @@ const translations = {
         "height": "Height",
         "coefficient": "Coefficient",
         "Buyway": "Add my WeChat or send me an email:",
+
+        "about-me": "Chinese people drink Chinese medicine, men look at women. How can Chinese people drink Chinese medicine more effectively? How can men look at women more politely? I discuss these issues and create artworks. I create artworks and discuss other issues.",
 
         '木板油彩': 'Oil on wood',
         '帆布油彩': 'Oil on canvas',

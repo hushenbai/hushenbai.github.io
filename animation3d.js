@@ -69,7 +69,7 @@ class Animation3DManager {
         
         let wrapper = element;
         const {
-            perspective = 3000,
+            perspective = 3500,
             scale = 1,
             maxRotation = 25,
             translateZ = 0

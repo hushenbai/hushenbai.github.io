@@ -22,14 +22,33 @@ const priceEvents = [
         state: '1',
         date: '2025-01-06'
     },
+    {
+        serialnumber: 'all0',
+        coefficient: 70,
+        date: '2025-01-20'
+    },
 
     // 更多事件...
 ]; 
 
 // 获取项目的最新系数
 function getLatestCoefficient(serialnumber) {
-    // 检索该项目的所有价格事件
-    const artworkEvents = priceEvents.filter(event => event.serialnumber === serialnumber);
+    // 先获取当前状态
+    const currentState = getLatestState(serialnumber) || '0';
+    
+    // 获取所有相关的价格事件
+    const artworkEvents = priceEvents.filter(event => {
+        // 匹配具体作品的事件
+        if (event.serialnumber === serialnumber) return true;
+        
+        // 匹配全局事件
+        if (event.serialnumber === 'all') return true;
+        
+        // 匹配特定状态的全局事件
+        if (event.serialnumber === 'all0' && currentState === '0') return true;
+        
+        return false;
+    });
     
     if (artworkEvents.length > 0) {
         // 按日期排序获取最新事件
@@ -40,14 +59,22 @@ function getLatestCoefficient(serialnumber) {
         return latestEvent.coefficient;
     }
     
-    // 如果没有价格事件，返回 null
     return null;
 }
 
 // 获取项目的最新状态
 function getLatestState(serialnumber) {
-    // 检索该项目的所有价格事件
-    const artworkEvents = priceEvents.filter(event => event.serialnumber === serialnumber);
+    // 获取所有相关的价格事件
+    const artworkEvents = priceEvents.filter(event => {
+        // 匹配具体作品的事件
+        if (event.serialnumber === serialnumber) return true;
+        
+        // 匹配全局事件
+        if (event.serialnumber === 'all') return true;
+        
+        // 对于状态查询，我们不考虑 all0 事件，因为它依赖于状态
+        return false;
+    });
     
     if (artworkEvents.length > 0) {
         // 按日期排序获取最新事件
@@ -58,7 +85,6 @@ function getLatestState(serialnumber) {
         return latestEvent.state;
     }
     
-    // 如果没有价格事件，返回 null
     return null;
 }
 
