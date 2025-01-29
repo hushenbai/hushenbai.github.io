@@ -2,121 +2,19 @@ header {
     position: relative;
     width: 100%;
     max-width: auto;
-    height: 620px;
+    padding: 180px 60px 60px 60px;
     margin-top: 0px;
-    margin-bottom: 60px;
-    align-items: left;
-    text-align: left;
-    justify-content: left;
-}
-
-.header-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #F0F0F0; /* 灰色背景 */
-    overflow: hidden; /* 超出部分裁切 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-}
-
-.header-bg::after {
-    content: '';
-    position: absolute;
-    width: 70%;
-    padding-bottom: 70%;
-    background-image: url('../assets/tradebginner.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: slowRotate 240s linear infinite;
-    transform: translateY(380px);
-    z-index: 0;
-}
-
-.header-bg::before {
-    content: '';
-    position: absolute;
-    width: 105%;
-    padding-bottom: 105%;
-    background-image: url('../assets/tradebgouter.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: reverseRotate 240s linear infinite;
-    transform: translateY(380px);
-    z-index: 1;
-}
-
-@keyframes slowRotate {
-    from {
-        transform: translateY(380px) rotate(0deg);
-    }
-    to {
-        transform: translateY(380px) rotate(360deg);
-    }
-}
-
-@keyframes reverseRotate {
-    from {
-        transform: translateY(380px) rotate(360deg);
-    }
-    to {
-        transform: translateY(380px) rotate(0deg);
-    }
+    margin-bottom: 0px;
 }
 
 .header-title {
-    position: relative;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
     width: 100%;
 }
-
-@media (max-width: 800px) {
-    header {
-        height: 320px;
-        margin-bottom: 40px;
-    }
-
-    .header-title {
-        padding: 0 8px;
-    }
-
-    .header-bg::after {
-        width: 100%;
-        padding-bottom: 100%;
-        transform: translateY(200px);
-    }
-    
-    .header-bg::before {
-        width: 150%;
-        padding-bottom: 150%;
-        transform: translateY(200px);
-    }
-
-    @keyframes slowRotate {
-        from {
-            transform: translateY(200px) rotate(0deg);
-        }
-        to {
-            transform: translateY(200px) rotate(360deg);
-        }
-    }
-    
-    @keyframes reverseRotate {
-        from {
-            transform: translateY(200px) rotate(360deg);
-        }
-        to {
-            transform: translateY(200px) rotate(0deg);
-        }
-    }
-}
-
 
 .trend-title {
     display: flex;
@@ -329,6 +227,19 @@ header {
 }
 
 @media (max-width: 800px) {
+
+    header {
+        position: relative;
+        width: 100%;
+        max-width: auto;
+        padding: 100px 20px 24px 20px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .header-title {
+        padding: 0;
+    }
 
 
     .coefficient-watch {
