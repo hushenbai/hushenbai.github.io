@@ -491,6 +491,10 @@ body {
         font-size: 14pt;
     }
 
+    p0 {
+        font-size: 12pt;
+    }
+
     /* 图片容器 */
     .detail-imagebox .image-wrapper {
     position: relative;
@@ -1050,7 +1054,7 @@ b1 {
     background-position: center;
     background-repeat: no-repeat;
     animation: slowRotate 240s linear infinite;
-    transform: translateY(380px);
+    transform: translateY(350px);
     z-index: 0;
 }
 
@@ -1064,25 +1068,25 @@ b1 {
     background-position: center;
     background-repeat: no-repeat;
     animation: reverseRotate 240s linear infinite;
-    transform: translateY(380px);
+    transform: translateY(350px);
     z-index: 1;
 }
 
 @keyframes slowRotate {
     from {
-        transform: translateY(380px) rotate(0deg);
+        transform: translateY(350px) rotate(0deg);
     }
     to {
-        transform: translateY(380px) rotate(360deg);
+        transform: translateY(350px) rotate(360deg);
     }
 }
 
 @keyframes reverseRotate {
     from {
-        transform: translateY(380px) rotate(360deg);
+        transform: translateY(350px) rotate(360deg);
     }
     to {
-        transform: translateY(380px) rotate(0deg);
+        transform: translateY(350px) rotate(0deg);
     }
 }
 
