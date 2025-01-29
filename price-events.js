@@ -22,11 +22,6 @@ const priceEvents = [
         state: '1',
         date: '2025-01-06'
     },
-    {
-        serialnumber: 'all0',
-        coefficient: 65,
-        date: '2025-01-20'
-    },
 
     // 更多事件...
 ]; 

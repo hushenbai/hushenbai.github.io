@@ -157,6 +157,82 @@ window.addEventListener('scroll', () => {
     lastScrollTop = scrollTop;
 });
 
+// 添加函数来更新弧线路径
+function updateConnectionPaths() {
+    const paths = document.querySelectorAll('.connection-path');
+    const center = { x: 300, y: 300 }; // 圆环中心点
+
+    paths.forEach(path => {
+        const fromData = path.dataset.from.split('-');
+        const toData = path.dataset.to.split('-');
+        
+        // 获取起点和终点的坐标
+        let from = getItemPosition(fromData[0], parseInt(fromData[1]));
+        let to = getItemPosition(toData[0], parseInt(toData[1]));
+        
+        // 创建弧线路径
+        const d = createArcPath(from, to, center);
+        path.setAttribute('d', d);
+    });
+}
+
+// 获取item的位置
+function getItemPosition(ring, index) {
+    const radius = ring === 'inner' ? 150 : 300;
+    const angle = (index * 60) * Math.PI / 180;
+    
+    return {
+        x: 300 + radius * Math.cos(angle),
+        y: 300 + radius * Math.sin(angle)
+    };
+}
+
+// 创建弧线路径
+function createArcPath(from, to, center) {
+    // 计算两点之间的中点
+    const midPoint = {
+        x: (from.x + to.x) / 2,
+        y: (from.y + to.y) / 2
+    };
+    
+    // 计算两点之间的距离
+    const distance = Math.sqrt(
+        Math.pow(to.x - from.x, 2) + 
+        Math.pow(to.y - from.y, 2)
+    );
+    
+    // 固定抛物线高度（可以调整这个值来改变抛物线的高度）
+    const parabolaHeight = distance * -0.6;
+    
+    // 计算垂直于连线的方向向量
+    const dx = to.x - from.x;
+    const dy = to.y - from.y;
+    const perpX = -dy;
+    const perpY = dx;
+    
+    // 归一化垂直向量
+    const perpLength = Math.sqrt(perpX * perpX + perpY * perpY);
+    const unitPerpX = perpX / perpLength;
+    const unitPerpY = perpY / perpLength;
+    
+    // 计算控制点（在中点的基础上，沿垂直方向偏移）
+    const controlPoint = {
+        x: midPoint.x + unitPerpX * parabolaHeight,
+        y: midPoint.y + unitPerpY * parabolaHeight
+    };
+    
+    return `M ${from.x} ${from.y} Q ${controlPoint.x} ${controlPoint.y} ${to.x} ${to.y}`;
+}
+
+// 删除箭头相关函数
+function updateAllPaths() {
+    // 只保留原有的连接线更新
+    updateConnectionPaths();
+}
+
+// 页面加载时初始化
+document.addEventListener('DOMContentLoaded', updateConnectionPaths);
+
 
 
 

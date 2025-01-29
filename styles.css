@@ -54,7 +54,7 @@ home {
     max-width: 1080px;
     width: 100%;
     margin: 0 auto;
-    padding: 30px;
+    margin: 30px;
 }
 
 .text-box {
@@ -654,7 +654,6 @@ body {
     .enter-container {
         margin-bottom: 20px;
         padding: 40px 20px;
-        border-radius: 0px;
     }
 }
 
@@ -790,7 +789,7 @@ b1 {
     height: 100%;
     padding-right: 60px;   /* 项目之间的间距 */
     opacity: 0;  /* 初始状态为透明 */
-    animation: fadeInUp 0.6s ease forwards;  /* 使用动画 */
+    animation: fadeInUp 0.5s ease forwards;  /* 使用动画 */
 }
 
 @keyframes fadeInUp {
@@ -808,19 +807,19 @@ b1 {
     height: 560px;  /* 留出空间给文字 */
     width: auto;
     object-fit: contain;
-    transform: scale(1) translateY(0);
-    transition: transform 0.5s ease;
+    transform: translateY(0);
+    transition: transform 0.2s ease;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version */
-    pointer-events: none; /* 禁止任何指针事件 */
 }
 
 .gallery-image:hover {
-    transform: scale(1) translateY(-5px);
+    transform: translateY(-10px);
+    transition: transform 0.2s ease;
 }
 
 .gallery-info {

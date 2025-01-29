@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shenbai</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shenbai.css">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <!-- 为 iOS 设备添加图标 -->
     <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
@@ -41,7 +42,7 @@
     </div>
 
     <header class="header">
-        <h1>胡申白</h1>
+        <h1>申白</h1>
         <h1>HuShenbai</h1>
         <div style="height: 40px;"></div>
     </header>
@@ -51,9 +52,44 @@
     <main>
         <div class="group">
             <h2 style="line-height: 1.7;" data-lang="about-me">
-                我讨论这些问题，并创作艺术作品。我创作艺术作品，并讨论其他问题。
+                我讨论这些问题
             </h2>
         </div>
+
+        <!-- 在适当位置添加旋转环结构 -->
+<div class="rotating-wheel">
+    <div class="wheel-center">
+        <h2>社交</h2>
+    </div>
+    <svg class="connection-lines" width="100%" height="100%">
+        <!-- 只保留原有的连接线 -->
+        <path class="connection-path" data-from="inner-0" data-to="outer-2" />
+        <path class="connection-path" data-from="inner-1" data-to="outer-3" />
+        <path class="connection-path" data-from="inner-2" data-to="outer-4" />
+        <path class="connection-path" data-from="inner-3" data-to="outer-5" />
+        <path class="connection-path" data-from="inner-4" data-to="outer-0" />
+        <path class="connection-path" data-from="inner-5" data-to="outer-1" />
+    </svg>
+    <!-- 原有的圆环结构 -->
+    <div class="inner-ring">
+        <!-- 内环的 items -->
+        <div class="wheel-item inner" data-index="0"><h3>花仙</h3></div>
+        <div class="wheel-item inner" data-index="1"><h3>月亮</h3></div>
+        <div class="wheel-item inner" data-index="2"><h3>夫人</h3></div>
+        <div class="wheel-item inner" data-index="3"><h3>魔鬼</h3></div>
+        <div class="wheel-item inner" data-index="4"><h3>鬼怪</h3></div>
+        <div class="wheel-item inner" data-index="5"><h3>精灵</h3></div>
+    </div>
+    <div class="outer-ring">
+        <!-- 外环的 items -->
+        <div class="wheel-item outer" data-index="0"><h3>石头</h3></div>
+        <div class="wheel-item outer" data-index="1"><h3>太阳</h3></div>
+        <div class="wheel-item outer" data-index="2"><h3>领主</h3></div>
+        <div class="wheel-item outer" data-index="3"><h3>女巫</h3></div>
+        <div class="wheel-item outer" data-index="4"><h3>苦生</h3></div>
+        <div class="wheel-item outer" data-index="5"><h3>圣人</h3></div>
+    </div>
+</div>
     </main>
 
     <home>
