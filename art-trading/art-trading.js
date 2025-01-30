@@ -32,7 +32,7 @@ function generateArtworkHTML(artwork) {
     }
 
     return `
-        <div class="artwork-item" onclick="goToDetail('${groupId}', '${artwork.serialnumber}')" style="cursor: pointer;">
+        <div class="artwork-item" onclick="window.location.href='../detail.html?group=group${groupId}&id=${artwork.serialnumber}'" style="cursor: pointer;">
             <img class="artwork-image" src="${artwork.image.replace('assets/TCM/', '../assets/TCM-small/')}" alt="${artwork.title['data-lang']}">
             <div class="artwork-info">
                 <p2 class="artwork-serialnumber">${artwork.serialnumber}</p2>
@@ -42,25 +42,6 @@ function generateArtworkHTML(artwork) {
         </div>
     `;
 }
-
-// 添加滚动监听
-let lastScrollTop = 0;
-const nav = document.querySelector('.nav-background');
-
-window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // 向下滚动时隐藏
-    if (scrollTop > lastScrollTop && scrollTop > 50) {
-        nav.classList.add('hidden');
-    } 
-    // 向上滚动时显示
-    else {
-        nav.classList.remove('hidden');
-    }
-    
-    lastScrollTop = scrollTop;
-});
 
 // 获取所有项目中的最高系数
 function getHighestCoefficient() {
