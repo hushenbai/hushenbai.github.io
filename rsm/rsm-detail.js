@@ -132,26 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-// 添加滚动监听
-let lastScrollTop = 0;
-const nav = document.querySelector('.nav-background');
-
-window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // 向下滚动时隐藏
-    if (scrollTop > lastScrollTop && scrollTop > 300) {
-        nav.classList.add('hidden');
-    } 
-    // 向上滚动时显示
-    else {
-        nav.classList.remove('hidden');
-    }
-    
-    lastScrollTop = scrollTop;
-});
-
 // 在需要使用的页面中
 document.addEventListener('DOMContentLoaded', () => {
     // 类型 A：仅 hover 时跟随
