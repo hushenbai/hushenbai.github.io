@@ -543,18 +543,16 @@ body {
 }
 
 /* 只在桌面端应用毛玻璃效果 */
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 561px) {
     .floating-info {
-        background: rgba(250, 250, 250, 0.7);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
+        background: #fff;
     }
 }
 
 /* 移动端样式 */
 @media screen and (max-width: 560px) {
     .floating-info {
-        background: #f8f8f8;  /* 纯白背景 */
+        background: #fff;  /* 纯白背景 */
     }
     .detail-container {
         transform: none !important;  /* 确保移动端没有transform效果 */
@@ -908,7 +906,7 @@ b1 {
     z-index: 200;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .willing.show {
@@ -928,10 +926,8 @@ b1 {
     max-width: 480px;
     width: 100%;
     max-height: 85vh;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     /* 初始状态 */
     transform: translateY(700px);
     opacity: 1;
@@ -1001,7 +997,7 @@ b1 {
         position: fixed;
         padding: 0 20px;
         border-radius: 0px;
-        max-height: 80vh;
+        max-height: 90vh;
     }
 
     .willing-content {
