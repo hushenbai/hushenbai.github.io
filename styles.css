@@ -1062,7 +1062,7 @@ b1 {
     background-position: center;
     background-repeat: no-repeat;
     animation: slowRotate 240s linear infinite;
-    transform: translateY(350px);
+    transform: translateY(45vh);
     z-index: 0;
 }
 
@@ -1076,29 +1076,29 @@ b1 {
     background-position: center;
     background-repeat: no-repeat;
     animation: reverseRotate 240s linear infinite;
-    transform: translateY(350px);
+    transform: translateY(45vh);
     z-index: 1;
 }
 
 @keyframes slowRotate {
     from {
-        transform: translateY(350px) rotate(0deg);
+        transform: translateY(45vh) rotate(0deg);
     }
     to {
-        transform: translateY(350px) rotate(360deg);
+        transform: translateY(45vh) rotate(360deg);
     }
 }
 
 @keyframes reverseRotate {
     from {
-        transform: translateY(350px) rotate(360deg);
+        transform: translateY(45vh) rotate(360deg);
     }
     to {
-        transform: translateY(350px) rotate(0deg);
+        transform: translateY(45vh) rotate(0deg);
     }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1024px) {
     .headerback {
         height: 80vh;
     }
@@ -1108,39 +1108,39 @@ b1 {
     }
 
     .header-bg::after {
-        width: 90%;
-        padding-bottom: 90%;
-        transform: translateY(260px);
+        width: 115%;
+        padding-bottom: 110%;
+        transform: translateY(40vh);
     }
     
     .header-bg::before {
-        width: 133%;
-        padding-bottom: 133%;
-        transform: translateY(260px);
+        width: 160%;
+        padding-bottom: 160%;
+        transform: translateY(40vh);
     }
 
     @keyframes slowRotate {
         from {
-            transform: translateY(260px) rotate(0deg);
+            transform: translateY(40vh) rotate(0deg);
         }
         to {
-            transform: translateY(260px) rotate(360deg);
+            transform: translateY(40vh) rotate(360deg);
         }
     }
     
     @keyframes reverseRotate {
         from {
-            transform: translateY(260px) rotate(360deg);
+            transform: translateY(40vh) rotate(360deg);
         }
         to {
-            transform: translateY(260px) rotate(0deg);
+            transform: translateY(40vh) rotate(0deg);
         }
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 560px) {
     .headerback {
-        height: 70vh;
+        height: 60vh;
     }
 
     .header-title {
@@ -1150,30 +1150,30 @@ b1 {
     .header-bg::after {
         width: 130%;
         padding-bottom: 130%;
-        transform: translateY(260px);
+        transform: translateY(35vh);
     }
     
     .header-bg::before {
         width: 195%;
         padding-bottom: 195%;
-        transform: translateY(260px);
+        transform: translateY(35vh);
     }
 
     @keyframes slowRotate {
         from {
-            transform: translateY(260px) rotate(0deg);
+            transform: translateY(35vh) rotate(0deg);
         }
         to {
-            transform: translateY(260px) rotate(360deg);
+            transform: translateY(35vh) rotate(360deg);
         }
     }
     
     @keyframes reverseRotate {
         from {
-            transform: translateY(260px) rotate(360deg);
+            transform: translateY(35vh) rotate(360deg);
         }
         to {
-            transform: translateY(260px) rotate(0deg);
+            transform: translateY(35vh) rotate(0deg);
         }
     }
 }
