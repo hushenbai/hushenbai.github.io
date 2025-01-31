@@ -1,0 +1,59 @@
+
+.headerback {
+    position: relative;
+    width: 100%;
+    max-width: auto;
+    height: 100vh;
+    margin-top: 0px;
+}
+
+.header-rsmbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/rsmbg.jpg');
+    background-size: cover;  /* 覆盖整个容器 */
+    background-position: center;  /* 居中显示 */
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+@keyframes slowRotate {
+    from {
+        transform: translateY(45vh) rotate(0deg);
+    }
+    to {
+        transform: translateY(45vh) rotate(360deg);
+    }
+}
+
+@keyframes reverseRotate {
+    from {
+        transform: translateY(45vh) rotate(360deg);
+    }
+    to {
+        transform: translateY(45vh) rotate(0deg);
+    }
+}
+
+@media (max-width: 1024px) {
+    .headerback {
+        height: 80vh;
+    }
+
+    .header-title {
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 560px) {
+    .headerback {
+        height: 60vh;
+    }
+
+    .header-title {
+        padding: 0 8px;
+    }
+}
