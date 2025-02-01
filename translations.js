@@ -1,16 +1,16 @@
 // 全局语言管理
-let currentLang = localStorage.getItem('language') || 'zh';  // 从 localStorage 读取或默认为中文
+let currentLang = localStorage.getItem('language') || 'en';  // 从 localStorage 读取或默认为中文
 
 // 获取当前语言
 function getCurrentLanguage() {
     // 始终从 localStorage 获取最新值
-    return localStorage.getItem('language') || 'zh';
+    return localStorage.getItem('language') || 'en';
 }
 
 // 切换语言
 function toggleLanguage() {
     // 更新 localStorage
-    currentLang = currentLang === 'zh' ? 'en' : 'zh';
+    currentLang = currentLang === 'en' ? 'zh' : 'en';
     localStorage.setItem('language', currentLang);
     
     // 更新页面
@@ -52,10 +52,12 @@ const translations = {
         'rsm-title': '重圆镜',
         'tcm-title-mobile': '明珠薏苡',
         'rsm-title-mobile': '重圆镜',
-        'tcm-slogan': '华人如何更有效地喝中药？我讨论这个问题并创作艺术作品。',
-        'rsm-slogan': '男人如何更礼貌地看女人？我讨论这个问题并创作艺术作品。',
+        'tcm-slogan': '华人如何更有效地喝中药？申白讨论这个问题并创作艺术作品。',
+        'rsm-slogan': '男人如何更礼貌地看女人？申白讨论这个问题并创作艺术作品。',
         'tcm-words': '一条大河，十亿小碗',
         'rsm-words': '生活是最容易被打碎的成就',
+        'PBS-about-me': '胡申白，90后，来自中国，<br>关心传统文化与医疗卫生的问题。<br>hushenbai@163.com',
+        'RSM-about-me': '胡申白，90后，来自中国，<br>关心男性凝视与女性规训的问题。<br>hushenbai@163.com',
         '木板油彩': '木板油彩',
         '帆布油彩': '帆布油彩',
         'work': '作品',
@@ -288,8 +290,10 @@ const translations = {
         'rsm-title': 'RestoredMirrors',
         'tcm-title-mobile': 'PBS',
         'rsm-title-mobile': 'RSM',
-        'tcm-slogan': 'How can Chinese people drink Chinese medicine more effectively? <br>I discuss these issues and create artworks.',
-        'rsm-slogan': 'How can men look at women more politely? <br>I discuss these issues and create artworks.',
+        'tcm-slogan': 'How can Chinese people drink Chinese medicine more effectively? <br>Shenbai discuss these issues and create artworks.',
+        'rsm-slogan': 'How can men look at women more politely? <br>Shenbai discuss these issues and create artworks.',
+        'PBS-about-me': 'Hu Shenbai, from China, <br>care about the traditional culture and health.<br>hushenbai@163.com',
+        'RSM-about-me': 'Hu Shenbai, from China, <br>care about the male gaze and female discipline.<br>hushenbai@163.com',
         'back': 'Back',
         'work': 'Work',
         'productstate-0': 'Buy this work',
