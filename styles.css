@@ -1134,7 +1134,7 @@ b1 {
     }
 
     .header-bg::after {
-        width: 115%;
+        width: 110%;
         padding-bottom: 110%;
         transform: translateY(40vh);
     }
@@ -1174,14 +1174,14 @@ b1 {
     }
 
     .header-bg::after {
-        width: 130%;
-        padding-bottom: 130%;
+        width: 100%;
+        padding-bottom: 100%;
         transform: translateY(0vh);
     }
     
     .header-bg::before {
-        width: 195%;
-        padding-bottom: 195%;
+        width: 147%;
+        padding-bottom: 147%;
         transform: translateY(0vh);
     }
 
