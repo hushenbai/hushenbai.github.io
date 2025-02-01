@@ -42,7 +42,24 @@ function generateRSMGallery() {
 // 在页面加载时调用
 document.addEventListener('DOMContentLoaded', () => {
     if (window.location.pathname.includes('rsm.html')) {
-        generateRSMGallery();
+        // 创建观察器监控 RSMGallery 区域
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    generateRSMGallery();
+                    // 触发一次后取消观察
+                    observer.disconnect();
+                }
+            });
+        }, {
+            threshold: 0.3 // 当 RSMGallery 区域 30% 可见时触发
+        });
+
+        // 开始观察 RSMGallery 区域
+        const gallerySection = document.querySelector('.rsm-gallery');
+        if (gallerySection) {
+            observer.observe(gallerySection);
+        }
     }
 });
 

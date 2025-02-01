@@ -35,7 +35,7 @@
 
 @media (max-width: 1024px) {
     .headerback {
-        height: 80vh;
+        height: 90vh;
     }
 
     .header-title {
@@ -51,4 +51,18 @@
     .header-title {
         padding: 0 8px;
     }
+
+    .header-rsmbg {
+        background-image: url('../assets/rsmbg-small.jpg');
+    }
+}
+
+.gallery-item {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    will-change: opacity, transform;
+}
+
+.gallery-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }

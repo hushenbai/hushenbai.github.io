@@ -275,8 +275,8 @@ body {
 
     header {
         padding: 0 20px;
-        margin-top: 60px;
-        margin-bottom: 40px;
+        margin-top: 80px;
+        margin-bottom: 60px;
     }
     
     main {
@@ -1029,9 +1029,39 @@ b1 {
 .headerback {
     position: relative;
     width: 100%;
-    max-width: auto;
     height: 100vh;
-    margin-top: 0px;
+}
+
+.header-text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1080px;
+    padding: 0 20px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.giant-text {
+    color: rgb(255, 255, 255);
+    font-size: clamp(2rem, 25vw, 25rem); /* 响应式字号 */
+    font-family: "Gowun Batang", "Noto Serif SC", "Noto Serif", serif;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 0.8;
+}
+
+@media (max-width: 768px) {
+    .header-text-container {
+        padding: 0 30px;
+    }
 }
 
 .header-bg {
@@ -1096,7 +1126,7 @@ b1 {
 
 @media (max-width: 1024px) {
     .headerback {
-        height: 80vh;
+        height: 90vh;
     }
 
     .header-title {
@@ -1146,30 +1176,30 @@ b1 {
     .header-bg::after {
         width: 130%;
         padding-bottom: 130%;
-        transform: translateY(35vh);
+        transform: translateY(0vh);
     }
     
     .header-bg::before {
         width: 195%;
         padding-bottom: 195%;
-        transform: translateY(35vh);
+        transform: translateY(0vh);
     }
 
     @keyframes slowRotate {
         from {
-            transform: translateY(35vh) rotate(0deg);
+            transform: translateY(0vh) rotate(0deg);
         }
         to {
-            transform: translateY(35vh) rotate(360deg);
+            transform: translateY(0vh) rotate(360deg);
         }
     }
     
     @keyframes reverseRotate {
         from {
-            transform: translateY(35vh) rotate(360deg);
+            transform: translateY(0vh) rotate(360deg);
         }
         to {
-            transform: translateY(35vh) rotate(0deg);
+            transform: translateY(0vh) rotate(0deg);
         }
     }
 }
