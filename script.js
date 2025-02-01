@@ -37,27 +37,24 @@ function createCards() {
     });
 }
 
-// 初始化卡片动画
-function initializeCardAnimations() {
-    const hoverElements = document.querySelectorAll('.hover-animation');
-    hoverElements.forEach(element => {
-        animation3D.initTypeA(element);
-    });
-}
-
 // 分别监听不同功能的初始化
 document.addEventListener('DOMContentLoaded', createCards);
-document.addEventListener('DOMContentLoaded', initializeCardAnimations);
 
 // 在需要使用的页面中
 document.addEventListener('DOMContentLoaded', () => {
-    // 类型 A：仅 hover 时跟随
-    const hoverElement = document.querySelector('.hover-animation');
-    animation3D.initTypeA(hoverElement);
+    // 检查当前页面
+    if (!window.location.pathname.includes('rsm.html')) {
+        // 只在非 RSM 页面初始化 3D 动画
+        const hoverElement = document.querySelector('.hover-animation');
+        if (hoverElement && window.animation3D) {
+            animation3D.initTypeA(hoverElement);
+        }
 
-    // 类型 B：全局跟随
-    const globalElement = document.querySelector('.global-animation');
-    animation3D.initTypeB(globalElement);
+        const globalElement = document.querySelector('.global-animation');
+        if (globalElement && window.animation3D) {
+            animation3D.initTypeB(globalElement);
+        }
+    }
 });
 
 
