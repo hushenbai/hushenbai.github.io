@@ -14,46 +14,22 @@
     height: 100%;
     overflow: hidden;
     z-index: 0;
+    background-image: url('../assets/rsmbg.jpg');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    animation: slideBackground 180s linear infinite;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
 }
 
-.scroll-container {
-    height: 100%;
-    display: flex;
-    animation: scroll 60s linear infinite;
-    will-change: transform;
-}
-
-.scroll-container img {
-    height: 100%;
-    width: auto;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-100% / 2)); /* 移动一组图片的距离 */
-    }
-}
-
-@keyframes slowRotate {
+@keyframes slideBackground {
     from {
-        transform: translateY(45vh) rotate(0deg);
+        background-position-x: 0;
     }
     to {
-        transform: translateY(45vh) rotate(360deg);
-    }
-}
-
-@keyframes reverseRotate {
-    from {
-        transform: translateY(45vh) rotate(360deg);
-    }
-    to {
-        transform: translateY(45vh) rotate(0deg);
+        background-position-x: -2800px;
     }
 }
 

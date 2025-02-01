@@ -46,8 +46,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-document.querySelector('.scroll-container').addEventListener('animationend', function() {
-    this.style.animation = 'none';
-    this.offsetHeight; // 触发回流
-    this.style.animation = 'scroll 60s linear infinite';
-});
+const container = document.querySelector('.scroll-container');
