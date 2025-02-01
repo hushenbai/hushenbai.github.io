@@ -1123,9 +1123,13 @@ b1 {
     }
 }
 
-@media (max-width: 1024px) {
+/* iPad 竖屏状态 */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (orientation: portrait) {
     .headerback {
-        height: 90vh;
+        height: 80vh;
     }
 
     .header-title {
