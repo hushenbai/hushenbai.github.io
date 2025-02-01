@@ -1076,6 +1076,7 @@ b1 {
     justify-content: center;
     align-items: center;
     z-index: 0;
+    transition: transform 0.3s ease; /* 添加平滑过渡 */
 }
 
 .header-bg::after {
@@ -1088,7 +1089,6 @@ b1 {
     background-position: center;
     background-repeat: no-repeat;
     animation: slowRotate 240s linear infinite;
-    transform: translateY(45vh);
     z-index: 0;
 }
 
@@ -1102,25 +1102,24 @@ b1 {
     background-position: center;
     background-repeat: no-repeat;
     animation: reverseRotate 240s linear infinite;
-    transform: translateY(45vh);
     z-index: 1;
 }
 
 @keyframes slowRotate {
     from {
-        transform: translateY(45vh) rotate(0deg);
+        transform: rotate(0deg);
     }
     to {
-        transform: translateY(45vh) rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 @keyframes reverseRotate {
     from {
-        transform: translateY(45vh) rotate(360deg);
+        transform: rotate(360deg);
     }
     to {
-        transform: translateY(45vh) rotate(0deg);
+        transform: rotate(0deg);
     }
 }
 
@@ -1134,33 +1133,13 @@ b1 {
     }
 
     .header-bg::after {
-        width: 110%;
-        padding-bottom: 110%;
-        transform: translateY(40vh);
+        width: 85%;
+        padding-bottom: 85%;
     }
     
     .header-bg::before {
-        width: 160%;
-        padding-bottom: 160%;
-        transform: translateY(40vh);
-    }
-
-    @keyframes slowRotate {
-        from {
-            transform: translateY(40vh) rotate(0deg);
-        }
-        to {
-            transform: translateY(40vh) rotate(360deg);
-        }
-    }
-    
-    @keyframes reverseRotate {
-        from {
-            transform: translateY(40vh) rotate(360deg);
-        }
-        to {
-            transform: translateY(40vh) rotate(0deg);
-        }
+        width: 125%;
+        padding-bottom: 125%;
     }
 }
 
@@ -1176,30 +1155,28 @@ b1 {
     .header-bg::after {
         width: 100%;
         padding-bottom: 100%;
-        transform: translateY(0vh);
     }
     
     .header-bg::before {
         width: 147%;
         padding-bottom: 147%;
-        transform: translateY(0vh);
     }
 
     @keyframes slowRotate {
         from {
-            transform: translateY(0vh) rotate(0deg);
+            transform: rotate(0deg);
         }
         to {
-            transform: translateY(0vh) rotate(360deg);
+            transform: rotate(360deg);
         }
     }
     
     @keyframes reverseRotate {
         from {
-            transform: translateY(0vh) rotate(360deg);
+            transform: rotate(360deg);
         }
         to {
-            transform: translateY(0vh) rotate(0deg);
+            transform: rotate(0deg);
         }
     }
 }
