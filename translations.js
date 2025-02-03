@@ -295,7 +295,7 @@ const translations = {
         'rsm-slogan': 'How can men look at women more politely?',
         'PBS-about-me': 'Hu Shenbai, artist from China, <br>creates artworks about traditional culture and healthcare.<br>hushenbai@163.com',
         'RSM-about-me': 'Hu Shenbai, artist from China, <br>creates artworks about male gaze and female discipline.<br>hushenbai@163.com',
-        'S&T-about-me': 'Hu Shenbai, artist from China, <br>poet and shaman.<br>hushenbai@163.com',
+        'S&T-about-me': 'Hu Shenbai, shaman from China. <br>hushenbai@163.com',
         'back': 'Back',
         'work': 'Work',
         'productstate-0': 'Buy this work',
