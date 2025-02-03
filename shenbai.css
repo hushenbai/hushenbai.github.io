@@ -121,6 +121,13 @@
     aspect-ratio: 3/4;
     border: 1px solid #dddddd;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+    transform: translateY(0px);
+    transition: transform 0.2s ease;
+}
+
+.book:hover {
+    transform: translateY(-10px);
+    transition: transform 0.2s ease;
 }
 
 .book-cover {
@@ -175,7 +182,7 @@ h2 {
 .golden-circle {
     width: 80px;
     height: 80px;
-    background: linear-gradient(145deg, #ff4800, #d73e07);
+    background: linear-gradient(145deg, #d53c00, #842300);
     border-radius: 50%;
     position: relative;
     animation: breathe 4s ease-in-out infinite;
@@ -202,7 +209,7 @@ h2 {
     left: -20px;
     right: -20px;
     bottom: -20px;
-    background: radial-gradient(circle, #FFD700 0%, transparent 70%);
+    background: radial-gradient(circle, #ff7b00 0%, transparent 70%);
     border-radius: 50%;
     opacity: 0.3;
     filter: blur(20px);
@@ -276,7 +283,7 @@ h2 {
     left: -15px;
     right: -15px;
     bottom: -15px;
-    background: radial-gradient(circle, rgba(179, 252, 255, 0.8) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
     border-radius: 50%;
     filter: blur(10px);
     animation: moon-glow 4s ease-in-out infinite;
