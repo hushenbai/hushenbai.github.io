@@ -106,3 +106,57 @@
     text-align: center;
     white-space: nowrap;
 }
+
+.books-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 60px;
+    gap: 60px;
+}
+
+.book {
+    width: 100%;
+    aspect-ratio: 3/4;
+}
+
+.book-cover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.book-cover.black {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.book-cover.light-gray {
+    background-color: #F0F0F0;
+    color: #000000;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+    .books-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .book {
+        width: 100%;
+        max-width: 280px;
+    }
+}

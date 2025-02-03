@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF 阅读器</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <link rel="stylesheet" href="pdf-viewer.css">
+</head>
+<body>
+    <div class="viewer-container">
+        <div class="nav-buttons">
+            <button class="nav-button prev" onclick="prevPage()">←</button>
+            <button class="nav-button next" onclick="nextPage()">→</button>
+        </div>
+        
+        <div class="page-container">
+            <canvas id="pdf-render"></canvas>
+        </div>
+        
+        <div class="page-info">
+            <span id="page-num"></span> / <span id="page-count"></span>
+        </div>
+    </div>
+
+    <script src="pdf-viewer.js"></script>
+</body>
+</html> 
