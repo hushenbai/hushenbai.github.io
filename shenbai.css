@@ -258,7 +258,7 @@ h2 {
 .silver-moon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(145deg, #F5F5F5, #bedfe4);
+    background: linear-gradient(145deg, #F5F5F5, #b3e6ee);
     border-radius: 50%;
     position: relative;
     animation: moon-breathe 4s ease-in-out infinite;
@@ -283,7 +283,7 @@ h2 {
     left: -15px;
     right: -15px;
     bottom: -15px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(158, 255, 244, 0.8) 0%, transparent 90%);
     border-radius: 50%;
     filter: blur(10px);
     animation: moon-glow 4s ease-in-out infinite;
