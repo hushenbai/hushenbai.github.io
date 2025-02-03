@@ -119,6 +119,8 @@
 .book {
     width: 100%;
     aspect-ratio: 3/4;
+    border: 1px solid #dddddd;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
 }
 
 .book-cover {
@@ -129,7 +131,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding-bottom: 20px;
 }
 
 .book-cover.black {
@@ -138,7 +140,7 @@
 }
 
 .book-cover.light-gray {
-    background-color: #F0F0F0;
+    background-color: #ffffff;
     color: #000000;
 }
 
@@ -152,11 +154,160 @@ h2 {
     .books-container {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 40px;
+        padding: 0 48px;
     }
 
     .book {
         width: 100%;
-        max-width: 280px;
+    }
+}
+
+.golden-circle-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px auto;
+}
+
+.golden-circle {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(145deg, #ff4800, #d73e07);
+    border-radius: 50%;
+    position: relative;
+    animation: breathe 4s ease-in-out infinite;
+}
+
+.golden-circle::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, #FFD700 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.5;
+    filter: blur(10px);
+    animation: glow 4s ease-in-out infinite;
+}
+
+.golden-circle::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(circle, #FFD700 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.3;
+    filter: blur(20px);
+    animation: glow-outer 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes glow-outer {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+}
+
+.white-moon-container {
+    width: 100px;
+    height: 100px;
+    margin: 12px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.silver-moon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(145deg, #F5F5F5, #bedfe4);
+    border-radius: 50%;
+    position: relative;
+    animation: moon-breathe 4s ease-in-out infinite;
+}
+
+.silver-moon::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #ffffff; /* 使用页面背景色 */
+    border-radius: 50%;
+    top: -40px;
+    right: -40px;
+    animation: moon-overlay-breathe 4s ease-in-out infinite;
+}
+
+.silver-moon::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: radial-gradient(circle, rgba(179, 252, 255, 0.8) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(10px);
+    animation: moon-glow 4s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes moon-breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes moon-overlay-breathe {
+    0%, 100% {
+        transform: scale(1) translate(0, 0);
+    }
+    50% {
+        transform: scale(1.05) translate(1px, -1px);
+    }
+}
+
+@keyframes moon-glow {
+    0%, 100% {
+        opacity: 0.3;
+        filter: blur(10px);
+    }
+    50% {
+        opacity: 0.5;
+        filter: blur(15px);
     }
 }
