@@ -159,6 +159,7 @@ const translations = {
         '尝试': '尝试',
         '抓握': '抓握',
         '介绍': '介绍',
+        '聊天': '聊天',
 
         '传统中药': '传统中药系列',
         '四川女人': '四川女人系列',
@@ -401,6 +402,7 @@ const translations = {
         '尝试': 'Try',
         '抓握': 'Grasp',
         '介绍': 'Introduce',
+        '聊天': 'Chat',
 
         '传统中药': 'Traditional Chinese medicine series',
         '四川女人': 'Sichuan Woman series',

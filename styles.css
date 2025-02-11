@@ -705,7 +705,7 @@ body {
 
 .nav-left {
     position: fixed;
-    left: 36px;
+    left: 24px;
     cursor: pointer;
     flex-direction: row;
     padding: 0px 0px;
@@ -713,15 +713,15 @@ body {
     display: flex;
     align-items: center;
     gap: 2px;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(6px);
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     transition: all 0.2s ease-out;
 }
 
 .nav-left:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
     transition: all 0.2s ease-out;
 }
 
