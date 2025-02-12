@@ -68,7 +68,7 @@ home {
 
 footer {
     background-color: #fff;
-    color: #888;
+    color: rgba(92, 87, 84, 0.8);
     text-align: center;
     padding: 12px;
     bottom: 0;
@@ -111,7 +111,7 @@ p0 {
     font-size: 14pt;
     font-family: "Gowun Batang","Noto Serif SC", "Noto Serif", serif;
     font-weight: 400;;
-    color: #6e6e6e;
+    color: #222;
     line-height: 1.7;
 }
 
@@ -119,7 +119,7 @@ p1 {
     font-size: 12pt;
     font-family: "Apple-System", system-ui, segoe ui, Arial, sans-serif;
     font-weight: 400;;
-    color: #000000;
+    color: #222;
     line-height: 1.5;
     letter-spacing: 0.01em;
 }
@@ -128,7 +128,7 @@ p2 {
     font-size: 10pt;
     font-family: "Apple-System", system-ui, segoe ui, Arial, sans-serif;
     font-weight: 400;;
-    color: #6e6e6e;
+    color: rgba(92, 87, 84, 0.8);
     line-height: 1.5;
     letter-spacing: 0.01em;
 }
@@ -137,7 +137,7 @@ p3 {
     font-size: 9pt;
     font-family: "Apple-System", system-ui, segoe ui, Arial, sans-serif;
     font-weight: 400;;
-    color: #6e6e6e;
+    color: rgba(92, 87, 84, 0.8);
     line-height: 1.5;
     letter-spacing: 0.01em;
 }
@@ -244,12 +244,12 @@ b1 {
 
 .card-content p2 {
     margin-bottom: 0px;
-    color: #666;
+    color: rgba(92, 87, 84, 0.8);
 }
 
 .card-content p3 {
     margin-bottom: 0px;
-    color: #c0c0c0;
+    color: rgba(92, 87, 84, 0.8);
 }
 
 
@@ -461,7 +461,7 @@ b1 {
     .detail-container {
         flex-direction: column;
         align-items: center;
-        padding: 48px;
+        padding: 60px;
         margin-bottom: 0;
     }
 
@@ -512,7 +512,7 @@ b1 {
     }
 
     p0 {
-        font-size: 12pt;
+        font-size: 13pt;
     }
 
     /* 图片容器 */
@@ -581,10 +581,6 @@ b1 {
     margin-bottom: 8px; /* 与 exhibit-item 对齐 */
 }
 
-.exhibits-header p0{
-    color:#202020;
-}
-
 .exhibits-list {
     display: flex;
     flex-direction: column;
@@ -631,13 +627,12 @@ b1 {
 }
 
 .detail-line p0 {
-    color: #202020;
     line-height: 2;
 }
 
 .enter-container {
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
+    background-color: rgba(110, 74, 24, 0.05);
+    border-radius: 8px;
     padding: 60px 36px;
     display: flex;
     width: 100%;
@@ -917,11 +912,11 @@ b1 {
 }
 
 .gallery-info p2 {
-    color: #666;
+    color: rgba(92, 87, 84, 0.8);
 }
 
 .gallery-info p3 {
-    color: #c0c0c0;
+    color: rgba(92, 87, 84, 0.8);
 }
 
 /* 移动端样式 */
@@ -982,10 +977,6 @@ b1 {
 
 .willing.show {
     display: flex;
-}
-
-.willing p0 {
-    color: #222;
 }
 
 .Willing-card {
@@ -1053,13 +1044,9 @@ b1 {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.05);
+    background-color: #000;
     transition: background 0.3s;
     z-index: 200;
-}
-
-.closebutton:hover {
-    background: rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 560px) {
@@ -1081,7 +1068,7 @@ b1 {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(110, 74, 24, 0.05);
     border-radius: 8px;
     padding: 8px;
     justify-content: center;

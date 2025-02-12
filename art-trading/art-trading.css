@@ -96,7 +96,7 @@ header {
 }
 
 .text-column p3 {
-    color: rgba(140, 140, 140, 0.8);
+    color: rgba(92, 87, 84, 0.8);
 }
 
 #priceChart {
@@ -137,7 +137,7 @@ header {
 }
 
 .artwork-label p3 {
-    color: rgba(140, 140, 140, 0.8);
+    color: rgba(92, 87, 84, 0.8);
 }
 
 .artwork-item {
@@ -168,7 +168,7 @@ header {
 
 .coefficient-title {
     font-size: 16px;
-    color: #666;
+    color: rgba(92, 87, 84, 0.8);
 }
 
 .tooltip-content {
