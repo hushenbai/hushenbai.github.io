@@ -205,22 +205,21 @@ document.addEventListener('DOMContentLoaded', function() {
         return ua.match(/MicroMessenger/i) == "micromessenger";
     }
 
-    // 检测是否在 aboutme 页面
-    function isAboutMePage() {
-        return window.location.pathname.endsWith('aboutme.html');
-    }
-
-    // 如果在微信浏览器中访问 aboutme 页面，显示提示
-    if (isWechat() && isAboutMePage()) {
-        const wechatTip = document.createElement('div');
-        wechatTip.className = 'wechat-tip';
-        wechatTip.innerHTML = `
-            <div class="wechat-tip-content">
-                <h3>请在系统自带浏览器中打开</h3>
-                <h3>Please open in system browser</h3>
-            </div>
-        `;
-        document.body.appendChild(wechatTip);
+    // 如果在微信浏览器中，替换视频为 GIF
+    if (isWechat()) {
+        const videoBackground = document.querySelector('.video-background');
+        if (videoBackground) {
+            videoBackground.innerHTML = `
+                <div class="gif-background" style="
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('assets/aboutmesmall.gif');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                "></div>
+            `;
+        }
     }
 });
 
