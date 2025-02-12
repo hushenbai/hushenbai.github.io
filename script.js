@@ -162,6 +162,44 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.querySelector('.logo');
+    
+    // 检查是否为移动端
+    function isMobile() {
+        return window.innerWidth <= 560;
+    }
+    
+    // 获取正确的路径
+    function getAboutMePath() {
+        // 获取当前页面的路径
+        const currentPath = window.location.pathname;
+        
+        // 检查是否在任何子目录中
+        if (currentPath.split('/').length > 2) {
+            // 如果在子目录中，返回上级目录的路径
+            return '../aboutme.html';
+        } else {
+            // 如果在根目录，直接返回
+            return 'aboutme.html';
+        }
+    }
+    
+    // 处理 logo 点击事件
+    logo.addEventListener('click', function(e) {
+        if (isMobile()) {
+            // 移动端：阻止默认点击行为和事件冒泡
+            e.preventDefault();
+            return;
+        }
+        // 桌面端：使用正确的路径跳转
+        window.location.href = getAboutMePath();
+    });
+    
+    // 移除内联的 onclick 属性
+    logo.removeAttribute('onclick');
+});
+
 
 
 

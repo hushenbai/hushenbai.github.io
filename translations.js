@@ -58,8 +58,7 @@ const translations = {
         'S&T-slogan': '遮天蔽日，明心见性',
         'tcm-words': '一条大河，十亿小碗',
         'rsm-words': '生活是最容易被打碎的成就',
-        'PBS-about-me': '胡申白，90后，来自四川，<br>关心传统文化与医疗卫生的问题。<br>hushenbai@163.com',
-        'RSM-about-me': '胡申白，90后，来自四川，<br>关心男性凝视与女性规训的问题。<br>hushenbai@163.com',
+        'about-me': '90后，来自四川，毕业于四川大学。<br>近视 400 度，没有拔智齿。i 人，不喝白酒。<br>关心传统文化与性别建构的问题，并创作艺术作品。<br>记忆力不好，不喝白酒。<br>之前从事互联网设计，太卷了，<br>不想和别人卷，能力和性格都不合适。<br>我要用艺术来感动你、爱你。因为真心。<br><br>hushenbai@163.com',
         'S&T-about-me': '胡申白，你的朋友<br>hushenbai@163.com',
         '木板油彩': '木板油彩',
         '帆布油彩': '帆布油彩',
@@ -142,8 +141,6 @@ const translations = {
         "width": "宽",
         "height": "高",
         "Buyway": "添加微信，或者向我发送邮件：",
-
-        "about-me": "六柱十二神格",
 
         "detail-TCMmain": "明珠薏苡项目指向华人的常见符号。<br>对中药的信仰比汉语的使用范围更广、也更虔诚。骄傲的华人追求一切，虚弱的华人祈求中药的疗效。<br>这些黑色的、苦涩的水，如同民族的长河，流淌在所有华人的生活中。<br>绘画是静态的，为了让尊严凝固其中，在姿态上抵御时间侵蚀。<br>生活中，药被急切地喝下。但在绘画中，药不会变质、不会蒸发、不会被倒掉，你有充分的时间来认识它、考虑是否需要它。",
         'detail-RSMmain': '重圆镜项目是大画，我希望主题足够宏大，最终认为值得用大幅面去赞扬的是生活本身。图像中只有女性，我还没有找到让其他性别进来，且镜子不会碎裂的方法。<br>绘画是静态的，为了让尊严凝固其中，在姿态上抵御时间侵蚀。<br>这些场景是弥合的镜子，映射大家的生活，如果它们被打碎，我觉得情况会不好。我画得简略，她们应当是常见的、你习惯到分不清的普通人。普通到有尊严的样子。',
@@ -298,9 +295,7 @@ const translations = {
         'tcm-slogan': 'How can Chinese people drink Chinese medicine more effectively?',
         'rsm-slogan': 'How can men look at women more politely?',
         'S&T-slogan': 'Cover the sky, reveal the heart.',
-        'PBS-about-me': 'Hu Shenbai, artist from China, <br>creates artworks about traditional culture and healthcare.<br>hushenbai@163.com',
-        'RSM-about-me': 'Hu Shenbai, artist from China, <br>creates artworks about male gaze and female discipline.<br>hushenbai@163.com',
-        'S&T-about-me': 'Hu Shenbai, your friend. <br>hushenbai@163.com',
+        'about-me': 'Artist from China, graduated from Sichuan University. <br>Creates artworks about traditional Chinese culture and gender gaze.<br>Want to have a cat but did not. <br>Used to work in UX design at tech companies. <br>Now want to use art to discuss our tomorrows.<br><br>hushenbai@163.com',
         'back': 'Back',
         'work': 'Work',
         'productstate-0': 'Buy this work',
@@ -382,8 +377,6 @@ const translations = {
         "height": "Height",
         "coefficient": "Coefficient",
         "Buyway": "Add my WeChat or send me an email:",
-
-        "about-me": "Chinese people drink Chinese medicine, men look at women. How can Chinese people drink Chinese medicine more effectively? How can men look at women more politely? I discuss these issues and create artworks. I create artworks and discuss other issues.",
 
         '木板油彩': 'Oil on wood',
         '帆布油彩': 'Oil on canvas',
