@@ -461,7 +461,7 @@ b1 {
     .detail-container {
         flex-direction: column;
         align-items: center;
-        padding: 60px;
+        padding: 48px;
         margin-bottom: 0;
     }
 
@@ -1068,7 +1068,7 @@ b1 {
         position: fixed;
         padding: 0 20px;
         border-radius: 0px;
-        max-height: 90vh;
+        max-height: 85vh;
     }
 
     .willing-content {
