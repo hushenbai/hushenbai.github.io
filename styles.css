@@ -997,7 +997,7 @@ b1 {
     max-width: 480px;
     width: 100%;
     max-height: 85vh;
-    background: rgba(255, 255, 255, 1);
+    background-color: rgba(252, 252, 250, 1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     /* 初始状态 */
     transform: translateY(700px);
