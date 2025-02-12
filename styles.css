@@ -22,6 +22,7 @@ body {
     padding: 0;
     overflow-x: hidden;    /* 防止页面横向滚动 */
     width: 100%;
+    background-color: rgba(252, 252, 250, 1);
 }
 
 #rotating-title {
@@ -72,6 +73,14 @@ footer {
     padding: 12px;
     bottom: 0;
     width: 100%;
+}
+
+h0 {
+    font-size: 16pt;
+    font-family: "Gowun Batang", "Noto Serif SC", "Noto Serif", serif;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #000;
 }
 
 h1 {
@@ -133,16 +142,12 @@ p3 {
     letter-spacing: 0.01em;
 }
 
-/* 基础样式重置 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
+b1 {
+    font-size: 13pt;
+    font-family: "Apple-System", system-ui, segoe ui, Arial, sans-serif;
+    font-weight: 400;;
+    line-height: 1.5;
+    color: #ffffff;
 }
 
 
@@ -178,7 +183,6 @@ body {
 /* 卡片样式 */
 .card {
     width: 100%;
-    background: white;
     opacity: 0;
     transition: all 0.8s ease;
     /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
@@ -194,7 +198,8 @@ body {
 /* 悬停效果 */
 .card:hover .card-image img {
     transition: 0.2s ease;
-    transform: translateY(-10px)
+    transform: translateY(-10px);
+    box-shadow: 0 10px 6px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* 图片容器 */
@@ -214,6 +219,7 @@ body {
     z-index: 10;
     transition: all 0.2s ease;
     transform: translateY(0px);
+    box-shadow: 0 8px 3px 0 rgba(0, 0, 0, 0);
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
@@ -705,24 +711,19 @@ body {
 
 .nav-left {
     position: fixed;
-    left: 24px;
-    cursor: pointer;
+    left: 32px;
     flex-direction: row;
     padding: 0px 0px;
     z-index: 100;
+    gap: 32px;
     display: flex;
     align-items: center;
-    gap: 2px;
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(6px);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     transition: all 0.2s ease-out;
 }
 
-.nav-left:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    transition: all 0.2s ease-out;
+.logo {
+    background-color: #000;
+    padding: 2px 8px;
 }
 
 .nav-button {
@@ -730,16 +731,16 @@ body {
     display: inline-flex;
     cursor: pointer;
     z-index: 100;
-    padding: 8px 20px;
 }
 
-
-b1 {
-    font-size: 13pt;
-    font-family: "Apple-System", system-ui, segoe ui, Arial, sans-serif;
-    font-weight: 400;;
-    line-height: 1.5;
-    color: #ffffff;
+.nav-right {
+    position: fixed;
+    right: 32px;
+    flex-direction: row;
+    padding: 0px 0px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
 }
 
 .language-switch {
@@ -747,51 +748,105 @@ b1 {
     display: inline-flex;
     cursor: pointer;
     z-index: 100;
-    padding: 8px 20px;
+    background-color: rgba(252, 252, 250, 1);
+    padding: 8px 12px;
 }
 
-.language-switch button {
-    background: none;
-    border: none;
+/* 修改菜单按钮样式 */
+.menu-toggle {
+    display: none;
     cursor: pointer;
+    padding: 8px;
 }
 
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #000000; /* 改为白色以匹配logo */
+    margin: 4px 0;
+}
 
+/* 移动端适配 */
 @media screen and (max-width: 560px) {
 
-    .nav-background {
-        height: 50px;
-    }
-
     .nav-container {
-        height: 50px;
+        height: 68px;
     }
 
     .nav-left {
-        top: 8px;
-        left: 8px;
-        gap: 0px;
-        background-color: rgba(255, 255, 255, 0.8);
-    }
-
-    .nav-left:hover {
-        background-color: rgba(255, 255, 255, 0.8);
-        transition: all 0.2s ease-out;
-    }
-
-    .nav-right {
-        right: 8px;
+        left: 16px;
+        gap: 4px; /* 减小间距 */
     }
     
-    .nav-button {
-        padding: 8px 12px;
+    .nav-right {
+        right: 16px;
+    }
+
+    .logo {
+        background-color: #000;
+        padding: 0px 6px;
     }
 
     .language-switch {
-        padding: 8px 12px;
+        padding: 6px 8px;
     }
 
+    .nav-button {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+
+    /* 移除汉堡菜单动画相关样式 */
+    .menu-toggle.active span:nth-child(1),
+    .menu-toggle.active span:nth-child(2),
+    .menu-toggle.active span:nth-child(3) {
+        transform: none;
+    }
+
+    /* 保持 language-switch 在导航栏 */
+    .language-switch {
+        display: inline-flex;
+    }
 }
+
+/* 修改移动端菜单样式 */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: rgba(252, 252, 250, 1);
+    padding: 8px 20px;
+    padding-top: 68px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transform: translateY(-150%); /* 初始位置在屏幕外 */
+    transition: transform 0.3s ease;
+    z-index: 98;
+}
+
+.mobile-menu.show {
+    transform: translateY(0); /* 显示时移动到正确位置 */
+}
+
+@media screen and (max-width: 560px) {
+    .mobile-menu {
+        display: block; /* 在移动端显示，但初始位置在屏幕外 */
+    }
+}
+
+.mobile-menu-item {
+    padding: 12px 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
 
 .rsm-gallery {
     width: 100%;
@@ -837,7 +892,8 @@ b1 {
     width: auto;
     object-fit: contain;
     transform: translateY(0);
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
+    box-shadow: 0 8px 2px 0 rgba(0, 0, 0, 0);
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
@@ -848,7 +904,8 @@ b1 {
 
 .gallery-image:hover {
     transform: translateY(-10px);
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
+    box-shadow: 0 10px 6px 0 rgba(0, 0, 0, 0.15);
 }
 
 .gallery-info {
@@ -1068,7 +1125,7 @@ b1 {
 
 .giant-text {
     color: rgb(255, 255, 255);
-    font-size: clamp(2rem, 25vw, 25rem); /* 响应式字号 */
+    font-size: clamp(2rem, 20vw, 25rem); /* 响应式字号 */
     font-family: "Gowun Batang", "Noto Serif SC", "Noto Serif", serif;
     font-weight: 400;
     text-align: center;
@@ -1088,7 +1145,7 @@ b1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #F0F0F0; /* 灰色背景 */
+    background-color: #efece5; /* 灰色背景 */
     overflow: hidden; /* 超出部分裁切 */
     display: flex;
     justify-content: center;
@@ -1202,3 +1259,4 @@ and (orientation: portrait) {
         }
     }
 }
+

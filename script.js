@@ -134,6 +134,34 @@ function generateCards(type) {
     });
 }
 
+// 添加菜单切换功能
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuTriggers = document.querySelectorAll('.mobile-menu-trigger');
+    
+    // 为所有触发器添加点击事件
+    menuTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('show');
+        });
+    });
+    
+    // 点击菜单项后关闭菜单
+    document.querySelectorAll('.mobile-menu-item').forEach(item => {
+        item.addEventListener('click', function() {
+            mobileMenu.classList.remove('show');
+        });
+    });
+    
+    // 点击页面其他区域关闭菜单
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.mobile-menu-trigger') && !mobileMenu.contains(e.target)) {
+            mobileMenu.classList.remove('show');
+        }
+    });
+});
+
 
 
 
