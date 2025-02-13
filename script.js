@@ -178,10 +178,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // 检查是否在任何子目录中
         if (currentPath.split('/').length > 2) {
             // 如果在子目录中，返回上级目录的路径
-            return '../aboutme.html';
+            return '../hsb/aboutme.html';
         } else {
             // 如果在根目录，直接返回
-            return 'aboutme.html';
+            return '/hsb/aboutme.html';
         }
     }
     

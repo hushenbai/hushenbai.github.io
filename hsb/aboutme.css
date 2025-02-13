@@ -41,7 +41,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 680px;
+    flex-direction: column;
+    max-width: 800px;
     padding: 80px 0px; /* 顶部留出导航栏空间 */
 }
 
@@ -70,3 +71,4 @@ p0 {
 .content-overlay {
     z-index: 1;
 }
+
