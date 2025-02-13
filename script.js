@@ -221,6 +221,28 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
         }
     }
+
+    // 处理视频自动播放
+    const video = document.querySelector('.video-background video');
+    if (video) {
+        // 设置视频属性
+        video.defaultMuted = true;
+        video.muted = true;
+        video.playsInline = true;
+        
+        // 尝试播放视频
+        const playVideo = function() {
+            video.play().catch(function(error) {
+                console.log("视频自动播放失败:", error);
+            });
+        };
+
+        // 在多个事件中尝试播放
+        playVideo();
+        video.addEventListener('loadedmetadata', playVideo);
+        window.addEventListener('load', playVideo);
+        document.addEventListener('click', playVideo, { once: true });
+    }
 });
 
 
