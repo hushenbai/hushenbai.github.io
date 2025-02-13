@@ -745,7 +745,7 @@ b1 {
     cursor: pointer;
     z-index: 100;
     background-color: rgba(252, 252, 250, 1);
-    padding: 8px 12px;
+    padding: 5px 10px;
 }
 
 .language-switch:hover {
