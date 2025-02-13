@@ -65,6 +65,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentArtwork.width && currentArtwork.height && currentArtwork.depth) {
             sizeElement.textContent = `${currentArtwork.width} × ${currentArtwork.height} × ${currentArtwork.depth} cm`;
         }
+
+        // 处理 intro 内容
+        const detailIntro = document.querySelector('.detail-intro');
+        const introText = detailIntro.querySelector('.intro-text');
+        
+        if (currentArtwork.intro) {
+            const language = getSystemLanguage();
+            introText.innerHTML = currentArtwork.intro[language];
+            detailIntro.style.display = 'block';
+        } else {
+            detailIntro.style.display = 'none';
+        }
         
         // 获取作品的展览历史
         function getArtworkExhibits(serialnumber) {
@@ -127,10 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
         // 使用全局语言设置更新内容
         updateLanguage();
-
     }
 });
-
 
 // 在需要使用的页面中
 document.addEventListener('DOMContentLoaded', () => {
@@ -142,3 +152,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const globalElement = document.querySelector('.global-animation');
     animation3D.initTypeB(globalElement);
 });
+
+// 获取系统语言
+function getSystemLanguage() {
+    return document.documentElement.lang || 'zh';
+}
+
+// 更新语言时同时更新 intro
+function updateLanguage() {
+    // 获取当前语言
+    const currentLang = getCurrentLanguage();
+    
+    // 更新所有带有 data-lang 属性的元素
+    document.querySelectorAll('[data-lang]').forEach(element => {
+        const key = element.getAttribute('data-lang');
+        if (translations[currentLang][key]) {
+            element.innerHTML = translations[currentLang][key];
+        }
+    });
+
+    // 更新 intro 内容（如果存在）
+    if (currentArtwork && currentArtwork.intro) {
+        const introText = document.querySelector('.detail-intro .intro-text');
+        if (introText) {
+            introText.innerHTML = currentArtwork.intro[currentLang];
+        }
+    }
+}

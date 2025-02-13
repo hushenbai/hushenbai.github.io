@@ -222,13 +222,14 @@ and (orientation: portrait) {
     }
     
     .detail-imagebox {
-        width: 62%;
+        width: 100%;
         margin-bottom: 0;
         object-fit: contain;
     }
 
     .detail-imagebox img {
         max-height: 600px;
+        max-width: 600px;
         width: auto;
         height: auto;
         object-fit: contain;
@@ -306,4 +307,8 @@ and (orientation: portrait) {
     align-items: center;
     width: 100%;
     height: 100%;
+}
+
+.detail-intro {
+    margin-bottom: 24px; /* 添加顶部间距 */
 }

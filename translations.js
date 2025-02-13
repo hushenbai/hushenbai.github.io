@@ -297,7 +297,7 @@ const translations = {
         'tcm-slogan': 'How can Chinese people drink Chinese medicine more effectively?',
         'rsm-slogan': 'How can men look at women more politely?',
         'S&T-slogan': 'Cover the sky, reveal the heart.',
-        'about-me': "Artist from China, graduated from Sichuan University. Used to work in UX design at tech companies. <br><br>Now want to use art to discuss our tomorrows. The contradictions about traditional culture, the contradictions about gender, are all my work targets.<br><br>In the past decades, it was the US that defined contemporary art, and it was also the US that started the Chinese contemporary art market. But now it's different. <br><br>I am starting my own art career in 2023, and we all know how uncertain the situation will be. I can only speak about Chinese life with sincerity and honesty. Which is probably an optimistic gamble.<br><br>hushenbai@163.com",
+        'about-me': "Artist from China, graduated from Sichuan University. Used to work in UX design at tech companies. <br><br>Now want to use art to discuss our tomorrows. The contradictions about traditional culture, the contradictions about gender, are both my work targets.<br><br>In the past years, it was the US that defined contemporary art, and it was also the US that started the China contemporary art market. But now things going different. <br><br>I am starting my art career in 2023, and we all know how uncertain the situation will be. I can only draw our life with sincerity and honesty. Which is probably an optimistic gamble.<br><br>hushenbai@163.com",
         'back': 'Back',
         'work': 'Work',
         'productstate-0': 'Buy this work',
