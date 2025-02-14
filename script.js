@@ -218,7 +218,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
-                "></div>
+                ">
+                <div class="video-overlay"></div>
+                </div>
             `;
         }
     } else {

@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
+    <!-- 网页元信息 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found</title>
-    <link rel="stylesheet" href="styles.css">
+    <title id="page-title">Shenbai</title>
+
+    <!-- 网页图标 -->
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-    <!-- 为 iOS 设备添加图标 -->
     <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+
+    <!-- 网页样式 -->
+    <link rel="stylesheet" href="styles.css">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Krub:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+Tibetan:wght@300&family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+
 </head>
 <body>
 
     <header class="header" style="margin: 0px; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;" >
         <div style="display: flex; flex-direction: row;">
-        <img src="assets/TCMbowl.png" 
+        <img src="./assets/TCMbowl.png" 
              style="width: 120px; height: 120px;" 
              alt="404" 
              class="error-image" 
@@ -33,11 +43,9 @@
         <b1 class="styled-button" onclick="window.location.href='index.html'">Back Home</b1>
     </header>
 
-     <!-- 添加必要的脚本 -->
-<script src="translations.js"></script>
 <script>
      // 直接在页面中添加轮替逻辑
-     const titles = [
+    const titles = [
     "抱歉，你访问的页面不存在。但我可以请你喝药。",
     "唔好意思，你訪問嘅頁面唔存在。但我可以請你飲藥。",
     "抱歉，你造訪的頁面不存在。但我可以請你喝藥。",
@@ -49,7 +57,7 @@
     "དགོངས་དག ཁྱེད་ཀྱིས་གཟིགས་བཞིན་པའི་ཤོག་ངོས་དེ་མེད། འོན་ཀྱང་ངས་ཁྱེད་ལ་སྨན་ཁ་ཤས་བསྟེན་པར་གདན་འདྲེན་ཞུ་གི་ཡོད།",
      ];
  
-     function rotateTitle() {
+    function rotateTitle() {
     const titleElement = document.getElementById('rotating-title');
     let lastIndex = -1;
 
@@ -102,7 +110,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </script>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
