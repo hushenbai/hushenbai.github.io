@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return ua.match(/MicroMessenger/i) == "micromessenger";
     }
 
-    // 如果在微信浏览器中，替换视频为 GIF
+    // 如果在微信浏览器中，替换视频为静态图片
     if (isWechat()) {
         const videoBackground = document.querySelector('.video-background');
         if (videoBackground) {
@@ -213,35 +213,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="gif-background" style="
                     width: 100%;
                     height: 100%;
-                    background-image: url('assets/aboutmesmall.gif');
+                    background-color: #323232;
+                    background-image: url('../assets/aboutme.gif');
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
                 "></div>
             `;
         }
-    }
+    } else {
+        // 非微信浏览器处理视频自动播放
+        const video = document.querySelector('.video-background video');
+        if (video) {
+            // 设置视频属性
+            video.defaultMuted = true;
+            video.muted = true;
+            video.playsInline = true;
+            
+            // 尝试播放视频
+            const playVideo = function() {
+                video.play().catch(function(error) {
+                    console.log("视频自动播放失败:", error);
+                });
+            };
 
-    // 处理视频自动播放
-    const video = document.querySelector('.video-background video');
-    if (video) {
-        // 设置视频属性
-        video.defaultMuted = true;
-        video.muted = true;
-        video.playsInline = true;
-        
-        // 尝试播放视频
-        const playVideo = function() {
-            video.play().catch(function(error) {
-                console.log("视频自动播放失败:", error);
-            });
-        };
-
-        // 在多个事件中尝试播放
-        playVideo();
-        video.addEventListener('loadedmetadata', playVideo);
-        window.addEventListener('load', playVideo);
-        document.addEventListener('click', playVideo, { once: true });
+            // 在多个事件中尝试播放
+            playVideo();
+            video.addEventListener('loadedmetadata', playVideo);
+            window.addEventListener('load', playVideo);
+            document.addEventListener('click', playVideo, { once: true });
+        }
     }
 });
 
