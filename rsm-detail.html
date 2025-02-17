@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- 网页元信息 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Shenbai</title>
+
+    <!-- 网页图标 -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+    <!-- 网页样式 -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/rsm.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/exhibits-events.js"></script>
+
+</head>
+<body>
+    <div class="nav-background">
+        <nav class="nav-container">
+            <div class="nav-left">
+                <div class="logo mobile-menu-trigger">
+                    <h0 style="color: #fff;" data-lang="shenbai">Shenbai</h0>
+                </div>
+                <div class="menu-toggle mobile-menu-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <h0 class="nav-button" onclick="window.location.href='index.html'">
+                    <span class="desktop-title" data-lang="tcm-title">明珠薏苡</span>
+                </h0>
+                <h0 class="nav-button" onclick="window.location.href='rsm.html'">
+                    <span class="desktop-title" data-lang="rsm-title">重圆镜</span>
+                </h0>
+            </div>
+            <div class="nav-right">
+                <div class="language-switch">
+                    <p1><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer;">English</button></p1>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu-item" onclick="window.location.href='aboutme.html'" style="width: 100%;">
+            <h0>
+                <span data-lang="abm-title">关于我</span>
+            </h0>
+        </div>
+        <div class="mobile-menu-item">
+            <h0 onclick="window.location.href='index.html'" style="width: 100%;">
+                <span data-lang="tcm-title">明珠薏苡</span>
+            </h0>
+        </div>
+        <div class="mobile-menu-item">
+            <h0 onclick="window.location.href='rsm.html'" style="width: 100%;">
+                <span data-lang="rsm-title">重圆镜</span>
+            </h0>
+        </div>
+    </div>
+
+    <!-- 主要内容容器 -->
+    <div class="detail-wrapper">
+        <!-- 慢速滚动的容器 -->
+        <div class="detail-container">
+            <div class="depthing-container">
+            <div class="detail-imagebox">
+                 <div class="image-wrapper">               
+                    <div class="depthimg-container global-animation">
+                        <img id="artwork-image" src="" alt="">
+                        <span class="depth-layer"></span>
+                        <span class="depth-layer"></span>
+                        <span class="depth-layer"></span>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="detail-info">
+                <h1 id="detail-title" data-lang=""></h1>
+                <p0 id="detail-serialnumber"></p0>
+                <p0 id="detail-series" data-lang=""></p0>
+                <p0 id="detail-media" data-lang=""></p0>
+                <p0 id="detail-size"></p0>
+                <p0 id="detail-weight"></p0>
+                <p0 id="detail-year"></p0>
+                
+            </div>
+        </div>
+
+    <!-- 正常滚动的浮动信息 -->
+    <div>
+        <div class="floating-content">
+            <!-- 展览列表模块 -->
+            <div class="exhibits-list-container">
+                <div id="exhibits-list" class="exhibits-list">
+                    <!-- 展览信息由 JavaScript 动态插入 -->
+                </div>
+            </div>
+        
+            <!-- 现有的文章部分 -->
+            <article class="detail-article">
+                <div class="detail-intro" style="display: none;">
+                    <p0 class="intro-text"></p0>
+                </div>
+                <div class="detail-line">
+                    <p0 id="detail-RSMmain" data-lang="detail-RSMmain"></p0>
+                </div>
+                
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        <p3>&copy; 2024 HU SHENBAI</p3>
+    </footer>  
+
+    <script src="js/script.js"></script>
+    <script src="js/price-events.js"></script>
+    <script src="js/rsm-detail.js"></script>
+    <script src="js/rsm-data.js"></script>
+    <script src="js/animation3d.js"></script>
+</body>
+</html> 

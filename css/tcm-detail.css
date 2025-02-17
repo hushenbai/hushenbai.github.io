@@ -1,0 +1,52 @@
+/* ------------------------------------------------------ */
+/* 深度层 */
+/* ------------------------------------------------------ */
+
+/* 深度层基础样式 */
+.depth-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #e9ddc4, #c8bea9); /* 从上到下渐变 */
+    pointer-events: none; /* 确保不会干扰鼠标事件 */
+    z-index: 1;
+    transform: translateZ(-1px);
+}
+
+/* 前两层使用白色 */
+.depth-layer:nth-child(1)  { transform: translateZ(-8px);background: #dadad6;}
+.depth-layer:nth-child(2)  { transform: translateZ(-16px);background: #dadad6;}
+.depth-layer:nth-child(3)  { transform: translateZ(-24px);background: #a49581;}
+.depth-layer:nth-child(4)  { transform: translateZ(-32px);background: #a49581;}
+
+/* 默认状态：56px 范围 */
+.depth-layer:nth-child(5)  { transform: translateZ(-40px); }
+.depth-layer:nth-child(6)  { transform: translateZ(-48px); }
+.depth-layer:nth-child(7)  { transform: translateZ(-56px); }
+.depth-layer:nth-child(8)  { transform: translateZ(-64px); }
+.depth-layer:nth-child(9)  { transform: translateZ(-72px); }
+.depth-layer:nth-child(10) { transform: translateZ(-80px); }
+.depth-layer:nth-child(11) { transform: translateZ(-88px); }
+.depth-layer:nth-child(12) { transform: translateZ(-96px); }
+.depth-layer:nth-child(13) { transform: translateZ(-104px); }
+.depth-layer:nth-child(14) { transform: translateZ(-112px); }
+
+/* 1080px 及以下：40px 范围 */
+@media screen and (max-width: 1080px) {
+    .depth-layer:nth-child(1)  { transform: translateZ(-4px); }
+    .depth-layer:nth-child(2)  { transform: translateZ(-8px); }
+    .depth-layer:nth-child(3)  { transform: translateZ(-12px); }
+    .depth-layer:nth-child(4)  { transform: translateZ(-16px); }
+    .depth-layer:nth-child(5)  { transform: translateZ(-20px); }
+    .depth-layer:nth-child(6)  { transform: translateZ(-24px); }
+    .depth-layer:nth-child(7)  { transform: translateZ(-28px); }
+    .depth-layer:nth-child(8)  { transform: translateZ(-32px); }
+    .depth-layer:nth-child(9)  { transform: translateZ(-36px); }
+    .depth-layer:nth-child(10) { transform: translateZ(-40px); }
+    .depth-layer:nth-child(11) { transform: translateZ(-44px); }
+    .depth-layer:nth-child(12) { transform: translateZ(-48px); }
+    .depth-layer:nth-child(13) { transform: translateZ(-52px); }
+    .depth-layer:nth-child(14) { transform: translateZ(-56px); }
+}
