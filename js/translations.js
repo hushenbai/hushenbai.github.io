@@ -1,5 +1,27 @@
-// 全局语言管理
-let currentLang = localStorage.getItem('language') || 'en';  // 从 localStorage 读取或默认为中文
+// 获取用户的首选语言
+function getPreferredLanguage() {
+    // 1. 首先检查localStorage是否已有语言设置
+    const savedLang = localStorage.getItem('language');
+    if (savedLang) {
+        return savedLang;
+    }
+
+    // 2. 检查浏览器语言设置
+    const browserLang = navigator.language || navigator.userLanguage;
+    
+    // 3. 检查系统语言
+    const systemLang = navigator.languages ? navigator.languages[0] : browserLang;
+    
+    // 4. 将获取到的语言代码转换为我们支持的格式（zh 或 en）
+    const lang = (systemLang || 'en').toLowerCase();
+    
+    // 5. 如果是中文（包括简体和繁体），返回 'zh'，否则返回 'en'
+    return lang.startsWith('zh') ? 'zh' : 'en';
+}
+
+// 初始化语言设置
+let currentLang = getPreferredLanguage();
+localStorage.setItem('language', currentLang);
 
 // 获取当前语言
 function getCurrentLanguage() {
@@ -22,8 +44,8 @@ function toggleLanguage() {
 
 // 更新页面语言
 function updateLanguage() {
-    // 确保使用最新的语言设置
     const lang = getCurrentLanguage();
+    document.documentElement.lang = lang; // 更新 HTML lang 属性
     
     document.querySelectorAll('[data-lang]').forEach(element => {
         const key = element.getAttribute('data-lang');
@@ -59,11 +81,12 @@ const translations = {
         'tcm-words': '一条大河，十亿小碗',
         'rsm-words': '生活是最容易被打碎的成就',
         'abm-title': '关于我',
-        'about-me': 'i 人，不喝白酒。<br><br>90后，四川人，毕业于 四川大学 视觉传达专业。<br>前腾讯（深圳）视觉设计师。<br>前虾皮（新加坡）用户体验设计师、品牌设计师。<br>前某区块链技术企业（新加坡）用户体验设计师。<br><br>明珠薏苡 是和传统文化相关的艺术项目。我在四川、广东、东南亚待过，虽然都是华人区，但观念也有差异，所以做这个项目来讨论集体与个体的关系。另外也在关注社会医疗卫生方面的情况。传统与医疗的联系，我藏在作品里了。<br><br>重圆镜 是和性别相关的艺术项目。性别问题比预想的要大，可以说是社会建构的基础。我是 INFP 调停者，目的是找到性别和平相处的方案。要把这个事业玩的够大，且不浮于口舌之快，得用艺术实物的方式开局。<br><br>最近在学拉康-精神分析的知识，看波伏娃的书。<br><br>开发了一款应用程序 「月亮山」，按十二种人格记日记。可以在苹果的 AppStore 里下载。<br><br>hushenbai@163.com',
+        'about-me': 'i 人，不喝白酒。<br><br>90后，四川人，毕业于 四川大学 视觉传达专业。<br>前腾讯（深圳）视觉设计师。<br>前虾皮（新加坡）用户体验设计师、品牌设计师。<br>前某区块链技术企业（新加坡）用户体验设计师。<br><br>明珠薏苡 是和传统文化相关的艺术项目。我在四川、广东、东南亚待过，虽然都是华人区，但观念也有差异，所以做这个项目来讨论集体与个体的关系。另外也在关注社会医疗卫生方面的情况。传统与医疗的联系，我藏在作品里了。<br><br>重圆镜 是和性别相关的艺术项目。性别问题比预想的要大，可以说是社会建构的基础。我是 INFP 调停者，目的是找到性别和平相处的方案。要把这个事业做的够大，且不浮于语言把戏，得用艺术实物的方式开局。<br><br>最近在学拉康-精神分析的知识，看波伏娃的书。<br><br>开发了一款应用程序 「月亮山」，按十二种人格记日记。可以在苹果的 AppStore 里下载。<br><br>hushenbai@163.com',
         'S&T-about-me': '胡申白，你的朋友<br>hushenbai@163.com',
         '木板油彩': '木板油彩',
         '帆布油彩': '帆布油彩',
         'work': '作品',
+        'work-criticism': '作品批评',
         'productstate-0': '认购作品',
         'productstate-button-0': '获得艺术作品的所有权。<br>可以留存给申白继续出售，或申请邮寄实物。',
         "productstate-1": "认购作品",
@@ -298,9 +321,10 @@ const translations = {
         'tcm-slogan': 'How can Chinese people drink Chinese medicine more effectively?',
         'rsm-slogan': 'How can men look at women more politely?',
         'S&T-slogan': 'Cover the sky, reveal the heart.',
-        'about-me': "Artist from China, graduated from Sichuan University. Used to work in UX design at tech companies. <br><br>Now want to use art to discuss our tomorrows. The contradictions about traditional culture, the contradictions about gender, are both my work targets.<br><br>In the past years, it was the US that defined contemporary art, and it was also the US that started the China contemporary art market. But now things going different. When the art industry embraced multiculturalism, it is not just about showing minorities and queer people as puppet symbols, it also meant the start of the decentralization process. But in the 2010s, the Chinese art industry began to diverge from US perspective, with a more negative view on multicultural issues. It was thought a flash in the pan and it will pass so that it not require the energy to study and participate.<br><br>I am starting my art career in 2023, face to the uncertain tomorrows. I can only draw our life with sincerity and honesty.<br><br>hushenbai@163.com",
+        'about-me': "Artist from China, graduated from Sichuan University. Used to work in UX design at tech companies. <br><br>Now want to use art to discuss our tomorrows. The contradictions about traditional culture, the contradictions about gender, are both my work targets.<br><br>In the past, it was the US that defined contemporary art and opened up the Chinese contemporary art market. But things are different now. In the 2010s, when the US art industry embraced multiculturalism, it meant the end of neutral, pure modernity. Foreign cultures that cooperate with US culture must seriously face the social conditions of their own countries. Art is no longer a dream to escape from reality. The Chinese social is more indifferent to the issue of multiculturalism. People think it is just a flash in the pan and it will pass, so there is no need to invest energy in studying and participating.<br><br>I started my art career in 2023, face to the uncertain tomorrows. I can only draw our life with sincerity and honesty.<br><br>hushenbai@163.com",
         'back': 'Back',
         'work': 'Work',
+        'work-criticism': 'Work criticism (Speak Chinese)',
         'productstate-0': 'Buy this work',
         'productstate-button-0': 'Obtain ownership of the artwork.<br>You can keep it for Shenbai and continue to sell it, or further apply to delivery.',
         "productstate-1": "Buy this work",

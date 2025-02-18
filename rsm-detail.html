@@ -101,11 +101,36 @@
     <!-- 正常滚动的浮动信息 -->
     <div>
         <div class="floating-content">
+            
             <!-- 展览列表模块 -->
             <div class="exhibits-list-container">
                 <div id="exhibits-list" class="exhibits-list">
                     <!-- 展览信息由 JavaScript 动态插入 -->
                 </div>
+            </div>
+
+            <div>
+                <p0 data-lang="work-criticism">Work criticism</p0>
+            </div>
+            <div style="height: 16px;"></div>
+            <!-- 添加音频播放器 -->
+            <div class="audio-player">
+                <div class="audio-controls">
+                    <button class="play-btn">
+                        <span class="play-icon">▶</span>
+                        <span class="pause-icon" style="display: none;">⏸</span>
+                    </button>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-current"></div>
+                        </div>
+                        <div class="time-display">
+                            <span class="current-time">0:00</span>
+                            <span class="duration">0:00</span>
+                        </div>
+                    </div>
+                </div>
+                <audio id="audio-element" src="assets/audio/dodo.mp3"></audio>
             </div>
         
             <!-- 现有的文章部分 -->

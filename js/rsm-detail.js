@@ -140,6 +140,62 @@ document.addEventListener('DOMContentLoaded', () => {
         // 使用全局语言设置更新内容
         updateLanguage();
     }
+
+    // 音频播放器控制
+    const audio = document.getElementById('audio-element');
+    const playBtn = document.querySelector('.play-btn');
+    const playIcon = document.querySelector('.play-icon');
+    const pauseIcon = document.querySelector('.pause-icon');
+    const progressBar = document.querySelector('.progress-bar');
+    const progressCurrent = document.querySelector('.progress-current');
+    const currentTimeDisplay = document.querySelector('.current-time');
+    const durationDisplay = document.querySelector('.duration');
+
+    // 播放/暂停切换
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'block';
+        } else {
+            audio.pause();
+            playIcon.style.display = 'block';
+            pauseIcon.style.display = 'none';
+        }
+    });
+
+    // 格式化时间
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        seconds = Math.floor(seconds % 60);
+        return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    // 更新进度条
+    audio.addEventListener('timeupdate', () => {
+        const progress = (audio.currentTime / audio.duration) * 100;
+        progressCurrent.style.width = `${progress}%`;
+        currentTimeDisplay.textContent = formatTime(audio.currentTime);
+    });
+
+    // 音频加载完成后显示总时长
+    audio.addEventListener('loadedmetadata', () => {
+        durationDisplay.textContent = formatTime(audio.duration);
+    });
+
+    // 点击进度条跳转
+    progressBar.addEventListener('click', (e) => {
+        const rect = progressBar.getBoundingClientRect();
+        const pos = (e.clientX - rect.left) / rect.width;
+        audio.currentTime = pos * audio.duration;
+    });
+
+    // 音频结束时重置播放按钮
+    audio.addEventListener('ended', () => {
+        playIcon.style.display = 'block';
+        pauseIcon.style.display = 'none';
+        progressCurrent.style.width = '0%';
+    });
 });
 
 // 在需要使用的页面中
