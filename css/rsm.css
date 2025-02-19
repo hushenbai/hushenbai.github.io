@@ -370,3 +370,8 @@ and (orientation: portrait) {
     font-size: 12px;
     color: rgba(0, 0, 0, 0.6);
 }
+
+.criticism {
+    padding: 32px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}

@@ -180,10 +180,6 @@ const groupedArtworks = {
             year: 2024,
             date: '2024-11-20',
             state: 0,
-            intro: {
-                "en": "The violence is a public matter, not private. It's best to have companions by your side when you hold a weapon. Whether it's encouragement or intercept, at least you're not facing it alone.",
-                "zh": "武力是公共事件而非个人隐私。最好的情况是，拿起武器的时候，都有同伴在侧。无论是鼓励还是阻拦，至少不是独自面对。"
-            },
             exhibits: [
                 {
                     "name": {
@@ -252,10 +248,6 @@ const groupedArtworks = {
             year: 2025,
             date: '2025-02-11',
             state: 0,
-            intro: {
-                "en": "In the past, due to patriarchal non-listening and the boundaries of her life scope, women could only talk to women of the same community. The stereotype is formed that women are keen on community gossip.<br>The Podcast has technically enabled <b>Chat</b> to be listened to by the public. Women's topics are put into a free and open social competition. The right and value of opinions are judged by the audience.<br>The problem of someone within the life scope is listening or not, is not important as it used to be.",
-                "zh": "过去，由于父权的不聆听和生活范围的束缚，女性只能与同社区女性对话。形成了女性热衷琐碎熟人话题的刻板印象。<br>播客的普及，在技术上实现「聊天」被公共社会聆听。女性话题投入到更自由公开的社会竞赛中。发言资格与观点价值，由广大听众判断。生活范围内谁谁不聆听、不让上桌的问题，没过去重要了。"
-            },
             exhibits: [
                 {
                     "name": {

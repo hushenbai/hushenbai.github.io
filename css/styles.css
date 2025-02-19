@@ -568,7 +568,7 @@ b1 {
 .exhibits-list-container {
     width: 100%;
     max-width: 1080px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 }
 
 .exhibits-header {
@@ -578,7 +578,6 @@ b1 {
 .exhibits-list {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .exhibit-item {
@@ -587,6 +586,7 @@ b1 {
     align-items: center;
     gap: 8px;
     padding: 12px 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -612,7 +612,9 @@ b1 {
 .article {
     width: 100%;
     align-items: center;
-    margin-bottom: 40px;
+    padding-top: 32px;
+    padding-bottom: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .detail-line {
@@ -765,6 +767,71 @@ b1 {
     background-color: #000000; /* 改为白色以匹配logo */
     margin: 4px 0;
 }
+
+.nav-pages {
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    z-index: 1000;
+    pointer-events: none; /* 防止按钮阻挡中间内容的交互 */
+}
+
+/* 在移动端隐藏导航按钮 */
+@media screen and (max-width: 560px) {
+    .nav-pages {
+        display: none;
+    }
+}
+
+.nav-pg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    width: 32px;
+    height: 64px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    padding: 0;
+}
+
+.nav-arrow {
+    width: 16px;
+    height: 48px;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+}
+
+.nav-pg:hover .nav-arrow {
+    width: 24px;
+    height: 72px;
+    opacity: 1;
+}
+
+.prev-btn {
+    left: 18px;
+}
+
+.next-btn {
+    right: 18px;
+}
+
+@media (max-width: 1024px) {
+    
+    .prev-btn {
+        left: 12px;
+    }
+    
+    .next-btn {
+        right: 12px;
+    }
+}
+
 
 /* 移动端适配 */
 @media screen and (max-width: 560px) {

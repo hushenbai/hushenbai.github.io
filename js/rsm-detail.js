@@ -196,6 +196,58 @@ document.addEventListener('DOMContentLoaded', () => {
         pauseIcon.style.display = 'none';
         progressCurrent.style.width = '0%';
     });
+
+    // 获取当前作品在数组中的位置
+    function getCurrentArtworkIndex() {
+        const params = new URLSearchParams(window.location.search);
+        const groupId = params.get('group');
+        const serialnumber = params.get('id');
+        
+        const artworks = groupedArtworks[groupId];
+        return artworks.findIndex(artwork => artwork.serialnumber === serialnumber);
+    }
+
+    // 获取上一个或下一个作品的URL
+    function getNavigationURL(direction) {
+        const params = new URLSearchParams(window.location.search);
+        const groupId = params.get('group');
+        const artworks = groupedArtworks[groupId];
+        const currentIndex = getCurrentArtworkIndex();
+        
+        let newIndex;
+        if (direction === 'prev') {
+            newIndex = currentIndex <= 0 ? artworks.length - 1 : currentIndex - 1;
+        } else {
+            newIndex = currentIndex >= artworks.length - 1 ? 0 : currentIndex + 1;
+        }
+        
+        return `rsm-detail.html?group=${groupId}&id=${artworks[newIndex].serialnumber}`;
+    }
+
+    // 添加导航按钮事件监听
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            window.location.href = getNavigationURL('prev');
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            window.location.href = getNavigationURL('next');
+        });
+    }
+
+    // 添加键盘导航支持
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            window.location.href = getNavigationURL('prev');
+        } else if (e.key === 'ArrowRight') {
+            window.location.href = getNavigationURL('next');
+        }
+    });
 });
 
 // 在需要使用的页面中

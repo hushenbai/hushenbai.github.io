@@ -112,32 +112,29 @@
         </div>
         
         <!-- 2.2 正常滚动区域 -->
-        <div>
-            <div class="floating-content">
-                <!-- 展览列表 -->
-                <div class="exhibits-list-container">
-                    <div id="exhibits-list" class="exhibits-list">
-                        <!-- 展览信息由 JavaScript 动态插入 -->
-                    </div>
+        <div class="floating-content">
+
+            <!-- 文章部分 -->
+            <article class="article">
+                <div class="detail-line">
+                    <p0 id="detail-TCMmain" data-lang="detail-TCMmain"></p0>
                 </div>
+            </article>
 
-                <!-- 订阅按钮 -->
-                <div class="enter-container">
-                    <b1 class="styled-button" data-lang="productstate-0" onclick="showWilling()"></b1>
-                    <p2 class="productstate-desc" style="max-width: 600px;" data-lang="productstate-button-0"></p2>
+            <!-- 展览列表 -->
+            <div class="exhibits-list-container">
+                <div id="exhibits-list" class="exhibits-list">
+                    <!-- 展览信息由 JavaScript 动态插入 -->
                 </div>
-
-                <div style="height: 24px;"></div>
-
-                <!-- 文章部分 -->
-                <article class="article">
-                    <div class="detail-line">
-                        <p0 id="detail-TCMmain" data-lang="detail-TCMmain"></p0>
-                    </div>
-                </article>
-            
             </div>
-        </div>    
+
+            <!-- 订阅按钮 -->
+            <div class="enter-container">
+                <b1 class="styled-button" data-lang="productstate-0" onclick="showWilling()"></b1>
+                <p2 class="productstate-desc" style="max-width: 600px;" data-lang="productstate-button-0"></p2>
+            </div>
+            
+        </div> 
     </div>
 
     <!-- 添加悬浮卡片 -->
@@ -214,6 +211,16 @@
 
             </div>
         </div>
+    </div>
+
+    <!-- 在 body 中添加 -->
+    <div class="nav-pages">
+        <button class="nav-pg prev-btn" aria-label="Previous artwork">
+            <img src="assets/leftar.svg" alt="Previous" class="nav-arrow">
+        </button>
+        <button class="nav-pg next-btn" aria-label="Next artwork">
+            <img src="assets/rightar.svg" alt="Next" class="nav-arrow">
+        </button>
     </div>
 
     <footer>
