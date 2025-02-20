@@ -1,4 +1,3 @@
-// 示例JavaScript代码
 document.addEventListener('DOMContentLoaded', function() {
     console.log('网页加载完成！');
 });
@@ -134,34 +133,6 @@ function generateCards(type) {
     });
 }
 
-// 添加菜单切换功能
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const menuTriggers = document.querySelectorAll('.mobile-menu-trigger');
-    
-    // 为所有触发器添加点击事件
-    menuTriggers.forEach(trigger => {
-        trigger.addEventListener('click', function(e) {
-            e.stopPropagation();
-            mobileMenu.classList.toggle('show');
-        });
-    });
-    
-    // 点击菜单项后关闭菜单
-    document.querySelectorAll('.mobile-menu-item').forEach(item => {
-        item.addEventListener('click', function() {
-            mobileMenu.classList.remove('show');
-        });
-    });
-    
-    // 点击页面其他区域关闭菜单
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.mobile-menu-trigger') && !mobileMenu.contains(e.target)) {
-            mobileMenu.classList.remove('show');
-        }
-    });
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     const logo = document.querySelector('.logo');
     
@@ -174,20 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function getAboutMePath() {
         return 'aboutme.html';
     }
-    
-    // 处理 logo 点击事件
-    logo.addEventListener('click', function(e) {
-        if (isMobile()) {
-            // 移动端：阻止默认点击行为和事件冒泡
-            e.preventDefault();
-            return;
-        }
-        // 桌面端：使用正确的路径跳转
-        window.location.href = getAboutMePath();
-    });
-    
-    // 移除内联的 onclick 属性
-    logo.removeAttribute('onclick');
 
     // 检测是否是微信浏览器
     function isWechat() {
@@ -236,6 +193,77 @@ document.addEventListener('DOMContentLoaded', function() {
             document.addEventListener('click', playVideo, { once: true });
         }
     }
+
+    // 如果是微信浏览器，给 body 添加 wechat 类
+    if (isWechat()) {
+        document.body.classList.add('wechat');
+    }
+});
+
+// 控制底部导航栏的显示和隐藏
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    // 检查是否接近页面底部
+    function isNearBottom() {
+        const scrollHeight = document.documentElement.scrollHeight;
+        const scrollTop = window.scrollY;
+        const clientHeight = document.documentElement.clientHeight;
+        const distanceToBottom = scrollHeight - scrollTop - clientHeight;
+        
+        return distanceToBottom <= 100; // 距离底部100px以内
+    }
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                // 如果接近底部，保持隐藏状态
+                if (isNearBottom()) {
+                    mobileMenu.classList.remove('hidden');
+                } else {
+                    // 正常的滚动逻辑
+                    if (window.scrollY < lastScrollY) {
+                        mobileMenu.classList.remove('hidden');
+                    } else {
+                        const scrollDifference = Math.abs(window.scrollY - lastScrollY);
+                        if (scrollDifference >= 800) {
+                            mobileMenu.classList.add('hidden');
+                            lastScrollY = window.scrollY;
+                        }
+                    }
+                }
+                
+                // 向上滚动时更新 lastScrollY
+                if (window.scrollY < lastScrollY) {
+                    lastScrollY = window.scrollY;
+                }
+                
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+});
+
+// 设置当前页面的导航按钮标识
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    const navButtons = document.querySelectorAll('.nav-button');
+    
+    navButtons.forEach(button => {
+        // 移除所有 current-page 类
+        button.classList.remove('current-page');
+        
+        // 获取按钮的链接地址
+        const href = button.getAttribute('onclick').match(/'([^']+)'/)[1];
+        
+        // 如果当前路径包含按钮的链接地址，添加 current-page 类
+        if (currentPath.includes(href)) {
+            button.classList.add('current-page');
+        }
+    });
 });
 
 

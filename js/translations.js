@@ -31,12 +31,24 @@ function getCurrentLanguage() {
 
 // 切换语言
 function toggleLanguage() {
-    // 更新 localStorage
-    currentLang = currentLang === 'en' ? 'zh' : 'en';
+    // 切换语言
+    currentLang = currentLang === 'zh' ? 'en' : 'zh';
     localStorage.setItem('language', currentLang);
     
-    // 更新页面
+    // 更新页面文本
     updateLanguage();
+    
+    // 更新语言切换图标
+    const langIcon = document.querySelector('.mobile-menu-item[onclick="toggleLanguage()"] img');
+    if (langIcon) {
+        if (currentLang === 'zh') {
+            langIcon.src = 'assets/enicon.svg';
+            langIcon.alt = 'English';
+        } else {
+            langIcon.src = 'assets/zhicon.svg';
+            langIcon.alt = '中文';
+        }
+    }
     
     // 触发语言改变事件
     document.dispatchEvent(new Event('languageChanged'));
@@ -60,6 +72,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // 确保使用 localStorage 中的语言设置
     currentLang = getCurrentLanguage();
     updateLanguage();
+    
+    // 设置初始图标
+    const langIcon = document.querySelector('.mobile-menu-item[onclick="toggleLanguage()"] img');
+    if (langIcon) {
+        if (currentLang === 'zh') {
+            langIcon.src = 'assets/enicon.svg';
+            langIcon.alt = 'English';
+        } else {
+            langIcon.src = 'assets/zhicon.svg';
+            langIcon.alt = '中文';
+        }
+    }
 });
 
 // 翻译内容
@@ -70,6 +94,7 @@ const translations = {
         'name': '名称',
         'back': '返回',
         'switch-lang': 'English',
+        'switch-lang2': 'Language',
         'shenbai': '申白',
         'tcm-title': '明珠薏苡',
         'rsm-title': '重圆镜',
@@ -80,13 +105,13 @@ const translations = {
         'S&T-slogan': '遮天蔽日，明心见性',
         'tcm-words': '一条大河，十亿小碗',
         'rsm-words': '生活是最容易被打碎的成就',
-        'abm-title': '关于我',
+        'abm-title': '申白',
         'about-me': 'i 人，不喝白酒。<br><br>90后，四川人，毕业于 四川大学 视觉传达专业。<br>前腾讯（深圳）视觉设计师。<br>前虾皮（新加坡）用户体验设计师、品牌设计师。<br>前某区块链技术企业（新加坡）用户体验设计师。<br><br>明珠薏苡 是和传统文化相关的艺术项目。我在四川、广东、东南亚待过，虽然都是华人区，但观念也有差异，所以做这个项目来讨论集体与个体的关系。另外也在关注社会医疗卫生方面的情况。传统与医疗的联系，我藏在作品里了。<br><br>重圆镜 是和性别相关的艺术项目。性别问题比预想的要大，可以说是社会建构的基础。我是 INFP 调停者，目的是找到性别和平相处的方案。当现象在实践上消除不了时，我尝试对它提出限制与修改。要把这个事业做的够大，且不浮于语言把戏，得用艺术实物的方式开局。<br><br>最近在学拉康-精神分析的知识，看波伏娃的书。<br><br>开发了一款应用程序 「月亮山」，按十二种人格记日记。可以在苹果的 AppStore 里下载。<br><br>hushenbai@163.com',
         'S&T-about-me': '胡申白，你的朋友<br>hushenbai@163.com',
         '木板油彩': '木板油彩',
         '帆布油彩': '帆布油彩',
         'work': '作品',
-        'work-criticism': "观看者对作品的批评",
+        'work-criticism': "作品批评",
         'productstate-0': '认购作品',
         'productstate-button-0': '获得艺术作品的所有权。<br>可以留存给申白继续出售，或申请邮寄实物。',
         "productstate-1": "认购作品",
@@ -102,7 +127,7 @@ const translations = {
         "art-trading": "艺术品交易",
         "art-trading-info": "如何参与明珠薏苡系列的交易，你需要了解的信息。",
         "artworks-trading": "艺术品交易",
-        "artworks-trading-description": "购买和出售明珠薏苡系列艺术品",
+        "artworks-trading-description": "购买和出售<br>明珠薏苡系列作品",
         "trend-info": "了解关于价格系数的更多信息<br>查看申白作品的整体价格与趋势。",
         "tooltip-title": "个作品系数为",
 
@@ -167,8 +192,8 @@ const translations = {
         "height": "高",
         "Buyway": "添加微信，或者向我发送邮件：",
 
-        "detail-TCMmain": "明珠薏苡项目指向华人的常见符号。对中药的信仰比汉语的使用范围更广、也更虔诚。骄傲的华人追求一切，虚弱的华人祈求中药的疗效。这些黑色的、苦涩的水，如同民族的长河，流淌在所有华人的生活中。<br>我发愿画十亿碗药给华人治疗疾病。如果一辈子时间不够，转世轮回也继续画。直到上天被我感动，差遣神仙下来结束这个符号。",
-        'detail-RSMmain': '重圆镜项目关于男性凝视。我把自己对女性的凝视画了出来。<br>这些场景连成一条主观的标准线，目光越界是我认为的不礼貌，故意看不见是我认为的不善良。正如艺术家对自己的作品负无限责任，我对自己的凝视负责，画出来了就不能否认，如果这条标准线不好，接受批评。',
+        "detail-TCMmain": "明珠薏苡项目指向华人的常见符号。对中药的信仰比汉语的使用范围更广、也更虔诚。骄傲的华人追求一切，虚弱的华人祈求中药的疗效。这些黑色的、苦涩的水，如同民族的长河，流淌在所有华人的生活中。<br>南无观世音菩萨摩诃萨，我发愿画十亿碗药与华人治疾病、度苦厄。人离难，难离身，一切心痛化为明珠、薏苡、沙粒入河。如果一辈子时间不够，转世轮回也继续画。直到上天被我感动，差遣神仙下来结束这个符号。<br>庶民妄语，敬上。",
+        'detail-RSMmain': '重圆镜项目关于男性凝视。我把自己对女性的凝视画了出来。<br>这些场景连成一条主观的准线，是我的自信表达，越界是不礼貌，看不见是冷血。正如艺术家对自己的作品负无限责任，我对自己的凝视负责，画出来了就不能否认，如果这条准线不好，接受批评。',
         'loading': '加载中...',
         'exhibitions': '追踪',
         '申白工作室': '申白工作室',
@@ -312,10 +337,11 @@ const translations = {
         'name': 'Name',
         'back': 'Back',
         'switch-lang': '中文',
+        'switch-lang2': '切换语言',
         'shenbai': 'Shenbai',
         'tcm-title': 'PearlBarleySand',
         'rsm-title': 'RestoredMirrors',
-        'abm-title': 'About Shenbai',
+        'abm-title': 'Shenbai',
         'tcm-title-mobile': 'PBS',
         'rsm-title-mobile': 'RSM',
         'tcm-slogan': 'How can Chinese people drink Chinese medicine more effectively?',
@@ -340,7 +366,7 @@ const translations = {
         "art-trading": "Artworks Trading",
         "art-trading-info": "How to join in the trading of the PearlBarleySand, you can learn more about it here.",
         "artworks-trading": "Artworks Trading",
-        "artworks-trading-description": "Contact Shenbai to buy and sell PearlBarleySand series artworks",
+        "artworks-trading-description": "Contact Shenbai to <br>buy and sell PearlBarleySand series artworks",
         "trend-info": "Learn more about the price coefficient,<br>view the overall price and trend of the artist's works.",
         
         'serialnumber': 'Serial No.',
@@ -410,7 +436,7 @@ const translations = {
         '帆布油彩': 'Oil on canvas',
         '申白持有': 'Artist Holding',
         '已收藏': 'Collected',
-        'detail-TCMmain': 'The PearlBarleySand artwork points to common symbols for the Chinese. <br>Belief in Chinese medicine is wider and more devout than the use of Chinese language. The proud Chinese looking for everything, the weak Chinese pray for the healing power of Chinese medicine. <br>These black, bitter waters, like the river of the nation, flow through the lives of all Chinese.<br>Painting is static, in order to freeze the dignity in it, in gestures resist the erosion of time. <br>In life, medicine is eagerly drunk. But in painting, medicine does not spoil, or get poured out; you have time to recognize it and consider whether you need it.',
+        'detail-TCMmain': 'The PearlBarleySand artwork points to common symbols for the Chinese. <br>Belief in Chinese medicine is wider and more devout than the use of Chinese language. The proud Chinese looking for everything, the weak Chinese pray for the healing power of Chinese medicine. <br>These black, bitter waters, like the river of the nation, flow through the lives of all Chinese.<br>Namo Avalokitesvara Bodhisattva Mahasattva, I vow to paint billion bowls of medicine to help Chinese people cure diseases and overcome suffering. People are free from difficulties, difficulties are free from the body, all heart-broken turn into pearls, barleys and sands into the river. If one lifetime is not enough, I will continue to paint in reincarnation. Until the heaven is moved by me and send gods down to end this symbol. <br>A impolite vow from common guy, sorry.',
         'detail-RSMmain': "The RestoredMirrors project is about the Male gaze. I drew my gaze on women. These scenes are linked together to form a subjective standard line. It is what I thought 'impolite' to look beyond the line, and it is what I thought 'cold-blooded' to deliberately don't see. I am responsible for my own gaze. Since I have drawn it, I cannot deny it. If my standard line is not set well, I accept criticism.",
         'loading': 'Loading...',
         'exhibitions': 'Track',

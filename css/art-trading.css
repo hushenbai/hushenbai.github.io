@@ -346,7 +346,7 @@ header {
 @media (max-width: 560px) {
 
     header {
-        padding: 120px 12px 30px 12px;
+        padding: 60px 12px 30px 12px;
     }
 
     .frame {

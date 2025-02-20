@@ -28,19 +28,14 @@
     <div class="nav-background">
         <nav class="nav-container">
             <div class="nav-left">
-                <div class="logo mobile-menu-trigger">
-                    <h0 style="color: #fff;" data-lang="shenbai">Shenbai</h0>
-                </div>
-                <div class="menu-toggle mobile-menu-trigger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <h0 class="nav-button current-page" onclick="window.location.href='aboutme.html'">
+                    <span class="desktop-title" data-lang="shenbai" style="color: #fff;">申白</span>
+                </h0>
                 <h0 class="nav-button" onclick="window.location.href='index.html'">
-                    <span class="desktop-title" data-lang="tcm-title">明珠薏苡</span>
+                    <span class="desktop-title" data-lang="tcm-title" style="color: #fff;">明珠薏苡</span>
                 </h0>
                 <h0 class="nav-button" onclick="window.location.href='rsm.html'">
-                    <span class="desktop-title" data-lang="rsm-title">重圆镜</span>
+                    <span class="desktop-title" data-lang="rsm-title" style="color: #fff;">重圆镜</span>
                 </h0>
             </div>
             <div class="nav-right">
@@ -52,20 +47,24 @@
     </div>
 
     <div class="mobile-menu">
-        <div class="mobile-menu-item" onclick="window.location.href='aboutme.html'" style="width: 100%;">
-            <h0>
-                <span data-lang="abm-title">关于我</span>
-            </h0>
+        <div class="menu-container">
+        <div class="mobile-menu-item" onclick="window.location.href='aboutme.html'">
+            <img src="assets/hsbicon.svg" alt="About">
+            <p3><span data-lang="abm-title">关于我</span></p3>
         </div>
-        <div class="mobile-menu-item" onclick="window.location.href='index.html'" style="width: 100%;">
-            <h0>
-                <span data-lang="tcm-title">明珠薏苡</span>
-            </h0>
+        <div class="mobile-menu-item" onclick="window.location.href='index.html'">
+            <img src="assets/tcmicon.svg" alt="TCM">
+            <p3><span data-lang="tcm-title">明珠薏苡</span></p3>
         </div>
         <div class="mobile-menu-item" onclick="window.location.href='rsm.html'">
-            <h0>
-                <span data-lang="rsm-title">重圆镜</span>
-            </h0>
+            <img src="assets/rsmicon.svg" alt="RSM">
+            <p3><span data-lang="rsm-title">重圆镜</span></p3>
+        </div>
+        <div class="mobile-menu-item" onclick="toggleLanguage()">
+            <img src="assets/enicon.svg" alt="English">
+            <p3><span data-lang="switch-lang2">language switch</span></p3>
+        </div>
+
         </div>
     </div>
 

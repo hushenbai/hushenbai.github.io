@@ -275,9 +275,21 @@ b1 {
     .card {
         max-width: 100%;
     }
+
+    header {
+        padding: 0 60px;
+    }
+    
+    main {
+        padding: 60px;
+    }
+    
+    home {
+        padding: 60px;
+    }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 560px) {
 
     header {
         padding: 0 20px;
@@ -288,13 +300,17 @@ b1 {
     main {
         width: 100%;
         margin: 0 auto;
-        padding: 30px;
+        padding: 20px;
     }
     
     home {
         width: 100%;
         margin: 0 auto;
         padding: 20px;
+    }
+
+    footer {
+        padding-bottom: 76px;
     }
     
     .text-box {
@@ -481,6 +497,7 @@ b1 {
     }
 
     .detail-container {
+        margin: 20px auto 40px;
         width: 100%;
         flex-direction: column;
         align-items: center;
@@ -706,15 +723,11 @@ b1 {
 }
 
 .nav-left {
-    position: fixed;
-    left: 32px;
-    flex-direction: row;
-    padding: 0px 0px;
-    z-index: 100;
-    gap: 32px;
+    position: fixed;  /* 添加固定定位 */
     display: flex;
     align-items: center;
-    transition: all 0.2s ease-out;
+    gap: 32px;
+    left: 32px;
 }
 
 .logo {
@@ -724,10 +737,12 @@ b1 {
 }
 
 .nav-button {
-    position: relative;
-    display: inline-flex;
     cursor: pointer;
-    z-index: 100;
+    transition: opacity 0.3s ease;
+}
+
+.nav-button:hover {
+    opacity: 0.7;
 }
 
 .nav-right {
@@ -756,8 +771,6 @@ b1 {
 /* 修改菜单按钮样式 */
 .menu-toggle {
     display: none;
-    cursor: pointer;
-    padding: 8px;
 }
 
 .menu-toggle span {
@@ -780,6 +793,30 @@ b1 {
 @media screen and (max-width: 560px) {
     .nav-pages {
         display: none;
+    }
+
+    .nav-left {
+        display: none;
+
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .nav-button {
+        display: none;  /* 隐藏所有导航按钮 */
+    }
+
+    /* 只显示当前页面标题 */
+    .nav-button.current-page {
+        display: block;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    .nav-button.current-page:hover {
+        opacity: 1;
     }
 }
 
@@ -833,87 +870,77 @@ b1 {
 }
 
 
-/* 移动端适配 */
-@media screen and (max-width: 560px) {
+/* 新的底部导航栏样式 */
 
-    .nav-container {
-        height: 68px;
-    }
-
-    .nav-left {
-        left: 16px;
-        gap: 4px; /* 减小间距 */
-    }
-    
-    .nav-right {
-        right: 16px;
-    }
-
-    .logo {
-        background-color: #000;
-        padding: 0px 6px;
-    }
-
-    .language-switch {
-        padding: 4px 6px;
-    }
-
-    .nav-button {
-        display: none;
-    }
-    
-    .menu-toggle {
-        display: block;
-    }
-    
-    .mobile-menu {
-        display: block;
-    }
-
-    /* 移除汉堡菜单动画相关样式 */
-    .menu-toggle.active span:nth-child(1),
-    .menu-toggle.active span:nth-child(2),
-    .menu-toggle.active span:nth-child(3) {
-        transform: none;
-    }
-
-    /* 保持 language-switch 在导航栏 */
-    .language-switch {
-        display: inline-flex;
-    }
-}
-
-/* 修改移动端菜单样式 */
 .mobile-menu {
     display: none;
     position: fixed;
-    left: 0;
     width: 100%;
-    background-color: rgba(252, 252, 250, 1);
-    padding: 8px 20px;
-    padding-top: 68px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    transform: translateY(-150%); /* 初始位置在屏幕外 */
-    transition: transform 0.3s ease;
     z-index: 98;
+    transition: transform 0.3s ease;
+    padding: 0;
+    bottom: 0;
 }
 
-.mobile-menu.show {
-    transform: translateY(0); /* 显示时移动到正确位置 */
+.menu-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: row;
 }
 
-@media screen and (max-width: 560px) {
-    .mobile-menu {
-        display: block; /* 在移动端显示，但初始位置在屏幕外 */
-    }
+/* 为微信浏览器添加特殊样式 */
+.wechat .menu-container {
+    padding-bottom: 8px;
 }
 
 .mobile-menu-item {
-    padding: 12px 0;
-    border-top: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 0;
+    cursor: pointer;
+}
+
+.mobile-menu-item img {
+    width: 28px;
+    height: 28px;
+}
+
+.mobile-menu-item p3 {
+    font-size: 11px;  /* 缩小字号 */
+    color: rgba(0, 0, 0, 1);
+}
+
+.goback {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    gap: 8px;
 }
 
 
+/* 移动端适配 */
+@media screen and (max-width: 560px) {
+    .mobile-menu {
+        display: flex;
+        justify-content: space-around;
+        transform: translateY(0);
+    }
+
+    .mobile-menu.hidden {
+        transform: translateY(100%);
+    }
+
+    .goback {
+        display: flex;
+    }
+}
 
 .error-image {
     transition: transform 0.5s ease-out;
@@ -1209,4 +1236,6 @@ and (orientation: portrait) {
         }
     }
 }
+
+
 

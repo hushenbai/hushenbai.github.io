@@ -253,9 +253,6 @@ and (orientation: portrait) {
         padding: 0;
     }
     
-    h1 {
-        font-size: 40pt;
-    }
 }
 
 @media screen and (max-width: 560px) {
@@ -330,7 +327,6 @@ and (orientation: portrait) {
 .play-btn {
     background: none;
     border: none;
-    font-size: 24px;
     cursor: pointer;
     padding: 8px;
     display: flex;
@@ -340,11 +336,27 @@ and (orientation: portrait) {
     height: 40px;
 }
 
-.progress-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+.play-btn img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.play-btn:hover img {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .play-btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .play-btn img {
+        width: 22px;
+        height: 22px;
+    }
 }
 
 .progress-bar {
@@ -362,13 +374,6 @@ and (orientation: portrait) {
     background: #000;
     border-radius: 2px;
     width: 0%;
-}
-
-.time-display {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.6);
 }
 
 .criticism {
