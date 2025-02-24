@@ -41,21 +41,12 @@ and (orientation: portrait) {
     .headerback {
         height: 80vh;
     }
-
-    .header-title {
-        padding: 0 8px;
-    }
 }
 
 @media (max-width: 560px) {
     .headerback {
         height: 75vh;
     }
-
-    .header-title {
-        padding: 0 8px;
-    }
-
     .header-rsmbg {
         background-image: url('../assets/rsmbg-small.jpg');
     }
@@ -74,10 +65,17 @@ and (orientation: portrait) {
 .rsm-gallery {
     width: 100%;
     height: 100%;
-    overflow-x: auto;     /* 隐藏横向滚动 */
+    overflow-x: auto;
     display: flex;
     justify-content: center;
     scroll-behavior: smooth;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+/* Chrome, Safari and Opera */
+.rsm-gallery::-webkit-scrollbar {
+    display: none;
 }
 
 /* 设置滚动速度 */
@@ -89,6 +87,7 @@ and (orientation: portrait) {
     margin: 30px 0;
     padding: 0 150px;
     overflow-x: visible;      /* 允许横向滚动 */
+    align-items: center;
 }
 
 .gallery-item {
@@ -110,12 +109,13 @@ and (orientation: portrait) {
 }
 
 .gallery-image {
-    height: 560px;  /* 留出空间给文字 */
+    height: 100%;  /* 留出空间给文字 */
     width: auto;
+    max-width: 560px;
+    max-height: 560px;
     object-fit: contain;
     transform: translateY(0);
     transition: all 0.2s ease;
-    box-shadow: 0 8px 2px 0 rgba(0, 0, 0, 0);
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
@@ -127,7 +127,6 @@ and (orientation: portrait) {
 .gallery-image:hover {
     transform: translateY(-10px);
     transition: all 0.2s ease;
-    box-shadow: 0 10px 6px 0 rgba(0, 0, 0, 0.15);
 }
 
 .gallery-info {
@@ -139,10 +138,7 @@ and (orientation: portrait) {
 }
 
 .gallery-info p2 {
-    color: rgba(92, 87, 84, 0.8);
-}
-
-.gallery-info p3 {
+    line-height: 1.5;
     color: rgba(92, 87, 84, 0.8);
 }
 
@@ -214,74 +210,38 @@ and (orientation: portrait) {
 
 
 @media screen and (min-width: 1024px) {
-    .detail-container {
-        flex-direction: row;
-        align-items: center;
-        padding: 60px;
-    }
-    
-    .detail-imagebox {
+
+    .artwork-imagebox {
         width: 100%;
-        margin-bottom: 0;
-        object-fit: contain;
     }
 
-    .detail-imagebox img {
+
+    .artwork-imagebox img {
         max-height: 600px;
         max-width: 600px;
         width: auto;
         height: auto;
         object-fit: contain;
-        display: block; /* 移除图片底部间隙 */
     }
     
-    .detail-info {
-        width: 38%;
+    .artwork-info {
+        max-width: 400px;
         padding: 0;
     }
 }
 
 @media screen and (max-width: 1023px) {
 
-    .detail-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 60px;
-    }
-
-    .detail-info {
-        padding: 0;
+    .artwork-info {
+        max-width: none;
     }
     
 }
 
 @media screen and (max-width: 560px) {
 
-    .detail-wrapper {
-        margin-top: 0px;
-    }
 
-    .detail-container {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-        padding: 20px;
-        max-height: auto;
-    }
-    
-    .detail-imagebox {
-        width: 100%;
-        margin-bottom: 0;
-        perspective: 1500px;
-        max-height: none;
-    }
-
-    .detail-imagebox .image-wrapper {
-        max-height: none;
-    }
-
-    .detail-imagebox img {
+    .artwork-imagebox img {
         max-height: none;
         width: 100%;
         height: auto;
@@ -305,78 +265,4 @@ and (orientation: portrait) {
     height: 100%;
 }
 
-.detail-intro {
-    margin-bottom: 24px; /* 添加顶部间距 */
-}
 
-/* 音频播放器样式 */
-.audio-player {
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 16px;
-    margin-bottom: 24px;
-    border-radius: 4px;
-}
-
-.audio-controls {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.play-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-}
-
-.play-btn img {
-    width: 24px;
-    height: 24px;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.play-btn:hover img {
-    opacity: 1;
-}
-
-@media (max-width: 768px) {
-    .play-btn {
-        width: 32px;
-        height: 32px;
-    }
-    
-    .play-btn img {
-        width: 22px;
-        height: 22px;
-    }
-}
-
-.progress-bar {
-    width: 100%;
-    height: 4px;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
-    cursor: pointer;
-    position: relative;
-}
-
-.progress-current {
-    position: absolute;
-    height: 100%;
-    background: #000;
-    border-radius: 2px;
-    width: 0%;
-}
-
-.criticism {
-    padding: 32px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-}

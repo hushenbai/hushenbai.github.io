@@ -259,7 +259,39 @@ const groupedArtworks = {
                     }
                 }
             ]
-        }
+        },
+        {
+            serialnumber: "RSMSC10",
+            title: {
+                "data-lang": "等待"
+            },
+            image: "assets/RSM/RSMSC10等待.jpg",
+            media: {
+                "data-lang": "帆布油彩"
+            },
+            series: {
+                'data-lang': "四川女人"
+            },
+            width: 80,
+            height: 100,
+            depth: 3.2,
+            coefficient: 150,
+            weight: "2.15 kg",
+            year: 2025,
+            date: '2025-02-23',
+            state: 0,
+            exhibits: [
+                {
+                    "name": {
+                        "data-lang": "申白工作室"
+                    },
+                    "time": "2025.02",
+                    "city": {
+                        "data-lang": "成都"
+                    }
+                }
+            ]
+        },
         // 可以继续添加更多作品
     ]
 }; 

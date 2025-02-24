@@ -14,10 +14,6 @@ function generateArtworkCard(artwork, groupId) {
             <div class="card-image" onclick="goToDetail('${groupId}', '${artwork.serialnumber}')">
                 <img src="${artwork.image}" alt="${translations[currentLang][titleKey]}">
             </div>
-            <div class="card-content">
-                <p2 data-lang="${titleKey}">${translations[currentLang][titleKey]}</p2>
-                <p3 class="year">${artwork.year}</p3>
-            </div>
         </article>
     `;
 }

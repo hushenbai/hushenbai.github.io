@@ -87,21 +87,26 @@ document.addEventListener('DOMContentLoaded', () => {
             return exhibitEvents
                 .filter(event => event.artworks.includes(serialnumber))
                 .sort((a, b) => {
-                    // 将时间字符串转换为可比较的格式
                     const timeA = a.time.split('.').join('');
                     const timeB = b.time.split('.').join('');
-                    return timeB - timeA; // 降序排列，最新的在前
+                    return timeB - timeA;
                 });
         }
 
-        // 在页面加载时更新展览列表
-        if (currentArtwork) {
-            const exhibitsList = document.getElementById('exhibits-list');
+        // 检查展览数据并处理展览区域显示
+        const exhibitsSection = document.querySelector('.exhibits');
+        const exhibitsList = document.getElementById('exhibits-list');
+        const exhibits = getArtworkExhibits(currentArtwork.serialnumber);
+        
+        // 如果没有展览数据，隐藏整个展览区域
+        if (!exhibits || exhibits.length === 0) {
+            exhibitsSection.style.display = 'none';
+        } else {
+            exhibitsSection.style.display = 'block';
+            
+            // 现有的展览列表渲染代码
             if (exhibitsList) {
                 exhibitsList.innerHTML = '';
-                
-                const exhibits = getArtworkExhibits(currentArtwork.serialnumber);
-                
                 exhibits.forEach((exhibit, index) => {
                     const exhibitItem = document.createElement('div');
                     exhibitItem.className = 'exhibit-item';

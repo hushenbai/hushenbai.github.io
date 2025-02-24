@@ -14,6 +14,7 @@
     <!-- 网页样式 -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/rsm.css">
+    <link rel="stylesheet" href="css/artworkpage.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,7 +77,7 @@
             </div>
         </div>
         <div class="header-text-container">
-            <div class="giant-text">Male<br>Gaze</div>
+            <div class="giant-text">Gaze</div>
         </div>
     </div>
 
@@ -98,13 +99,101 @@
         </div>
     </div>
     
-
+    <main>
+    <!-- 添加悬浮卡片 定制绘画模块 -->
+    <div id="willing" class="willing">
+        <div class="Willing-card">
+                <div class="closebutton" onclick="hideWilling()" style="color: #fff;">×</div>
+                <div class="willing-content">
+                    <div class="willing-toppart">
+                        <div>
+                            <img src="assets/rsmcust.png" style="width: 100%; height: 100%; margin-bottom: 16px; opacity: 1;">
+                            <h2 data-lang="customized-title">Customized title</h2>
+                            <div style="height: 12px;"></div>
+            
+                            <!-- 购买信息部分 -->
+                            <div style="display: flex; flex-direction: column;">
+                            <p2 data-lang="customized-info">customized-info</p2>
+                            </div>
+            
+                        </div>
+                    <!-- 计算价格部分 -->
+                    <!--    <div>
+            
+                            <div style="display: flex; flex-direction: row; align-items: baseline; gap: 4px;">
+                                <h1 id="calculated-custprice">price</h1>
+                                <h2>CNY</h2>
+                            </div>
+                            <div style="display: flex; flex-direction: row; gap: 4px;">
+                                <div style="display: flex; flex-direction: row; gap: 2px;">
+                                <p2>(</p2>
+                                <p2 data-lang="width">width</p2>
+                                <p2 id="detail-width"></p2>
+                                <p2>+</p2>
+                                <p2 data-lang="height">height</p2>
+                                <p2 id="detail-height"></p2>
+                                <p2>)</p2>
+                                <p2>×</p2>
+                                <p2 data-lang="coefficient">coefficient</p2>
+                                <p2 id="detail-coefficient"></p2>
+                                </div>
+                            </div>
+            
+                            <div style="display: flex; flex-direction: row; gap: 4px;">
+                                <p2 data-lang="price-RSMinfo">price-RSMinfo</p2>
+                                <p2>100</p2>
+                            </div>
+            
+                            <div id="calculater-container">
+                                <div id="width-input-box">
+                                    <input type="number" id="width-input" min="1" step="1" value="40">
+                                    <span class="unit">cm</span>
+                                </div>
+                                <div id="height-input-box">
+                                    <input type="number" id="height-input" min="1" step="1" value="60">
+                                    <span class="unit">cm</span>
+                                </div>
+                            </div>
+                        </div>
+                    -->
+                    </div>
+            
+                    <div class="willing-bottompart">
+            
+                        <div style="display: flex; flex-direction: column; gap: 4px;">
+                            <h3 data-lang="customized-way">customized-way</h3>
+                            <p2 data-lang="customized-content">customized-content</p2>
+                        </div>
+                    <!-- 购买方式部分 -->
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <p2 data-lang="Buyway">添加微信，或者向我发送邮件：</p2>
+                        <div class="contact-card" style="display: flex; flex-direction: row; gap: 16px;">
+                            <div class="info-block" style="width: 35%;">
+                                <img src="assets/qrcode.png" alt="QR Code" style="width: 100%; height: 100%;">
+                            </div>
+                            <div class="info-block" style="width: 65%; height: auto;">
+                                <p0>hushenbai@163.com</p0>
+                            </div>
+                        </div>
+                    </div>
+            
+                    </div>
+                </div>
+    </div>
+    </main>
+    
     <home>
         <div class="text-box">
-            <p0>生活是最容易被打碎的成就</p0>
-            <p0>Life is the most fragile achievement</p0>
+            <p0 data-lang="rsm-words">生活是最容易被打碎的成就</p0>
         </div>
+        <!-- 订阅按钮 -->
+        <div class="enter-container">
+            <b1 class="styled-button" data-lang="customized-button" onclick="showWilling()"></b1>
+            <p2 class="customized-desc" style="max-width: 600px;" data-lang="customized-desc"></p2>
+        </div>
+
     </home>
+
 
     <footer>
         <p3>&copy; 2024 HU SHENBAI</p3>

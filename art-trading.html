@@ -68,26 +68,27 @@
         </div>
     </div>
 
-    <header class="header">
-        <div class="header-title" style="text-align: left;">
+    <header>
+        <div class="header-title">
             <p0 data-lang="artworks-trading">艺术品交易</p0>
             <div style="height: 8px;"></div>
             <h2 data-lang="artworks-trading-description" style="color: #000; line-height: 1.5;">艺术品交易</h2>
         </div>
     </header>
 
-    
-<div class="frame">
-    <div class="trend-title">
-        <p0 data-lang="coefficient">系数</p0>
-        <div style="height: 8px;"></div>
-        <div>
-            <p0 data-lang="coefficient-description" style="color: #000;">系数</p0>
-        </div>
-    </div>
-    <div class="big-board">
-        <div class="coefficient-watch">
-            <div class="board-watch">
+    <main>
+        <div class="frame">
+            <div class="trend-title">
+                <p0 data-lang="coefficient">系数</p0>
+                <div style="height: 8px;"></div>
+                <div>
+                    <p0 data-lang="coefficient-description" style="color: #000;">系数</p0>
+                </div>
+            </div>
+
+            <div class="big-board">
+                <div class="coefficient-watch">
+                <div class="board-watch">
                 <div class="text-column">
                 <h2>60</h2>
                 <p0 data-lang="official-coefficient" style="line-height: 1.5; color: #000;">标定系数</p0>
@@ -115,14 +116,14 @@
                     <p3 data-lang="highest-sell-coefficient-description" style="line-height: 1.5;">藏家市场交易最高价格</p3>
                 </div>
             </div>
+            </div>
+            <div class="chart-board">
+                <canvas id="priceChart"></canvas>
+            </div>
         </div>
-        <div class="chart-board">
-            <canvas id="priceChart"></canvas>
-        </div>
-    </div>
 
-    <div class="list-board">
-        <div class="list-column">
+            <div class="list-board">
+            <div class="list-column">
             <p0 class="list-title" data-lang="latest-deal">最新成交</p0>
             <div class="artwork-label">
                 
@@ -143,10 +144,10 @@
                 <p3 data-lang="price">价格</p3>
             </div>
             <div id="highest-list"></div>
+            </div>
         </div>
     </div>
-</div>
-
+    </main>
 <!--
 <div class="frame">
     <div class="trend-title">
@@ -237,9 +238,9 @@
         </div>
     </home>
     
-        <footer>
-            <p3>&copy; 2024 HU SHENBAI</p3>
-        </footer>
+    <footer>
+        <p3>&copy; 2024 HU SHENBAI</p3>
+    </footer>
  
     <script src="js/data.js"></script>  
     <script src="js/price-events.js"></script>

@@ -1,0 +1,256 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+
+.celestial-system {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.orbit-ring {
+    position: relative;
+    width: 50vmin;
+    height: 50vmin;
+    animation: mainRotation 120s linear infinite;
+}
+
+.binary-unit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform-origin: center;
+    transform: rotate(var(--unit-angle)) translateX(40vmin) translateY(-50%);
+}
+
+.binary-orbit {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    animation: binaryRotation 60s linear infinite;
+}
+
+.planet {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    transform-origin: center;
+}
+
+.planet-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.planet:nth-child(1) {
+    top: -200px;
+    left: -200px;
+}
+
+.planet:nth-child(2) {
+    bottom: -200px;
+    right: -200px;
+}
+
+.planet img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.planet-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 32px;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: #ffffff;
+    opacity: 0;
+    z-index: 10;
+}
+
+.text-social {
+    animation: showSocial 60s linear infinite;
+}
+
+.text-inner {
+    animation: showInner 60s linear infinite;
+}
+
+@keyframes mainRotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes binaryRotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes showSocial {
+    10%,100% {
+        opacity: 0;
+    }
+    0%, 20% {
+        opacity: 1;
+    }
+    0%, 5%, 15%, 20% {
+        transition: opacity 1s ease-in-out;
+    }
+}
+
+@keyframes showInner {
+    0%, 50%, 70%, 100% {
+        opacity: 0;
+    }
+    50%, 70% {
+        opacity: 1;
+    }
+    50%, 55%, 65%, 70% {
+        transition: opacity 1s ease-in-out;
+    }
+}
+
+/* 第一个星球 */
+.binary-unit[style*="0deg"] .planet:nth-child(1) .planet-content {
+    animation: counterRotate0 40s linear infinite;
+}
+
+.binary-unit[style*="60deg"] .planet:nth-child(1) .planet-content {
+    animation: counterRotate60 40s linear infinite;
+}
+
+.binary-unit[style*="120deg"] .planet:nth-child(1) .planet-content {
+    animation: counterRotate120 40s linear infinite;
+}
+
+.binary-unit[style*="180deg"] .planet:nth-child(1) .planet-content {
+    animation: counterRotate180 40s linear infinite;
+}
+
+.binary-unit[style*="240deg"] .planet:nth-child(1) .planet-content {
+    animation: counterRotate240 40s linear infinite;
+}
+
+.binary-unit[style*="300deg"] .planet:nth-child(1) .planet-content {
+    animation: counterRotate300 40s linear infinite;
+}
+
+/* 第二个星球 */
+.binary-unit[style*="0deg"] .planet:nth-child(2) .planet-content {
+    animation: counterRotate0 40s linear infinite;
+}
+
+.binary-unit[style*="60deg"] .planet:nth-child(2) .planet-content {
+    animation: counterRotate60 40s linear infinite;
+}
+
+.binary-unit[style*="120deg"] .planet:nth-child(2) .planet-content {
+    animation: counterRotate120 40s linear infinite;
+}
+
+.binary-unit[style*="180deg"] .planet:nth-child(2) .planet-content {
+    animation: counterRotate180 40s linear infinite;
+}
+
+.binary-unit[style*="240deg"] .planet:nth-child(2) .planet-content {
+    animation: counterRotate240 40s linear infinite;
+}
+
+.binary-unit[style*="300deg"] .planet:nth-child(2) .planet-content {
+    animation: counterRotate300 40s linear infinite;
+}
+
+@keyframes counterRotate0 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+@keyframes counterRotate60 {
+    from { transform: rotate(-60deg); }
+    to { transform: rotate(-420deg); }
+}
+
+@keyframes counterRotate120 {
+    from { transform: rotate(-120deg); }
+    to { transform: rotate(-480deg); }
+}
+
+@keyframes counterRotate180 {
+    from { transform: rotate(-180deg); }
+    to { transform: rotate(-540deg); }
+}
+
+@keyframes counterRotate240 {
+    from { transform: rotate(-240deg); }
+    to { transform: rotate(-600deg); }
+}
+
+@keyframes counterRotate300 {
+    from { transform: rotate(-300deg); }
+    to { transform: rotate(-660deg); }
+}
+
+/* 响应式设计 */
+@media (max-width: 560px) {
+
+    .celestial-system {
+        height: 90vh;
+    }
+
+    .orbit-ring {
+        width: 40vmin;
+        height: 40vmin;
+    }
+
+    .binary-orbit {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .planet {
+        width: 133px;
+        height: 133px;
+    }
+    
+    .planet:nth-child(1) {
+        top: -75px;
+        left: -75px;
+    }
+    
+    .planet:nth-child(2) {
+        bottom: -75px;
+        right: -75px;
+    }
+
+    .planet-text {
+        font-size: 24px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+}
+
+/* 添加延迟显示 */
+.celestial-system .center-text {
+    animation-delay: 15s;
+}

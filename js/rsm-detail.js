@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         // 设置图片源
-        img.src = currentArtwork.image.replace('/RSM/', '/RSM-big/');
+        img.src = currentArtwork.image;
         
         // 更新基本信息
         document.getElementById('detail-serialnumber').textContent = currentArtwork.serialnumber;
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 处理 intro 内容
-        const detailIntro = document.querySelector('.detail-intro');
+        const detailIntro = document.querySelector('.artwork-intro');
         const introText = detailIntro.querySelector('.intro-text');
         
         if (currentArtwork.intro) {
@@ -90,111 +90,142 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
         }
 
-        // 处理展览信息
+        // 检查展览数据并处理展览区域显示
+        const exhibitsSection = document.querySelector('.exhibits');
         const exhibitsList = document.getElementById('exhibits-list');
-        if (exhibitsList) {
-            exhibitsList.innerHTML = '';
-            
+        
+        if (currentArtwork) {
             const exhibits = getArtworkExhibits(currentArtwork.serialnumber);
             
-            exhibits.forEach((exhibit, index) => {
-                const exhibitItem = document.createElement('div');
-                exhibitItem.className = 'exhibit-item';
+            // 如果没有展览数据，隐藏整个展览区域
+            if (!exhibits || exhibits.length === 0) {
+                exhibitsSection.style.display = 'none';
+            } else {
+                exhibitsSection.style.display = 'block';
+                exhibitsList.innerHTML = '';
                 
-                // 创建 new 标签容器
-                const newTagContainer = document.createElement('span');
-                newTagContainer.className = 'new-tag-container';
-                if (index === 0) {
-                    const newTag = document.createElement('span');
-                    newTag.className = 'new-tag';
-                    newTag.textContent = 'NEW';
-                    newTagContainer.appendChild(newTag);
-                }
-                
-                const exhibitCity = document.createElement('span');
-                exhibitCity.className = 'exhibit-city';
-                const cityText = document.createElement('span');
-                cityText.setAttribute('data-lang', exhibit.city['data-lang']);
-                cityText.innerHTML = translations[getCurrentLanguage()][exhibit.city['data-lang']];
-                exhibitCity.appendChild(cityText);
-                
-                const exhibitName = document.createElement('span');
-                exhibitName.className = 'exhibit-name';
-                exhibitName.setAttribute('data-lang', exhibit.name['data-lang']);
-                exhibitName.innerHTML = translations[getCurrentLanguage()][exhibit.name['data-lang']];
-                
-                const exhibitTime = document.createElement('span');
-                exhibitTime.className = 'exhibit-time';
-                exhibitTime.textContent = exhibit.time;
-                
-                // 添加所有元素
-                exhibitItem.appendChild(newTagContainer);
-                exhibitItem.appendChild(exhibitCity);
-                exhibitItem.appendChild(exhibitName);
-                exhibitItem.appendChild(exhibitTime);
-                
-                exhibitsList.appendChild(exhibitItem);
-            });
+                exhibits.forEach((exhibit, index) => {
+                    const exhibitItem = document.createElement('div');
+                    exhibitItem.className = 'exhibit-item';
+                    
+                    // 创建 new 标签容器
+                    const newTagContainer = document.createElement('span');
+                    newTagContainer.className = 'new-tag-container';
+                    if (index === 0) {
+                        const newTag = document.createElement('span');
+                        newTag.className = 'new-tag';
+                        newTag.textContent = 'NEW';
+                        newTagContainer.appendChild(newTag);
+                    }
+                    
+                    const exhibitCity = document.createElement('span');
+                    exhibitCity.className = 'exhibit-city';
+                    const cityText = document.createElement('span');
+                    cityText.setAttribute('data-lang', exhibit.city['data-lang']);
+                    cityText.innerHTML = translations[getCurrentLanguage()][exhibit.city['data-lang']];
+                    exhibitCity.appendChild(cityText);
+                    
+                    const exhibitName = document.createElement('span');
+                    exhibitName.className = 'exhibit-name';
+                    exhibitName.setAttribute('data-lang', exhibit.name['data-lang']);
+                    exhibitName.innerHTML = translations[getCurrentLanguage()][exhibit.name['data-lang']];
+                    
+                    const exhibitTime = document.createElement('span');
+                    exhibitTime.className = 'exhibit-time';
+                    exhibitTime.textContent = exhibit.time;
+                    
+                    // 添加所有元素
+                    exhibitItem.appendChild(newTagContainer);
+                    exhibitItem.appendChild(exhibitCity);
+                    exhibitItem.appendChild(exhibitName);
+                    exhibitItem.appendChild(exhibitTime);
+                    
+                    exhibitsList.appendChild(exhibitItem);
+                });
+            }
         }
     
         // 使用全局语言设置更新内容
         updateLanguage();
     }
 
-    // 音频播放器控制
-    const audio = document.getElementById('audio-element');
-    const playBtn = document.querySelector('.play-btn');
-    const playIcon = document.querySelector('.play-icon');
-    const pauseIcon = document.querySelector('.pause-icon');
-    const progressBar = document.querySelector('.progress-bar');
-    const progressCurrent = document.querySelector('.progress-current');
-    const currentTimeDisplay = document.querySelector('.current-time');
-    const durationDisplay = document.querySelector('.duration');
+    // 音频播放器逻辑
+    const players = document.querySelectorAll('.audio-player');
+    let currentlyPlaying = null;
 
-    // 播放/暂停切换
-    playBtn.addEventListener('click', () => {
-        if (audio.paused) {
-            audio.play();
-            playIcon.style.display = 'none';
-            pauseIcon.style.display = 'block';
-        } else {
-            audio.pause();
+    // 检查是否存在音频播放器
+    if (!players || players.length === 0) return;
+
+    players.forEach(player => {
+        const playBtn = player.querySelector('.play-btn');
+        const playIcon = player.querySelector('.play-icon');
+        const pauseIcon = player.querySelector('.pause-icon');
+        const audio = player.querySelector('audio');
+        const remainingTime = player.querySelector('.remaining-time');
+
+        // 检查必要的元素是否都存在
+        if (!playBtn || !playIcon || !pauseIcon || !audio || !remainingTime) return;
+
+        // 设置初始进度
+        player.style.setProperty('--progress', '0%');
+
+        // 格式化时间显示
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            seconds = Math.floor(seconds % 60);
+            return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        // 暂停当前播放的音频
+        function pauseCurrentlyPlaying() {
+            if (currentlyPlaying && currentlyPlaying !== audio) {
+                currentlyPlaying.pause();
+                const previousPlayer = currentlyPlaying.closest('.audio-player');
+                const previousPlayIcon = previousPlayer.querySelector('.play-icon');
+                const previousPauseIcon = previousPlayer.querySelector('.pause-icon');
+                previousPlayIcon.style.display = 'block';
+                previousPauseIcon.style.display = 'none';
+            }
+        }
+
+        // 播放按钮点击事件
+        playBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                pauseCurrentlyPlaying();
+                audio.play();
+                playIcon.style.display = 'none';
+                pauseIcon.style.display = 'block';
+                currentlyPlaying = audio;
+            } else {
+                audio.pause();
+                playIcon.style.display = 'block';
+                pauseIcon.style.display = 'none';
+                currentlyPlaying = null;
+            }
+        });
+
+        // 更新进度和时间
+        audio.addEventListener('timeupdate', () => {
+            const percent = (audio.currentTime / audio.duration) * 100;
+            player.style.setProperty('--progress', `${percent}%`);
+            
+            // 更新倒计时
+            const remaining = audio.duration - audio.currentTime;
+            remainingTime.textContent = formatTime(remaining);
+        });
+
+        // 音频结束时重置
+        audio.addEventListener('ended', () => {
             playIcon.style.display = 'block';
             pauseIcon.style.display = 'none';
-        }
-    });
+            currentlyPlaying = null;
+            player.style.setProperty('--progress', '0%');
+        });
 
-    // 格式化时间
-    function formatTime(seconds) {
-        const minutes = Math.floor(seconds / 60);
-        seconds = Math.floor(seconds % 60);
-        return `${minutes}:${seconds.toString().padStart(2, '0')}`;
-    }
-
-    // 更新进度条
-    audio.addEventListener('timeupdate', () => {
-        const progress = (audio.currentTime / audio.duration) * 100;
-        progressCurrent.style.width = `${progress}%`;
-        currentTimeDisplay.textContent = formatTime(audio.currentTime);
-    });
-
-    // 音频加载完成后显示总时长
-    audio.addEventListener('loadedmetadata', () => {
-        durationDisplay.textContent = formatTime(audio.duration);
-    });
-
-    // 点击进度条跳转
-    progressBar.addEventListener('click', (e) => {
-        const rect = progressBar.getBoundingClientRect();
-        const pos = (e.clientX - rect.left) / rect.width;
-        audio.currentTime = pos * audio.duration;
-    });
-
-    // 音频结束时重置播放按钮
-    audio.addEventListener('ended', () => {
-        playIcon.style.display = 'block';
-        pauseIcon.style.display = 'none';
-        progressCurrent.style.width = '0%';
+        // 加载完成后显示总时长
+        audio.addEventListener('loadedmetadata', () => {
+            remainingTime.textContent = formatTime(audio.duration);
+        });
     });
 
     // 获取当前作品在数组中的位置
@@ -203,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const groupId = params.get('group');
         const serialnumber = params.get('id');
         
-        const artworks = groupedArtworks[groupId];
+        const artworks = [...groupedArtworks[groupId]].reverse();
         return artworks.findIndex(artwork => artwork.serialnumber === serialnumber);
     }
 
@@ -211,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function getNavigationURL(direction) {
         const params = new URLSearchParams(window.location.search);
         const groupId = params.get('group');
-        const artworks = groupedArtworks[groupId];
+        const artworks = [...groupedArtworks[groupId]].reverse();
         const currentIndex = getCurrentArtworkIndex();
         
         let newIndex;
@@ -281,9 +312,103 @@ function updateLanguage() {
 
     // 更新 intro 内容（如果存在）
     if (currentArtwork && currentArtwork.intro) {
-        const introText = document.querySelector('.detail-intro .intro-text');
+        const introText = document.querySelector('.artwork-intro .intro-text');
         if (introText) {
             introText.innerHTML = currentArtwork.intro[currentLang];
         }
     }
 }
+
+// 显示意愿卡片
+function showWilling() {
+    const card = document.getElementById('willing');
+    const content = card.querySelector('.Willing-card');
+    
+    // 确保初始状态
+    content.style.transform = 'translateY(900px)';
+    
+    // 先显示卡片容器
+    card.classList.add('show');
+    
+    // 强制重绘
+    void content.offsetWidth;
+    
+    // 触发动画
+    requestAnimationFrame(() => {
+        content.style.transform = 'translateY(0)';
+    });
+    
+    // 阻止背景滚动
+    document.body.style.overflow = 'hidden';
+}
+// 隐藏意愿卡片
+function hideWilling() {
+    const card = document.getElementById('willing');
+    const content = card.querySelector('.Willing-card');
+    
+    // 重置动画状态
+    content.style.transform = 'translateY(700px)';
+    
+    // 等待动画完成后隐藏卡片
+    setTimeout(() => {
+        card.classList.remove('show');
+        // 恢复背景滚动
+        document.body.style.overflow = '';
+    }, 400); // 与 CSS transition 时间匹配
+}
+// 点击背景关闭卡片
+document.getElementById('willing').addEventListener('click', (e) => {
+    if (e.target.id === 'willing') {
+        hideWilling();
+    }
+});
+// ESC 键关闭卡片
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        hideWilling();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const widthInput = document.getElementById('width-input');
+    const heightInput = document.getElementById('height-input');
+    const priceDisplay = document.getElementById('calculated-custprice');
+    const coefficient = 100;
+
+    // 计算价格的函数
+    function calculatePrice() {
+        const width = parseInt(widthInput.value) || 0;
+        const height = parseInt(heightInput.value) || 0;
+        const price = (width + height) * coefficient;
+        priceDisplay.textContent = Math.round(price);
+    }
+
+    // 限制输入为整数
+    function handleInput(e) {
+        let value = e.target.value;
+        
+        // 移除任何非数字字符
+        value = value.replace(/[^\d]/g, '');
+        
+        // 确保值不为空
+        if (value === '') {
+            value = '0';
+        } else {
+            // 移除前导零
+            value = parseInt(value).toString();
+        }
+        
+        // 更新输入框的值
+        e.target.value = value;
+        
+        // 计算新价格
+        calculatePrice();
+    }
+
+    // 添加事件监听器
+    widthInput.addEventListener('input', handleInput);
+    heightInput.addEventListener('input', handleInput);
+
+    // 初始计算
+    calculatePrice();
+});
