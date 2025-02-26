@@ -114,8 +114,8 @@ and (orientation: portrait) {
     max-width: 560px;
     max-height: 560px;
     object-fit: contain;
-    transform: translateY(0);
-    transition: all 0.2s ease;
+    transform: scale(1);
+    transition: all 0.3s ease;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
@@ -125,8 +125,8 @@ and (orientation: portrait) {
 }
 
 .gallery-image:hover {
-    transform: translateY(-10px);
-    transition: all 0.2s ease;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
 }
 
 .gallery-info {
@@ -264,5 +264,8 @@ and (orientation: portrait) {
     width: 100%;
     height: 100%;
 }
+
+
+
 
 

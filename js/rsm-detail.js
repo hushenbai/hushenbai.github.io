@@ -1,5 +1,6 @@
 // 全局变量存储当前项目数据
 let currentArtwork = null;
+let currentGroupId = null;
 
 // 返回上一页函数
 function goBack() {
@@ -16,13 +17,44 @@ function goBack() {
 
 // 页面加载时初始化
 document.addEventListener('DOMContentLoaded', () => {
-    // 从 URL 获取参数
+    // 获取URL参数
     const params = new URLSearchParams(window.location.search);
-    const groupId = params.get('group');
+    currentGroupId = params.get('group') || 'group1';
     const serialnumber = params.get('id');
+
+    // 确保数据存在
+    if (!groupedArtworks || !groupedArtworks[currentGroupId]) return;
+
+    // 获取当前作品
+    currentArtwork = groupedArtworks[currentGroupId].find(p => p.serialnumber === serialnumber);
     
-    // 查找对应的项目数据
-    currentArtwork = groupedArtworks[groupId].find(p => p.serialnumber === serialnumber);
+    // 设置导航按钮
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    if (prevBtn) {
+        prevBtn.onclick = () => {
+            const artworks = [...groupedArtworks[currentGroupId]].reverse();
+            const currentIndex = artworks.findIndex(a => a.serialnumber === currentArtwork.serialnumber);
+            const newIndex = currentIndex <= 0 ? artworks.length - 1 : currentIndex - 1;
+            const nextArtwork = artworks[newIndex];
+            window.location.href = `rsm-detail.html?group=${currentGroupId}&id=${nextArtwork.serialnumber}`;
+        };
+    }
+
+    if (nextBtn) {
+        nextBtn.onclick = () => {
+            const artworks = [...groupedArtworks[currentGroupId]].reverse();
+            const currentIndex = artworks.findIndex(a => a.serialnumber === currentArtwork.serialnumber);
+            const newIndex = currentIndex >= artworks.length - 1 ? 0 : currentIndex + 1;
+            const nextArtwork = artworks[newIndex];
+            window.location.href = `rsm-detail.html?group=${currentGroupId}&id=${nextArtwork.serialnumber}`;
+        };
+    }
+
+    // 获取当前作品
+    currentArtwork = groupedArtworks[currentGroupId].find(p => p.serialnumber === serialnumber);
+    console.log('Current artwork:', currentArtwork);
     
     if (currentArtwork) {
         const img = document.getElementById('artwork-image');
@@ -227,59 +259,10 @@ document.addEventListener('DOMContentLoaded', () => {
             remainingTime.textContent = formatTime(audio.duration);
         });
     });
-
-    // 获取当前作品在数组中的位置
-    function getCurrentArtworkIndex() {
-        const params = new URLSearchParams(window.location.search);
-        const groupId = params.get('group');
-        const serialnumber = params.get('id');
-        
-        const artworks = [...groupedArtworks[groupId]].reverse();
-        return artworks.findIndex(artwork => artwork.serialnumber === serialnumber);
-    }
-
-    // 获取上一个或下一个作品的URL
-    function getNavigationURL(direction) {
-        const params = new URLSearchParams(window.location.search);
-        const groupId = params.get('group');
-        const artworks = [...groupedArtworks[groupId]].reverse();
-        const currentIndex = getCurrentArtworkIndex();
-        
-        let newIndex;
-        if (direction === 'prev') {
-            newIndex = currentIndex <= 0 ? artworks.length - 1 : currentIndex - 1;
-        } else {
-            newIndex = currentIndex >= artworks.length - 1 ? 0 : currentIndex + 1;
-        }
-        
-        return `rsm-detail.html?group=${groupId}&id=${artworks[newIndex].serialnumber}`;
-    }
-
-    // 添加导航按钮事件监听
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            window.location.href = getNavigationURL('prev');
-        });
-    }
-
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            window.location.href = getNavigationURL('next');
-        });
-    }
-
-    // 添加键盘导航支持
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            window.location.href = getNavigationURL('prev');
-        } else if (e.key === 'ArrowRight') {
-            window.location.href = getNavigationURL('next');
-        }
-    });
 });
+
+
+
 
 // 在需要使用的页面中
 document.addEventListener('DOMContentLoaded', () => {
@@ -411,4 +394,96 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 初始计算
     calculatePrice();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const confirmButton = document.getElementById('confirmButton');
+    const submitButton = document.getElementById('submitButton');
+    const emailInput = document.querySelector('input[type="email"]');
+    const messageInput = document.querySelector('textarea');
+
+    // 初始状态
+    submitButton.disabled = true;
+    confirmButton.disabled = false;
+
+    // 确认按钮点击事件
+    confirmButton.addEventListener('click', function() {
+        submitButton.disabled = false;
+        this.disabled = true;
+    });
+
+    // 监听输入变化
+    function disableSubmit() {
+        submitButton.disabled = true;
+        confirmButton.disabled = false;
+    }
+
+    emailInput.addEventListener('input', disableSubmit);
+    messageInput.addEventListener('input', disableSubmit);
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mathInput = document.getElementById('mathAnswer');
+    const submitButton = document.getElementById('submitButton');
+    const emailInput = document.querySelector('input[type="email"]');
+    const messageInput = document.getElementById('messageInput');
+    let correctAnswer;
+
+    // 生成随机数学题
+    function generateMathQuestion() {
+        const num1 = Math.floor(Math.random() * 10) + 1;
+        const num2 = Math.floor(Math.random() * 10) + 1;
+        const operators = ['+', '-', '×'];
+        const operator = operators[Math.floor(Math.random() * operators.length)];
+        
+        let answer;
+        switch(operator) {
+            case '+': answer = num1 + num2; break;
+            case '-': answer = num1 - num2; break;
+            case '×': answer = num1 * num2; break;
+        }
+        
+        const question = `${num1} ${operator} ${num2} = ?`;
+        mathInput.setAttribute('data-question', question);
+        mathInput.placeholder = question;
+        return answer;
+    }
+
+    // 初始化数学题
+    correctAnswer = generateMathQuestion();
+
+    // 检查答案
+    mathInput.addEventListener('input', function() {
+        if (this.value === '') {
+            this.placeholder = mathInput.getAttribute('data-question');
+        } else {
+            this.placeholder = '';
+        }
+        const userAnswer = parseInt(this.value);
+        submitButton.disabled = userAnswer !== correctAnswer;
+    });
+
+    // 在邮箱或内容输入完成后更新数学题
+    emailInput.addEventListener('blur', () => {
+        if (emailInput.value) {
+            submitButton.disabled = true;
+            mathInput.value = '';
+            correctAnswer = generateMathQuestion();
+        }
+    });
+
+    messageInput.addEventListener('blur', () => {
+        if (messageInput.value) {
+            submitButton.disabled = true;
+            mathInput.value = '';
+            correctAnswer = generateMathQuestion();
+        }
+    });
+
+    // 当数学题答错时，保持当前题目不变
+    mathInput.addEventListener('input', function() {
+        const userAnswer = parseInt(this.value);
+        submitButton.disabled = userAnswer !== correctAnswer;
+    });
 });

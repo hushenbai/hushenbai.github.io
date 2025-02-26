@@ -111,29 +111,37 @@
                 
         </article>
 
-        <!-- 添加音频播放器 
         <div class="criticism">
-                <p0 data-lang="work-criticism">Work criticism</p0>
-                <div style="height: 16px;"></div> 
-                <div class="player-container">
-                    <div class="audio-player">
-                        <p0 class="play-title">创作者发言</p0>
-                        <div class="audio-controls">
-                            <button class="play-btn">
-                                <img src="assets/play.svg" alt="Play" class="play-icon">
-                                <img src="assets/pause.svg" alt="Pause" class="pause-icon" style="display: none;">
-                            </button>
-                            <span class="remaining-time">0:00</span>
-                            <audio id="audio-element" src="assets/audio/intro4.mp3"></audio>
-                        </div>
-                    </div>
-                    <div class="audio-player">
-                        <p0>没有更多批评，快来联系我</p0>
-                        <p0>hushenbai@163.com </p0>
-                    </div>
+                <form class="form"
+                    action="https://formspree.io/f/mldgyvvo"
+                    method="POST"
+                >
+                <h3 data-lang="work-criticism"></h3>
+                <div style="height: 32px;"></div>
+                <input class="input" 
+                    type="email" 
+                    name="email" 
+                    placeholder="Email / 邮箱">
+                <textarea class="textarea" 
+                        name="message" 
+                        id="messageInput" 
+                        maxlength="2000" 
+                        placeholder="Critical Message / 批评内容"></textarea>
+
+                <div class="math-question">
+                    <input class="input math-input" 
+                           type="number" 
+                           id="mathAnswer"
+                           placeholder="">   
                 </div>
+                <div class="button-group">
+                <button type="submit" id="submitButton" disabled>
+                    <p2 data-lang="Send">发送</p2>
+                </button>
+                </div>
+                </form>
         </div>
-        -->
+        
 
         <!-- 展览列表模块 -->
         <div class="exhibits">
@@ -236,8 +244,8 @@
 
     <script src="js/script.js"></script>
     <script src="js/price-events.js"></script>
-    <script src="js/rsm-detail.js"></script>
     <script src="js/rsm-data.js"></script>
+    <script src="js/rsm-detail.js"></script>
     <script src="js/animation3d.js"></script>
 
     <!-- 在 body 中添加 -->

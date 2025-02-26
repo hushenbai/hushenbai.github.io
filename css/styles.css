@@ -374,7 +374,7 @@ border-line {
 .styled-button {
     position: relative;
     cursor: pointer;
-    background: rgb(158, 136, 103); 
+    background: rgb(0, 0, 0); 
     padding: 8px 16px;
     border-radius: 30px;
     min-width: 120px; 

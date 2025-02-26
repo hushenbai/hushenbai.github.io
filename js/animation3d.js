@@ -47,7 +47,7 @@ class Animation3DManager {
                 const rotateY = deltaX * maxRotation;
                 const rotateX = -deltaY * maxRotation;
                 
-                wrapper.style.transition = 'transform 0.5s ease-out';
+                wrapper.style.transition = 'transform 0.2s ease-out';
                 wrapper.style.transform = `
                     perspective(${perspective}px)
                     scale(${scale})
@@ -88,7 +88,7 @@ class Animation3DManager {
                 translateZ(${translateZ}px)
             `;
             setTimeout(() => {
-                wrapper.style.transition = 'transform 0.1s ease';
+                wrapper.style.transition = 'transform 0.5s ease';
             }, 500);
         };
 
@@ -108,7 +108,7 @@ class Animation3DManager {
                 const rotateY = deltaX * maxRotation;
                 const rotateX = -deltaY * maxRotation;
                 
-                wrapper.style.transition = 'transform 0.8s ease-out';
+                wrapper.style.transition = 'transform 0.5s ease-out';
                 wrapper.style.transform = `
                     perspective(${perspective}px)
                     scale(${scale})
