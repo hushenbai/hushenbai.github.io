@@ -20,11 +20,39 @@ function goBack() {
 document.addEventListener('DOMContentLoaded', () => {
     // 从 URL 获取参数
     const params = new URLSearchParams(window.location.search);
-    const groupId = params.get('group');
     const serialnumber = params.get('id');
     
+    // 查找作品所属的组
+    let artworkGroup = 'group1';
+    for (const [groupKey, artworks] of Object.entries(groupedArtworks)) {
+        if (artworks.find(a => a.serialnumber === serialnumber)) {
+            artworkGroup = groupKey;
+            break;
+        }
+    }
+    
+    // 更新 section 的 ID
+    const groupSection = document.querySelector('section.group');
+    if (artworkGroup === 'group1') {
+        groupSection.style.display = 'none';
+    } else {
+        groupSection.id = artworkGroup;
+        groupSection.style.display = 'block';
+        
+        // 更新组标题
+        const groupTitle = groupSection.querySelector('.group-title');
+        if (groupTitle) {
+            const titleKey = `tcm-${artworkGroup}`;
+            groupTitle.setAttribute('data-lang', titleKey);
+            groupTitle.textContent = translations[getCurrentLanguage()][titleKey] || groupTitle.textContent;
+        }
+        
+        // 重新生成卡片
+        createDetailCards(artworkGroup);
+    }
+    
     // 查找对应的项目数据
-    currentArtwork = groupedArtworks[groupId].find(p => p.serialnumber === serialnumber);
+    currentArtwork = groupedArtworks[artworkGroup].find(p => p.serialnumber === serialnumber);
     
     if (currentArtwork) {
         // 设置页面标题
@@ -156,23 +184,38 @@ document.addEventListener('DOMContentLoaded', () => {
         // 使用全局语言设置更新内容
         updateLanguage();
         
+        // 更新产品状态
         updateProductStatus();
+    }
 
+    // 初始化 3D 动画
+    const hoverElement = document.querySelector('.hover-animation');
+    if (hoverElement) {
+        animation3D.initTypeA(hoverElement);
+    }
 
+    const globalElement = document.querySelector('.global-animation');
+    if (globalElement) {
+        animation3D.initTypeB(globalElement);
+    }
+
+    // 初始化意愿卡片状态
+    const card = document.getElementById('willing');
+    if (card) {
+        const content = card.querySelector('.Willing-card');
+        content.style.transform = 'translateY(900px)';
+    }
+
+    // 点击背景关闭卡片
+    const willingElement = document.getElementById('willing');
+    if (willingElement) {
+        willingElement.addEventListener('click', (e) => {
+            if (e.target.id === 'willing') {
+                hideWilling();
+            }
+        });
     }
 });
-
-// 在需要使用的页面中
-document.addEventListener('DOMContentLoaded', () => {
-    // 类型 A：仅 hover 时跟随
-    const hoverElement = document.querySelector('.hover-animation');
-    animation3D.initTypeA(hoverElement);
-
-    // 类型 B：全局跟随
-    const globalElement = document.querySelector('.global-animation');
-    animation3D.initTypeB(globalElement);
-});
-
 
 // ===============================
 // 处理项目状态显示
@@ -257,12 +300,6 @@ function hideWilling() {
         document.body.style.overflow = '';
     }, 400); // 与 CSS transition 时间匹配
 }
-// 点击背景关闭卡片
-document.getElementById('willing').addEventListener('click', (e) => {
-    if (e.target.id === 'willing') {
-        hideWilling();
-    }
-});
 // ESC 键关闭卡片
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -330,4 +367,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// 生成作品卡片的HTML
+function generateArtworkCard(artwork, groupId) {
+    const titleKey = artwork.title['data-lang'];
+    const imagePath = artwork.image.replace('assets/TCM/', 'assets/TCM/');
+    return `
+        <article class="card visible">
+            <div class="card-image" onclick="goToDetail('${groupId}', '${artwork.serialnumber}')">
+                <img src="${imagePath}" alt="${translations[getCurrentLanguage()][titleKey]}">
+            </div>
+        </article>
+    `;
+}
+
+// 生成卡片的函数
+function createDetailCards(groupId) {
+    const container = document.querySelector(`#${groupId} .container`);
+    if (!container) return;
+    
+    const cardsHTML = groupedArtworks[groupId].map(artwork => {
+        return generateArtworkCard(artwork, groupId);
+    }).join('');
+    
+    container.innerHTML = cardsHTML;
+}
+
+
 

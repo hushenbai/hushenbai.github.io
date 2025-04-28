@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(252, 252, 250, 1);
+    background-color: #ffffff;
 }
 
 .header-title {
@@ -57,7 +57,7 @@ body {
     align-items: top;
     justify-content: top;
     gap: 16px;
-    background-color: rgb(245, 244, 240);
+    background-color: #f8f8f8;
 }
 
 .function-watch {
@@ -105,7 +105,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 24px;
-    background-color: rgb(245, 244, 240);
+    background-color: #f8f8f8;
 }
 
 .list-board {
@@ -116,7 +116,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 16px;
-    background-color: rgb(245, 244, 240);
+    background-color: #f8f8f8;
 }
 
 .list-column {
@@ -199,7 +199,7 @@ body {
 }
 
 #chartjs-tooltip {
-    background-color: rgba(252, 252, 250, 1);
+    background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 12px;

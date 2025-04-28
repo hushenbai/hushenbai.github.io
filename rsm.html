@@ -12,9 +12,10 @@
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
     <!-- 网页样式 -->
+    <link rel="stylesheet" href="css/artworkpage.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/rsm.css">
-    <link rel="stylesheet" href="css/artworkpage.css">
+    
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,9 +42,10 @@
             </div>
             <div class="nav-right">
                 <div class="language-switch">
-                    <p1><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer;">English</button></p1>
+                    <h0 class="language-button"><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer;">English</button></h0>
                 </div>
-            </div>
+        </nav>
+    </div>
         </nav>
     </div>
 
@@ -71,19 +73,29 @@
 
 
     <div class="headerback">
+        <div class="video-background-rsm">
+            <video autoplay muted loop playsinline defaultMuted 
+                style="background: rgb(220, 217, 211);" 
+                preload="auto"
+                webkit-playsinline>
+                <source src="assets/rsmvideo.mp4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            </div>
+            <!--
         <div class="header-rsmbg">
             <div class="scroll-container">
-                <!-- 原始图片组 -->
+                <!-- 原始图片组 
             </div>
-        </div>
+        </div>-->
         <div class="header-text-container">
-            <div class="giant-text">Gaze</div>
+            <div class="giant-text" data-lang="Gaze">Gaze</div>
         </div>
     </div>
 
     <header class="header">
         <h1>重圆镜</h1>
-        <h1>RestoredMirrors</h1>
+        <h1>RestoredMirror</h1>
         <div style="height: 24px;"></div>
         <div>
             <p0 data-lang="rsm-slogan">How can men look at women more politely? <br>Shenbai discuss these issues and create artworks.</p0>
@@ -187,8 +199,8 @@
             <p0 data-lang="rsm-words">生活是最容易被打碎的成就</p0>
         </div>
         <!-- 订阅按钮 -->
-        <div class="enter-container">
-            <b1 class="styled-button" data-lang="customized-button" onclick="showWilling()"></b1>
+        <div class="enter-container" onclick="showWilling()">
+            <h3 data-lang="customized-button" ></h3>
             <p2 class="customized-desc" style="max-width: 600px;" data-lang="customized-desc"></p2>
         </div>
 

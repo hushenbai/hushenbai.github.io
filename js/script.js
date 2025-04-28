@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('网页加载完成！');
 });
@@ -8,10 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 生成作品卡片的HTML
 function generateArtworkCard(artwork, groupId) {
-    const titleKey = artwork.title['data-lang'];
+    const titleKey = artwork.title2['data-lang'];
     return `
         <article class="card">
-            <div class="card-image" onclick="goToDetail('${groupId}', '${artwork.serialnumber}')">
+            <div class="card-image" 
+                onclick="goToDetail('${groupId}', '${artwork.serialnumber}')"
+                onmouseenter="showTitle('${titleKey}'); "
+                onmouseleave="hideTitle()">
                 <img src="${artwork.image}" alt="${translations[currentLang][titleKey]}">
             </div>
         </article>
@@ -156,13 +160,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="gif-background" style="
                     width: 100%;
                     height: 100%;
-                    background-color: #323232;
+                    background-color: rgb(0, 0, 0);
                     background-image: url('assets/aboutme.gif');
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
                 ">
-                <div class="video-overlay"></div>
                 </div>
             `;
         }
@@ -188,6 +191,88 @@ document.addEventListener('DOMContentLoaded', function() {
             window.addEventListener('load', playVideo);
             document.addEventListener('click', playVideo, { once: true });
         }
+    }
+
+    // 如果在微信浏览器中，替换视频为静态图片
+    if (isWechat()) {
+            const videoBackground = document.querySelector('.video-background-tcm');
+            if (videoBackground) {
+                videoBackground.innerHTML = `
+                    <div class="gif-background-tcm" style="
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgb(0, 0, 0);
+                        background-image: url('assets/tcmvideo.gif');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    ">
+                    </div>
+                `;
+            }
+    } else {
+            // 非微信浏览器处理视频自动播放
+            const video = document.querySelector('.video-background-tcm video');
+            if (video) {
+                // 设置视频属性
+                video.defaultMuted = true;
+                video.muted = true;
+                video.playsInline = true;
+                
+                // 尝试播放视频
+                const playVideo = function() {
+                    video.play().catch(function(error) {
+                        console.log("视频自动播放失败:", error);
+                    });
+                };
+    
+                // 在多个事件中尝试播放
+                playVideo();
+                video.addEventListener('loadedmetadata', playVideo);
+                window.addEventListener('load', playVideo);
+                document.addEventListener('click', playVideo, { once: true });
+            }
+    }
+
+    // 如果在微信浏览器中，替换视频为静态图片
+    if (isWechat()) {
+            const videoBackground = document.querySelector('.video-background-rsm');
+            if (videoBackground) {
+                videoBackground.innerHTML = `
+                    <div class="gif-background-rsm" style="
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgb(0, 0, 0);
+                        background-image: url('assets/rsmvideo.gif');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    ">
+                    </div>
+                `;
+            }
+    } else {
+            // 非微信浏览器处理视频自动播放
+            const video = document.querySelector('.video-background-rsm video');
+            if (video) {
+                // 设置视频属性
+                video.defaultMuted = true;
+                video.muted = true;
+                video.playsInline = true;
+                
+                // 尝试播放视频
+                const playVideo = function() {
+                    video.play().catch(function(error) {
+                        console.log("视频自动播放失败:", error);
+                    });
+                };
+    
+                // 在多个事件中尝试播放
+                playVideo();
+                video.addEventListener('loadedmetadata', playVideo);
+                window.addEventListener('load', playVideo);
+                document.addEventListener('click', playVideo, { once: true });
+            }
     }
 
     // 如果是微信浏览器，给 body 添加 wechat 类
@@ -261,6 +346,48 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > window.innerHeight) {
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
+    }
+});
+
+// 显示标题
+function showTitle(titleKey) {
+    let overlay = document.querySelector('.title-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'title-overlay';
+        document.body.appendChild(overlay);
+    }
+    overlay.innerHTML = `<h3><span data-lang="${titleKey}">${translations[currentLang][titleKey]}</span></h3>`;
+    overlay.classList.add('visible');
+}
+
+// 隐藏标题
+function hideTitle() {
+    const overlay = document.querySelector('.title-overlay');
+    if (overlay) {
+        overlay.classList.remove('visible');
+    }
+}
+
+// 更新所有带有 data-lang 属性的元素
+function updateTranslations() {
+    document.querySelectorAll('[data-lang]').forEach(element => {
+        const key = element.getAttribute('data-lang');
+        if (translations[currentLang][key]) {
+            // 使用 innerHTML 而不是 textContent 来支持 HTML 标签
+            element.innerHTML = translations[currentLang][key];
+        }
+    });
+}
+
+// 删除重复的 toggleLanguage 函数，使用 translations.js 中的实现
 
 
 

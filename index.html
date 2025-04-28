@@ -38,7 +38,7 @@
             </div>
             <div class="nav-right">
                 <div class="language-switch">
-                    <p1><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer;">English</button></p1>
+                    <h0 class="language-button"><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer;">English</button></h0>
                 </div>
             </div>
         </nav>
@@ -67,17 +67,26 @@
     </div>
 
     <div class="headerback">
-        <div class="header-bg">
-            <!-- 旋转的背景图片 -->
+        <div class="video-background-tcm">
+        <video autoplay muted loop playsinline defaultMuted 
+            style="background: rgb(220, 217, 211);" 
+            preload="auto"
+            webkit-playsinline>
+            <source src="assets/tcmvideo.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+        </video>
         </div>
+        <!-- <div class="header-bg">
+             旋转的背景图片
+        </div> -->
         <div class="header-text-container">
-            <div class="giant-text">Repetition</div>
+            <div class="giant-text" data-lang="Repetition">Repetition</div>
         </div>
     </div>
 
     <header class="header">
         <h1>明珠薏苡</h1>
-        <h1>PearlBarleySand</h1>
+        <h1>MedicineBowl</h1>
         <div style="height: 24px;"></div>
         <div>
             <p0 data-lang="tcm-slogan">How can Chinese people drink Chinese medicine more effectively? <br>Shenbai discuss these issues and create artworks.</p0>
@@ -97,7 +106,7 @@
         <!-- 第二组 -->
         <section class="group" id="group2">
             <div class="group-content">
-            <h2 data-lang="文言四字碗盛药图" class="group-title">文言四字碗盛药图</h2>
+            <h2 data-lang="tcm-group2" class="group-title">文言四字碗盛药图</h2>
             </div>
             <div class="container">
                 <!-- JavaScript 将在这里插入第二组卡片 -->
@@ -107,7 +116,7 @@
          <!-- 第二组 -->
          <section class="group" id="group3">
             <div class="group-content">
-            <h2 data-lang="四回字碗盛药图"class="group-title">四回字碗盛药图</h2>
+            <h2 data-lang="tcm-group3"class="group-title">四回字碗盛药图</h2>
             </div>
             <div class="container">
                 <!-- JavaScript 将在这里插入第二组卡片 -->
@@ -117,17 +126,28 @@
           <!-- 第三组 -->
          <section class="group" id="group4">
             <div class="group-content">
-            <h2 data-lang="儒家祭祀五字碗盛药图"class="group-title">儒家祭祀五字碗盛药图</h2>
+            <h2 data-lang="tcm-group4"class="group-title">儒家祭祀五字碗盛药图</h2>
             </div>
             <div class="container">
                 <!-- JavaScript 将在这里插入第三组卡片 -->
             </div>
         </section>
 
+        <!-- 第八组 -->
+        <section class="group" id="group10">
+            <div class="group-content">
+            <h2 data-lang="tcm-group10"class="group-title">儒家四端碗盛药图</h2>
+            </div>
+            <div class="container">
+                <!-- JavaScript 将在这里插入第八组卡片 -->
+            </div>
+        </section>
+        
+
         <!-- 第四组 -->
         <section class="group" id="group5">
             <div class="group-content">
-            <h2 data-lang="三峡九乡碗盛药图"class="group-title">三峡九乡碗盛药图</h2>
+            <h2 data-lang="tcm-group5"class="group-title">三峡九乡碗盛药图</h2>
             </div>
             <div class="container">
                         <!-- JavaScript 将在这里插入第四组卡片 -->
@@ -137,7 +157,7 @@
         <!-- 第五组 -->
         <section class="group" id="group6">
             <div class="group-content">
-            <h2 data-lang="姐娣碗盛药图"class="group-title">姐娣碗盛药图</h2>
+            <h2 data-lang="tcm-group6"class="group-title">姐娣碗盛药图</h2>
             </div>
             <div class="container">
                 <!-- JavaScript 将在这里插入第五组卡片 -->
@@ -147,20 +167,43 @@
         <!-- 第六组 -->
         <section class="group" id="group7">
             <div class="group-content">
-            <h2 data-lang="南洋娘惹碗盛药图"class="group-title">南洋娘惹碗盛药图</h2>
+            <h2 data-lang="tcm-group7"class="group-title">南洋娘惹碗盛药图</h2>
             </div>
             <div class="container">
                 <!-- JavaScript 将在这里插入第六组卡片 -->
             </div>
         </section>
+
+        <!-- 第七组 -->
+        <section class="group" id="group8">
+            <div class="group-content">
+            <h2 data-lang="tcm-group8" class="group-title">旧金山华乡碗盛药图</h2>
+            </div>
+            <div class="container">
+                <!-- JavaScript 将在这里插入第七组卡片 -->
+            </div>
+        </section>
+
+        <!-- 第八组 -->
+        <section class="group" id="group9">
+            <div class="group-content">
+            <h2 data-lang="tcm-group9"class="group-title">卑诗华乡碗盛药图</h2>
+            </div>
+            <div class="container">
+                <!-- JavaScript 将在这里插入第八组卡片 -->
+            </div>
+        </section>
+
+        
     </main>
 
     <home>
     <div class="text-box">
         <p0 data-lang="tcm-words">一条大河，十亿小碗</p0>
     </div>
-    <div class="enter-container">
-        <b1 class="styled-button" data-lang="art-trading" onclick="window.location.href='art-trading.html'"></b1>
+    
+    <div class="enter-container" onclick="window.location.href='art-trading.html'">
+        <h3 data-lang="art-trading"></h3>
         <p2 data-lang="art-trading-info">art-trading-info</p2>
     </div>
     </home>

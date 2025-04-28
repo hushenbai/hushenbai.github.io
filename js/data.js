@@ -448,8 +448,90 @@ const groupedArtworks = {
             
         },
 
+        {
+            image: 'assets/TCM/TCMHM1裂纹青黄手捏陶碗盛药图.jpg',
+            title: {
+                'data-lang': '裂纹青黄手捏陶碗盛药图'
+            },
+            title2: {
+                'data-lang': '裂纹青黄<br>手捏陶碗<br>盛药图'
+            },
+            serialnumber: 'TCMHM1',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2024,
+            date: '2025-04-17',
+            state: 0,
+            
+        },
+        {
+            image: 'assets/TCM/TCMHM2红纭手捏陶碗盛药图.jpg',
+            title: {
+                'data-lang': '红纭手捏陶碗盛药图'
+            },
+            title2: {
+                'data-lang': '红纭<br>手捏陶碗<br>盛药图'
+            },
+            serialnumber: 'TCMHM2',
+            series: {'data-lang': '传统中药'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2024,
+            date: '2025-04-17',
+            state: 0,
+            
+        },
+        {
+            image: 'assets/TCM/TCMHM3缺口墨斑纹手捏陶碗盛药图.jpg',
+            title: {
+                'data-lang': '缺口墨斑纹手捏陶碗盛药图'
+            },
+            title2: {
+                'data-lang': '缺口墨斑纹<br>手捏陶碗<br>盛药图'
+            },
+            serialnumber: 'TCMHM3',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2024,
+            date: '2025-04-17',
+            state: 0,
+            
+        },
+        {
+            image: 'assets/TCM/TCMHM4墨纭手捏陶碗盛药图.jpg',
+            title: {
+                'data-lang': '墨纭手捏陶碗盛药图'
+            },
+            title2: {
+                'data-lang': '墨纭<br>手捏陶碗<br>盛药图'
+            },
+            serialnumber: 'TCMHM4',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2024,
+            date: '2025-04-17',
+            state: 0,
+            
+        },
 
-        
         // 第一组的更多项目...
     ],
 
@@ -1217,5 +1299,250 @@ const groupedArtworks = {
             
         },
     ],
+
+    group8: [
+        {
+            image: 'assets/TCM/TCMCSSF1金山大埠瓷碗盛药图.jpg',
+            title: {
+                'data-lang': '金山大埠瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '金山大埠<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMCSSF1',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-04-12',
+            state: 0,
+        },
+
+        {
+            image: 'assets/TCM/TCMCSSF2金山二埠瓷碗盛药图.jpg',
+            title: {
+                'data-lang': '金山二埠瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '金山二埠<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMCSSF2',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-04-12',
+            state: 0,
+        },
+
+        {
+            image: 'assets/TCM/TCMCSSF3金山三埠瓷碗盛药图.jpg',
+            title: {
+                'data-lang': '金山三埠瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '金山三埠<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMCSSF3',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-04-12',
+            state: 0,
+            
+        },
+
+        {
+            image: 'assets/TCM/TCMCSSF4金山埠仔瓷碗盛药图.jpg',
+            title: {
+                'data-lang': '金山埠仔瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '金山埠仔<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMCSSF4',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-04-12',
+            state: 0,
+        },
+        // 第二组的更多项目...
+    ],
+
+    group9: [
+        {
+            image: 'assets/TCM/TCMCSBC1卑诗大埠瓷碗盛药图.jpg',
+            title: {
+                'data-lang': '卑诗大埠瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '卑诗大埠<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMCSBC1',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-04-12',
+            state: 0,
+        },
+
+        {
+            image: 'assets/TCM/TCMCSBC2卑诗二埠瓷碗盛药图.jpg',
+            title: {
+                'data-lang': '卑诗二埠瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '卑诗二埠<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMCSBC2',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-04-12',
+            state: 0,
+        },
+
+        {
+            image: 'assets/TCM/TCMCSBC3卑诗咸水埠瓷碗盛药图.jpg',
+            title: {
+                'data-lang': '卑诗咸水埠瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '卑诗咸水埠<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMCSBC3',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-04-12',
+            state: 0,
+        },
+        // 第二组的更多项目...
+    ],
+
+    group10: [
+        {
+            image: 'assets/TCM/TCMCS4B1恻隐陶碗盛药图.jpg',
+            title: {
+                'data-lang': '恻隐陶碗盛药图'
+            },
+            title2: {
+                'data-lang': '恻隐<br>陶碗<br>盛药图'
+            },
+            serialnumber: 'TCMCS4B1',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-04-14',
+            state: 0,
+        },
+
+        {
+            image: 'assets/TCM/TCMCS4B2羞恶陶碗盛药图.jpg',
+            title: {
+                'data-lang': '羞恶陶碗盛药图'
+            },
+            title2: {
+                'data-lang': '羞恶<br>陶碗<br>盛药图'
+            },
+            serialnumber: 'TCMCS4B2',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-04-14',
+            state: 0,
+        },
+
+        {
+            image: 'assets/TCM/TCMCS4B3辞让陶碗盛药图.jpg',
+            title: {
+                'data-lang': '辞让陶碗盛药图'
+            },
+            title2: {
+                'data-lang': '辞让<br>陶碗<br>盛药图'
+            },
+            serialnumber: 'TCMCS4B3',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-04-14',
+            state: 0,
+            
+        },
+
+        {
+            image: 'assets/TCM/TCMCS4B4是非陶碗盛药图.jpg',
+            title: {
+                'data-lang': '是非陶碗盛药图'
+            },
+            title2: {
+                'data-lang': '是非<br>陶碗<br>盛药图'
+            },
+            serialnumber: 'TCMCS4B4',
+            series: {'data-lang': '传统中药'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-04-14',
+            state: 0,
+        },
+        // 第二组的更多项目...
+    ],    
     // 可以添加更多组...
 };
+
+
+

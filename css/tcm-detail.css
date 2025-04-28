@@ -50,3 +50,24 @@
     .depth-layer:nth-child(13) { transform: translateZ(-52px); }
     .depth-layer:nth-child(14) { transform: translateZ(-56px); }
 }
+
+.group {
+    margin-bottom: 120px;
+}
+
+.group-content {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+@media screen and (max-width: 560px) {
+    .group {
+        margin-bottom: 40px;
+    }
+    
+    .group-content {
+        margin-top: 40px;
+        margin-bottom: 48px;
+    }
+    
+}

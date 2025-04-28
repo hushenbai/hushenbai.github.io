@@ -24,6 +24,8 @@
     <!-- Scripts -->
     <script src="js/translations.js"></script>
     <script src="js/exhibits-events.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/detail.js"></script>
 
 </head>
 
@@ -33,18 +35,18 @@
         <nav class="nav-container">
             <div class="nav-left">
                 <h0 class="nav-button" onclick="window.location.href='aboutme.html'">
-                    <span class="desktop-title" data-lang="shenbai">申白</span>
+                    <span class="desktop-title" data-lang="shenbai" style="color:#000">申白</span>
                 </h0>
                 <h0 class="nav-button" onclick="window.location.href='index.html'">
-                    <span class="desktop-title" data-lang="tcm-title">明珠薏苡</span>
+                    <span class="desktop-title" data-lang="tcm-title" style="color:#000">明珠薏苡</span>
                 </h0>
                 <h0 class="nav-button" onclick="window.location.href='rsm.html'">
-                    <span class="desktop-title" data-lang="rsm-title">重圆镜</span>
+                    <span class="desktop-title" data-lang="rsm-title" style="color:#000">重圆镜</span>
                 </h0>
             </div>
             <div class="nav-right">
                 <div class="language-switch">
-                    <p1><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer;">English</button></p1>
+                    <h0><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer; color:#000">English</button></h0>
                 </div>
             </div>
         </nav>
@@ -113,6 +115,10 @@
     </header>
 
     <main>
+        <div class="buy-button">
+            <p1 data-lang="productstate-0" class="styled-button" onclick="showWilling()"></p1>
+            <p2 class="productstate-desc" style="max-width: 600px;" data-lang="productstate-button-0"></p2>
+        </div>
             <!-- 文章部分 -->
             <article class="article">
                 <div class="article-line">
@@ -128,10 +134,18 @@
             </div>
 
             <!-- 订阅按钮 -->
-            <div class="enter-container">
-                <b1 class="styled-button" data-lang="productstate-0" onclick="showWilling()"></b1>
-                <p2 class="productstate-desc" style="max-width: 600px;" data-lang="productstate-button-0"></p2>
-            </div>
+            
+
+            <section class="group" id="group4">
+                <div style="border: 0.5px solid rgba(0, 0, 0, 0.08);"></div>
+                <div style="height: 24px;"></div>
+                <div class="group-content">
+                    <h2 data-lang="tcm-group4" class="group-title">文言四字碗盛药图</h2>
+                </div>
+                <div class="container">
+                    <!-- JavaScript 将在这里插入第三组卡片 -->
+                </div>
+            </section>
             
     </main>
 
@@ -196,8 +210,8 @@
                         </div>
                     </div>
                     <div style="height: 1px; background-color: rgba(0, 0, 0, 0.1);"></div>
-                    <div class="enter-container" style="margin-bottom: 0;">
-                        <b1 class="styled-button" data-lang="art-trading" onclick="window.location.href='art-trading.html'"></b1>
+                    <div class="enter-container" style="margin-bottom: 0;" onclick="window.location.href='art-trading.html'">
+                        <h3 data-lang="art-trading" ></h3>
                         <p2 data-lang="art-trading-info">art-trading-info</p2>
                     </div>
                 </div>
@@ -220,10 +234,10 @@
         <p3>&copy; 2024 HU SHENBAI</p3>
     </footer>  
 
-    <script src="js/script.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/exhibits-events.js"></script>
     <script src="js/price-events.js"></script>
     <script src="js/data.js"></script>
-    <script src="js/detail.js"></script>
     <script src="js/animation3d.js"></script>
 </body>
 </html> 

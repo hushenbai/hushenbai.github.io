@@ -23,24 +23,25 @@
     <!-- Scripts -->
     <script src="js/translations.js"></script>
 
+
 </head>
 <body>
     <div class="nav-background">
         <nav class="nav-container">
             <div class="nav-left">
                 <h0 class="nav-button current-page" onclick="window.location.href='aboutme.html'">
-                    <span class="desktop-title" data-lang="shenbai" style="color: #fff;">申白</span>
+                    <span class="desktop-title" data-lang="shenbai">申白</span>
                 </h0>
                 <h0 class="nav-button" onclick="window.location.href='index.html'">
-                    <span class="desktop-title" data-lang="tcm-title" style="color: #fff;">明珠薏苡</span>
+                    <span class="desktop-title" data-lang="tcm-title">明珠薏苡</span>
                 </h0>
                 <h0 class="nav-button" onclick="window.location.href='rsm.html'">
-                    <span class="desktop-title" data-lang="rsm-title" style="color: #fff;">重圆镜</span>
+                    <span class="desktop-title" data-lang="rsm-title">重圆镜</span>
                 </h0>
             </div>
             <div class="nav-right">
                 <div class="language-switch">
-                    <p1><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer;">English</button></p1>
+                    <h0 class="language-button"><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer;">English</button></h0>
                 </div>
             </div>
         </nav>
@@ -68,31 +69,42 @@
         </div>
     </div>
 
-    <!-- 背景视频 -->
-    <div class="video-background">
-        <video autoplay muted loop playsinline defaultMuted 
-            style="background: rgb(50, 50, 50);" 
+    <div class="headerback">
+        <div class="video-background">
+            <video autoplay muted loop playsinline defaultMuted 
+            style="background: rgb(220, 217, 211);" 
             preload="auto"
             webkit-playsinline>
             <source src="assets/aboutme.mp4" type="video/mp4">
             您的浏览器不支持视频播放。
-        </video>
-        <!-- 添加遮罩层 -->
-        <div class="video-overlay"></div>
+            </video>
+        </div>
+        <div class="header-text-container">
+            <div class="giant-text" data-lang="shenbai">Shenbai</div>
+        </div>
     </div>
 
     <!-- 内容区域 -->
-    <header>
-        <div class="content-overlay">
-            <h1>胡申白</h1>
-            <h1>Hu Shenbai</h1>
-            <div style="height: 80px;"></div>
+    <main>
+        <div class="content-intro">
             <div>
-                <p0 data-lang="about-me">PBS-about-me</p0>
+                <p0 data-lang="about-me">MDB-about-me</p0>
             </div>
         </div>
-    </header>
+    </main>
+
+    <home>
+
+    <a href="https://www.xiaohongshu.com/user/profile/5e4a34d4000000000100b61a?xsec_token=YBplo5P8xDcfUh6gxb1nT7xOlRLvmgh0rGYRRiRnaFFWQ=&xsec_source=app_share&xhsshare=CopyLink&appuid=5e4a34d4000000000100b61a&apptime=1744949193&share_id=08c7bdb3138449c3b45fe2834b26b419">
+        <img src="assets/rednote.svg" class="rednote">
+    </a>
+    </home>
+
+    <footer>
+        <p3>&copy; 2024 HU SHENBAI</p3>
+    </footer>
 
     <script src="js/script.js"></script>
+    
 </body>
 </html> 
