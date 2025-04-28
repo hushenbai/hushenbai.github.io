@@ -397,33 +397,103 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const confirmButton = document.getElementById('confirmButton');
     const submitButton = document.getElementById('submitButton');
     const emailInput = document.querySelector('input[type="email"]');
     const messageInput = document.querySelector('textarea');
 
     // 初始状态
-    submitButton.disabled = true;
-    confirmButton.disabled = false;
-
-    // 确认按钮点击事件
-    confirmButton.addEventListener('click', function() {
-        submitButton.disabled = false;
-        this.disabled = true;
-    });
+    if (submitButton) {
+        submitButton.disabled = true;
+    }
 
     // 监听输入变化
     function disableSubmit() {
-        submitButton.disabled = true;
-        confirmButton.disabled = false;
+        if (submitButton) {
+            submitButton.disabled = true;
+        }
     }
 
-    emailInput.addEventListener('input', disableSubmit);
-    messageInput.addEventListener('input', disableSubmit);
+    if (emailInput) {
+        emailInput.addEventListener('input', disableSubmit);
+    }
+    if (messageInput) {
+        messageInput.addEventListener('input', disableSubmit);
+    }
 });
 
 
 document.addEventListener('DOMContentLoaded', function() {
+    const mathInput = document.getElementById('mathAnswer');
+    const submitButton = document.getElementById('submitButton');
+    const emailInput = document.querySelector('input[type="email"]');
+    const messageInput = document.getElementById('messageInput');
+    let correctAnswer;
+
+    // 生成随机数学题
+    function generateMathQuestion() {
+        const num1 = Math.floor(Math.random() * 10) + 1;
+        const num2 = Math.floor(Math.random() * 10) + 1;
+        const operators = ['+', '-', '×'];
+        const operator = operators[Math.floor(Math.random() * operators.length)];
+        
+        let answer;
+        switch(operator) {
+            case '+': answer = num1 + num2; break;
+            case '-': answer = num1 - num2; break;
+            case '×': answer = num1 * num2; break;
+        }
+        
+        const question = `${num1} ${operator} ${num2} = ?`;
+        mathInput.setAttribute('data-question', question);
+        mathInput.placeholder = question;
+        return answer;
+    }
+
+    // 初始化数学题
+    correctAnswer = generateMathQuestion();
+
+    // 检查答案
+    mathInput.addEventListener('input', function() {
+        if (this.value === '') {
+            this.placeholder = mathInput.getAttribute('data-question');
+        } else {
+            this.placeholder = '';
+        }
+        const userAnswer = parseInt(this.value);
+        submitButton.disabled = userAnswer !== correctAnswer;
+    });
+
+    // 在邮箱或内容输入完成后更新数学题
+    emailInput.addEventListener('blur', () => {
+        if (emailInput.value) {
+            submitButton.disabled = true;
+            mathInput.value = '';
+            correctAnswer = generateMathQuestion();
+        }
+    });
+
+    messageInput.addEventListener('blur', () => {
+        if (messageInput.value) {
+            submitButton.disabled = true;
+            mathInput.value = '';
+            correctAnswer = generateMathQuestion();
+        }
+    });
+
+    // 当数学题答错时，保持当前题目不变
+    mathInput.addEventListener('input', function() {
+        const userAnswer = parseInt(this.value);
+        submitButton.disabled = userAnswer !== correctAnswer;
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 设置当前页面URL到隐藏字段
+    const pageUrlInput = document.getElementById('pageUrl');
+    if (pageUrlInput) {
+        pageUrlInput.value = window.location.href;
+    }
+
     const mathInput = document.getElementById('mathAnswer');
     const submitButton = document.getElementById('submitButton');
     const emailInput = document.querySelector('input[type="email"]');
