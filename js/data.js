@@ -6,7 +6,7 @@ const groupedArtworks = {
             title: {'data-lang': '白陶碗盛药图'},
             title2: {'data-lang': '白陶碗<br>盛药图'},
             serialnumber: 'TCMFW1',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -24,7 +24,7 @@ const groupedArtworks = {
             title: {'data-lang': '金叶纹铜碗盛药图'},
             title2: {'data-lang': '金叶纹铜碗<br>盛药图'},
             serialnumber: 'TCMFW2',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -42,7 +42,7 @@ const groupedArtworks = {
             title: {'data-lang': '柔形白瓷碗盛药图'},
             title2: {'data-lang': '柔形白瓷碗<br>盛药图'},
             serialnumber: 'TCMFW3',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -64,7 +64,7 @@ const groupedArtworks = {
                 'data-lang': '金边天蓝釉<br>瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW4',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -86,7 +86,7 @@ const groupedArtworks = {
                 'data-lang': '枯草地<br>白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW5',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -108,7 +108,7 @@ const groupedArtworks = {
                 'data-lang': '金环白瓷盘<br>盛药图'
             },
             serialnumber: 'TCMFW6',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -130,7 +130,7 @@ const groupedArtworks = {
                 'data-lang': '紫地<br>高足白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW7',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -152,7 +152,7 @@ const groupedArtworks = {
                 'data-lang': '金边黑釉<br>扁陶碗<br>盛药图'
             },
             serialnumber: 'TCMFW8',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -174,7 +174,7 @@ const groupedArtworks = {
                 'data-lang': '金边墨蓝釉<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMFW9',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -196,7 +196,7 @@ const groupedArtworks = {
                 'data-lang': '素青瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW10',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -218,7 +218,7 @@ const groupedArtworks = {
                 'data-lang': '大玻璃碗<br>盛药图'
             },
             serialnumber: 'TCMFW11',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -240,7 +240,7 @@ const groupedArtworks = {
                 'data-lang': '冰蓝釉褐边<br>厚碗<br>盛药图'
             },
             serialnumber: 'TCMFW12',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -262,7 +262,7 @@ const groupedArtworks = {
                 'data-lang': '金地<br>黑边灰土碗<br>盛药图'
             },
             serialnumber: 'TCMFW13',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -284,7 +284,7 @@ const groupedArtworks = {
                 'data-lang': '黄釉<br>喇叭瓷盘<br>盛药图'
             },
             serialnumber: 'TCMFW14',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -306,7 +306,7 @@ const groupedArtworks = {
                 'data-lang': '糯玉瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW15',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -328,7 +328,7 @@ const groupedArtworks = {
                 'data-lang': '绿铁碗<br>盛药图'
             },
             serialnumber: 'TCMFW16',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -350,7 +350,7 @@ const groupedArtworks = {
                 'data-lang': '草地<br>金斑黑瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW17',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -372,7 +372,7 @@ const groupedArtworks = {
                 'data-lang': '碎绿地<br>白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW18',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -413,7 +413,7 @@ const groupedArtworks = {
                 'data-lang': '淤血白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMFW19',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -435,7 +435,7 @@ const groupedArtworks = {
                 'data-lang': '淤花纹<br>蓝底钵<br>盛药图'
             },
             serialnumber: 'TCMFW20',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -457,7 +457,7 @@ const groupedArtworks = {
                 'data-lang': '裂纹青黄<br>手捏陶碗<br>盛药图'
             },
             serialnumber: 'TCMHM1',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -478,7 +478,8 @@ const groupedArtworks = {
                 'data-lang': '红纭<br>手捏陶碗<br>盛药图'
             },
             serialnumber: 'TCMHM2',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
             depth: 2.3,
@@ -498,28 +499,7 @@ const groupedArtworks = {
                 'data-lang': '缺口墨斑纹<br>手捏陶碗<br>盛药图'
             },
             serialnumber: 'TCMHM3',
-            series: {'data-lang': '传统中药'},
-            media: {'data-lang': '木板油彩'},
-            width: 20,
-            height: 20,
-            depth: 2.3,
-            coefficient: 60,
-            weight: '250 g',
-            year: 2024,
-            date: '2025-04-17',
-            state: 0,
-            
-        },
-        {
-            image: 'assets/TCM/TCMHM4墨纭手捏陶碗盛药图.jpg',
-            title: {
-                'data-lang': '墨纭手捏陶碗盛药图'
-            },
-            title2: {
-                'data-lang': '墨纭<br>手捏陶碗<br>盛药图'
-            },
-            serialnumber: 'TCMHM4',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -545,7 +525,7 @@ const groupedArtworks = {
                 'data-lang': '之字<br>白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT1',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -567,7 +547,7 @@ const groupedArtworks = {
                 'data-lang': '乎字<br>白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT2',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -589,7 +569,7 @@ const groupedArtworks = {
                 'data-lang': '者字<br>白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT3',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -611,7 +591,7 @@ const groupedArtworks = {
                 'data-lang': '也字<br>白瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT4',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -636,7 +616,7 @@ const groupedArtworks = {
                 'data-lang': '回字第一形<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT5',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -658,7 +638,7 @@ const groupedArtworks = {
                 'data-lang': '回字第二形<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT6',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -680,7 +660,7 @@ const groupedArtworks = {
                 'data-lang': '回字第三形<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT7',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -702,7 +682,7 @@ const groupedArtworks = {
                 'data-lang': '回字第四形<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMCSCT8',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -727,7 +707,7 @@ const groupedArtworks = {
                 'data-lang': '天字<br>红碗<br>盛药图'
             },
             serialnumber: 'TCMCSCW1',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -749,7 +729,7 @@ const groupedArtworks = {
                 'data-lang': '地字<br>红碗<br>盛药图'
             },
             serialnumber: 'TCMCSCW2',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -771,7 +751,7 @@ const groupedArtworks = {
                 'data-lang': '君字<br>红碗<br>盛药图'
             },
             serialnumber: 'TCMCSCW3',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -793,7 +773,7 @@ const groupedArtworks = {
                 'data-lang': '亲字<br>红碗<br>盛药图'
             },
             serialnumber: 'TCMCSCW4',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -815,7 +795,7 @@ const groupedArtworks = {
                 'data-lang': '师字<br>红碗<br>盛药图'
             },
             serialnumber: 'TCMCSCW5',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -840,7 +820,7 @@ const groupedArtworks = {
                 'data-lang': '秭归<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G1',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -861,7 +841,7 @@ const groupedArtworks = {
                 'data-lang': '兴山<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G2',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -882,7 +862,7 @@ const groupedArtworks = {
                 'data-lang': '巴东<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G3',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -903,7 +883,7 @@ const groupedArtworks = {
                 'data-lang': '巫山<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G4',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -924,7 +904,7 @@ const groupedArtworks = {
                 'data-lang': '奉节<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G5',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -945,7 +925,7 @@ const groupedArtworks = {
                 'data-lang': '万县<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G6',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -966,7 +946,7 @@ const groupedArtworks = {
                 'data-lang': '开县<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G7',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -987,7 +967,7 @@ const groupedArtworks = {
                 'data-lang': '丰都<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G8',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1008,7 +988,7 @@ const groupedArtworks = {
                 'data-lang': '云阳<br>紫釉碗<br>盛药图'
             },
             serialnumber: 'TCMCS3G9',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1032,7 +1012,7 @@ const groupedArtworks = {
                 'data-lang': '花招娣<br>白衣搪瓷碗<br>盛药图'
             },
             serialnumber: 'TCMES1',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1053,7 +1033,7 @@ const groupedArtworks = {
                 'data-lang': '花迎娣<br>黄衣搪瓷碗<br>盛药图'
             },
             serialnumber: 'TCMES2',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1074,7 +1054,7 @@ const groupedArtworks = {
                 'data-lang': '花念娣<br>粉衣搪瓷碗<br>盛药图'
             },
             serialnumber: 'TCMES3',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1095,7 +1075,7 @@ const groupedArtworks = {
                 'data-lang': '花盼娣<br>青衣搪瓷碗<br>盛药图'
             },
             serialnumber: 'TCMES4',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1118,7 +1098,7 @@ const groupedArtworks = {
                 'data-lang': '娘惹<br>绿粉瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN1',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1139,7 +1119,7 @@ const groupedArtworks = {
                 'data-lang': '娘惹<br>黄蓝瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN2',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1160,7 +1140,7 @@ const groupedArtworks = {
                 'data-lang': '娘惹<br>黄绿瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN3',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1181,7 +1161,7 @@ const groupedArtworks = {
                 'data-lang': '娘惹<br>黄罗瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN4',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1202,7 +1182,7 @@ const groupedArtworks = {
                 'data-lang': '娘惹<br>蓝绿瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN5',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1223,7 +1203,7 @@ const groupedArtworks = {
                 'data-lang': '娘惹<br>粉罗瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN6',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1244,7 +1224,7 @@ const groupedArtworks = {
                 'data-lang': '娘惹<br>土粉瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN7',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1265,7 +1245,7 @@ const groupedArtworks = {
                 'data-lang': '娘惹<br>酱绿瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN8',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1286,7 +1266,7 @@ const groupedArtworks = {
                 'data-lang': '娘惹<br>红黄瓷碗<br>盛药图'
             },
             serialnumber: 'TCMNN9',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1310,7 +1290,7 @@ const groupedArtworks = {
                 'data-lang': '金山大埠<br>瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSSF1',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1331,7 +1311,7 @@ const groupedArtworks = {
                 'data-lang': '金山二埠<br>瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSSF2',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1352,7 +1332,7 @@ const groupedArtworks = {
                 'data-lang': '金山三埠<br>瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSSF3',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1374,7 +1354,7 @@ const groupedArtworks = {
                 'data-lang': '金山埠仔<br>瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSSF4',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1398,7 +1378,7 @@ const groupedArtworks = {
                 'data-lang': '卑诗大埠<br>瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSBC1',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1419,7 +1399,7 @@ const groupedArtworks = {
                 'data-lang': '卑诗二埠<br>瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSBC2',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1440,7 +1420,7 @@ const groupedArtworks = {
                 'data-lang': '卑诗咸水埠<br>瓷碗<br>盛药图'
             },
             serialnumber: 'TCMCSBC3',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1464,7 +1444,7 @@ const groupedArtworks = {
                 'data-lang': '恻隐<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMCS4B1',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1485,7 +1465,7 @@ const groupedArtworks = {
                 'data-lang': '羞恶<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMCS4B2',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1506,7 +1486,7 @@ const groupedArtworks = {
                 'data-lang': '辞让<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMCS4B3',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1528,7 +1508,7 @@ const groupedArtworks = {
                 'data-lang': '是非<br>陶碗<br>盛药图'
             },
             serialnumber: 'TCMCS4B4',
-            series: {'data-lang': '传统中药'},
+            series: {'data-lang': '明珠薏苡'},
             media: {'data-lang': '木板油彩'},
             width: 20,
             height: 20,
@@ -1541,6 +1521,291 @@ const groupedArtworks = {
         },
         // 第二组的更多项目...
     ],    
+    group11: [
+        {
+            image: 'assets/TCM/TCMCSNY1北海瓷碗盛药图.png',
+            title: {
+                'data-lang': '北海瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '北海<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMCSNY1',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+        {
+            image: 'assets/TCM/TCMCSNY2太平瓷碗盛药图.png',
+            title: {
+                'data-lang': '太平瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '太平<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMCSNY2',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+        {
+            image: 'assets/TCM/TCMCSNY3泗水瓷碗盛药图.png',
+            title: {
+                'data-lang': '泗水瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '泗水<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMCSNY3',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+        {
+            image: 'assets/TCM/TCMCSNY4新山瓷碗盛药图.png',
+            title: {
+                'data-lang': '新山瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '新山<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMCSNY4',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+        {
+            image: 'assets/TCM/TCMCSNY5槟榔屿瓷碗盛药图.png',
+            title: {
+                'data-lang': '槟榔屿瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '槟榔屿<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMCSNY5',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+    ],
+    group12: [
+        {
+            image: 'assets/TCM/TCMLR1牡丹粉旗衣瓷碗盛药图.png',
+            title: {
+                'data-lang': '牡丹粉旗衣瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '牡丹粉旗衣<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMLR1',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+        {
+            image: 'assets/TCM/TCMLR2黄衣瓷碗盛药图.png',
+            title: {
+                'data-lang': '黄衣瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '黄衣瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMLR2',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+        {
+            image: 'assets/TCM/TCMLR3荷花粉旗衣瓷碗盛药图.png',
+            title: {
+                'data-lang': '荷花粉旗衣瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '荷花粉旗衣<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMLR3',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+        {
+            image: 'assets/TCM/TCMLR4荷花紫旗衣瓷碗盛药图.png',
+            title: {
+                'data-lang': '荷花紫旗衣瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '荷花紫旗衣<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMLR4',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+        {
+            image: 'assets/TCM/TCMLR5荷叶青旗衣瓷碗盛药图.png',
+            title: {
+                'data-lang': '荷叶青旗衣瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '荷叶青旗衣<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMLR5',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+        {
+            image: 'assets/TCM/TCMLR6梅花红旗衣瓷碗盛药图.png',
+            title: {
+                    'data-lang': '梅花红旗衣瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '梅花红旗衣<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMLR6',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+        {
+            image: 'assets/TCM/TCMLR7牡丹绿旗衣瓷碗盛药图.png',
+            title: {
+                'data-lang': '牡丹绿旗衣瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '牡丹绿旗衣<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMLR7',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+        {
+            image: 'assets/TCM/TCMLR8梅花紫旗衣瓷碗盛药图.png',
+            title: {
+                'data-lang': '梅花紫旗衣瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '梅花紫旗衣<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMLR8',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+        {
+            image: 'assets/TCM/TCMLR9蓝边白旗衣瓷碗盛药图.png',
+            title: {
+                'data-lang': '蓝边白旗衣瓷碗盛药图'
+            },
+            title2: {
+                'data-lang': '蓝边白旗衣<br>瓷碗<br>盛药图'
+            },
+            serialnumber: 'TCMLR9',
+            series: {'data-lang': '明珠薏苡'},
+            media: {'data-lang': '木板油彩'},
+            width: 20,
+            height: 20,
+            depth: 2.3,
+            coefficient: 60,
+            weight: '250 g',
+            year: 2025,
+            date: '2025-06-19',
+            state: 0,
+        },
+        
+    ],
     // 可以添加更多组...
 };
 

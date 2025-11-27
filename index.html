@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <!-- 确保 translations.js 最先加载 -->
+    <script src="js/pdf-download.js"></script>
     <script src="js/translations.js"></script>
+
 
     <!-- 网页元信息 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>明珠薏苡-Shenbai</title>
+    <title>良药-Shenbai</title>
 
     <!-- 网页图标 -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -30,7 +32,7 @@
                     <span class="desktop-title" data-lang="shenbai">申白</span>
                 </h0>
                 <h0 class="nav-button" onclick="window.location.href='index.html'">
-                    <span class="desktop-title" data-lang="tcm-title">明珠薏苡</span>
+                    <span class="desktop-title" data-lang="tcm-title">良药</span>
                 </h0>
                 <h0 class="nav-button" onclick="window.location.href='rsm.html'">
                     <span class="desktop-title" data-lang="rsm-title">重圆镜</span>
@@ -52,7 +54,7 @@
         </div>
         <div class="mobile-menu-item" onclick="window.location.href='index.html'">
             <img src="assets/tcmicon.svg" alt="TCM">
-            <p3><span data-lang="tcm-title">明珠薏苡</span></p3>
+            <p3><span data-lang="tcm-title">良药</span></p3>
         </div>
         <div class="mobile-menu-item" onclick="window.location.href='rsm.html'">
             <img src="assets/rsmicon.svg" alt="RSM">
@@ -85,7 +87,7 @@
     </div>
 
     <header class="header">
-        <h1>明珠薏苡</h1>
+        <h1>良药</h1>
         <h1>MedicineBowl</h1>
         <div style="height: 24px;"></div>
         <div>
@@ -194,6 +196,26 @@
             </div>
         </section>
 
+        <!-- 第十一组 -->
+        <section class="group" id="group11">
+            <div class="group-content">
+            <h2 data-lang="tcm-group11"class="group-title">南洋华乡碗盛药图</h2>
+            </div>
+            <div class="container">
+                <!-- JavaScript 将在这里插入第十一组卡片 -->
+            </div>
+        </section>
+
+        <!-- 第十二组 -->   
+        <section class="group" id="group12">
+            <div class="group-content">
+            <h2 data-lang="tcm-group12"class="group-title">陵容碗盛药图</h2>
+            </div>
+            <div class="container">
+                <!-- JavaScript 将在这里插入第十二组卡片 -->
+            </div>
+        </section>
+
         
     </main>
 
@@ -206,6 +228,9 @@
         <h3 data-lang="art-trading"></h3>
         <p2 data-lang="art-trading-info">art-trading-info</p2>
     </div>
+
+    <div class="pdf-download"></div>
+    
     </home>
 
     <footer>
@@ -215,6 +240,7 @@
     <script src="js/price-events.js"></script>
     <script src="js/data.js"></script>
     <script src="js/script.js"></script>
+
 
 </body>
 </html>

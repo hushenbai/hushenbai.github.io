@@ -1,0 +1,11 @@
+# 确保PDF文件作为下载而不是在浏览器中打开
+<FilesMatch "\.pdf$">
+    Header set Content-Disposition "attachment"
+    Header set Content-Type "application/pdf"
+</FilesMatch>
+
+# 或者更具体地针对特定文件
+<Files "Shenbai_24_06_2025.pdf">
+    Header set Content-Disposition "attachment; filename=Shenbai_24_06_2025.pdf"
+    Header set Content-Type "application/pdf"
+</Files> 

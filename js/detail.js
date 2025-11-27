@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentArtwork) {
         // 设置页面标题
         document.getElementById('page-title').textContent = 
-            (translations[getCurrentLanguage()][currentArtwork.title['data-lang']] || '明珠薏苡') + '-Shenbai';
+            (translations[getCurrentLanguage()][currentArtwork.title['data-lang']] || '良药') + '-Shenbai';
         
         const img = document.getElementById('artwork-image');
         const imageWrapper = document.querySelector('.image-wrapper');

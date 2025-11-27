@@ -22,6 +22,104 @@ const priceEvents = [
         state: '1',
         date: '2025-01-06'
     },
+    {
+        serialnumber: 'TCMCSCT1',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-06-15'
+    },
+    {
+        serialnumber: 'TCMCSCT2',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-06-15'
+    },  
+    {
+        serialnumber: 'TCMCSCT3',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-06-15'
+    },
+    {
+        serialnumber: 'TCMCSCT4',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-06-15'
+    },  
+    {
+        serialnumber: 'TCMFW7',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-06-15'
+    },
+    {
+        serialnumber: 'TCMNN1',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-08-19'
+    },
+    {
+        serialnumber: 'TCMNN2',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-08-19'
+    },
+    {
+        serialnumber: 'TCMNN3',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-08-19'
+    },
+    {
+        serialnumber: 'TCMNN4',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-08-19'
+    },
+    {
+        serialnumber: 'TCMNN5',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-08-19'
+    },
+    {
+        serialnumber: 'TCMNN6',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-08-19'
+    },
+    {
+        serialnumber: 'TCMNN7',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-08-19'
+    },
+    {
+        serialnumber: 'TCMNN8',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-08-19'
+    },
+    {
+        serialnumber: 'TCMNN9',
+        coefficient: 60,
+        dealcoefficient: 60,
+        state: '2',
+        date: '2025-08-19'
+    },
 
     // 更多事件...
 ]; 
