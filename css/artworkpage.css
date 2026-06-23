@@ -1,6 +1,6 @@
 .artwork-toppart {
     width: 100%;
-    max-width: 1080px;
+    margin: 56px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,18 +13,25 @@
 
 .artwork-imagebox {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 56px);
     display: flex;
     justify-content: center;
+    align-items: center;
     perspective: 2500px;
     user-select: none;
+    background-color: #f2f2f2;
 }
 
 /* 图片容器 */
 .artwork-imagebox .image-wrapper {
+    width: 480px;
+    height: 480px;
+    max-width: 75%;
+    max-height: 75%;
     position: relative;
     display: block;
     justify-content: center;
+    align-items: center;
     transform-style: preserve-3d;
     transform: translateZ(0) scale(1);
     transition: transform 0.2s ease;
@@ -81,15 +88,20 @@
 
 /* 右侧信息区域 */
 .artwork-info {
-    padding: 0 24px;
     width: 100%;
+    padding-right: 36px;
+    gap: 24px;
+    margin: 8px 0;
     text-align: left;
     align-items: left;
     justify-content: left;
+    flex-direction: column;
+    display: flex;
 }
 
-.artwork-info h1 {
-    margin-bottom: 24px;
+.detail-info-grid {
+    display: flex;
+    flex-direction: column;
 }
 
 .artwork-info p0 {
@@ -106,12 +118,12 @@
     }
     
     .artwork-imagebox {
-        width: 55%;
+        width: 65%;
         margin-bottom: 0;
     }
     
     .artwork-info {
-        width: 45%;
+        width: 35%;
     }
 }
 
@@ -124,7 +136,7 @@
 
     .artwork-info {
         width: 100%;
-        padding: 0;
+        padding: 0 60px;
     }
 
 }
@@ -132,14 +144,15 @@
 @media screen and (max-width: 560px) {
 
     header {
-        margin: 40px 0;
+        margin: 68px 0 40px 0;
     }
 
     .artwork-toppart {
         width: 100%;
         flex-direction: column;
         align-items: center;
-        gap: 40px;
+        gap: 28px;
+        margin-bottom: 24px;
     }
     
     .artwork-imagebox {
@@ -147,6 +160,7 @@
         margin-bottom: 0;
         perspective: 1500px;
         max-height: none;
+        height: 100vw;
     }
 
     .artwork-imagebox .image-wrapper {
@@ -156,12 +170,17 @@
     /* 图片容器 */
     .artwork-imagebox .image-wrapper {
     position: relative;
-    width: 100%;
-    height: 100%;
+    max-width: 85%;
+    max-height: 85%;
     transform-style: preserve-3d; /* 保持3D效果 */
     transform: translateZ(0);
     transition: transform 0.1s ease;
     cursor: grab;
+    }
+
+    .artwork-info {
+        width: 100%;
+        padding: 0 20px;
     }
 
     .artwork-info p0 {
@@ -171,19 +190,15 @@
 }
 
 
-/* floating --------------------------------------------- */
-/* floating-------------------------------------------- */
-
-
 .artwork-bottompart {
     margin: 0;
-    max-width: 1080px;
+    max-width: 1280px;
     padding: 60px 0;
 }
 
 .exhibits {
     width: 100%;
-    max-width: 1080px;
+    max-width: 1280px;
     margin-bottom: 60px;
 }
 
@@ -229,12 +244,10 @@
 
 .article {
     width: 100%;
-    max-width: 1080px;
-    align-items: center;
+    max-width: 800px;
+    align-items: left;
     text-align: left;
-    padding-top: 60px;
-    padding-bottom: 40px;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 60px 0 40px 0;
 }
 
 .article-line {
@@ -248,397 +261,8 @@
 
 @media screen and (max-width: 560px) {
     .article {
-
-        padding-top: 40px;
-        padding-bottom: 20px;
+        padding: 20px;
     }
 }
-
-
-/* 悬浮卡片 --------------------------------------------- */  
-/* 悬浮卡片 --------------------------------------------- */  
-
-.willing {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 200;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.willing.show {
-    display: flex;
-}
-
-.Willing-card {
-    position: relative;
-    display: flex;
-    overflow-y: hidden;
-    padding: 0 36px;
-    border-radius: 12px;
-    max-width: 480px;
-    width: 100%;
-    height: 700px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    /* 初始状态 */
-    transform: translateY(900px);
-    opacity: 1;
-    transition: transform 0.4s ease;
-    /* 隐藏滚动条 - Firefox */
-    scrollbar-width: none;
-    /* 隐藏滚动条 - IE/Edge */
-    -ms-overflow-style: none;
-}
-
-.willing-content {
-    padding: 60px 0;
-    overflow-y: auto;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-}
-
-/* 隐藏滚动条 - Chrome/Safari/Opera */
-.willing-content::-webkit-scrollbar {
-    display: none;
-}
-
-/* 显示状态 */
-.willing.show .Willing-card {
-    transform: translateY(0);
-    opacity: 1;
-    transition: all 0.5s cubic-bezier(.25,1.23,.52,1);
-}
-
-.willing-toppart {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    margin-bottom: 48px;
-}
-
-.willing-bottompart {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-}
-
-.closebutton {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    font-size: 32px;
-    cursor: pointer;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: #000;
-    transition: background 0.3s;
-    z-index: 200;
-}
-
-@media screen and (max-width: 560px) {
-    .Willing-card {
-        bottom: 0;
-        position: fixed;
-        padding: 0 20px;
-        border-radius: 0px;
-        max-height: 80vh;
-    }
-}
-
-.info-block {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    padding: 8px;
-    justify-content: center;
-    align-items: center;
-}
-
-.willing-toppart.hidden {
-    display: none !important;
-}
-
-.player-container {
-    width: 100%;
-    max-width: 1080px;
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    margin-bottom: 0;
-}
-
-/* 音频播放器样式 */
-.audio-player {
-    background: rgb(245, 244, 240);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    width: 50%;
-    border-radius: 8px;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.audio-player::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: var(--progress, 0%);
-    background: rgb(223, 217, 201);
-    transition: width 0.1s linear;
-    z-index: 1;
-}
-
-.audio-controls {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;  /* 左右分布 */
-    width: 100%;  /* 确保占满容器宽度 */
-    margin: 0px auto;  /* 上下间距8px，左右自动居中 */
-    z-index: 2;
-}
-
-.play-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 24px;  /* 固定宽度 */
-    height: 24px;  /* 固定高度 */
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.play-icon, .pause-icon {
-    width: 24px;
-    height: 24px;
-}
-
-.play-title {
-    position: relative;
-    z-index: 2;  /* 确保在背景层之上 */
-}
-
-.remaining-time {
-    font-size: 20px;
-    color: rgba(0, 0, 0, 1);
-    /* 移除绝对定位 */
-    position: static;
-}
-
-/* 移除原有的进度条样式 */
-.progress-bar, .progress-current {
-    display: none;
-}
-
-.criticism {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 100%;
-    max-width: 1080px;
-    padding-bottom: 24px;
-}
-
-@media (max-width: 560px) {
-
-    .player-container {
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 8px;
-    }
-
-    .audio-player {
-        width: 100%;
-    }
-}
-
-#calculater-container {
-    display: flex;
-    gap: 8px;
-    margin-top: 8px;
-    width: 100%;
-
-}
-
-#width-input-box, #height-input-box {
-    position: relative;
-    width: 50%;
-    height: 56px;
-
-}
-
-#width-input, #height-input {
-    width: 100%;
-    height: 56px;
-    padding: 12px 40px 12px 12px; /* 右侧留出单位的空间 */
-    border: 1px solid rgba(52, 33, 26, 0.2);
-    background-color: #fff;
-    border-radius: 8px;
-    font-size: 20px;
-    font-family: "Gowun Batang", "Noto Serif SC", "Noto Serif", serif;
-
-}
-
-.unit {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 20px;
-    font-family: "Gowun Batang", "Noto Serif SC", "Noto Serif", serif;
-    pointer-events: none;
-}
-
-/* 移除输入框的上下箭头 */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-input[type="number"] {
-    appearance: textfield;
-    -moz-appearance: textfield;
-}
-
-
-/* 评论 --------------------------------------------- */
-.form {
-    width: 100%;
-    max-width: 1080px;
-    display: flex;
-    margin-bottom: 24px;
-    padding: 56px 48px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    flex-direction: column;
-    zoom: 100% !important;
-}
-
-.input, .textarea, .math-input {
-    width: 100%;
-    padding: 16px 2px;
-    height: 52px;
-    border: none;
-    border-radius: 0;
-    font-size: 16px;
-    line-height: 1.5;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    background-color: #f8f8f8;
-    font-family: "Apple-System", system-ui, segoe ui, Arial, sans-serif;
-    transition: all 0.3s ease;
-}
-
-.input:focus, .textarea:focus, .math-input:focus {
-    outline: none;
-}
-
-.textarea {
-    height: 100px;
-    width: 100%;
-    transition: all 0.8s ease;
-}
-
-.textarea:focus {
-    height: 200px;
-    transition: all 0.3s ease;
-}
-
-.input::placeholder,
-.textarea::placeholder {
-    color: #999;
-    opacity: 1;
-}
-
-
-.button-group {
-    display: flex;
-    margin-top: 32px;
-    gap: 16px;
-    justify-content: left;
-}
-
-
-.math-question {
-    position: relative;
-}
-
-/* 当输入框为空且未获得焦点时显示数学题 */
-.math-input:placeholder-shown {
-    color: #999999;
-}
-
-#confirmButton, #submitButton {
-    min-width: 120px;
-    cursor: pointer;
-    background: #a59372; 
-    padding: 6px 16px;
-    border-radius: 6px;
-    min-width: 120px; 
-    border: none;
-    font-size: 17px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#confirmButton p2 {
-    color: white;
-    font-size: 17px;
-}
-
-#submitButton p2 {
-    color: white;
-    font-size: 17px;
-}
-
-#submitButton:disabled {
-    background: #a9a9a9;
-    cursor: not-allowed;
-    opacity: 0.7;
-}
-
-#submitButton {
-    background: #000000;
-}
-
-@media screen and (max-width: 560px) {
-    .form {
-        padding: 32px 20px;
-    }
-
-    .input, .textarea, .math-input {
-        width: 100%;
-        padding: 16px 2px;
-    }
-
-    .button-group {
-        justify-content: center;
-    }
-}
-
-
-
-
 
 

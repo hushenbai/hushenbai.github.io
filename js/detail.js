@@ -10,7 +10,7 @@ function goBack() {
         window.history.back();
     } else {
         // 如果没有上一页，则返回首页
-        window.location.href = 'index.html';
+        window.location.href = 'tcm.html';
     }
 }
 
@@ -42,7 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // 更新组标题
         const groupTitle = groupSection.querySelector('.group-title');
         if (groupTitle) {
-            const titleKey = `tcm-${artworkGroup}`;
+            const titleKey = (typeof TCM_GROUP_META !== 'undefined' && TCM_GROUP_META[artworkGroup])
+                ? TCM_GROUP_META[artworkGroup].titleKey
+                : `tcm-${artworkGroup}`;
             groupTitle.setAttribute('data-lang', titleKey);
             groupTitle.textContent = translations[getCurrentLanguage()][titleKey] || groupTitle.textContent;
         }
@@ -71,26 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // 设置图片源
         img.src = currentArtwork.image.replace('assets/TCM/', 'assets/TCM-big/');
 
-        // 获取每个项目的最新系数和最新更新时间
-        const latestCoefficient = getLatestCoefficient(currentArtwork.serialnumber);
-        if (latestCoefficient !== null) {
-            currentArtwork.coefficient = latestCoefficient;  
-        }
-        const latestState = getLatestState(currentArtwork.serialnumber);
-        if (latestState !== null) {
-            currentArtwork.state = latestState;
-        }
-        
         // 更新基本信息
         document.getElementById('detail-serialnumber').textContent = currentArtwork.serialnumber;
         document.getElementById('detail-size').textContent = currentArtwork.size;
         document.getElementById('detail-weight').textContent = currentArtwork.weight;
         document.getElementById('detail-year').textContent = currentArtwork.year;
-        // 更新公式中的值
-        document.getElementById('detail-width').textContent = currentArtwork.width;
-        document.getElementById('detail-height').textContent = currentArtwork.height;
-        document.getElementById('detail-coefficient').textContent = currentArtwork.coefficient;
-        document.getElementById('detail-coefficient-1').textContent = currentArtwork.coefficient;
         // 设置需要翻译的元素
         const titleElement = document.getElementById('detail-title');
         titleElement.setAttribute('data-lang', currentArtwork.title2['data-lang']);
@@ -177,15 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // 计算价格：(宽 + 高) × 系数
-        const price = (currentArtwork.width + currentArtwork.height) * currentArtwork.coefficient;
-        document.getElementById('calculated-price').textContent = Math.round(price);
-
         // 使用全局语言设置更新内容
         updateLanguage();
-        
-        // 更新产品状态
-        updateProductStatus();
     }
 
     // 初始化 3D 动画
@@ -198,116 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (globalElement) {
         animation3D.initTypeB(globalElement);
     }
-
-    // 初始化意愿卡片状态
-    const card = document.getElementById('willing');
-    if (card) {
-        const content = card.querySelector('.Willing-card');
-        content.style.transform = 'translateY(900px)';
-    }
-
-    // 点击背景关闭卡片
-    const willingElement = document.getElementById('willing');
-    if (willingElement) {
-        willingElement.addEventListener('click', (e) => {
-            if (e.target.id === 'willing') {
-                hideWilling();
-            }
-        });
-    }
 });
-
-// ===============================
-// 处理项目状态显示
-// ===============================
-function updateProductStatus() {
-    // 确保 currentArtwork 存在且有 state 值
-    if (currentArtwork && typeof currentArtwork.state !== 'undefined') {
-        const state = currentArtwork.state;
-        console.log('Current state:', state); // 添加调试日志
-        
-        // 获取显示元素
-        const textElement = document.querySelector('.styled-button');
-        const descElement = document.querySelector('.productstate-desc');
-        const willingToppart = document.querySelector('.willing-toppart');
-        
-        if (textElement && descElement) {
-            // 根据 state 设置对应的翻译键
-            textElement.setAttribute('data-lang', `productstate-${state}`);
-            descElement.setAttribute('data-lang', `productstate-button-${state}`);
-            
-            // 根据 state 控制 willing-toppart 的显示
-            if (willingToppart) {
-                if ([2, 3, 4].includes(Number(state))) {
-                    willingToppart.classList.add('hidden');
-                } else {
-                    willingToppart.classList.remove('hidden');
-                }
-            }
-            
-            // 使用全局语言设置更新内容
-            updateLanguage();
-        }
-    }
-}
-
-// 在页面加载完成时更新项目状态
-document.addEventListener('DOMContentLoaded', updateProductStatus);
-
-// 页面加载完成后初始化意愿卡片状态
-document.addEventListener('DOMContentLoaded', () => {
-    const card = document.getElementById('willing');
-    const content = card.querySelector('.Willing-card');
-    
-    // 设置初始状态
-    content.style.transform = 'translateY(900px)';
-});
-
-// 显示意愿卡片
-function showWilling() {
-    const card = document.getElementById('willing');
-    const content = card.querySelector('.Willing-card');
-    
-    // 确保初始状态
-    content.style.transform = 'translateY(900px)';
-    
-    // 先显示卡片容器
-    card.classList.add('show');
-    
-    // 强制重绘
-    void content.offsetWidth;
-    
-    // 触发动画
-    requestAnimationFrame(() => {
-        content.style.transform = 'translateY(0)';
-    });
-    
-    // 阻止背景滚动
-    document.body.style.overflow = 'hidden';
-}
-// 隐藏意愿卡片
-function hideWilling() {
-    const card = document.getElementById('willing');
-    const content = card.querySelector('.Willing-card');
-    
-    // 重置动画状态
-    content.style.transform = 'translateY(700px)';
-    
-    // 等待动画完成后隐藏卡片
-    setTimeout(() => {
-        card.classList.remove('show');
-        // 恢复背景滚动
-        document.body.style.overflow = '';
-    }, 400); // 与 CSS transition 时间匹配
-}
-// ESC 键关闭卡片
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        hideWilling();
-    }
-});
-
-// ... 现有代码 ...
 
 // 获取当前作品在数组中的位置
 function getCurrentArtworkIndex() {
@@ -342,21 +213,23 @@ function getNavigationURL(direction) {
 document.addEventListener('DOMContentLoaded', () => {
     // ... 现有的 DOMContentLoaded 代码 ...
     
-    // 添加导航按钮事件监听
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
+    // 添加导航按钮事件监听（为所有按钮绑定事件，包括桌面版和移动版）
+    const prevBtns = document.querySelectorAll('.prev-btn');
+    const nextBtns = document.querySelectorAll('.next-btn');
 
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
+    // 为所有前一个按钮绑定事件
+    prevBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             window.location.href = getNavigationURL('prev');
         });
-    }
+    });
 
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
+    // 为所有下一个按钮绑定事件
+    nextBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             window.location.href = getNavigationURL('next');
         });
-    }
+    });
 
     // 添加键盘导航支持
     document.addEventListener('keydown', (e) => {

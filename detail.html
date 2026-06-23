@@ -8,8 +8,9 @@
     <title id="page-title">Shenbai</title>
 
     <!-- 网页图标 -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="/assets/tcmbowl.png">
+    <link rel="apple-touch-icon" href="/assets/tcmbowl.png">
 
     <!-- 网页样式 -->
     <link rel="stylesheet" href="css/styles.css">
@@ -34,19 +35,21 @@
     <div class="nav-background">
         <nav class="nav-container">
             <div class="nav-left">
-                <h0 class="nav-button" onclick="window.location.href='aboutme.html'">
-                    <span class="desktop-title" data-lang="shenbai" style="color:#000">申白</span>
-                </h0>
-                <h0 class="nav-button" onclick="window.location.href='index.html'">
-                    <span class="desktop-title" data-lang="tcm-title" style="color:#000">良药</span>
-                </h0>
-                <h0 class="nav-button" onclick="window.location.href='rsm.html'">
-                    <span class="desktop-title" data-lang="rsm-title" style="color:#000">重圆镜</span>
-                </h0>
+                <h4 class="nav-button" onclick="window.location.href='/'">
+                    <span class="desktop-title" data-lang="site-title">SHENBAI</span>
+                </h4>
+            </div>
+            <div class="nav-center">
+                <h5 class="nav-button" onclick="window.location.href='/'">
+                    <span class="desktop-title" data-lang="abm-title">胡申白</span>
+                </h5>
+                <h5 class="nav-button" onclick="window.location.href='works.html'">
+                    <span class="desktop-title" data-lang="nav-works">作品</span>
+                </h5>
             </div>
             <div class="nav-right">
                 <div class="language-switch">
-                    <h0><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer; color:#000">English</button></h0>
+                    <h6><button onclick="toggleLanguage()" data-lang="switch-lang" style="all: unset; cursor: pointer;">English</button></h6>
                 </div>
             </div>
         </nav>
@@ -54,196 +57,125 @@
 
     <div class="mobile-menu">
         <div class="menu-container">
-        <div class="mobile-menu-item" onclick="window.location.href='aboutme.html'">
-            <img src="assets/hsbicon.svg" alt="About">
-            <p3><span data-lang="abm-title">关于我</span></p3>
-        </div>
-        <div class="mobile-menu-item" onclick="window.location.href='index.html'">
-            <img src="assets/tcmicon.svg" alt="TCM">
-            <p3><span data-lang="tcm-title">良药</span></p3>
-        </div>
-        <div class="mobile-menu-item" onclick="window.location.href='rsm.html'">
-            <img src="assets/rsmicon.svg" alt="RSM">
-            <p3><span data-lang="rsm-title">重圆镜</span></p3>
-        </div>
-        <div class="mobile-menu-item" onclick="toggleLanguage()">
-            <img src="assets/enicon.svg" alt="English">
-            <p3><span data-lang="switch-lang2">language switch</span></p3>
-        </div>
-
+            <div class="mobile-menu-item" onclick="window.location.href='/'">
+                <h6><span data-lang="abm-title">胡申白</span></h6>
+            </div>
+            <div class="mobile-menu-item" onclick="window.location.href='works.html'">
+                <h6><span data-lang="nav-works">作品</span></h6>
+            </div>
+            <div class="mobile-menu-item">
+                <h6><button type="button" class="mobile-lang-button" onclick="toggleLanguage()" data-lang="switch-lang">English</button></h6>
+            </div>
         </div>
     </div>
 
-    <!-- 主要内容容器 -->
-    <header>
-        <!-- 2.1 慢速滚动区域 -->
-        <div class="artwork-toppart">
-            <!-- 图片区域 -->
-            <div class="artwork-imagebox">
-                <div class="image-wrapper global-animation">               
-                    <div class="depthimg-container">
-                        <img id="artwork-image" src="" alt="">
-                        <!-- 深度层 -->
-                        <span class="depth-layer"></span>
-                        <span class="depth-layer"></span>
-                        <span class="depth-layer"></span>
-                        <span class="depth-layer"></span>
-                        <span class="depth-layer"></span>
-                        <span class="depth-layer"></span>
-                        <span class="depth-layer"></span>
-                        <span class="depth-layer"></span>
-                        <span class="depth-layer"></span>
-                        <span class="depth-layer"></span>
-                        <span class="depth-layer"></span>
-                        <span class="depth-layer"></span>
-                        <span class="depth-layer"></span>
-                        <span class="depth-layer"></span>
-                    </div>
+    <div class="mobile-logo">
+        <h4 onclick="window.location.href='/'">
+            <span data-lang="site-title">SHENBAI</span>
+        </h4>
+    </div>
+
+    <div class="artwork-toppart">
+        <!-- 图片区域 -->
+        <div class="artwork-imagebox">
+            <div class="image-wrapper global-animation">               
+                <div class="depthimg-container">
+                    <img id="artwork-image" src="" alt="">
+                    <!-- 深度层 -->
+                    <span class="depth-layer"></span>
+                    <span class="depth-layer"></span>
+                    <span class="depth-layer"></span>
+                    <span class="depth-layer"></span>
+                    <span class="depth-layer"></span>
+                    <span class="depth-layer"></span>
+                    <span class="depth-layer"></span>
+                    <span class="depth-layer"></span>
+                    <span class="depth-layer"></span>
+                    <span class="depth-layer"></span>
+                    <span class="depth-layer"></span>
+                    <span class="depth-layer"></span>
+                    <span class="depth-layer"></span>
+                    <span class="depth-layer"></span>
                 </div>
             </div>
-            <!-- 基本信息 -->
-            <div class="artwork-info">
-                <h1 id="detail-title" data-lang=""></h1>
-                <p0 id="detail-serialnumber"></p0>
-                <p0 id="detail-series" data-lang=""></p0>
-                <p0 id="detail-media" data-lang=""></p0>
-                <p0 id="detail-size"></p0>
-                <p0 id="detail-weight"></p0>
-                <p0 id="detail-year"></p0>
+        </div>
+        <div class="nav-pages-mobile">
+            <button class="nav-page-button-mobile prev-btn" aria-label="Previous artwork">
+                <span data-lang="nav-prev">前一幅</span>
+            </button>
+            <button class="nav-page-button-mobile next-btn" aria-label="Next artwork">
+                <span data-lang="nav-next">后一幅</span>
+            </button>
+        </div>
+        <!-- 基本信息 -->
+        <div class="artwork-info">
+            <h1 id="detail-title" data-lang=""></h1>
+            <div class="detail-info-grid">
+                <p2 id="detail-serialnumber"></p2>
+                <p2 id="detail-series" data-lang=""></p2>
+                <p2 id="detail-media" data-lang=""></p2>
+                <p2 id="detail-size"></p2>
+                <p2 id="detail-weight"></p2>
+                <p2 id="detail-year"></p2>
             </div>
         </div>
-    </header>
+    </div>
 
     <main>
-        <div class="buy-button">
-            <p1 data-lang="productstate-0" class="styled-button" onclick="showWilling()"></p1>
-            <p2 class="productstate-desc" style="max-width: 600px;" data-lang="productstate-button-0"></p2>
+        
+        <article class="article">
+            <div class="article-line">
+                <p0 id="detail-TCMmain" data-lang="detail-TCMmain"></p0>
+            </div>
+        </article>
+
+        <!-- 展览列表 -->
+        <div class="exhibits">
+            <div id="exhibits-list" class="exhibits-list">
+            <!-- 展览信息由 JavaScript 动态插入 -->
+            </div>
         </div>
-            <!-- 文章部分 -->
-            <article class="article">
-                <div class="article-line">
-                    <p0 id="detail-TCMmain" data-lang="detail-TCMmain"></p0>
-                </div>
-            </article>
 
-            <!-- 展览列表 -->
-            <div class="exhibits">
-                <div id="exhibits-list" class="exhibits-list">
-                    <!-- 展览信息由 JavaScript 动态插入 -->
-                </div>
+        <!-- 订阅按钮 -->
+        <section class="group" id="group4">
+            <div class="group-content">
+                <h2 data-lang="tcm-group4" class="group-title">文言四字碗盛药图</h2>
             </div>
-
-            <!-- 订阅按钮 -->
-            
-
-            <section class="group" id="group4">
-                <div style="border: 0.5px solid rgba(0, 0, 0, 0.08);"></div>
-                <div style="height: 24px;"></div>
-                <div class="group-content">
-                    <h2 data-lang="tcm-group4" class="group-title">文言四字碗盛药图</h2>
-                </div>
-                <div class="container">
-                    <!-- JavaScript 将在这里插入第三组卡片 -->
-                </div>
-            </section>
-
-            <div style="display: flex; width: 100%; max-width: 1080px; margin-bottom: 40px; justify-content: left; text-align: left;">
-                <h0 class="nav-button" onclick="window.location.href='index.html'">
-                    <span class="desktop-title" data-lang="back" style="color:#8a8a8a">back</span>
-                    <span class="desktop-title" data-lang="listpage" style="color:#8a8a8a">listpage</span>
-                </h0>
+            <div class="container">
+            <!-- JavaScript 将在这里插入第三组卡片 -->
             </div>
+        </section>
+
+        <div class="goback-container">
+            <h5 class="nav-button" onclick="window.location.href='tcm.html'">
+                <span class="desktop-title" data-lang="back" style="color:#8a8a8a">back</span>
+                <span class="desktop-title" data-lang="listpage" style="color:#8a8a8a">listpage</span>
+            </h5>
+        </div>
             
     </main>
 
-    <!-- 添加悬浮卡片 -->
-    <div id="willing" class="willing">
-        <div class="Willing-card">
-            <div class="closebutton" onclick="hideWilling()" style="color: #fff;">×</div>
-            <div class="willing-content">
-                <div class="willing-toppart">
-                    <div>
-                        <h2 data-lang="price">price</h2>
-                        <div style="height: 8px;"></div>
-                        <div style="display: flex; flex-direction: row; gap: 4px;">
-                            <p2 data-lang="price-TCMinfo">price-TCMinfo</p2>
-                            <p2>60</p2>
-                        </div>
-
-                        <div style="display: flex; flex-direction: row; gap: 4px;">
-                            <p2 data-lang="price-this">price-this</p2>
-                            <p2 id="detail-coefficient-1"></p2>
-                        </div>
-
-                        <div style="height: 12px;"></div>
-
-                        <div>
-                            <div style="display: flex; flex-direction: row; align-items: baseline; gap: 4px;">
-                                <h1 id="calculated-price">price</h1>
-                                <h2>CNY</h2>
-                            </div>
-                            <div style="display: flex; flex-direction: row; gap: 4px;">
-                                <div style="display: flex; flex-direction: row; gap: 2px;">
-                                <p2>(</p2>
-                                <p2 data-lang="width">width</p2>
-                                <p2 id="detail-width"></p2>
-                                <p2>+</p2>
-                                <p2 data-lang="height">height</p2>
-                                <p2 id="detail-height"></p2>
-                                <p2>)</p2>
-                                <p2>×</p2>
-                                <p2 data-lang="coefficient">coefficient</p2>
-                                <p2 id="detail-coefficient"></p2>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 购买信息部分 -->
-                    <div style="display: flex; flex-direction: column;">
-                        <p2 data-lang="purchase-info">purchase-info</p2>
-                    </div>
-                </div>
-
-                <div class="willing-bottompart">
-                    <div style="display: flex; flex-direction: column; gap: 16px;">
-                        <p2 data-lang="Buyway">添加微信，或者向我发送邮件：</p2>
-                        <div class="contact-card" style="display: flex; flex-direction: row; gap: 16px;">
-                            <div class="info-block" style="width: 35%;">
-                                <img src="assets/qrcode.png" alt="QR Code" style="width: 100%; height: 100%;">
-                            </div>
-                            <div class="info-block" style="width: 65%; height: auto;">
-                                <p0>hushenbai@163.com</p0>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="height: 1px; background-color: rgba(0, 0, 0, 0.1);"></div>
-                    <div class="enter-container" style="margin-bottom: 0;" onclick="window.location.href='art-trading.html'">
-                        <h3 data-lang="art-trading" ></h3>
-                        <p2 data-lang="art-trading-info">art-trading-info</p2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <!-- 在 body 中添加 -->
     <div class="nav-pages">
-        <button class="nav-pg prev-btn" aria-label="Previous artwork">
+        <button class="nav-page-button prev-btn" aria-label="Previous artwork">
             <img src="assets/leftar.svg" alt="Previous" class="nav-arrow">
         </button>
-        <button class="nav-pg next-btn" aria-label="Next artwork">
+        <button class="nav-page-button next-btn" aria-label="Next artwork">
             <img src="assets/rightar.svg" alt="Next" class="nav-arrow">
         </button>
     </div>
 
     <footer>
-        <p3>&copy; 2024 HU SHENBAI</p3>
+        <p class="footer-meta">
+            <span>&copy; 2024 HU SHENBAI</span>
+            <a href="https://beian.miit.gov.cn/" rel="noopener noreferrer">蜀ICP备2026031565号</a>
+        </p>
     </footer>  
 
     <script src="js/translations.js"></script>
     <script src="js/exhibits-events.js"></script>
-    <script src="js/price-events.js"></script>
+    <script src="js/tcm-data-core.js"></script>
+    <script src="js/tcm-catalog.js"></script>
     <script src="js/data.js"></script>
     <script src="js/animation3d.js"></script>
 </body>

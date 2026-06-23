@@ -4,27 +4,34 @@
 /* 内容区域 */
 .content-intro {
     position: relative;
-    min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: left;
     flex-direction: column;
-    max-width: 760px;
-    margin-top: 60px;
+    text-align: start;
+    max-width: 800px;
+    width:100%;
+    margin-top: 50vh;
+    padding: 48px;
+    color:#fff;
 }
 
-h1 {
+/* 移动端适配 */
+@media (max-width: 560px) {
+    .content-intro {
+        padding: 36px 24px 36px 24px;
+    }
+    
+}
+
+h0 {
+    color: #ffffff;
     text-align: left;
-    display: block; /* 将 p0 改为块级元素 */
-    width: 100%; /* 确保元素占满容器宽度 */
 }
 
 p0 {
-    color: #000000;
-    text-align: left;
-    display: block; /* 将 p0 改为块级元素 */
-    width: 100%; /* 确保元素占满容器宽度 */
+    color: #ffffff;
 }
+
 
 
 /* 隐藏播放控件 */
@@ -33,10 +40,6 @@ video::-webkit-media-controls-play-button,
 video::-webkit-media-controls-start-playback-button {
     display: none !important;
     -webkit-appearance: none;
-}
-
-.menu-container {
-    background-color: rgba(255, 255, 255, 0.4);
 }
 
 
